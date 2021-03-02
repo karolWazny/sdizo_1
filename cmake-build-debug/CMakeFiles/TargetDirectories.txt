@@ -1,0 +1,3 @@
+D:/projects/clion/sdizo_1/cmake-build-debug/CMakeFiles/sdizo_1.dir
+D:/projects/clion/sdizo_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/projects/clion/sdizo_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
