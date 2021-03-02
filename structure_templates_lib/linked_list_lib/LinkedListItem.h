@@ -22,9 +22,7 @@ public:
     std::shared_ptr<LinkedListItem<type>> getNext() override;
     void setNext(std::shared_ptr<LinkedListItem<type>> next) override;
     std::shared_ptr<INextable<type>> getPrevious();
-    static std::shared_ptr<LinkedListItem<type>> obtainFirstItem(type content);
     void putAfter(type);
-    void putBefore(type);
     void remove();
     void swap(std::shared_ptr<LinkedListItem<type>>);
     bool hasNext() override;
@@ -65,14 +63,6 @@ void LinkedListItem<type>::swap(std::shared_ptr<LinkedListItem<type>>replacement
 }
 
 template<typename type>
-std::shared_ptr<LinkedListItem<type>> LinkedListItem<type>::obtainFirstItem(type content) {
-    auto output = std::make_shared<LinkedListItem<type>>(content);
-    output->next = output;
-    output->previous = output;
-    return output;
-}
-
-template<typename type>
 type LinkedListItem<type>::getContent() {
     return content;
 }
@@ -110,12 +100,6 @@ void LinkedListItem<type>::remove()
 {
     next->previous = previous;
     previous.lock()->setNext(next);
-}
-
-template<typename type>
-void LinkedListItem<type>::putBefore(type content)
-{
-    previous.lock()->putAfter(content);
 }
 
 template<typename type>

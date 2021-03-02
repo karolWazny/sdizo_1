@@ -8,6 +8,10 @@
 template <typename T>
 Array
 {
+public:
+    Array();
+    void pushBack(T);
+    void addAtPosition(T, int index);
 
 };
 #endif //SDIZO_1_ARRAY_H
