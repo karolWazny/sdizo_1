@@ -134,7 +134,7 @@ template<typename type>
 LinkedList<type>::LinkedList()
 {
     length = 0;
-    zeroIndex = std::make_shared<Nexter>();
+    zeroIndex = std::make_unique<Nexter>();
 }
 
 template<typename type>
