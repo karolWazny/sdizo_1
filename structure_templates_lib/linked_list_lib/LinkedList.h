@@ -15,31 +15,34 @@ public:
     void swap(int, int) noexcept (false);
     type remove(int);
     void pushBack(type);
+    void pushFront(type);
+    type removeLast();
+    type removeFirst();
     type get(int index);
     bool isEmpty();
     int getLength();
     LinkedList<type>();
     class Nexter : public  INextable<type> {
     public:
-        std::shared_ptr<LinkedListItem<type>> pointer;
+        std::shared_ptr<INextable<type>> pointer;
         Nexter();
-        std::shared_ptr<LinkedListItem<type>> getNext() override;
-        void setNext(std::shared_ptr<LinkedListItem<type>> next) override;
+        std::shared_ptr<INextable<type>> getNext() override;
+        void setNext(std::shared_ptr<INextable<type>> next) override;
         bool hasNext() override;
     };
     std::string toString();
 private:
-    std::weak_ptr<LinkedListItem<type> > lastIndex;
-    std::shared_ptr< Nexter > zeroIndex;
+    std::weak_ptr<INextable<type>> lastIndex;
+    std::shared_ptr< Nexter > guard;
     int length;
-    std::shared_ptr< LinkedListItem<type> > getItem(int index);
+    std::shared_ptr< INextable<type> > getItem(int index);
 };
 
 template<typename type>
-std::shared_ptr< LinkedListItem<type> > LinkedList<type>::getItem(const int index)
+std::shared_ptr< INextable<type> > LinkedList<type>::getItem(const int index)
 {
     int counter = 0;
-    auto buffer = zeroIndex->getNext();
+    auto buffer = guard->getNext();
     while (counter < index) {
         buffer = buffer->getNext();
         counter++;
@@ -51,9 +54,8 @@ template<typename type>
 void LinkedList<type>::addAtPosition(type content, int index)
 {
     if (!index) {
-        auto indexOne = zeroIndex->getNext();
-        zeroIndex->setNext(std::make_shared<LinkedListItem<type>>(content, zeroIndex));
-        zeroIndex->getNext()->setNext(indexOne);
+        pushFront(content);
+        return;
     }
     else {
         auto buffer = getItem(index - 1);
@@ -74,7 +76,7 @@ void LinkedList<type>::swap(int index1, int index2) noexcept(false)
         index2 = buffer;
     }
 
-    auto buffer = zeroIndex->getNext();
+    auto buffer = guard->getNext();
     int count = 0;
     while (count < index1) {
         buffer = buffer->getNext();
@@ -103,14 +105,38 @@ template<typename type>
 void LinkedList<type>::pushBack(type element)
 {
     if (!length) {
-        zeroIndex->setNext(std::shared_ptr<LinkedListItem<type>>(new LinkedListItem<type>(element, zeroIndex)));
-        lastIndex = zeroIndex->getNext();
+        guard->setNext(std::shared_ptr<LinkedListItem<type>>(new LinkedListItem<type>(element, guard)));
+        lastIndex = guard->getNext();
     }
     else {
         lastIndex.lock()->putAfter(element);
         lastIndex = lastIndex.lock()->getNext();
     }
     length++;
+}
+
+template <typename T>
+void LinkedList<T>::pushFront(T element)
+{
+    auto indexOne = guard->getNext();
+    guard->setNext(std::make_shared<LinkedListItem<type>>(content, guard));
+    guard->getNext()->setNext(indexOne);
+}
+
+template <typename T>
+T LinkedList<T>::removeFirst()
+{
+    return remove(0);
+}
+
+template <typename T>
+T LinkedList<T>::removeLast()
+{
+    auto buffer = lastIndex.lock();
+    lastIndex = buffer->getPrevious();
+    buffer->remove();
+    length--;
+    return buffer->getContent();
 }
 
 template<typename type>
@@ -134,7 +160,7 @@ template<typename type>
 LinkedList<type>::LinkedList()
 {
     length = 0;
-    zeroIndex = std::make_unique<Nexter>();
+    guard = std::make_unique<Nexter>();
 }
 
 template<typename type>
@@ -144,13 +170,13 @@ LinkedList<type>::Nexter::Nexter()
 }
 
 template<typename type>
-std::shared_ptr<LinkedListItem<type>> LinkedList<type>::Nexter::getNext()
+std::shared_ptr<INextable<type>> LinkedList<type>::Nexter::getNext()
 {
     return pointer;
 }
 
 template<typename type>
-void LinkedList<type>::Nexter::setNext(std::shared_ptr<LinkedListItem<type>> next)
+void LinkedList<type>::Nexter::setNext(std::shared_ptr<INextable<type>> next)
 {
     pointer = next;
 }
@@ -167,7 +193,7 @@ std::string LinkedList<T>::toString()
     std::string output = "[";
     if(!isEmpty())
     {
-        auto buffer = zeroIndex->getNext();
+        auto buffer = guard->getNext();
         output += std::to_string(buffer->getContent());
         while(buffer->hasNext())
         {

@@ -13,18 +13,18 @@ class LinkedListItem : public INextable<type>
 private:
     std::weak_ptr<INextable<type>> previous;
     type content;
-    std::shared_ptr<LinkedListItem> next;
-    void putAfter(LinkedListItem<type>);
+    std::shared_ptr<INextable<type>> next;
+    void putAfter(INextable<type>);
 public:
     LinkedListItem(type);
     LinkedListItem(type, std::shared_ptr<INextable<type>>);
-    type getContent();
-    std::shared_ptr<LinkedListItem<type>> getNext() override;
-    void setNext(std::shared_ptr<LinkedListItem<type>> next) override;
-    std::shared_ptr<INextable<type>> getPrevious();
-    void putAfter(type);
-    void remove();
-    void swap(std::shared_ptr<LinkedListItem<type>>);
+    type getContent() override;
+    std::shared_ptr<INextable<type>> getNext() override;
+    void setNext(std::shared_ptr<INextable<type>> next) override;
+    std::shared_ptr<INextable<type>> getPrevious() override;
+    void putAfter(type) override;
+    void remove() override;
+    void swap(std::shared_ptr<INextable<type>>) override;
     bool hasNext() override;
 };
 
@@ -35,30 +35,30 @@ bool LinkedListItem<T>::hasNext()
 }
 
 template <typename T>
-void LinkedListItem<T>::setNext(std::shared_ptr<LinkedListItem<T>> next) {
+void LinkedListItem<T>::setNext(std::shared_ptr<INextable<T>> next) {
     this->next = next;
 }
 
 template <typename T>
-std::shared_ptr<LinkedListItem<T>> LinkedListItem<T>::getNext() {
+std::shared_ptr<INextable<T>> LinkedListItem<T>::getNext() {
     return next;
 }
 
 template<typename type>
-void LinkedListItem<type>::swap(std::shared_ptr<LinkedListItem<type>>replacement) {
+void LinkedListItem<type>::swap(std::shared_ptr<INextable<type>>replacement) {
     auto elem_0 = replacement->getPrevious();
-    auto elem_2 = replacement->next;
+    auto elem_2 = replacement->getNext();
     auto buffer_1 = elem_0->getNext();
     elem_0->setNext(this->previous.lock()->getNext());
     this->previous.lock()->setNext(buffer_1);
-    buffer_1 = replacement->next;
-    replacement->next = this->next;
+    buffer_1 = replacement->getNext();
+    replacement->setNext(this->next);
     this->next = buffer_1;
-    auto buffer_2 = this->next->previous;
-    this->next->previous = elem_2->previous;
-    elem_2->previous = buffer_2;
-    buffer_2 = replacement->previous;
-    replacement->previous = this->previous;
+    auto buffer_2 = this->next->getPrevious();
+    this->next->setPrevious(elem_2->getPrevious());
+    elem_2->setPrevious(buffer_2);
+    buffer_2 = replacement->getPrevious();
+    replacement->setPrevious(this->previous);
     this->previous = buffer_2;
 }
 
@@ -89,7 +89,7 @@ void LinkedListItem<type>::putAfter(type nextItem)
     auto buffer = std::make_shared<LinkedListItem<type>>(nextItem);
     if (next != nullptr) {
         buffer->next = next;
-        next->previous = buffer;
+        next->setPrevious(buffer);
     }
     buffer->previous = previous.lock()->getNext();
     next = buffer;
@@ -98,12 +98,15 @@ void LinkedListItem<type>::putAfter(type nextItem)
 template<typename type>
 void LinkedListItem<type>::remove()
 {
-    next->previous = previous;
+    if(next != nullptr)
+    {
+        next->setPrevious(previous);
+    }
     previous.lock()->setNext(next);
 }
 
 template<typename type>
-void LinkedListItem<type>::putAfter(LinkedListItem<type> nextItem)
+void LinkedListItem<type>::putAfter(INextable<type> nextItem)
 {
     auto buffer = next;
     next = std::shared_ptr<LinkedListItem<type>>(nextItem);

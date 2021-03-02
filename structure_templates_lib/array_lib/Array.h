@@ -15,6 +15,9 @@ public:
     void swap(const int, const int);
     T remove(const int);
     void pushBack(T);
+    void pushFront(T);
+    T removeLast();
+    T removeFirst();
     T get(const int index);
     bool isEmpty();
     int getLength();
@@ -34,14 +37,25 @@ Array<T>::Array()
 template<typename T>
 void Array<T>::pushBack(T element)
 {
-    auto buffer = std::make_unique<T[]>(length + 1);
-    for(int i = 0; i < length; i++)
-    {
-        buffer[i] = elements[i];
-    }
-    buffer[length] = element;
-    length++;
-    elements = std::move(buffer);
+    addAtPosition(element, length);
+}
+
+template <typename T>
+T Array<T>::removeFirst()
+{
+    return remove(0);
+}
+
+template <typename T>
+T Array<T>::removeLast()
+{
+    return remove(length - 1);
+}
+
+template <typename T>
+void Array<T>::pushFront(T element)
+{
+    addAtPosition(element, 0);
 }
 
 template <typename T>
@@ -81,22 +95,17 @@ void Array<T>::swap(const int index1, const int index2)
 template<typename T>
 void Array<T>::addAtPosition(T element, const int index)
 {
-    if(index >= length)
-    {
-        pushBack(element);
-        return;
-    }
     auto newArray = std::make_unique<T[]>(length + 1);
     int newArrayCount = 0;
     for(int i = 0; i < length; i++, newArrayCount++)
     {
         if(i == index)
         {
-            newArray[newArrayCount] = element;
             newArrayCount++;
         }
         newArray[newArrayCount] = elements[i];
     }
+    newArray[index] = element;
     elements = std::move(newArray);
     length++;
 }
