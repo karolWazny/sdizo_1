@@ -22,6 +22,7 @@ public:
     std::shared_ptr<INextable<type>> getNext() override;
     void setNext(std::shared_ptr<INextable<type>> next) override;
     std::shared_ptr<INextable<type>> getPrevious() override;
+    void setPrevious(std::weak_ptr<INextable<type>> newPrevious) override;
     void putAfter(type) override;
     void remove() override;
     void swap(std::shared_ptr<INextable<type>>) override;
@@ -119,6 +120,11 @@ template<typename type>
 std::shared_ptr<INextable<type>> LinkedListItem<type>::getPrevious()
 {
     return previous.lock();
+}
+
+template<typename type>
+void LinkedListItem<type>::setPrevious(std::weak_ptr<INextable<type>> newPrevious) {
+    previous = newPrevious;
 }
 
 

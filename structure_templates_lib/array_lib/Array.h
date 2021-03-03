@@ -11,10 +11,11 @@ class Array
 {
 public:
     Array<T>();
-    void addAtPosition(T, const int);
+    void putAtPosition(T, const int);
     void swap(const int, const int);
-    T remove(const int);
+    T removeAt(const int index);
     void pushBack(T);
+    bool contains(T element);
     void pushFront(T);
     T removeLast();
     T removeFirst();
@@ -37,25 +38,25 @@ Array<T>::Array()
 template<typename T>
 void Array<T>::pushBack(T element)
 {
-    addAtPosition(element, length);
+    putAtPosition(element, length);
 }
 
 template <typename T>
 T Array<T>::removeFirst()
 {
-    return remove(0);
+    return removeAt(0);
 }
 
 template <typename T>
 T Array<T>::removeLast()
 {
-    return remove(length - 1);
+    return removeAt(length - 1);
 }
 
 template <typename T>
 void Array<T>::pushFront(T element)
 {
-    addAtPosition(element, 0);
+    putAtPosition(element, 0);
 }
 
 template <typename T>
@@ -65,7 +66,7 @@ T Array<T>::get(const int index)
 }
 
 template <typename T>
-T Array<T>::remove(const int index)
+T Array<T>::removeAt(const int index)
 {
     auto buffer = elements[index];
     auto newArray = std::make_unique<T[]>(length - 1);
@@ -93,7 +94,7 @@ void Array<T>::swap(const int index1, const int index2)
 }
 
 template<typename T>
-void Array<T>::addAtPosition(T element, const int index)
+void Array<T>::putAtPosition(T element, const int index)
 {
     auto newArray = std::make_unique<T[]>(length + 1);
     int newArrayCount = 0;
@@ -136,6 +137,18 @@ std::string Array<T>::toString()
     }
     output += "]";
     return output;
+}
+
+template<typename T>
+bool Array<T>::contains(T element) {
+    for(int i = 0; i < length; i++)
+    {
+        if(element == elements[i])
+        {
+            return true;
+        }
+    }
+    return false;
 }
 
 #endif //SDIZO_1_ARRAY_H

@@ -12,8 +12,10 @@ class LinkedList
 {
 public:
     void addAtPosition(type, int);
+    void putAfter(type whereToPut, type elementToAdd);
     void swap(int, int) noexcept (false);
-    type remove(int);
+    type removeAt(int position);
+    bool remove(type element);
     void pushBack(type);
     void pushFront(type);
     type removeLast();
@@ -25,9 +27,12 @@ public:
     class Nexter : public  INextable<type> {
     public:
         std::shared_ptr<INextable<type>> pointer;
+        std::weak_ptr<INextable<type>> mThis;
         Nexter();
+        void setMThis(std::shared_ptr<INextable<type>> mThis);
         std::shared_ptr<INextable<type>> getNext() override;
         void setNext(std::shared_ptr<INextable<type>> next) override;
+        void putAfter(type element) override;
         bool hasNext() override;
     };
     std::string toString();
@@ -92,7 +97,7 @@ void LinkedList<type>::swap(int index1, int index2) noexcept(false)
 }
 
 template<typename type>
-type LinkedList<type>::remove(int index)
+type LinkedList<type>::removeAt(int index)
 {
     auto buffer = getItem(index);
     auto out = buffer->getContent();
@@ -118,15 +123,21 @@ void LinkedList<type>::pushBack(type element)
 template <typename T>
 void LinkedList<T>::pushFront(T element)
 {
-    auto indexOne = guard->getNext();
-    guard->setNext(std::make_shared<LinkedListItem<type>>(content, guard));
-    guard->getNext()->setNext(indexOne);
+    if(!isEmpty())
+    {
+        guard->putAfter(element);
+    } else
+    {
+        guard->putAfter(element);
+        lastIndex = guard->getNext();
+    }
+    length++;
 }
 
 template <typename T>
 T LinkedList<T>::removeFirst()
 {
-    return remove(0);
+    return removeAt(0);
 }
 
 template <typename T>
@@ -161,6 +172,7 @@ LinkedList<type>::LinkedList()
 {
     length = 0;
     guard = std::make_unique<Nexter>();
+    guard->setMThis(guard);
 }
 
 template<typename type>
@@ -187,6 +199,22 @@ bool LinkedList<type>::Nexter::hasNext()
     return pointer != nullptr;
 }
 
+template<typename type>
+void LinkedList<type>::Nexter::putAfter(type element) {
+    auto buffer = std::make_shared<LinkedListItem<type>>(element);
+    if (pointer != nullptr) {
+        buffer->setNext(pointer);
+        pointer->setPrevious(buffer);
+    }
+    buffer->setPrevious(mThis);
+    pointer = buffer;
+}
+
+template<typename type>
+void LinkedList<type>::Nexter::setMThis(std::shared_ptr<INextable<type>> mThis) {
+    this->mThis = mThis;
+}
+
 template<typename T>
 std::string LinkedList<T>::toString()
 {
@@ -203,6 +231,50 @@ std::string LinkedList<T>::toString()
         }
     }
     return output + "]";
+}
+
+template<typename type>
+bool LinkedList<type>::remove(type element)
+{
+    if(isEmpty())
+    {
+        return false;
+    }
+    auto buffer = guard->getNext();
+    for(int i = 0; i < length; i++)
+    {
+        if(buffer->getContent() == element)
+        {
+            if(i == --length)
+            {
+                lastIndex = buffer->getPrevious();
+            }
+            buffer->remove();
+            return true;
+        }
+        buffer = buffer->getNext();
+    }
+    return false;
+}
+
+template<typename type>
+void LinkedList<type>::putAfter(type whereToPut, type elementToAdd)
+{
+    auto buffer = guard->getNext();
+    for(int i = 0; i < length; i++)
+    {
+        if(buffer->getContent() == whereToPut)
+        {
+            buffer->putAfter(elementToAdd);
+            if(i == length - 1)
+            {
+                lastIndex = buffer->getNext();
+            }
+            return;
+        }
+        buffer = buffer->getNext();
+    }
+    pushFront(elementToAdd);
 }
 
 #endif //SDIZO_1_LINKEDLIST_H

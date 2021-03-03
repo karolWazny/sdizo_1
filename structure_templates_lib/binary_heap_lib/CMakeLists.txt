@@ -3,7 +3,8 @@ project(binary_heap_lib)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(HEADER_FILES)
+set(HEADER_FILES
+        BinaryHeap.h)
 
 set(SOURCE_FILES
         index.cpp)

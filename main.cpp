@@ -16,11 +16,16 @@ int main() {
     std::cout << std::endl;
     LinkedList<int> lista = LinkedList<int>();
     for (int i = 0; i < 30; i++) {
-        lista.pushBack(i);
+        lista.pushFront(i);
     }
-    lista.removeLast();
     std::cout << lista.toString();
     std::cout << std::endl;
+    std::cout << lista.remove(7) << std::endl;
+    std::cout << lista.toString();
+    lista.removeLast();
+    lista.removeFirst();
+    std::cout << std::endl;
     lista.get(10);
+    lista.putAfter(10, 44);
     std::cout << lista.toString();
 }
