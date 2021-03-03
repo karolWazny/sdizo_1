@@ -5,13 +5,83 @@
 #ifndef SDIZO_1_BINARYHEAP_H
 #define SDIZO_1_BINARYHEAP_H
 
+#include <memory>
+
 template <typename T>
 class BinaryHeap
 {
 public:
+    BinaryHeap();
     void add(T element);
     void remove(T element);
-    
+    bool contains(T element);
+private:
+    std::unique_ptr<T[]> content;
+    int size;
+    void reallocateContent();
+    void cascadeUp();
+    void swap(const int position1, const int position2);
+    int calculateParentPosition(const int childPosition);
 };
+
+template<typename T>
+BinaryHeap<T>::BinaryHeap() {
+    size = 0;
+    reallocateContent();
+}
+
+template<typename T>
+void BinaryHeap<T>::add(T element) {
+    size++;
+    reallocateContent();
+    content[size - 1] = element;
+    cascadeUp();
+}
+
+template<typename T>
+void BinaryHeap<T>::reallocateContent() {
+    auto buffer = std::make_unique<T[]>(size);
+    for(int i = 0; i < size; i++)
+    {
+        buffer[i] = content[i];
+    }
+    content = std::move(buffer);
+}
+
+template<typename T>
+void BinaryHeap<T>::cascadeUp() {
+    int childPosition = size - 1;
+    int parentPosition = calculateParentPosition(childPosition);
+    bool heapPropertyRestored = (content[childPosition] <= content[parentPosition]);
+    while (!heapPropertyRestored)
+    {
+        swap(childPosition, parentPosition);
+        childPosition = parentPosition;
+        parentPosition = calculateParentPosition(childPosition);
+        heapPropertyRestored = (content[childPosition] <= content[parentPosition]);
+    }
+}
+
+template<typename T>
+void BinaryHeap<T>::swap(const int position1, const int position2) {
+    T buffer = content[position1];
+    content[position1] = content[position2];
+    content[position2] = buffer;
+}
+
+template<typename T>
+int BinaryHeap<T>::calculateParentPosition(const int childPosition) {
+    int parentPosition = (childPosition - 1) >> 1;
+    if(parentPosition < 0)
+    {
+        parentPosition = 0;
+    }
+    return parentPosition;
+}
+
+template<typename T>
+void BinaryHeap<T>::remove(T element) {
+
+}
 
 #endif //SDIZO_1_BINARYHEAP_H
