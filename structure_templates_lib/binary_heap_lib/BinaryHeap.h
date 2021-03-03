@@ -22,6 +22,9 @@ private:
     void cascadeUp();
     void swap(const int position1, const int position2);
     int calculateParentPosition(const int childPosition);
+    int findPositionOfElementInSubtree(const int subtreeRootPosition, T element);
+    int calculateLeftChildPosition(const int parentPosition);
+    int calculateRigthChildPositiont(const int parentposition);
 };
 
 template<typename T>
@@ -82,6 +85,41 @@ int BinaryHeap<T>::calculateParentPosition(const int childPosition) {
 template<typename T>
 void BinaryHeap<T>::remove(T element) {
 
+}
+
+template<typename T>
+int BinaryHeap<T>::findPositionOfElementInSubtree(const int subtreeRootPosition, T element) {
+    if((subtreeRootPosition >= size) || (content[subtreeRootPosition] < element))
+    {
+        return -1;
+    }
+    if(content[subtreeRootPosition] == element)
+    {
+        return subtreeRootPosition;
+    }
+    int buffer = findPositionOfElementInSubtree(calculateLeftChildPosition(subtreeRootPosition),
+                                                element);
+    if(buffer > -1)
+    {
+        return buffer;
+    }
+    return findPositionOfElementInSubtree(calculateRigthChildPositiont(subtreeRootPosition),
+                                          element);
+}
+
+template<typename T>
+int BinaryHeap<T>::calculateLeftChildPosition(const int parentPosition) {
+    return (parentPosition << 1) + 1;
+}
+
+template<typename T>
+int BinaryHeap<T>::calculateRigthChildPositiont(const int parentposition) {
+    return calculateLeftChildPosition(parentposition) + 1;
+}
+
+template<typename T>
+bool BinaryHeap<T>::contains(T element) {
+    return findPositionOfElementInSubtree(0, element) > -1;
 }
 
 #endif //SDIZO_1_BINARYHEAP_H
