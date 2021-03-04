@@ -4,7 +4,8 @@ project(red_black_tree_lib)
 set(CMAKE_CXX_STANDARD 14)
 
 set(HEADER_FILES
-        )
+        RedBlackTree.h
+        RedBlackNode.h)
 
 set(SOURCE_FILES
         index.cpp)

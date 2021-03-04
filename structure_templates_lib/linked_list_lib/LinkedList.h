@@ -7,6 +7,7 @@
 
 #include "LinkedListItem.h"
 #include <string>
+
 template <typename type>
 class LinkedList
 {
@@ -14,7 +15,7 @@ public:
     void addAtPosition(type, int);
     void putAfter(type whereToPut, type elementToAdd);
     void swap(int, int) noexcept (false);
-    type removeAt(int position);
+    type removeAt(int index);
     bool remove(type element);
     void pushBack(type);
     void pushFront(type);

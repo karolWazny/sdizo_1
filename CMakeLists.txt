@@ -9,3 +9,5 @@ include_directories(structure_templates_lib)
 add_subdirectory(structure_templates_lib)
 
 target_link_libraries(sdizo_1 structure_templates_lib)
+
+add_subdirectory(Google_tests)
