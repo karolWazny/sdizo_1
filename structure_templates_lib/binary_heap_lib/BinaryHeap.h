@@ -20,11 +20,12 @@ private:
     int size;
     void reallocateContent();
     void cascadeUp();
-    void swap(const int position1, const int position2);
-    int calculateParentPosition(const int childPosition);
-    int findPositionOfElementInSubtree(const int subtreeRootPosition, T element);
-    int calculateLeftChildPosition(const int parentPosition);
-    int calculateRigthChildPositiont(const int parentposition);
+    void cascadeDownFrom(int position);
+    void swap(int position1, int position2);
+    int calculateParentPosition(int childPosition);
+    int findPositionOfElementInSubtree(int subtreeRootPosition, T element);
+    int calculateLeftChildPosition(int parentPosition);
+    int calculateRigthChildPositiont(int parentposition);
 };
 
 template<typename T>
@@ -84,7 +85,11 @@ int BinaryHeap<T>::calculateParentPosition(const int childPosition) {
 
 template<typename T>
 void BinaryHeap<T>::remove(T element) {
-
+    int position = findPositionOfElementInSubtree(0, element);
+    content[position] = INT_MIN;
+    cascadeDownFrom(position);
+    size--;
+    reallocateContent();
 }
 
 template<typename T>
@@ -120,6 +125,29 @@ int BinaryHeap<T>::calculateRigthChildPositiont(const int parentposition) {
 template<typename T>
 bool BinaryHeap<T>::contains(T element) {
     return findPositionOfElementInSubtree(0, element) > -1;
+}
+
+template<typename T>
+void BinaryHeap<T>::cascadeDownFrom(const int position) {
+    int rightChildPosition = calculateRigthChildPositiont(position);
+    int leftChildPosition = calculateLeftChildPosition(position);
+    int biggerChildPosition;
+    if(leftChildPosition >= size)
+    {
+        return;
+    }
+    if(rightChildPosition >= size)
+    {
+        biggerChildPosition = leftChildPosition;
+    } else
+    {
+        biggerChildPosition = (content[leftChildPosition] > content[rightChildPosition] ? leftChildPosition : rightChildPosition);
+    }
+    if(content[biggerChildPosition] > content[position])
+    {
+        swap(biggerChildPosition, position);
+        cascadeDownFrom(biggerChildPosition);
+    }
 }
 
 #endif //SDIZO_1_BINARYHEAP_H

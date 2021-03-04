@@ -8,4 +8,8 @@ int main() {
     heap.add(5);
     heap.add(4);
     heap.add(6);
+    std::cout << heap.contains(3) << std::endl;
+    std::cout << heap.contains(4) << std::endl;
+    heap.remove(4);
+    std::cout << heap.contains(4) << std::endl;
 }
