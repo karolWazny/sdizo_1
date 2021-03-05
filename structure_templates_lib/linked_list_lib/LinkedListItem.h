@@ -11,8 +11,21 @@ private:
     type content;
     std::shared_ptr<INextable<type>> next;
     void putAfter(INextable<type>);
+    class Swapper
+    {
+    public:
+        explicit Swapper(LinkedListItem<type>* owningItem);
+        void swapWith(std::shared_ptr<INextable<type>>);
+    private:
+        LinkedListItem<type>* owner;
+        std::shared_ptr<INextable<type>> replacement;
+        void swapPointersInPredecessors();
+        void swapPointersToConsequents();
+        void swapPointersInConsequents();
+        void swapPointersToPredecessors();
+    };
 public:
-    LinkedListItem(type);
+    explicit LinkedListItem(type);
     LinkedListItem(type, std::shared_ptr<INextable<type>>);
     type getContent() override;
     std::shared_ptr<INextable<type>> getNext() override;
@@ -24,6 +37,52 @@ public:
     void swap(std::shared_ptr<INextable<type>>) override;
     bool hasNext() override;
 };
+
+template<typename type>
+LinkedListItem<type>::Swapper::Swapper(LinkedListItem<type> *owningItem) {
+    owner = owningItem;
+}
+
+template<typename type>
+void LinkedListItem<type>::Swapper::swapWith(std::shared_ptr<INextable<type>>replacement) {
+    this->replacement = replacement;
+    auto replacementConsequent = replacement->getNext();
+    swapPointersInPredecessors();
+    swapPointersToConsequents();
+    swapPointersInConsequents();
+    swapPointersToPredecessors();
+}
+
+template<typename type>
+void LinkedListItem<type>::Swapper::swapPointersInPredecessors() {
+    auto replacementPredecessor = replacement->getPrevious();
+    replacementPredecessor->setNext(owner->previous.lock()->getNext());
+    owner->previous.lock()->setNext(replacement);
+}
+
+template<typename type>
+void LinkedListItem<type>::Swapper::swapPointersToConsequents() {
+    auto pointerBuffer = replacement->getNext();
+    replacement->setNext(owner->next);
+    owner->next = pointerBuffer;
+}
+
+template<typename type>
+void LinkedListItem<type>::Swapper::swapPointersInConsequents() {
+    auto pointerBuffer = replacement->getNext()->getPrevious();
+    if(owner->hasNext())
+    {
+        owner->next->setPrevious(pointerBuffer);
+    }
+    replacement->getNext()->setPrevious(replacement);
+}
+
+template<typename type>
+void LinkedListItem<type>::Swapper::swapPointersToPredecessors() {
+    auto pointerBuffer = replacement->getPrevious();
+    replacement->setPrevious(owner->previous);
+    owner->previous = pointerBuffer;
+}
 
 template <typename T>
 bool LinkedListItem<T>::hasNext()
@@ -43,20 +102,9 @@ std::shared_ptr<INextable<T>> LinkedListItem<T>::getNext() {
 
 template<typename type>
 void LinkedListItem<type>::swap(std::shared_ptr<INextable<type>>replacement) {
-    auto elem_0 = replacement->getPrevious();
-    auto elem_2 = replacement->getNext();
-    auto buffer_1 = elem_0->getNext();
-    elem_0->setNext(this->previous.lock()->getNext());
-    this->previous.lock()->setNext(buffer_1);
-    buffer_1 = replacement->getNext();
-    replacement->setNext(this->next);
-    this->next = buffer_1;
-    auto buffer_2 = this->next->getPrevious();
-    this->next->setPrevious(elem_2->getPrevious());
-    elem_2->setPrevious(buffer_2);
-    buffer_2 = replacement->getPrevious();
-    replacement->setPrevious(this->previous);
-    this->previous = buffer_2;
+
+    Swapper swapper = Swapper(this);
+    swapper.swapWith(replacement);
 }
 
 template<typename type>

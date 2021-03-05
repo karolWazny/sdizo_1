@@ -12,6 +12,7 @@ template <typename type>
 class LinkedList
 {
 public:
+    bool contains(type element);
     void addAtPosition(type, int);
     void putAfter(type whereToPut, type elementToAdd);
     void swap(int, int) noexcept (false);
@@ -95,6 +96,10 @@ void LinkedList<type>::swap(int index1, int index2) noexcept(false)
     }
     auto item_2 = buffer;
     item_1->swap(item_2);
+    if(index2 == length - 1)
+    {
+        lastIndex = item_1;
+    }
 }
 
 template<typename type>
@@ -276,6 +281,20 @@ void LinkedList<type>::putAfter(type whereToPut, type elementToAdd)
         buffer = buffer->getNext();
     }
     pushFront(elementToAdd);
+}
+
+template<typename type>
+bool LinkedList<type>::contains(type element) {
+    std::shared_ptr<INextable<type>> currentItem = guard;
+    while (currentItem->hasNext())
+    {
+        currentItem = currentItem->getNext();
+        if(currentItem->getContent() == element)
+        {
+            return true;
+        }
+    }
+    return false;
 }
 
 #endif //SDIZO_1_LINKEDLIST_H
