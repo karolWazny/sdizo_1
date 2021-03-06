@@ -5,7 +5,9 @@ set(CMAKE_CXX_STANDARD 14)
 
 set(HEADER_FILES
         RedBlackTree.h
-        RedBlackNode.h)
+        RedBlackNodeImpl.h
+        RedBlackNode.h
+        RedBlackSentinel.h)
 
 set(SOURCE_FILES
         index.cpp)

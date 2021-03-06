@@ -5,10 +5,11 @@
 #ifndef SDIZO_1_REDBLACKTREE_H
 #define SDIZO_1_REDBLACKTREE_H
 
-#include "RedBlackNode.h"
+#include "RedBlackNodeImpl.h"
+#include "RedBlackSentinel.h"
 
 template <typename T>
-using Node = RedBlackNode<T>;
+using Node = RedBlackNodeImpl<T>;
 
 template <typename T>
 class RedBlackTree
@@ -20,19 +21,21 @@ public:
     bool contains(T key);
 private:
     NodePointer<T> standardBinaryTreeInsert(T key);
-    NodePointer<T> root;
+    void restoreRedBlackPropertyStartingFrom(NodePointer<T> initialNode);
+    NodePointer<T> sentinel;
     int numberOfElements;
 };
 
 template<typename T>
 RedBlackTree<T>::RedBlackTree() {
-    root = NodePointer<T>(nullptr);
+    sentinel = NodePointer<T>(new RedBlackSentinel<T>());
     numberOfElements = 0;
 }
 
 template<typename T>
 void RedBlackTree<T>::insert(T key) {
-    standardBinaryTreeInsert(key);
+    auto z = standardBinaryTreeInsert(key);
+    restoreRedBlackPropertyStartingFrom(z);
     numberOfElements++;
 }
 
@@ -43,19 +46,19 @@ int RedBlackTree<T>::getSize() {
 
 template<typename T>
 NodePointer<T> RedBlackTree<T>::standardBinaryTreeInsert(T key) {
-    if(numberOfElements == 0)
-    {
-        root = NodePointer<T>(new Node<T>(nullptr, key));
-        return root;
-    }
-    NodePointer<T> addedNode(new Node<T>(root, key));
-    root->insertAfter(addedNode);
+    NodePointer<T> addedNode(new Node<T>(sentinel, key));
+    sentinel->insertAfter(addedNode);
     return addedNode;
 }
 
 template<typename T>
 bool RedBlackTree<T>::contains(T key) {
-    return root->subtreeContains(key);
+    return sentinel->subtreeContains(key);
+}
+
+template<typename T>
+void RedBlackTree<T>::restoreRedBlackPropertyStartingFrom(NodePointer<T> initialNode) {
+    initialNode->restoreRedBlackProperty();
 }
 
 #endif //SDIZO_1_REDBLACKTREE_H
