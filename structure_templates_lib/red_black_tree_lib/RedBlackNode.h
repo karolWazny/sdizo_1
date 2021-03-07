@@ -5,6 +5,8 @@
 #ifndef SDIZO_1_REDBLACKNODE_H
 #define SDIZO_1_REDBLACKNODE_H
 
+#include "RedBlackRotator.h"
+
 template <typename T>
 class RedBlackNode;
 
@@ -27,8 +29,12 @@ public:
     virtual bool isRed() = 0;
     virtual void paintBlack() = 0;
     virtual void paintRed() = 0;
-    virtual void restoreRedBlackProperty() = 0;
     virtual T getKey() = 0;
+    virtual bool isRightChild() = 0;
+    virtual void setRightChild(NodePointer<T>) = 0;
+    virtual void setLeftChild(NodePointer<T>) = 0;
+    virtual void rotateParent() = 0;
+private:
 };
 
 #endif //SDIZO_1_REDBLACKNODE_H

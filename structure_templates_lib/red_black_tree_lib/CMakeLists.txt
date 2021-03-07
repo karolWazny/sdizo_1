@@ -7,7 +7,9 @@ set(HEADER_FILES
         RedBlackTree.h
         RedBlackNodeImpl.h
         RedBlackNode.h
-        RedBlackSentinel.h)
+        RedBlackSentinel.h
+        RedBlackRotator.h
+        RedBlackPropertyRestorer.h)
 
 set(SOURCE_FILES
         index.cpp)

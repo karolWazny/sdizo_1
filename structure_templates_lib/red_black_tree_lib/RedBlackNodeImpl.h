@@ -22,7 +22,6 @@ public:
     void insertAfter(NodePointer<T> newNode) override;
     bool subtreeContains(T key) override;
     bool isRed() override;
-    void restoreRedBlackProperty() override;
     T getKey() override;
 private:
     T key;
@@ -37,6 +36,8 @@ private:
     NodeWeakPtr<T> parent;
     NodePointer<T> getRightChild() override;
     NodePointer<T> getLeftChild() override;
+    void setRightChild(NodePointer<T> rightChild) override;
+    void setLeftChild(NodePointer<T> leftChild) override;
     RedBlackNodeImpl(NodePointer<T> parent, T key);
     void insertLeftwards(NodePointer<T> newNode);
     void insertRightwards(NodePointer<T> newNode);
@@ -53,7 +54,7 @@ private:
     bool isChild();
     void paintRed();
     void paintBlack();
-    void rotateRight();
+    void rotateParent();
 };
 
 template<typename T>
@@ -168,31 +169,6 @@ NodePointer<T> RedBlackNodeImpl<T>::getUncle() {
 }
 
 template<typename T>
-void RedBlackNodeImpl<T>::restoreRedBlackProperty() {
-    if(!parentIsRed())
-    {
-        return;
-    }
-    if(uncleIsRed())
-    {
-        auto uncle = getUncle();
-        uncle->paintBlack();
-        getParent()->paintBlack();
-        auto grandpa = uncle->getParent();
-        grandpa->paintRed();
-        grandpa->restoreRedBlackProperty();
-        return;
-    }
-    /*if(!isRightChild())
-    {
-        getParent()->paintBlack();
-        auto grandpa = getParent()->getParent();
-        grandpa->paintRed();
-        grandpa->rotateRight();
-    }*/
-}
-
-template<typename T>
 void RedBlackNodeImpl<T>::paintRed() {
     color = Color::RED;
 }
@@ -217,7 +193,7 @@ bool RedBlackNodeImpl<T>::isRightChild() {
     {
         return false;
     }
-    auto parentKey = getParent()->key;
+    auto parentKey = getParent()->getKey();
     return (this->key >= parentKey);
 }
 
@@ -236,13 +212,6 @@ bool RedBlackNodeImpl<T>::parentIsRed() {
 }
 
 template<typename T>
-void RedBlackNodeImpl<T>::rotateRight() {
-    auto bufferForLeftKid = leftChild;
-    leftChild = leftChild->rightChild;
-
-}
-
-template<typename T>
 T RedBlackNodeImpl<T>::getKey() {
     return key;
 }
@@ -256,6 +225,31 @@ template<typename T>
 NodePointer<T> RedBlackNodeImpl<T>::getLeftChild() {
     return leftChild;
 }
+
+template<typename T>
+void RedBlackNodeImpl<T>::setRightChild(NodePointer<T> rightChild) {
+    this->rightChild = rightChild;
+}
+
+template<typename T>
+void RedBlackNodeImpl<T>::setLeftChild(NodePointer<T> leftChild) {
+    this->leftChild = leftChild;
+}
+
+template<typename T>
+void RedBlackNodeImpl<T>::rotateParent() {
+    RedBlackRotator<T> rotator = RedBlackRotator<T>(getParent());
+    if(isRightChild())
+    {
+        rotator.rotateLeft();
+        return;
+    } else
+    {
+      rotator.rotateRight();
+      return;
+    }
+}
+
 
 #endif //SDIZO_1_REDBLACKTREE_H
 #endif //SDIZO_1_REDBLACKNODEIMPL_H

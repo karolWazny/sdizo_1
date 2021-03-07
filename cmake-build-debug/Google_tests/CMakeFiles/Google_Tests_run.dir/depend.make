@@ -48,6 +48,8 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\Googl
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-type-util.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\RedBlackNode.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\RedBlackNodeImpl.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\RedBlackPropertyRestorer.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\RedBlackRotator.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\RedBlackSentinel.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\RedBlackTree.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\Google_tests\RedBlackTreeTests.cpp

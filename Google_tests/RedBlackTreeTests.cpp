@@ -26,6 +26,7 @@ TEST(RedBlackTestSuite, ContainsFalse){
     tree.insert(56);
     tree.insert(10);
     tree.insert(18);
+    tree.insert(19);
     ASSERT_FALSE(tree.contains(6));
 }
 

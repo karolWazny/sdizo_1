@@ -7,6 +7,7 @@
 
 #include "RedBlackNodeImpl.h"
 #include "RedBlackSentinel.h"
+#include "RedBlackPropertyRestorer.h"
 
 template <typename T>
 using Node = RedBlackNodeImpl<T>;
@@ -58,7 +59,8 @@ bool RedBlackTree<T>::contains(T key) {
 
 template<typename T>
 void RedBlackTree<T>::restoreRedBlackPropertyStartingFrom(NodePointer<T> initialNode) {
-    initialNode->restoreRedBlackProperty();
+    RedBlackPropertyRestorer<T> restorer = RedBlackPropertyRestorer<T>(initialNode);
+    restorer.restore();
 }
 
 #endif //SDIZO_1_REDBLACKTREE_H

@@ -22,8 +22,11 @@ public:
     bool isRed();
     void paintBlack();
     void paintRed();
-    void restoreRedBlackProperty();
     T getKey();
+    bool isRightChild();
+    void setRightChild(NodePointer<T>);
+    void setLeftChild(NodePointer<T>);
+    void rotateParent() override;
 private:
     NodePointer<T> root;
 };
@@ -45,12 +48,12 @@ std::shared_ptr <RedBlackNode<T>> RedBlackSentinel<T>::getSibling() {
 
 template<typename T>
 std::shared_ptr <RedBlackNode<T>> RedBlackSentinel<T>::getRightChild() {
-    return root;
+    return nullptr;
 }
 
 template<typename T>
 std::shared_ptr <RedBlackNode<T>> RedBlackSentinel<T>::getLeftChild() {
-    return root;
+    return nullptr;
 }
 
 template<typename T>
@@ -85,11 +88,6 @@ void RedBlackSentinel<T>::paintRed() {
 }
 
 template<typename T>
-void RedBlackSentinel<T>::restoreRedBlackProperty() {
-    //do nothing
-}
-
-template<typename T>
 T RedBlackSentinel<T>::getKey() {
     return NULL;
 }
@@ -97,6 +95,26 @@ T RedBlackSentinel<T>::getKey() {
 template<typename T>
 RedBlackSentinel<T>::RedBlackSentinel() {
     root = NodePointer<T>(nullptr);
+}
+
+template<typename T>
+bool RedBlackSentinel<T>::isRightChild() {
+    return false;
+}
+
+template<typename T>
+void RedBlackSentinel<T>::setRightChild(NodePointer<T> child) {
+    root = child;
+}
+
+template<typename T>
+void RedBlackSentinel<T>::setLeftChild(NodePointer<T> child) {
+    root = child;
+}
+
+template<typename T>
+void RedBlackSentinel<T>::rotateParent() {
+
 }
 
 #endif //SDIZO_1_REDBLACKSENTINEL_H

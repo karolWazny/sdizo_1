@@ -331,12 +331,20 @@ acxx_demangle.h
 -
 
 ../structure_templates_lib/red_black_tree_lib/RedBlackNode.h
+RedBlackRotator.h
+../structure_templates_lib/red_black_tree_lib/RedBlackRotator.h
 
 ../structure_templates_lib/red_black_tree_lib/RedBlackNodeImpl.h
 memory
 -
 RedBlackNode.h
 ../structure_templates_lib/red_black_tree_lib/RedBlackNode.h
+
+../structure_templates_lib/red_black_tree_lib/RedBlackPropertyRestorer.h
+RedBlackNode.h
+../structure_templates_lib/red_black_tree_lib/RedBlackNode.h
+
+../structure_templates_lib/red_black_tree_lib/RedBlackRotator.h
 
 ../structure_templates_lib/red_black_tree_lib/RedBlackSentinel.h
 RedBlackNode.h
@@ -347,6 +355,8 @@ RedBlackNodeImpl.h
 ../structure_templates_lib/red_black_tree_lib/RedBlackNodeImpl.h
 RedBlackSentinel.h
 ../structure_templates_lib/red_black_tree_lib/RedBlackSentinel.h
+RedBlackPropertyRestorer.h
+../structure_templates_lib/red_black_tree_lib/RedBlackPropertyRestorer.h
 
 D:/projects/clion/sdizo_1/Google_tests/RedBlackTreeTests.cpp
 gtest/gtest.h
