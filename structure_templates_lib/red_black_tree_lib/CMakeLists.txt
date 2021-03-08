@@ -9,7 +9,8 @@ set(HEADER_FILES
         RedBlackNode.h
         RedBlackSentinel.h
         RedBlackRotator.h
-        RedBlackPropertyRestorer.h)
+        RedBlackPropertyRestorer.h
+        UsefulEnums.h)
 
 set(SOURCE_FILES
         index.cpp)

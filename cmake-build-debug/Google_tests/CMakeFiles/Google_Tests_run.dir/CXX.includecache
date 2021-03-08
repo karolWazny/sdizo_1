@@ -339,12 +339,18 @@ memory
 -
 RedBlackNode.h
 ../structure_templates_lib/red_black_tree_lib/RedBlackNode.h
+UsefulEnums.h
+../structure_templates_lib/red_black_tree_lib/UsefulEnums.h
 
 ../structure_templates_lib/red_black_tree_lib/RedBlackPropertyRestorer.h
 RedBlackNode.h
 ../structure_templates_lib/red_black_tree_lib/RedBlackNode.h
+UsefulEnums.h
+../structure_templates_lib/red_black_tree_lib/UsefulEnums.h
 
 ../structure_templates_lib/red_black_tree_lib/RedBlackRotator.h
+UsefulEnums.h
+../structure_templates_lib/red_black_tree_lib/UsefulEnums.h
 
 ../structure_templates_lib/red_black_tree_lib/RedBlackSentinel.h
 RedBlackNode.h
@@ -357,6 +363,8 @@ RedBlackSentinel.h
 ../structure_templates_lib/red_black_tree_lib/RedBlackSentinel.h
 RedBlackPropertyRestorer.h
 ../structure_templates_lib/red_black_tree_lib/RedBlackPropertyRestorer.h
+
+../structure_templates_lib/red_black_tree_lib/UsefulEnums.h
 
 D:/projects/clion/sdizo_1/Google_tests/RedBlackTreeTests.cpp
 gtest/gtest.h

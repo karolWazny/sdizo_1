@@ -53,4 +53,5 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/RedBlackTreeTests.cpp.obj
  ../structure_templates_lib/red_black_tree_lib/RedBlackRotator.h
  ../structure_templates_lib/red_black_tree_lib/RedBlackSentinel.h
  ../structure_templates_lib/red_black_tree_lib/RedBlackTree.h
+ ../structure_templates_lib/red_black_tree_lib/UsefulEnums.h
  D:/projects/clion/sdizo_1/Google_tests/RedBlackTreeTests.cpp

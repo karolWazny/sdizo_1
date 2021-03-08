@@ -6,24 +6,28 @@
 #define SDIZO_1_REDBLACKPROPERTYRESTORER_H
 
 #include "RedBlackNode.h"
+#include "UsefulEnums.h"
 
 template <typename T>
 class RedBlackPropertyRestorer
 {
 public:
     RedBlackPropertyRestorer() = delete;
-    RedBlackPropertyRestorer(NodePointer<T> nodeZ);
+    explicit RedBlackPropertyRestorer(NodePointer<T> nodeZ);
     void restore();
 private:
-    enum class Side : char
-    {
-        RIGHT,
-        LEFT
-    };
     NodePointer<T> nodeZ;
     NodePointer<T> zParent;
     Side parentSide;
     Side getChildSide(NodePointer<T> child);
+    bool zHasRedUncle();
+    bool zIsSentinel();
+    void moveRednessUpFromZParentAndUncle();
+    void moveRednessFromParentUp();
+    void restoreFromZGrandpaUp();
+    bool zIsSameSideAsFather();
+    void rotateZParent();
+    void restoreFromParentUp();
 };
 
 template <typename T>
@@ -36,35 +40,84 @@ RedBlackPropertyRestorer<T>::RedBlackPropertyRestorer(NodePointer<T> nodeZ)
 
 template<typename T>
 void RedBlackPropertyRestorer<T>::restore() {
-    if(!(zParent->isRed()))
+    if(!(zParent->isRed()) || zIsSentinel())
     {
         return;
     }
-    if(zParent->getSibling() != nullptr && zParent->getSibling()->isRed())
+    else if(zHasRedUncle())
     {
-        zParent->paintBlack();
-        zParent->getSibling()->paintBlack();
-        zParent->getParent()->paintRed();
-        auto restorer = RedBlackPropertyRestorer<T>(zParent->getParent());
-        restorer.restore();
-        return;
-        //logikę z tego bloku wypindolić do NodeImpl
-    }
-    if(parentSide != getChildSide(nodeZ))
-    {
-        nodeZ->rotateParent();
-        auto restorer = RedBlackPropertyRestorer<T>(zParent);
-        restorer.restore();
+        moveRednessUpFromZParentAndUncle();
+        restoreFromZGrandpaUp();
         return;
     }
-    zParent->paintBlack();
-    zParent->getParent()->paintRed();
-    zParent->rotateParent();
+    else if(zIsSameSideAsFather())
+    {
+        rotateZParent();
+        restoreFromParentUp();
+        return;
+    }
+    else
+    {
+        moveRednessFromParentUp();
+        rotateZParent();
+    }
 }
 
 template<typename T>
-typename RedBlackPropertyRestorer<T>::Side RedBlackPropertyRestorer<T>::getChildSide(NodePointer<T> child) {
+Side RedBlackPropertyRestorer<T>::getChildSide(NodePointer<T> child)
+{
     return (child->isRightChild() ? Side::RIGHT : Side::LEFT);
+}
+
+template<typename T>
+bool RedBlackPropertyRestorer<T>::zHasRedUncle()
+{
+    return nodeZ->uncleIsRed();
+}
+
+template<typename T>
+bool RedBlackPropertyRestorer<T>::zIsSentinel()
+{
+    return !nodeZ->isChild();
+}
+
+template<typename T>
+void RedBlackPropertyRestorer<T>::moveRednessUpFromZParentAndUncle()
+{
+    moveRednessFromParentUp();
+    zParent->getSibling()->paintBlack();
+}
+
+template<typename T>
+void RedBlackPropertyRestorer<T>::restoreFromZGrandpaUp()
+{
+    auto restorer = RedBlackPropertyRestorer<T>(zParent->getParent());
+    restorer.restore();
+}
+
+template<typename T>
+bool RedBlackPropertyRestorer<T>::zIsSameSideAsFather()
+{
+    return parentSide != getChildSide(nodeZ);
+}
+
+template<typename T>
+void RedBlackPropertyRestorer<T>::rotateZParent()
+{
+    nodeZ->rotateParent();
+}
+
+template<typename T>
+void RedBlackPropertyRestorer<T>::restoreFromParentUp()
+{
+    auto restorer = RedBlackPropertyRestorer<T>(zParent);
+    restorer.restore();
+}
+
+template<typename T>
+void RedBlackPropertyRestorer<T>::moveRednessFromParentUp() {
+    zParent->paintBlack();
+    zParent->getParent()->paintRed();
 }
 
 #endif //SDIZO_1_REDBLACKPROPERTYRESTORER_H

@@ -8,6 +8,7 @@
 
 #include <memory>
 #include "RedBlackNode.h"
+#include "UsefulEnums.h"
 
 template <typename T>
 class RedBlackTree;
@@ -25,11 +26,6 @@ public:
     T getKey() override;
 private:
     T key;
-    enum class Color : char
-    {
-        RED,
-        BLACK
-    };
     Color color;
     NodePointer<T> leftChild;
     NodePointer<T> rightChild;
@@ -47,11 +43,8 @@ private:
     bool subtreeOnTheSideOfContains(T key, NodePointer<T>& child);
     NodePointer<T> getParent();
     NodePointer<T> getSibling();
-    NodePointer<T> getUncle();
     bool parentIsRed();
-    bool uncleIsRed();
     bool isRightChild();
-    bool isChild();
     void paintRed();
     void paintBlack();
     void rotateParent();
@@ -160,35 +153,20 @@ NodePointer<T> RedBlackNodeImpl<T>::getSibling() {
 }
 
 template<typename T>
-NodePointer<T> RedBlackNodeImpl<T>::getUncle() {
-    if(!isChild())
-    {
-        return NodePointer<T>(nullptr);
-    }
-    return getParent()->getSibling();
-}
-
-template<typename T>
-void RedBlackNodeImpl<T>::paintRed() {
+void RedBlackNodeImpl<T>::paintRed()
+{
     color = Color::RED;
 }
 
 template<typename T>
-void RedBlackNodeImpl<T>::paintBlack() {
+void RedBlackNodeImpl<T>::paintBlack()
+{
     color = Color::BLACK;
 }
 
 template<typename T>
-bool RedBlackNodeImpl<T>::uncleIsRed() {
-    auto uncle = getUncle();
-    if (!uncle) {
-        return false;
-    }
-    return uncle->isRed();
-}
-
-template<typename T>
-bool RedBlackNodeImpl<T>::isRightChild() {
+bool RedBlackNodeImpl<T>::isRightChild()
+{
     if(!isChild())
     {
         return false;
@@ -196,14 +174,9 @@ bool RedBlackNodeImpl<T>::isRightChild() {
     auto parentKey = getParent()->getKey();
     return (this->key >= parentKey);
 }
-
 template<typename T>
-bool RedBlackNodeImpl<T>::isChild() {
-    return getParent() != nullptr;
-}
-
-template<typename T>
-bool RedBlackNodeImpl<T>::parentIsRed() {
+bool RedBlackNodeImpl<T>::parentIsRed()
+{
     if(isChild())
     {
         return getParent()->isRed();
@@ -212,38 +185,45 @@ bool RedBlackNodeImpl<T>::parentIsRed() {
 }
 
 template<typename T>
-T RedBlackNodeImpl<T>::getKey() {
+T RedBlackNodeImpl<T>::getKey()
+{
     return key;
 }
 
 template<typename T>
-NodePointer<T> RedBlackNodeImpl<T>::getRightChild() {
+NodePointer<T> RedBlackNodeImpl<T>::getRightChild()
+{
     return rightChild;
 }
 
 template<typename T>
-NodePointer<T> RedBlackNodeImpl<T>::getLeftChild() {
+NodePointer<T> RedBlackNodeImpl<T>::getLeftChild()
+{
     return leftChild;
 }
 
 template<typename T>
-void RedBlackNodeImpl<T>::setRightChild(NodePointer<T> rightChild) {
+void RedBlackNodeImpl<T>::setRightChild(NodePointer<T> rightChild)
+{
     this->rightChild = rightChild;
 }
 
 template<typename T>
-void RedBlackNodeImpl<T>::setLeftChild(NodePointer<T> leftChild) {
+void RedBlackNodeImpl<T>::setLeftChild(NodePointer<T> leftChild)
+{
     this->leftChild = leftChild;
 }
 
 template<typename T>
-void RedBlackNodeImpl<T>::rotateParent() {
+void RedBlackNodeImpl<T>::rotateParent()
+{
     RedBlackRotator<T> rotator = RedBlackRotator<T>(getParent());
     if(isRightChild())
     {
         rotator.rotateLeft();
         return;
-    } else
+    }
+    else
     {
       rotator.rotateRight();
       return;

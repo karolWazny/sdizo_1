@@ -5,6 +5,8 @@
 #ifndef SDIZO_1_REDBLACKROTATOR_H
 #define SDIZO_1_REDBLACKROTATOR_H
 
+#include "UsefulEnums.h"
+
 template <typename T>
 class RedBlackNode;
 
@@ -20,6 +22,13 @@ public:
     void rotateRight();
     void rotateLeft();
 private:
+    Side rotationDirection;
+    bool nodeBeingRotatedIsRightChild();
+    void moveNodesChildUp();
+    void rotate();
+    void obtainProperChild();
+    void moveNodeBeingRotatedDown();
+    void transferSubtreeBetweenNodes();
     NodePointer<T> nodeToRotate;
     NodePointer<T> nodesParent;
     NodePointer<T> nodesChild;
@@ -35,42 +44,25 @@ RedBlackRotator<T>::RedBlackRotator(NodePointer<T> nodeToRotate)
 template<typename T>
 void RedBlackRotator<T>::rotateRight()
 {
-    if(!nodesParent)
-    {
-        return;
-    }
-    nodesChild = nodeToRotate->getLeftChild();
-    bool nodeBeingRotatedIsRightChild = nodeToRotate->isRightChild();
-    //wypłynięcie lewego syna w górę
-    if(nodeBeingRotatedIsRightChild)
-    {
-        nodesParent->setRightChild(nodesChild);
-    } else
-    {
-        nodesParent->setLeftChild(nodesChild);
-    }
-    nodesChild->setParent(nodesParent);
-    //
-    nodeToRotate->setLeftChild(nodesChild->getRightChild());
-    if(nodeToRotate->getLeftChild())
-    {
-        nodeToRotate->getLeftChild()->setParent(nodeToRotate);
-    }
-    nodesChild->setRightChild(nodeToRotate);
-    nodeToRotate->setParent(nodesChild);
+    rotationDirection = Side::RIGHT;
+    rotate();
 }
 
 template<typename T>
 void RedBlackRotator<T>::rotateLeft()
 {
-    if(!nodesParent)
-    {
-        return;
-    }
-    nodesChild = nodeToRotate->getRightChild();
-    bool nodeBeingRotatedIsRightChild = nodeToRotate->isRightChild();
-    //wypłynięcie lewego syna w górę
-    if(nodeBeingRotatedIsRightChild)
+    rotationDirection = Side::LEFT;
+    rotate();
+}
+
+template<typename T>
+bool RedBlackRotator<T>::nodeBeingRotatedIsRightChild() {
+    return nodeToRotate->isRightChild();
+}
+
+template<typename T>
+void RedBlackRotator<T>::moveNodesChildUp() {
+    if(nodeBeingRotatedIsRightChild())
     {
         nodesParent->setRightChild(nodesChild);
     } else
@@ -78,14 +70,60 @@ void RedBlackRotator<T>::rotateLeft()
         nodesParent->setLeftChild(nodesChild);
     }
     nodesChild->setParent(nodesParent);
-    //
-    nodeToRotate->setRightChild(nodesChild->getLeftChild());
-    if(nodeToRotate->getRightChild())
+}
+
+template<typename T>
+void RedBlackRotator<T>::rotate() {
+    obtainProperChild();
+    moveNodesChildUp();
+    transferSubtreeBetweenNodes();
+    moveNodeBeingRotatedDown();
+}
+
+template<typename T>
+void RedBlackRotator<T>::obtainProperChild() {
+    if(rotationDirection == Side::LEFT)
     {
-        nodeToRotate->getRightChild()->setParent(nodeToRotate);
+        nodesChild = nodeToRotate->getRightChild();
     }
-    nodesChild->setLeftChild(nodeToRotate);
+    else
+    {
+        nodesChild = nodeToRotate->getLeftChild();
+    }
+}
+
+template<typename T>
+void RedBlackRotator<T>::moveNodeBeingRotatedDown() {
+    if(rotationDirection == Side::LEFT)
+    {
+        nodesChild->setLeftChild(nodeToRotate);
+    }
+    else
+    {
+        nodesChild->setRightChild(nodeToRotate);
+    }
     nodeToRotate->setParent(nodesChild);
+}
+
+template<typename T>
+void RedBlackRotator<T>::transferSubtreeBetweenNodes() {
+    //todo ładniejsza refaktoryzacja (może zwracać liść NIL zamiast nullptr z Node)
+    if(rotationDirection == Side::LEFT)
+    {
+        nodeToRotate->setRightChild(nodesChild->getLeftChild());
+        if(nodeToRotate->getRightChild())
+        {
+            nodeToRotate->getRightChild()->setParent(nodeToRotate);
+        }
+    }
+    else
+    {
+        nodeToRotate->setLeftChild(nodesChild->getRightChild());
+        if(nodeToRotate->getLeftChild())
+        {
+            nodeToRotate->getLeftChild()->setParent(nodeToRotate);
+        }
+    }
 }
 
 #endif //SDIZO_1_REDBLACKROTATOR_H
