@@ -6,6 +6,7 @@
 #define SDIZO_1_REDBLACKNODE_H
 
 #include "RedBlackRotator.h"
+#include "UsefulEnums.h"
 
 template <typename T>
 class RedBlackNode;
@@ -36,6 +37,8 @@ public:
     void rotateParent();
     bool uncleIsRed();
     bool isChild();
+    NodePointer<T> getChildOnTheSide(Side side);
+    void setChildOnTheSide(NodePointer<T> child, Side side);
 private:
     NodePointer<T> getUncle();
 };
@@ -76,6 +79,36 @@ void RedBlackNode<T>::rotateParent()
     {
         rotator.rotateRight();
         return;
+    }
+}
+
+template<typename T>
+NodePointer<T> RedBlackNode<T>::getChildOnTheSide(Side side) {
+    switch(side)
+    {
+        case Side::LEFT:
+            return getLeftChild();
+            break;
+        case Side::RIGHT:
+            return getRightChild();
+            break;
+        default:
+            throw "unrecognized side";
+    }
+}
+
+template<typename T>
+void RedBlackNode<T>::setChildOnTheSide(NodePointer<T> child, Side side) {
+    switch(side)
+    {
+        case Side::LEFT:
+            setLeftChild(child);
+            return;
+        case Side::RIGHT:
+            setRightChild(child);
+            return;
+        default:
+            throw "unrecognized side";
     }
 }
 

@@ -330,9 +330,15 @@ cxxabi.h
 acxx_demangle.h
 -
 
+../structure_templates_lib/red_black_tree_lib/RedBlackNil.h
+RedBlackNode.h
+../structure_templates_lib/red_black_tree_lib/RedBlackNode.h
+
 ../structure_templates_lib/red_black_tree_lib/RedBlackNode.h
 RedBlackRotator.h
 ../structure_templates_lib/red_black_tree_lib/RedBlackRotator.h
+UsefulEnums.h
+../structure_templates_lib/red_black_tree_lib/UsefulEnums.h
 
 ../structure_templates_lib/red_black_tree_lib/RedBlackNodeImpl.h
 memory
@@ -341,6 +347,8 @@ RedBlackNode.h
 ../structure_templates_lib/red_black_tree_lib/RedBlackNode.h
 UsefulEnums.h
 ../structure_templates_lib/red_black_tree_lib/UsefulEnums.h
+RedBlackNil.h
+../structure_templates_lib/red_black_tree_lib/RedBlackNil.h
 
 ../structure_templates_lib/red_black_tree_lib/RedBlackPropertyRestorer.h
 RedBlackNode.h
