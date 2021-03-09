@@ -9,6 +9,7 @@
 #include <memory>
 #include "RedBlackNode.h"
 #include "UsefulEnums.h"
+#include "RedBlackNil.h"
 
 template <typename T>
 class RedBlackTree;
@@ -25,6 +26,7 @@ public:
     bool isRed() override;
     T getKey() override;
 private:
+    static NodePointer<T> NIL;
     T key;
     Color color;
     NodePointer<T> leftChild;
@@ -47,16 +49,18 @@ private:
     bool isRightChild();
     void paintRed();
     void paintBlack();
-    void rotateParent();
 };
+
+template <typename T>
+NodePointer<T> RedBlackNodeImpl<T>::NIL = NodePointer<T>(new RedBlackNil<T>());
 
 template<typename T>
 RedBlackNodeImpl<T>::RedBlackNodeImpl(NodePointer<T> parent, T key) {
     this->key= key;
     this->parent = parent;
     color = (parent? Color::RED : Color::BLACK);
-    leftChild = NodePointer<T>(nullptr);
-    rightChild = NodePointer<T>(nullptr);
+    leftChild = NIL;
+    rightChild = NIL;
 }
 
 template<typename T>
@@ -87,7 +91,7 @@ void RedBlackNodeImpl<T>::insertRightwards(NodePointer<T> newNode) {
 
 template<typename T>
 void RedBlackNodeImpl<T>::insertOnTheSideOf(NodePointer<T> newNode, NodePointer<T> & child) {
-    if(child == nullptr)
+    if(child == NIL)
     {
         child = newNode;
         return;
@@ -121,10 +125,6 @@ bool RedBlackNodeImpl<T>::rightSubtreeContains(T key) {
 
 template<typename T>
 bool RedBlackNodeImpl<T>::subtreeOnTheSideOfContains(T key, NodePointer<T>& child) {
-    if(child == nullptr)
-    {
-        return false;
-    }
     return child->subtreeContains(key);
 }
 
@@ -142,7 +142,7 @@ template<typename T>
 NodePointer<T> RedBlackNodeImpl<T>::getSibling() {
     if(!isChild())
     {
-        return NodePointer<T>(nullptr);
+        return NIL;
     }
     auto parentKey = getParent()->getKey();
     if(parentKey > this->key)
@@ -213,23 +213,6 @@ void RedBlackNodeImpl<T>::setLeftChild(NodePointer<T> leftChild)
 {
     this->leftChild = leftChild;
 }
-
-template<typename T>
-void RedBlackNodeImpl<T>::rotateParent()
-{
-    RedBlackRotator<T> rotator = RedBlackRotator<T>(getParent());
-    if(isRightChild())
-    {
-        rotator.rotateLeft();
-        return;
-    }
-    else
-    {
-      rotator.rotateRight();
-      return;
-    }
-}
-
 
 #endif //SDIZO_1_REDBLACKTREE_H
 #endif //SDIZO_1_REDBLACKNODEIMPL_H

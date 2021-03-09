@@ -111,18 +111,12 @@ void RedBlackRotator<T>::transferSubtreeBetweenNodes() {
     if(rotationDirection == Side::LEFT)
     {
         nodeToRotate->setRightChild(nodesChild->getLeftChild());
-        if(nodeToRotate->getRightChild())
-        {
-            nodeToRotate->getRightChild()->setParent(nodeToRotate);
-        }
+        nodeToRotate->getRightChild()->setParent(nodeToRotate);
     }
     else
     {
         nodeToRotate->setLeftChild(nodesChild->getRightChild());
-        if(nodeToRotate->getLeftChild())
-        {
-            nodeToRotate->getLeftChild()->setParent(nodeToRotate);
-        }
+        nodeToRotate->getLeftChild()->setParent(nodeToRotate);
     }
 }
 

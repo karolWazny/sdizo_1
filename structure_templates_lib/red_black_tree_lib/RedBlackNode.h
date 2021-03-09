@@ -33,7 +33,7 @@ public:
     virtual bool isRightChild() = 0;
     virtual void setRightChild(NodePointer<T>) = 0;
     virtual void setLeftChild(NodePointer<T>) = 0;
-    virtual void rotateParent() = 0;
+    void rotateParent();
     bool uncleIsRed();
     bool isChild();
 private:
@@ -61,6 +61,22 @@ NodePointer<T> RedBlackNode<T>::getUncle() {
 template<typename T>
 bool RedBlackNode<T>::isChild() {
     return getParent() != nullptr;
+}
+
+template<typename T>
+void RedBlackNode<T>::rotateParent()
+{
+    RedBlackRotator<T> rotator = RedBlackRotator<T>(getParent());
+    if(isRightChild())
+    {
+        rotator.rotateLeft();
+        return;
+    }
+    else
+    {
+        rotator.rotateRight();
+        return;
+    }
 }
 
 #endif //SDIZO_1_REDBLACKNODE_H

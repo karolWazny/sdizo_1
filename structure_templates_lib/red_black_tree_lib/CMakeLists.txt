@@ -10,7 +10,8 @@ set(HEADER_FILES
         RedBlackSentinel.h
         RedBlackRotator.h
         RedBlackPropertyRestorer.h
-        UsefulEnums.h)
+        UsefulEnums.h
+        RedBlackNil.h)
 
 set(SOURCE_FILES
         index.cpp)

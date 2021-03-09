@@ -26,7 +26,6 @@ public:
     bool isRightChild();
     void setRightChild(NodePointer<T>);
     void setLeftChild(NodePointer<T>);
-    void rotateParent() override;
 private:
     NodePointer<T> root;
 };
@@ -110,11 +109,6 @@ void RedBlackSentinel<T>::setRightChild(NodePointer<T> child) {
 template<typename T>
 void RedBlackSentinel<T>::setLeftChild(NodePointer<T> child) {
     root = child;
-}
-
-template<typename T>
-void RedBlackSentinel<T>::rotateParent() {
-
 }
 
 #endif //SDIZO_1_REDBLACKSENTINEL_H
