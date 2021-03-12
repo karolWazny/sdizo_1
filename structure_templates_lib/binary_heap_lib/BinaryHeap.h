@@ -86,9 +86,9 @@ int BinaryHeap<T>::calculateParentPosition(const int childPosition) {
 template<typename T>
 void BinaryHeap<T>::remove(T element) {
     int position = findPositionOfElementInSubtree(0, element);
-    content[position] = INT_MIN;
-    cascadeDownFrom(position);
     size--;
+    swap(position, size)
+    cascadeDownFrom(position);
     reallocateContent();
 }
 

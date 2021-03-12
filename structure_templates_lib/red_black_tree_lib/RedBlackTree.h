@@ -20,9 +20,11 @@ public:
     void insert(T);
     int getSize();
     bool contains(T key);
+    void remove(T key);
 private:
     NodePointer<T> standardBinaryTreeInsert(T key);
     void restoreRedBlackPropertyStartingFrom(NodePointer<T> initialNode);
+    void standardBinaryTreeRemove(T key);
     NodePointer<T> sentinel;
     int numberOfElements;
 };
@@ -61,6 +63,17 @@ template<typename T>
 void RedBlackTree<T>::restoreRedBlackPropertyStartingFrom(NodePointer<T> initialNode) {
     RedBlackPropertyRestorer<T> restorer = RedBlackPropertyRestorer<T>(initialNode);
     restorer.restore();
+}
+
+template<typename T>
+void RedBlackTree<T>::remove(T key) {
+    standardBinaryTreeRemove(key);
+    numberOfElements--;
+}
+
+template<typename T>
+void RedBlackTree<T>::standardBinaryTreeRemove(T key) {
+
 }
 
 #endif //SDIZO_1_REDBLACKTREE_H
