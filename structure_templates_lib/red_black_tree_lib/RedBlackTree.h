@@ -8,6 +8,7 @@
 #include "RedBlackNodeImpl.h"
 #include "RedBlackSentinel.h"
 #include "RedBlackPropertyRestorer.h"
+#include "RedBlackRemover.h"
 
 template <typename T>
 using Node = RedBlackNodeImpl<T>;
@@ -73,7 +74,8 @@ void RedBlackTree<T>::remove(T key) {
 
 template<typename T>
 void RedBlackTree<T>::standardBinaryTreeRemove(T key) {
-
+    /*auto remover = RedBlackRemover<T>(sentinel->getNodeWithKey(key));
+    remover.remove();*/
 }
 
 #endif //SDIZO_1_REDBLACKTREE_H

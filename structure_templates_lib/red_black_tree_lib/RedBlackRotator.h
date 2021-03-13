@@ -11,7 +11,7 @@ template <typename T>
 class RedBlackNode;
 
 template <typename T>
-using NodePointer = std::shared_ptr<RedBlackNode<T>>;
+using NodePointer = RedBlackNode<T>*;
 
 template<typename T>
 class RedBlackRotator

@@ -129,12 +129,13 @@ Google_tests\Google_Tests_run.exe: structure_templates_lib\array_lib\array_lib.l
 Google_tests\Google_Tests_run.exe: structure_templates_lib\binary_heap_lib\binary_heap_lib.lib
 Google_tests\Google_Tests_run.exe: structure_templates_lib\linked_list_lib\linked_list_lib.lib
 Google_tests\Google_Tests_run.exe: structure_templates_lib\red_black_tree_lib\red_black_tree_lib.lib
+Google_tests\Google_Tests_run.exe: structure_templates_lib\tree_lib\tree_lib.lib
 Google_tests\Google_Tests_run.exe: lib\gtestd.lib
 Google_tests\Google_Tests_run.exe: Google_tests\CMakeFiles\Google_Tests_run.dir\objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Google_Tests_run.exe"
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
 	"D:\Program_Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\Google_Tests_run.dir --rc=D:\WINDOW~1\10\bin\100190~1.0\x86\rc.exe --mt=D:\WINDOW~1\10\bin\100190~1.0\x86\mt.exe --manifests  -- C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\Google_Tests_run.dir\objects1.rsp @<<
- /out:Google_Tests_run.exe /implib:Google_Tests_run.lib /pdb:D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests\Google_Tests_run.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  ..\structure_templates_lib\structure_templates_lib.lib ..\lib\gtestd.lib ..\lib\gtest_maind.lib ..\structure_templates_lib\array_lib\array_lib.lib ..\structure_templates_lib\binary_heap_lib\binary_heap_lib.lib ..\structure_templates_lib\linked_list_lib\linked_list_lib.lib ..\structure_templates_lib\red_black_tree_lib\red_black_tree_lib.lib ..\lib\gtestd.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+ /out:Google_Tests_run.exe /implib:Google_Tests_run.lib /pdb:D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests\Google_Tests_run.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  ..\structure_templates_lib\structure_templates_lib.lib ..\lib\gtestd.lib ..\lib\gtest_maind.lib ..\structure_templates_lib\array_lib\array_lib.lib ..\structure_templates_lib\binary_heap_lib\binary_heap_lib.lib ..\structure_templates_lib\linked_list_lib\linked_list_lib.lib ..\structure_templates_lib\red_black_tree_lib\red_black_tree_lib.lib ..\structure_templates_lib\tree_lib\tree_lib.lib ..\lib\gtestd.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
 	cd D:\projects\clion\sdizo_1\cmake-build-debug
 

@@ -60,6 +60,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../structure_templates_lib/binary_heap_lib/CMakeLists.txt"
   "../structure_templates_lib/linked_list_lib/CMakeLists.txt"
   "../structure_templates_lib/red_black_tree_lib/CMakeLists.txt"
+  "../structure_templates_lib/tree_lib/CMakeLists.txt"
   )
 
 # The corresponding makefile is:
@@ -76,6 +77,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "structure_templates_lib/binary_heap_lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "structure_templates_lib/linked_list_lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "structure_templates_lib/red_black_tree_lib/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "structure_templates_lib/tree_lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Google_tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Google_tests/lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Google_tests/lib/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -90,6 +92,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "structure_templates_lib/binary_heap_lib/CMakeFiles/binary_heap_lib.dir/DependInfo.cmake"
   "structure_templates_lib/linked_list_lib/CMakeFiles/linked_list_lib.dir/DependInfo.cmake"
   "structure_templates_lib/red_black_tree_lib/CMakeFiles/red_black_tree_lib.dir/DependInfo.cmake"
+  "structure_templates_lib/tree_lib/CMakeFiles/tree_lib.dir/DependInfo.cmake"
   "Google_tests/CMakeFiles/Google_Tests_run.dir/DependInfo.cmake"
   "Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
   "Google_tests/lib/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"

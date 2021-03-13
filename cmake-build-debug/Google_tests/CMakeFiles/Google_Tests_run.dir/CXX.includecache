@@ -356,6 +356,10 @@ RedBlackNode.h
 UsefulEnums.h
 ../structure_templates_lib/red_black_tree_lib/UsefulEnums.h
 
+../structure_templates_lib/red_black_tree_lib/RedBlackRemover.h
+RedBlackNode.h
+../structure_templates_lib/red_black_tree_lib/RedBlackNode.h
+
 ../structure_templates_lib/red_black_tree_lib/RedBlackRotator.h
 UsefulEnums.h
 ../structure_templates_lib/red_black_tree_lib/UsefulEnums.h
@@ -371,6 +375,8 @@ RedBlackSentinel.h
 ../structure_templates_lib/red_black_tree_lib/RedBlackSentinel.h
 RedBlackPropertyRestorer.h
 ../structure_templates_lib/red_black_tree_lib/RedBlackPropertyRestorer.h
+RedBlackRemover.h
+../structure_templates_lib/red_black_tree_lib/RedBlackRemover.h
 
 ../structure_templates_lib/red_black_tree_lib/UsefulEnums.h
 

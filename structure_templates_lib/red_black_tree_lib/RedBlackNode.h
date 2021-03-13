@@ -12,10 +12,10 @@ template <typename T>
 class RedBlackNode;
 
 template <typename T>
-using NodePointer = std::shared_ptr<RedBlackNode<T>>;
+using NodePointer = RedBlackNode<T>*;
 
 template <typename T>
-using NodeWeakPtr = std::weak_ptr<RedBlackNode<T>>;
+using NodeWeakPtr = RedBlackNode<T>*;
 
 template <typename T>
 class RedBlackNode {
@@ -34,6 +34,7 @@ public:
     virtual bool isRightChild() = 0;
     virtual void setRightChild(NodePointer<T>) = 0;
     virtual void setLeftChild(NodePointer<T>) = 0;
+    virtual NodePointer<T> getNodeWithKey(T key);
     void rotateParent();
     bool uncleIsRed();
     bool isChild();
@@ -109,6 +110,32 @@ void RedBlackNode<T>::setChildOnTheSide(NodePointer<T> child, Side side) {
             return;
         default:
             throw "unrecognized side";
+    }
+}
+
+template<typename T>
+NodePointer<T> RedBlackNode<T>::getNodeWithKey(T key) {
+    if(key < getKey())
+    {
+        if(key == getLeftChild()->getKey())
+        {
+            return getLeftChild();
+        }
+        else
+        {
+            return getLeftChild()->getNodeWithKey(key);
+        }
+    }
+    else
+    {
+        if(key == getRightChild()->getKey())
+        {
+            return getRightChild();
+        }
+        else
+        {
+            return getRightChild()->getNodeWithKey(key);
+        }
     }
 }
 

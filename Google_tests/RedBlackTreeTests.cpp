@@ -43,6 +43,20 @@ TEST(RedBlackTestSuite, ContainsTrue){
     ASSERT_TRUE(tree.contains(6));
 }
 
+TEST(RedBlackTestSuite, RemoveSizeUpdate){
+    auto tree = RedBlackTree<int>();
+    tree.insert(5);
+    tree.insert(5);
+    tree.insert(4);
+    tree.insert(56);
+    tree.insert(10);
+    tree.insert(18);
+    tree.insert(6);
+    ASSERT_EQ(tree.getSize(), 7);
+    tree.remove(4);
+    ASSERT_EQ(tree.getSize(), 6);
+}
+
 TEST(RedBlackTestSuite, RemoveContainsUpdate){
     auto tree = RedBlackTree<int>();
     tree.insert(5);
@@ -56,16 +70,15 @@ TEST(RedBlackTestSuite, RemoveContainsUpdate){
     ASSERT_FALSE(tree.contains(6));
 }
 
-TEST(RedBlackTestSuite, RemoveSizeUpdate){
+TEST(RedBlackTestSuite, Remove){
     auto tree = RedBlackTree<int>();
-    tree.insert(5);
     tree.insert(5);
     tree.insert(4);
     tree.insert(56);
     tree.insert(10);
     tree.insert(18);
     tree.insert(6);
-    ASSERT_EQ(tree.getSize(), 7);
-    tree.remove(4);
-    ASSERT_EQ(tree.getSize(), 6);
+    ASSERT_TRUE(tree.contains(6));
+    tree.remove(6);
+    ASSERT_FALSE(tree.contains(6));
 }

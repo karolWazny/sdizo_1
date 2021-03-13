@@ -11,7 +11,8 @@ set(HEADER_FILES
         RedBlackRotator.h
         RedBlackPropertyRestorer.h
         UsefulEnums.h
-        RedBlackNil.h)
+        RedBlackNil.h
+        RedBlackRemover.h)
 
 set(SOURCE_FILES
         index.cpp)

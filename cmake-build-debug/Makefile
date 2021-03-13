@@ -227,6 +227,19 @@ red_black_tree_lib\fast:
 .PHONY : red_black_tree_lib\fast
 
 #=============================================================================
+# Target rules for targets named tree_lib
+
+# Build rule for target.
+tree_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) tree_lib
+.PHONY : tree_lib
+
+# fast build rule for target.
+tree_lib\fast:
+	$(MAKE) $(MAKESILENT) -f structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\build
+.PHONY : tree_lib\fast
+
+#=============================================================================
 # Target rules for targets named Google_Tests_run
 
 # Build rule for target.
@@ -340,6 +353,7 @@ help:
 	@echo ... red_black_tree_lib
 	@echo ... sdizo_1
 	@echo ... structure_templates_lib
+	@echo ... tree_lib
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

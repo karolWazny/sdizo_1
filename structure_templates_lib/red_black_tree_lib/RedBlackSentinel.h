@@ -31,32 +31,32 @@ private:
 };
 
 template<typename T>
-void RedBlackSentinel<T>::setParent(std::shared_ptr <RedBlackNode<T>> parent) {
+void RedBlackSentinel<T>::setParent(NodePointer<T> parent) {
     //do nothing
 }
 
 template<typename T>
-std::shared_ptr <RedBlackNode<T>> RedBlackSentinel<T>::getParent() {
+NodePointer<T> RedBlackSentinel<T>::getParent() {
     return nullptr;
 }
 
 template<typename T>
-std::shared_ptr <RedBlackNode<T>> RedBlackSentinel<T>::getSibling() {
+NodePointer<T> RedBlackSentinel<T>::getSibling() {
     return nullptr;
 }
 
 template<typename T>
-std::shared_ptr <RedBlackNode<T>> RedBlackSentinel<T>::getRightChild() {
+NodePointer<T> RedBlackSentinel<T>::getRightChild() {
     return nullptr;
 }
 
 template<typename T>
-std::shared_ptr <RedBlackNode<T>> RedBlackSentinel<T>::getLeftChild() {
+NodePointer<T> RedBlackSentinel<T>::getLeftChild() {
     return nullptr;
 }
 
 template<typename T>
-void RedBlackSentinel<T>::insertAfter(std::shared_ptr <RedBlackNode<T>> newNode) {
+void RedBlackSentinel<T>::insertAfter(NodePointer<T> newNode) {
     if(root == nullptr)
     {
         root = newNode;

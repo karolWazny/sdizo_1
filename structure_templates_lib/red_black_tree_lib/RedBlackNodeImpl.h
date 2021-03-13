@@ -135,7 +135,7 @@ bool RedBlackNodeImpl<T>::isRed() {
 
 template<typename T>
 NodePointer<T> RedBlackNodeImpl<T>::getParent() {
-    return parent.lock();
+    return parent;
 }
 
 template<typename T>

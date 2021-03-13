@@ -363,6 +363,12 @@ structure_templates_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-
 //Value Computed by CMake
 structure_templates_lib_SOURCE_DIR:STATIC=D:/projects/clion/sdizo_1/structure_templates_lib
 
+//Value Computed by CMake
+tree_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/tree_lib
+
+//Value Computed by CMake
+tree_lib_SOURCE_DIR:STATIC=D:/projects/clion/sdizo_1/structure_templates_lib/tree_lib
+
 
 ########################
 # INTERNAL cache entries
@@ -492,7 +498,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RC_COMPILER

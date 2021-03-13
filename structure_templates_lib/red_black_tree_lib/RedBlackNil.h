@@ -24,6 +24,9 @@ class RedBlackNil : public RedBlackNode<T>
     bool isRightChild();
     void setRightChild(NodePointer<T>);
     void setLeftChild(NodePointer<T>);
+
+private:
+    NodePointer<T> parent;
 };
 
 template<typename T>
@@ -32,7 +35,7 @@ bool RedBlackNil<T>::subtreeContains(T key) {
 }
 
 template<typename T>
-void RedBlackNil<T>::insertAfter(std::shared_ptr <RedBlackNode<T>> newNode) {
+void RedBlackNil<T>::insertAfter(NodePointer<T> newNode) {
     //do nothing
 }
 
@@ -52,29 +55,29 @@ void RedBlackNil<T>::paintRed() {
 }
 
 template<typename T>
-std::shared_ptr <RedBlackNode<T>> RedBlackNil<T>::getRightChild() {
+NodePointer<T> RedBlackNil<T>::getRightChild() {
     throw "trying to get NIL's child!";
 }
 
 template<typename T>
-std::shared_ptr <RedBlackNode<T>> RedBlackNil<T>::getLeftChild() {
+NodePointer<T> RedBlackNil<T>::getLeftChild() {
     throw "trying to get NIL's child!";
 }
 
 template<typename T>
-void RedBlackNil<T>::setParent(std::shared_ptr <RedBlackNode<T>> parent) {
+void RedBlackNil<T>::setParent(NodePointer<T> parent) {
     //do nothing;
     //this function exists ONLY to simplify rotating operations
     //on nodes having only one or none childs
 }
 
 template<typename T>
-std::shared_ptr <RedBlackNode<T>> RedBlackNil<T>::getSibling() {
+NodePointer<T> RedBlackNil<T>::getSibling() {
     return nullptr;
 }
 
 template<typename T>
-std::shared_ptr <RedBlackNode<T>> RedBlackNil<T>::getParent() {
+NodePointer<T> RedBlackNil<T>::getParent() {
     return nullptr;
 }
 
