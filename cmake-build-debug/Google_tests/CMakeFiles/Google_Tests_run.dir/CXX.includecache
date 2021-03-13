@@ -367,6 +367,8 @@ UsefulEnums.h
 ../structure_templates_lib/red_black_tree_lib/RedBlackSentinel.h
 RedBlackNode.h
 ../structure_templates_lib/red_black_tree_lib/RedBlackNode.h
+RedBlackNil.h
+../structure_templates_lib/red_black_tree_lib/RedBlackNil.h
 
 ../structure_templates_lib/red_black_tree_lib/RedBlackTree.h
 RedBlackNodeImpl.h

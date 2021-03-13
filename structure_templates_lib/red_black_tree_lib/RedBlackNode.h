@@ -115,28 +115,16 @@ void RedBlackNode<T>::setChildOnTheSide(NodePointer<T> child, Side side) {
 
 template<typename T>
 NodePointer<T> RedBlackNode<T>::getNodeWithKey(T key) {
-    if(key < getKey())
+    if(key == getKey())
     {
-        if(key == getLeftChild()->getKey())
-        {
-            return getLeftChild();
-        }
-        else
-        {
-            return getLeftChild()->getNodeWithKey(key);
-        }
+        return this;
+    }
+    else if(key < getKey())
+    {
+        return getLeftChild()->getNodeWithKey(key);
     }
     else
-    {
-        if(key == getRightChild()->getKey())
-        {
-            return getRightChild();
-        }
-        else
-        {
-            return getRightChild()->getNodeWithKey(key);
-        }
-    }
+        return getRightChild()->getNodeWithKey(key);
 }
 
 #endif //SDIZO_1_REDBLACKNODE_H

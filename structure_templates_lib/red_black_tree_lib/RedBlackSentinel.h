@@ -6,6 +6,7 @@
 #define SDIZO_1_REDBLACKSENTINEL_H
 
 #include "RedBlackNode.h"
+#include "RedBlackNil.h"
 
 template <typename T>
 class RedBlackSentinel : public RedBlackNode<T>
@@ -27,9 +28,14 @@ public:
     bool isRightChild();
     void setRightChild(NodePointer<T>);
     void setLeftChild(NodePointer<T>);
+    NodePointer<T> getNodeWithKey(T key);
 private:
     NodePointer<T> root;
+    static RedBlackNil<T> NIL;
 };
+
+template <typename T>
+RedBlackNil<T> RedBlackSentinel<T>::NIL = RedBlackNil<T>();
 
 template<typename T>
 void RedBlackSentinel<T>::setParent(NodePointer<T> parent) {
@@ -58,7 +64,7 @@ NodePointer<T> RedBlackSentinel<T>::getLeftChild() {
 
 template<typename T>
 void RedBlackSentinel<T>::insertAfter(NodePointer<T> newNode) {
-    if(root == nullptr)
+    if(root == &NIL)
     {
         root = newNode;
         return;
@@ -94,7 +100,7 @@ T RedBlackSentinel<T>::getKey() {
 
 template<typename T>
 RedBlackSentinel<T>::RedBlackSentinel() {
-    root = NodePointer<T>(nullptr);
+    root = NodePointer<T>(&NIL);
 }
 
 template<typename T>
@@ -114,10 +120,12 @@ void RedBlackSentinel<T>::setLeftChild(NodePointer<T> child) {
 
 template<typename T>
 RedBlackSentinel<T>::~RedBlackSentinel() {
-    if(root)
-    {
-        delete root;
-    }
+    delete root;
+}
+
+template<typename T>
+NodePointer<T> RedBlackSentinel<T>::getNodeWithKey(T key) {
+    return root->getNodeWithKey(key);
 }
 
 #endif //SDIZO_1_REDBLACKSENTINEL_H

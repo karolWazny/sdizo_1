@@ -75,8 +75,8 @@ void RedBlackTree<T>::remove(T key) {
 
 template<typename T>
 void RedBlackTree<T>::standardBinaryTreeRemove(T key) {
-    /*auto remover = RedBlackRemover<T>(sentinel->getNodeWithKey(key));
-    remover.remove();*/
+    auto remover = RedBlackRemover<T>(sentinel->getNodeWithKey(key));
+    remover.remove();
 }
 
 template<typename T>
