@@ -22,6 +22,7 @@ public:
     int getSize();
     bool contains(T key);
     void remove(T key);
+    ~RedBlackTree();
 private:
     NodePointer<T> standardBinaryTreeInsert(T key);
     void restoreRedBlackPropertyStartingFrom(NodePointer<T> initialNode);
@@ -76,6 +77,11 @@ template<typename T>
 void RedBlackTree<T>::standardBinaryTreeRemove(T key) {
     /*auto remover = RedBlackRemover<T>(sentinel->getNodeWithKey(key));
     remover.remove();*/
+}
+
+template<typename T>
+RedBlackTree<T>::~RedBlackTree() {
+    delete sentinel;
 }
 
 #endif //SDIZO_1_REDBLACKTREE_H

@@ -20,6 +20,7 @@ class RedBlackNodeImpl : public RedBlackNode<T>
     friend RedBlackTree<T>;
 public:
     RedBlackNodeImpl() = delete;
+    ~RedBlackNodeImpl();
     void setParent(NodePointer<T> parent) override;
     void insertAfter(NodePointer<T> newNode) override;
     bool subtreeContains(T key) override;
@@ -212,6 +213,20 @@ template<typename T>
 void RedBlackNodeImpl<T>::setLeftChild(NodePointer<T> leftChild)
 {
     this->leftChild = leftChild;
+}
+
+template<typename T>
+RedBlackNodeImpl<T>::~RedBlackNodeImpl() {
+    if(leftChild != NIL)
+    {
+        delete leftChild;
+        leftChild = NIL;
+    }
+    if(rightChild != NIL)
+    {
+        delete rightChild;
+        rightChild = NIL;
+    }
 }
 
 #endif //SDIZO_1_REDBLACKTREE_H

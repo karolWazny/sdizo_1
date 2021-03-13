@@ -12,6 +12,7 @@ class RedBlackSentinel : public RedBlackNode<T>
 {
 public:
     RedBlackSentinel();
+    ~RedBlackSentinel();
     void setParent(NodePointer <T> parent);
     NodePointer<T> getParent();
     NodePointer<T> getSibling();
@@ -109,6 +110,14 @@ void RedBlackSentinel<T>::setRightChild(NodePointer<T> child) {
 template<typename T>
 void RedBlackSentinel<T>::setLeftChild(NodePointer<T> child) {
     root = child;
+}
+
+template<typename T>
+RedBlackSentinel<T>::~RedBlackSentinel() {
+    if(root)
+    {
+        delete root;
+    }
 }
 
 #endif //SDIZO_1_REDBLACKSENTINEL_H
