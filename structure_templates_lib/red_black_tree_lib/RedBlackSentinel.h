@@ -29,6 +29,8 @@ public:
     void setRightChild(NodePointer<T>);
     void setLeftChild(NodePointer<T>);
     NodePointer<T> getNodeWithKey(T key);
+    bool hasLeftChild() override;
+    bool hasRightChild() override;
 private:
     NodePointer<T> root;
     static RedBlackNil<T> NIL;
@@ -126,6 +128,16 @@ RedBlackSentinel<T>::~RedBlackSentinel() {
 template<typename T>
 NodePointer<T> RedBlackSentinel<T>::getNodeWithKey(T key) {
     return root->getNodeWithKey(key);
+}
+
+template<typename T>
+bool RedBlackSentinel<T>::hasLeftChild() {
+    return false;
+}
+
+template<typename T>
+bool RedBlackSentinel<T>::hasRightChild() {
+    return false;
 }
 
 #endif //SDIZO_1_REDBLACKSENTINEL_H

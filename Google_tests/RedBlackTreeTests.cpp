@@ -75,10 +75,7 @@ TEST(RedBlackTestSuite, Remove){
     tree.insert(5);
     tree.insert(4);
     tree.insert(56);
-    tree.insert(10);
-    tree.insert(18);
-    tree.insert(6);
-    ASSERT_TRUE(tree.contains(6));
-    tree.remove(6);
-    ASSERT_FALSE(tree.contains(6));
+    tree.remove(5);
+    ASSERT_TRUE(tree.contains(4));
+    ASSERT_TRUE(tree.contains(56));
 }

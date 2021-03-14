@@ -66,6 +66,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/NodeImpl.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/RedBlackNil.h">
 			<Option target="red_black_tree_lib"/>
 		</Unit>

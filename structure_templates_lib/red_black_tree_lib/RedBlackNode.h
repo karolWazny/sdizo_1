@@ -40,6 +40,9 @@ public:
     bool isChild();
     NodePointer<T> getChildOnTheSide(Side side);
     void setChildOnTheSide(NodePointer<T> child, Side side);
+    virtual bool hasLeftChild() = 0;
+    virtual bool hasRightChild() = 0;
+    bool hasChildOnTheSide(Side side);
 private:
     NodePointer<T> getUncle();
 };
@@ -125,6 +128,14 @@ NodePointer<T> RedBlackNode<T>::getNodeWithKey(T key) {
     }
     else
         return getRightChild()->getNodeWithKey(key);
+}
+
+template<typename T>
+bool RedBlackNode<T>::hasChildOnTheSide(Side side) {
+    if(side == Side::LEFT)
+        return hasLeftChild();
+    else
+        return hasRightChild();
 }
 
 #endif //SDIZO_1_REDBLACKNODE_H

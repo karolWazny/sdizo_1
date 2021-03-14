@@ -12,7 +12,8 @@ set(HEADER_FILES
         RedBlackPropertyRestorer.h
         UsefulEnums.h
         RedBlackNil.h
-        RedBlackRemover.h)
+        RedBlackRemover.h
+        NodeImpl.h)
 
 set(SOURCE_FILES
         index.cpp)

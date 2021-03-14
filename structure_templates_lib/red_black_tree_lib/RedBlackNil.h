@@ -24,7 +24,8 @@ class RedBlackNil : public RedBlackNode<T>
     bool isRightChild();
     void setRightChild(NodePointer<T>);
     void setLeftChild(NodePointer<T>);
-
+    bool hasLeftChild() override;
+    bool hasRightChild() override;
 private:
     NodePointer<T> parent;
 };
@@ -99,6 +100,16 @@ void RedBlackNil<T>::setRightChild(NodePointer<T>) {
 template<typename T>
 void RedBlackNil<T>::setLeftChild(NodePointer<T>) {
 
+}
+
+template<typename T>
+bool RedBlackNil<T>::hasLeftChild() {
+    return false;
+}
+
+template<typename T>
+bool RedBlackNil<T>::hasRightChild() {
+    return false;
 }
 
 #endif //SDIZO_1_REDBLACKNIL_H
