@@ -10,13 +10,14 @@ class NodeImpl : public RedBlackNode<T>
 {
 public:
     NodeImpl(NodePointer<T> parent, T key);
-    ~NodeImpl();
+    virtual ~NodeImpl();
     void setParent(NodePointer<T> parent) override;
     void insertAfter(NodePointer<T> newNode) override;
     bool subtreeContains(T key) override;
     T getKey() override;
     bool hasLeftChild() override;
     bool hasRightChild() override;
+    NodePointer<T> getParent();
 private:
     NodePointer<T> getRightChild() override;
     NodePointer<T> getLeftChild() override;
@@ -30,7 +31,6 @@ private:
     bool leftSubtreeContains(T key);
     bool rightSubtreeContains(T key);
     bool subtreeOnTheSideOfContains(T key, NodePointer<T>& child);
-    NodePointer<T> getParent();
     NodePointer<T> getSibling();
     bool isRightChild();
 
@@ -42,7 +42,7 @@ private:
 };
 
 template <typename T>
-NodePointer<T> NodeImpl<T>::NIL = NodePointer<T>(new RedBlackNil<T>());
+NodePointer<T> NodeImpl<T>::NIL = NodePointer<T>(new RedBlackNil<T>(nullptr));
 
 template<typename T>
 void NodeImpl<T>::setParent(NodePointer<T> parent) {
@@ -195,6 +195,7 @@ NodeImpl<T>::~NodeImpl() {
     {
         delete rightChild;
     }
+    std::cout << "Deleteing node with key: " + this->getKey();
 }
 
 template<typename T>

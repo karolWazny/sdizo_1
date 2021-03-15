@@ -51,6 +51,7 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/RedBlackTreeTests.cpp.obj
  ../structure_templates_lib/red_black_tree_lib/RedBlackNil.h
  ../structure_templates_lib/red_black_tree_lib/RedBlackNode.h
  ../structure_templates_lib/red_black_tree_lib/RedBlackNodeImpl.h
+ ../structure_templates_lib/red_black_tree_lib/RedBlackPostDeleteFixer.h
  ../structure_templates_lib/red_black_tree_lib/RedBlackPropertyRestorer.h
  ../structure_templates_lib/red_black_tree_lib/RedBlackRemover.h
  ../structure_templates_lib/red_black_tree_lib/RedBlackRotator.h

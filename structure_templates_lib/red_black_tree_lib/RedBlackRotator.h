@@ -72,6 +72,8 @@ void RedBlackRotator<T>::moveNodesChildUp()
 template<typename T>
 void RedBlackRotator<T>::rotate()
 {
+    if(!nodesParent)
+        return;
     obtainProperChild();
     moveNodesChildUp();
     transferSubtreeBetweenNodes();

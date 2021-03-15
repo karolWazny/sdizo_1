@@ -27,6 +27,7 @@ private:
     void restoreFromZGrandpaUp();
     bool zIsSameSideAsFather();
     void rotateZParent();
+    void rotateZGrandparent();
     void restoreFromParentUp();
 };
 
@@ -59,7 +60,7 @@ void RedBlackPropertyRestorer<T>::restore() {
     else
     {
         moveRednessFromParentUp();
-        rotateZParent();
+        rotateZGrandparent();
     }
 }
 
@@ -118,6 +119,11 @@ template<typename T>
 void RedBlackPropertyRestorer<T>::moveRednessFromParentUp() {
     zParent->paintBlack();
     zParent->getParent()->paintRed();
+}
+
+template<typename T>
+void RedBlackPropertyRestorer<T>::rotateZGrandparent() {
+    zParent->rotateParent();
 }
 
 #endif //SDIZO_1_REDBLACKPROPERTYRESTORER_H

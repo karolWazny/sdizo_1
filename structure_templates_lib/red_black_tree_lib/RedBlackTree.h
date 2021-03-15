@@ -26,7 +26,7 @@ public:
 private:
     NodePointer<T> standardBinaryTreeInsert(T key);
     void restoreRedBlackPropertyStartingFrom(NodePointer<T> initialNode);
-    void standardBinaryTreeRemove(T key);
+
     NodePointer<T> sentinel;
     int numberOfElements;
 };
@@ -41,6 +41,7 @@ template<typename T>
 void RedBlackTree<T>::insert(T key) {
     auto z = standardBinaryTreeInsert(key);
     restoreRedBlackPropertyStartingFrom(z);
+    sentinel->checkNumberOfBlackNodesInSubtrees();
     numberOfElements++;
 }
 
@@ -69,14 +70,9 @@ void RedBlackTree<T>::restoreRedBlackPropertyStartingFrom(NodePointer<T> initial
 
 template<typename T>
 void RedBlackTree<T>::remove(T key) {
-    standardBinaryTreeRemove(key);
+    sentinel->removeKey(key);
+    sentinel->checkNumberOfBlackNodesInSubtrees();
     numberOfElements--;
-}
-
-template<typename T>
-void RedBlackTree<T>::standardBinaryTreeRemove(T key) {
-    auto remover = RedBlackRemover<T>(sentinel->getNodeWithKey(key));
-    remover.remove();
 }
 
 template<typename T>

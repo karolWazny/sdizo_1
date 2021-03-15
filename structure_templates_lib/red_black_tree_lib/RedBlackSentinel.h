@@ -31,13 +31,18 @@ public:
     NodePointer<T> getNodeWithKey(T key);
     bool hasLeftChild() override;
     bool hasRightChild() override;
+    void remove() override;
+    void removeKey(T key) override;
+
+    //for testing only
+    int checkNumberOfBlackNodesInSubtrees() override;
 private:
     NodePointer<T> root;
     static RedBlackNil<T> NIL;
 };
 
 template <typename T>
-RedBlackNil<T> RedBlackSentinel<T>::NIL = RedBlackNil<T>();
+RedBlackNil<T> RedBlackSentinel<T>::NIL = RedBlackNil<T>(nullptr);
 
 template<typename T>
 void RedBlackSentinel<T>::setParent(NodePointer<T> parent) {
@@ -138,6 +143,21 @@ bool RedBlackSentinel<T>::hasLeftChild() {
 template<typename T>
 bool RedBlackSentinel<T>::hasRightChild() {
     return false;
+}
+
+template<typename T>
+int RedBlackSentinel<T>::checkNumberOfBlackNodesInSubtrees() {
+    return root->checkNumberOfBlackNodesInSubtrees();
+}
+
+template<typename T>
+void RedBlackSentinel<T>::remove() {
+    //do nothing
+}
+
+template<typename T>
+void RedBlackSentinel<T>::removeKey(T key) {
+    root->removeKey(key);
 }
 
 #endif //SDIZO_1_REDBLACKSENTINEL_H

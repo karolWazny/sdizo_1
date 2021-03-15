@@ -282,10 +282,10 @@ structure_templates_lib\tree_lib\clean: structure_templates_lib\tree_lib\CMakeFi
 # Target rules for target CMakeFiles/sdizo_1.dir
 
 # All Build rule for target.
+CMakeFiles\sdizo_1.dir\all: structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all
 CMakeFiles\sdizo_1.dir\all: structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\all
 CMakeFiles\sdizo_1.dir\all: structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
 CMakeFiles\sdizo_1.dir\all: structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
-CMakeFiles\sdizo_1.dir\all: structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all
 CMakeFiles\sdizo_1.dir\all: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
 CMakeFiles\sdizo_1.dir\all: structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\depend
@@ -480,10 +480,10 @@ structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\clean:
 # Target rules for target Google_tests/CMakeFiles/Google_Tests_run.dir
 
 # All Build rule for target.
+Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all
 Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\all
 Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
 Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
-Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all
 Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
 Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\all
 Google_tests\CMakeFiles\Google_Tests_run.dir\all: Google_tests\lib\googletest\CMakeFiles\gtest.dir\all

@@ -6,6 +6,7 @@
 #define SDIZO_1_REDBLACKREMOVER_H
 
 #include "RedBlackNode.h"
+#include "RedBlackPostDeleteFixer.h"
 
 template <typename T>
 class RedBlackRemover
@@ -20,9 +21,11 @@ private:
     void freeSubsequent();
     void replaceZWithSubsequent();
 
-    NodePointer<T> nodeToRemove;
+    std::shared_ptr<RedBlackNode<T>> nodeToRemove;
     NodePointer<T> subsequentOfNodeToRemove;
     NodePointer<T> subsequentChild;
+
+    bool subsequentIsBlack();
 };
 
 template <typename T>
@@ -50,13 +53,13 @@ NodePointer<T> SubsequentFinder<T>::find() {
         output = nodeZ->getLeftChild();
         subsequentSide = Side::LEFT;
     }
-    else if(nodeZ->hasRightChild())
+    else
     {
+        if(!nodeZ->hasRightChild())
+            nodeZ->setRightChild(new RedBlackNil<T>(nodeZ));
         output = nodeZ->getRightChild();
         subsequentSide = Side::RIGHT;
     }
-    else
-        return output;
     while(output->hasChildOnTheSide(!subsequentSide))
     {
         output = output->getChildOnTheSide(!subsequentSide);
@@ -66,7 +69,7 @@ NodePointer<T> SubsequentFinder<T>::find() {
 
 template<typename T>
 RedBlackRemover<T>::RedBlackRemover(NodePointer<T> nodeToRemove) {
-    this->nodeToRemove = nodeToRemove;
+    this->nodeToRemove = std::shared_ptr<RedBlackNode<T>>(nodeToRemove);
     this->subsequentOfNodeToRemove = obtainSubsequent();
     this->subsequentChild = obtainSubsequentChild();
 }
@@ -75,18 +78,21 @@ template<typename T>
 void RedBlackRemover<T>::remove() {
     freeSubsequent();
     replaceZWithSubsequent();
+    if(!nodeToRemove->hasRightChild() && !nodeToRemove->hasLeftChild())
+    {
+        auto fixer = RedBlackPostDeleteFixer<T>(nodeToRemove->getParent());
+        fixer.fix();
+    }
 }
 
 template<typename T>
 NodePointer<T> RedBlackRemover<T>::obtainSubsequent() {
-    SubsequentFinder<T> finder = SubsequentFinder<T>(nodeToRemove);
+    SubsequentFinder<T> finder = SubsequentFinder<T>(nodeToRemove.get());
     return finder.find();
 }
 
 template<typename T>
 NodePointer<T> RedBlackRemover<T>::obtainSubsequentChild() {
-    if(!subsequentOfNodeToRemove)
-        return nullptr;
     if(subsequentOfNodeToRemove->isRightChild())
         return subsequentOfNodeToRemove->getLeftChild();
     else
@@ -95,8 +101,6 @@ NodePointer<T> RedBlackRemover<T>::obtainSubsequentChild() {
 
 template<typename T>
 void RedBlackRemover<T>::freeSubsequent() {
-    if(!subsequentOfNodeToRemove)
-        return;
     if(subsequentOfNodeToRemove->isRightChild())
         subsequentOfNodeToRemove->getParent()->setRightChild(subsequentChild);
     else
@@ -112,10 +116,19 @@ void RedBlackRemover<T>::replaceZWithSubsequent() {
         parent->setRightChild(subsequentOfNodeToRemove);
     else
         parent->setLeftChild(subsequentOfNodeToRemove);
-    if(!subsequentOfNodeToRemove)
-        return;
     subsequentOfNodeToRemove->setLeftChild(nodeToRemove->getLeftChild());
     subsequentOfNodeToRemove->setRightChild(nodeToRemove->getRightChild());
+    if(nodeToRemove->isRed())
+        subsequentOfNodeToRemove->paintRed();
+    else
+        subsequentOfNodeToRemove->paintBlack();
+}
+
+template<typename T>
+bool RedBlackRemover<T>::subsequentIsBlack() {
+    if(!subsequentOfNodeToRemove->isRed())
+        return true;
+    return false;
 }
 
 #endif //SDIZO_1_REDBLACKREMOVER_H

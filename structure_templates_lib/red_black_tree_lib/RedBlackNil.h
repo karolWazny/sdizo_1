@@ -10,6 +10,8 @@
 template <typename T>
 class RedBlackNil : public RedBlackNode<T>
 {
+public:
+    explicit RedBlackNil(NodePointer<T>);
     void setParent(NodePointer <T> parent);
     NodePointer<T> getParent();
     NodePointer<T> getSibling();
@@ -26,6 +28,10 @@ class RedBlackNil : public RedBlackNode<T>
     void setLeftChild(NodePointer<T>);
     bool hasLeftChild() override;
     bool hasRightChild() override;
+    void remove() override;
+
+    //for testing only
+    int checkNumberOfBlackNodesInSubtrees() override;
 private:
     NodePointer<T> parent;
 };
@@ -57,19 +63,19 @@ void RedBlackNil<T>::paintRed() {
 
 template<typename T>
 NodePointer<T> RedBlackNil<T>::getRightChild() {
-    throw "trying to get NIL's child!";
+    return this;
 }
 
 template<typename T>
 NodePointer<T> RedBlackNil<T>::getLeftChild() {
-    throw "trying to get NIL's child!";
+    return this;
 }
 
 template<typename T>
 void RedBlackNil<T>::setParent(NodePointer<T> parent) {
     //do nothing;
     //this function exists ONLY to simplify rotating operations
-    //on nodes having only one or none childs
+    //on nodes having only one or none children
 }
 
 template<typename T>
@@ -79,7 +85,7 @@ NodePointer<T> RedBlackNil<T>::getSibling() {
 
 template<typename T>
 NodePointer<T> RedBlackNil<T>::getParent() {
-    return nullptr;
+    return parent;
 }
 
 template<typename T>
@@ -110,6 +116,21 @@ bool RedBlackNil<T>::hasLeftChild() {
 template<typename T>
 bool RedBlackNil<T>::hasRightChild() {
     return false;
+}
+
+template<typename T>
+int RedBlackNil<T>::checkNumberOfBlackNodesInSubtrees() {
+    return 1;
+}
+
+template<typename T>
+RedBlackNil<T>::RedBlackNil(NodePointer<T> parentNode) {
+    parent = parentNode;
+}
+
+template<typename T>
+void RedBlackNil<T>::remove() {
+
 }
 
 #endif //SDIZO_1_REDBLACKNIL_H

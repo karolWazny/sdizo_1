@@ -7,6 +7,7 @@
 
 #include "RedBlackRotator.h"
 #include "UsefulEnums.h"
+#include "RedBlackPostDeleteFixer.h"
 
 template <typename T>
 class RedBlackNode;
@@ -43,6 +44,12 @@ public:
     virtual bool hasLeftChild() = 0;
     virtual bool hasRightChild() = 0;
     bool hasChildOnTheSide(Side side);
+    virtual void removeKey(T key);
+    virtual void remove() = 0;
+    virtual void postDeleteFixup();
+
+    //for testing
+    virtual int checkNumberOfBlackNodesInSubtrees();
 private:
     NodePointer<T> getUncle();
 };
@@ -136,6 +143,33 @@ bool RedBlackNode<T>::hasChildOnTheSide(Side side) {
         return hasLeftChild();
     else
         return hasRightChild();
+}
+
+template<typename T>
+int RedBlackNode<T>::checkNumberOfBlackNodesInSubtrees() {
+    int numberRight = getRightChild()->checkNumberOfBlackNodesInSubtrees();
+    int numberLeft = getLeftChild()->checkNumberOfBlackNodesInSubtrees();
+    if(numberLeft != numberRight)
+        throw "red black property not maintained!";
+    if(!isRed())
+        numberRight++;
+    return numberRight;
+}
+
+template<typename T>
+void RedBlackNode<T>::removeKey(T key) {
+    if(key == getKey())
+        remove();
+    else if(key < getKey())
+        getLeftChild()->removeKey(key);
+    else
+        getRightChild()->removeKey(key);
+}
+
+template<typename T>
+void RedBlackNode<T>::postDeleteFixup() {
+    auto fixer = RedBlackPostDeleteFixer<T>(this);
+    fixer.fix();
 }
 
 #endif //SDIZO_1_REDBLACKNODE_H

@@ -13,7 +13,8 @@ set(HEADER_FILES
         UsefulEnums.h
         RedBlackNil.h
         RedBlackRemover.h
-        NodeImpl.h)
+        NodeImpl.h
+        RedBlackPostDeleteFixer.h)
 
 set(SOURCE_FILES
         index.cpp)

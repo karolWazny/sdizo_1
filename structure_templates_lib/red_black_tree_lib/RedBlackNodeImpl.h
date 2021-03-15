@@ -11,6 +11,7 @@
 #include "UsefulEnums.h"
 #include "RedBlackNil.h"
 #include "NodeImpl.h"
+#include "RedBlackRemover.h"
 
 template <typename T>
 class RedBlackTree;
@@ -22,6 +23,7 @@ class RedBlackNodeImpl : public NodeImpl<T>
 public:
     RedBlackNodeImpl() = delete;
     bool isRed() override;
+    void remove() override;
 private:
     Color color;
     RedBlackNodeImpl(NodePointer<T> parent, T key);
@@ -61,6 +63,12 @@ bool RedBlackNodeImpl<T>::parentIsRed()
         return getParent()->isRed();
     }
     return false;
+}
+
+template<typename T>
+void RedBlackNodeImpl<T>::remove() {
+    auto remover = RedBlackRemover<T>(this);
+    remover.remove();
 }
 
 #endif //SDIZO_1_REDBLACKTREE_H
