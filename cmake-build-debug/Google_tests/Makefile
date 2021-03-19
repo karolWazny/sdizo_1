@@ -210,6 +210,39 @@ ListTests.cpp.s:
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
 .PHONY : ListTests.cpp.s
 
+NodeTest.obj: NodeTest.cpp.obj
+
+.PHONY : NodeTest.obj
+
+# target to build an object file
+NodeTest.cpp.obj:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : NodeTest.cpp.obj
+
+NodeTest.i: NodeTest.cpp.i
+
+.PHONY : NodeTest.i
+
+# target to preprocess a source file
+NodeTest.cpp.i:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.i
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : NodeTest.cpp.i
+
+NodeTest.s: NodeTest.cpp.s
+
+.PHONY : NodeTest.s
+
+# target to generate assembly for a file
+NodeTest.cpp.s:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.s
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : NodeTest.cpp.s
+
 RedBlackTreeTests.obj: RedBlackTreeTests.cpp.obj
 
 .PHONY : RedBlackTreeTests.obj
@@ -258,6 +291,9 @@ help:
 	@echo ... ListTests.obj
 	@echo ... ListTests.i
 	@echo ... ListTests.s
+	@echo ... NodeTest.obj
+	@echo ... NodeTest.i
+	@echo ... NodeTest.s
 	@echo ... RedBlackTreeTests.obj
 	@echo ... RedBlackTreeTests.i
 	@echo ... RedBlackTreeTests.s

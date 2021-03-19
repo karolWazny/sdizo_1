@@ -1,83 +1,33 @@
 //
-// Created by admin on 04.03.2021.
+// Created by admin on 19.03.2021.
 //
 
 #ifndef SDIZO_1_REDBLACKTREE_H
 #define SDIZO_1_REDBLACKTREE_H
 
-#include "RedBlackNodeImpl.h"
-#include "RedBlackSentinel.h"
-#include "RedBlackPropertyRestorer.h"
-#include "RedBlackRemover.h"
-
-template <typename T>
-using Node = RedBlackNodeImpl<T>;
-
-template <typename T>
+template <typename T, typename U>
 class RedBlackTree
 {
 public:
-    RedBlackTree();
-    void insert(T);
-    int getSize();
-    bool contains(T key);
-    void remove(T key);
-    ~RedBlackTree();
+    void put(T key, U value);
+    bool containsKey(T key);
+    bool containsValue(U value);
 private:
-    NodePointer<T> standardBinaryTreeInsert(T key);
-    void restoreRedBlackPropertyStartingFrom(NodePointer<T> initialNode);
-
-    NodePointer<T> sentinel;
-    int numberOfElements;
 };
 
-template<typename T>
-RedBlackTree<T>::RedBlackTree() {
-    sentinel = NodePointer<T>(new RedBlackSentinel<T>());
-    numberOfElements = 0;
+template<typename T, typename U>
+void RedBlackTree<T, U>::put(T key, U value) {
+
 }
 
-template<typename T>
-void RedBlackTree<T>::insert(T key) {
-    auto z = standardBinaryTreeInsert(key);
-    restoreRedBlackPropertyStartingFrom(z);
-    sentinel->checkNumberOfBlackNodesInSubtrees();
-    numberOfElements++;
+template<typename T, typename U>
+bool RedBlackTree<T, U>::containsKey(T key) {
+    return true;
 }
 
-template<typename T>
-int RedBlackTree<T>::getSize() {
-    return numberOfElements;
-}
-
-template<typename T>
-NodePointer<T> RedBlackTree<T>::standardBinaryTreeInsert(T key) {
-    NodePointer<T> addedNode(new Node<T>(sentinel, key));
-    sentinel->insertAfter(addedNode);
-    return addedNode;
-}
-
-template<typename T>
-bool RedBlackTree<T>::contains(T key) {
-    return sentinel->subtreeContains(key);
-}
-
-template<typename T>
-void RedBlackTree<T>::restoreRedBlackPropertyStartingFrom(NodePointer<T> initialNode) {
-    RedBlackPropertyRestorer<T> restorer = RedBlackPropertyRestorer<T>(initialNode);
-    restorer.restore();
-}
-
-template<typename T>
-void RedBlackTree<T>::remove(T key) {
-    sentinel->removeKey(key);
-    sentinel->checkNumberOfBlackNodesInSubtrees();
-    numberOfElements--;
-}
-
-template<typename T>
-RedBlackTree<T>::~RedBlackTree() {
-    delete sentinel;
+template<typename T, typename U>
+bool RedBlackTree<T, U>::containsValue(U value) {
+    return true;
 }
 
 #endif //SDIZO_1_REDBLACKTREE_H

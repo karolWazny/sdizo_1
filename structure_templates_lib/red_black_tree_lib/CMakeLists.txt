@@ -5,16 +5,8 @@ set(CMAKE_CXX_STANDARD 14)
 
 set(HEADER_FILES
         RedBlackTree.h
-        RedBlackNodeImpl.h
-        RedBlackNode.h
-        RedBlackSentinel.h
-        RedBlackRotator.h
-        RedBlackPropertyRestorer.h
-        UsefulEnums.h
-        RedBlackNil.h
-        RedBlackRemover.h
-        NodeImpl.h
-        RedBlackPostDeleteFixer.h)
+        Node.h
+        Compare.h)
 
 set(SOURCE_FILES
         index.cpp)
