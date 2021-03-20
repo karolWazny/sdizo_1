@@ -331,10 +331,22 @@ acxx_demangle.h
 -
 
 ../structure_templates_lib/red_black_tree_lib/Node.h
+memory
+-
+
+../structure_templates_lib/red_black_tree_lib/NodeImpl.h
+Node.h
+../structure_templates_lib/red_black_tree_lib/Node.h
+Sentinel.h
+../structure_templates_lib/red_black_tree_lib/Sentinel.h
+
+../structure_templates_lib/red_black_tree_lib/Sentinel.h
+Node.h
+../structure_templates_lib/red_black_tree_lib/Node.h
 
 D:/projects/clion/sdizo_1/Google_tests/NodeTest.cpp
 gtest/gtest.h
 D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
-red_black_tree_lib/Node.h
+red_black_tree_lib/NodeImpl.h
 -
 

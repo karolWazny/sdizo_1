@@ -342,7 +342,16 @@
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/Node.h">
 			<Option target="red_black_tree_lib"/>
 		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/NodeFinder.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/NodeImpl.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/RedBlackTree.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/Sentinel.h">
 			<Option target="red_black_tree_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/index.cpp">

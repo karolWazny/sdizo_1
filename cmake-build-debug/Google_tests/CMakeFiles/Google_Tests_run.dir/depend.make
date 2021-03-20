@@ -47,6 +47,8 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\Google_tests\l
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-string.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-type-util.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\Node.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\NodeImpl.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\Sentinel.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\Google_tests\NodeTest.cpp
 
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\gtest-death-test.h

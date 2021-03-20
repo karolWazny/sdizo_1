@@ -5,8 +5,11 @@ set(CMAKE_CXX_STANDARD 14)
 
 set(HEADER_FILES
         RedBlackTree.h
+        NodeImpl.h
+        Compare.h
         Node.h
-        Compare.h)
+        Sentinel.h
+        NodeFinder.h)
 
 set(SOURCE_FILES
         index.cpp)

@@ -45,7 +45,7 @@ int RedBlackTree<T>::getSize() {
 
 template<typename T>
 NodePointer<T> RedBlackTree<T>::standardBinaryTreeInsert(T key) {
-    NodePointer<T> addedNode(new Node<T>(sentinel, key));
+    NodePointer<T> addedNode(new NodeImpl<T>(sentinel, key));
     sentinel->insertAfter(addedNode);
     return addedNode;
 }
