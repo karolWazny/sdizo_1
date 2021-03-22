@@ -104,6 +104,7 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\structure_te
 Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\NodeImpl.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\NodePutter.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\PlaceToPutFinder.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\RootFinder.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\Sentinel.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\Google_tests\PutterTest.cpp
 
@@ -131,7 +132,10 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\struc
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\Node.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\NodeFinder.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\NodeImpl.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\NodePutter.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\PlaceToPutFinder.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\RedBlackTree.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\RootFinder.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\Sentinel.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\Google_tests\RedBlackTreeTests.cpp
 

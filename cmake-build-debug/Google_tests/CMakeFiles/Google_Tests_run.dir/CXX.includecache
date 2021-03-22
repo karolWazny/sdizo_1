@@ -330,6 +330,10 @@ cxxabi.h
 acxx_demangle.h
 -
 
+../structure_templates_lib/red_black_tree_lib/KeyFinder.h
+NodeFinder.h
+../structure_templates_lib/red_black_tree_lib/NodeFinder.h
+
 ../structure_templates_lib/red_black_tree_lib/Node.h
 memory
 -
@@ -358,6 +362,16 @@ RootFinder.h
 NodeFinder.h
 ../structure_templates_lib/red_black_tree_lib/NodeFinder.h
 
+../structure_templates_lib/red_black_tree_lib/RedBlackTree.h
+Node.h
+../structure_templates_lib/red_black_tree_lib/Node.h
+NodeImpl.h
+../structure_templates_lib/red_black_tree_lib/NodeImpl.h
+KeyFinder.h
+../structure_templates_lib/red_black_tree_lib/KeyFinder.h
+NodePutter.h
+../structure_templates_lib/red_black_tree_lib/NodePutter.h
+
 ../structure_templates_lib/red_black_tree_lib/RootFinder.h
 NodeFinder.h
 ../structure_templates_lib/red_black_tree_lib/NodeFinder.h
@@ -366,11 +380,9 @@ NodeFinder.h
 Node.h
 ../structure_templates_lib/red_black_tree_lib/Node.h
 
-D:/projects/clion/sdizo_1/Google_tests/PutterTest.cpp
+D:/projects/clion/sdizo_1/Google_tests/RedBlackTreeTests.cpp
 gtest/gtest.h
 D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
-red_black_tree_lib/NodeImpl.h
--
-red_black_tree_lib/NodePutter.h
+red_black_tree_lib/RedBlackTree.h
 -
 

@@ -13,7 +13,8 @@ set(HEADER_FILES
         KeyFinder.h
         PlaceToPutFinder.h
         NodePutter.h
-        RootFinder.h)
+        RootFinder.h
+        ConsequentFinder.h)
 
 set(SOURCE_FILES
         index.cpp)

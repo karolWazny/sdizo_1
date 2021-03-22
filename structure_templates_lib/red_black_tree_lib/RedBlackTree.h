@@ -8,6 +8,7 @@
 #include "Node.h"
 #include "NodeImpl.h"
 #include "KeyFinder.h"
+#include "NodePutter.h"
 
 template <typename T, typename U>
 class RedBlackTree
@@ -17,6 +18,7 @@ public:
     void put(T key, U value);
     bool containsKey(T key);
     bool containsValue(U value);
+    void removeKey(T key);
 private:
     NodePointer<T, U> root;
 };
@@ -28,7 +30,9 @@ RedBlackTree<T, U>::RedBlackTree() {
 
 template<typename T, typename U>
 void RedBlackTree<T, U>::put(T key, U value) {
-    root = NodePointer<T, U>(new NodeImpl<T, U>(key, value));
+    auto putter = NodePutter<T, U>(root);
+    putter.put(key, value);
+    root = putter.getRoot();
 }
 
 template<typename T, typename U>
@@ -42,6 +46,11 @@ bool RedBlackTree<T, U>::containsKey(T key) {
 template<typename T, typename U>
 bool RedBlackTree<T, U>::containsValue(U value) {
     return true;
+}
+
+template<typename T, typename U>
+void RedBlackTree<T, U>::removeKey(T key) {
+
 }
 
 #endif //SDIZO_1_REDBLACKTREE_H

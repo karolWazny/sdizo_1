@@ -105,6 +105,7 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/PutterTest.cpp.obj
  ../structure_templates_lib/red_black_tree_lib/NodeImpl.h
  ../structure_templates_lib/red_black_tree_lib/NodePutter.h
  ../structure_templates_lib/red_black_tree_lib/PlaceToPutFinder.h
+ ../structure_templates_lib/red_black_tree_lib/RootFinder.h
  ../structure_templates_lib/red_black_tree_lib/Sentinel.h
  D:/projects/clion/sdizo_1/Google_tests/PutterTest.cpp
 Google_tests/CMakeFiles/Google_Tests_run.dir/RedBlackTreeTests.cpp.obj
@@ -132,6 +133,9 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/RedBlackTreeTests.cpp.obj
  ../structure_templates_lib/red_black_tree_lib/Node.h
  ../structure_templates_lib/red_black_tree_lib/NodeFinder.h
  ../structure_templates_lib/red_black_tree_lib/NodeImpl.h
+ ../structure_templates_lib/red_black_tree_lib/NodePutter.h
+ ../structure_templates_lib/red_black_tree_lib/PlaceToPutFinder.h
  ../structure_templates_lib/red_black_tree_lib/RedBlackTree.h
+ ../structure_templates_lib/red_black_tree_lib/RootFinder.h
  ../structure_templates_lib/red_black_tree_lib/Sentinel.h
  D:/projects/clion/sdizo_1/Google_tests/RedBlackTreeTests.cpp
