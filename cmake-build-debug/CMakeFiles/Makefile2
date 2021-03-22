@@ -286,8 +286,8 @@ CMakeFiles\sdizo_1.dir\all: structure_templates_lib\array_lib\CMakeFiles\array_l
 CMakeFiles\sdizo_1.dir\all: structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
 CMakeFiles\sdizo_1.dir\all: structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
 CMakeFiles\sdizo_1.dir\all: structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all
-CMakeFiles\sdizo_1.dir\all: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
 CMakeFiles\sdizo_1.dir\all: structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\all
+CMakeFiles\sdizo_1.dir\all: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=26,27 "Built target sdizo_1"
@@ -317,8 +317,8 @@ CMakeFiles\sdizo_1.dir\clean:
 structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all: structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\all
 structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all: structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
 structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all: structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
-structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
 structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all: structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\all
+structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
 	$(MAKE) $(MAKESILENT) -f structure_templates_lib\CMakeFiles\structure_templates_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\CMakeFiles\structure_templates_lib.dir\depend
 	$(MAKE) $(MAKESILENT) -f structure_templates_lib\CMakeFiles\structure_templates_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\CMakeFiles\structure_templates_lib.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=28,29 "Built target structure_templates_lib"
@@ -484,10 +484,10 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\array_
 Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
 Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
 Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all
-Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
 Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\all
-Google_tests\CMakeFiles\Google_Tests_run.dir\all: Google_tests\lib\googletest\CMakeFiles\gtest.dir\all
+Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
 Google_tests\CMakeFiles\Google_Tests_run.dir\all: Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\all
+Google_tests\CMakeFiles\Google_Tests_run.dir\all: Google_tests\lib\googletest\CMakeFiles\gtest.dir\all
 	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\depend
 	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target Google_Tests_run"

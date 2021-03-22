@@ -4,6 +4,7 @@
 #include "Node.h"
 #include "PlaceToPutFinder.h"
 #include "NodeImpl.h" //todo zrobić fabrykę abstrakcyjną
+#include "RootFinder.h"
 
 template <typename T, typename U>
 class NodePutter
@@ -41,6 +42,9 @@ void NodePutter<T, U>::put(T key, U value) {
         currentNode->setRight(nodeToBePut);
     }
     nodeToBePut->setParent(currentNode);
+    auto rootFinder = RootFinder<T, U>(nodeToBePut);
+    rootFinder.find();
+    root = rootFinder.getFound();
 }
 
 template<typename T, typename U>

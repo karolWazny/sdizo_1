@@ -23,7 +23,11 @@ public:
 private:
     static U content;
     static T key;
+    static NodePointer<T, U> instance;
 };
+
+template <typename T, typename U>
+NodePointer<T,U> Sentinel<T, U>::instance = NodePointer<T, U>(new Sentinel<T, U>);
 
 template <typename T, typename U>
 U Sentinel<T, U>::content = NULL;
@@ -33,17 +37,17 @@ T Sentinel<T, U>::key = NULL;
 
 template<typename T, typename U>
 NodePointer<T, U> Sentinel<T, U>::getParent() {
-    return NodePointer<T, U>();
+    return instance;
 }
 
 template<typename T, typename U>
 NodePointer<T, U> Sentinel<T, U>::getLeft() {
-    return NodePointer<T, U>();
+    return instance;
 }
 
 template<typename T, typename U>
 NodePointer<T, U> Sentinel<T, U>::getRight() {
-    return NodePointer<T, U>();
+    return instance;
 }
 
 template<typename T, typename U>

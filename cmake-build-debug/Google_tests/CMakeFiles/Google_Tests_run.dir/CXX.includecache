@@ -351,8 +351,14 @@ PlaceToPutFinder.h
 ../structure_templates_lib/red_black_tree_lib/PlaceToPutFinder.h
 NodeImpl.h
 ../structure_templates_lib/red_black_tree_lib/NodeImpl.h
+RootFinder.h
+../structure_templates_lib/red_black_tree_lib/RootFinder.h
 
 ../structure_templates_lib/red_black_tree_lib/PlaceToPutFinder.h
+NodeFinder.h
+../structure_templates_lib/red_black_tree_lib/NodeFinder.h
+
+../structure_templates_lib/red_black_tree_lib/RootFinder.h
 NodeFinder.h
 ../structure_templates_lib/red_black_tree_lib/NodeFinder.h
 
