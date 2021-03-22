@@ -10,7 +10,10 @@ set(HEADER_FILES
         Node.h
         Sentinel.h
         NodeFinder.h
-        KeyFinder.h)
+        KeyFinder.h
+        PlaceToPutFinder.h
+        NodePutter.h
+        RootFinder.h)
 
 set(SOURCE_FILES
         index.cpp)

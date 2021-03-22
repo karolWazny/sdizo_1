@@ -13,6 +13,7 @@ class Sentinel : public Node<T, U>
 public:
     U& getContent();
     T getKey();
+    void setParent(NodePointer<T, U>);
     NodePointer<T, U> getParent();
     void setLeft(NodePointer<T, U>) override;
     NodePointer<T, U> getLeft() override;
@@ -68,6 +69,11 @@ void Sentinel<T, U>::setLeft(NodePointer<T, U>) {
 template<typename T, typename U>
 void Sentinel<T, U>::setRight(NodePointer<T, U>) {
     //nil z definicji jest bezdzietny
+}
+
+template<typename T, typename U>
+void Sentinel<T, U>::setParent(NodePointer<T, U> parent) {
+
 }
 
 #endif //SDIZO_1_SENTINEL_H

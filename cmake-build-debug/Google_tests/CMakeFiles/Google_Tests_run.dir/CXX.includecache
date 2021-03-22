@@ -334,19 +334,37 @@ acxx_demangle.h
 memory
 -
 
+../structure_templates_lib/red_black_tree_lib/NodeFinder.h
+Node.h
+../structure_templates_lib/red_black_tree_lib/Node.h
+
 ../structure_templates_lib/red_black_tree_lib/NodeImpl.h
 Node.h
 ../structure_templates_lib/red_black_tree_lib/Node.h
 Sentinel.h
 ../structure_templates_lib/red_black_tree_lib/Sentinel.h
 
+../structure_templates_lib/red_black_tree_lib/NodePutter.h
+Node.h
+../structure_templates_lib/red_black_tree_lib/Node.h
+PlaceToPutFinder.h
+../structure_templates_lib/red_black_tree_lib/PlaceToPutFinder.h
+NodeImpl.h
+../structure_templates_lib/red_black_tree_lib/NodeImpl.h
+
+../structure_templates_lib/red_black_tree_lib/PlaceToPutFinder.h
+NodeFinder.h
+../structure_templates_lib/red_black_tree_lib/NodeFinder.h
+
 ../structure_templates_lib/red_black_tree_lib/Sentinel.h
 Node.h
 ../structure_templates_lib/red_black_tree_lib/Node.h
 
-D:/projects/clion/sdizo_1/Google_tests/NodeTest.cpp
+D:/projects/clion/sdizo_1/Google_tests/PutterTest.cpp
 gtest/gtest.h
 D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
 red_black_tree_lib/NodeImpl.h
+-
+red_black_tree_lib/NodePutter.h
 -
 

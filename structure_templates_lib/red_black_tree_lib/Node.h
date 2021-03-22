@@ -22,6 +22,7 @@ class Node
 public:
     virtual U& getContent() = 0;
     virtual T getKey() = 0;
+    virtual void setParent(NodePointer<T, U>) = 0;
     virtual NodePointer<T, U> getParent() = 0;
     virtual void setLeft(NodePointer<T, U>) = 0;
     virtual NodePointer<T, U> getLeft() = 0;

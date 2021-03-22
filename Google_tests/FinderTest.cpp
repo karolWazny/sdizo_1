@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 #include <red_black_tree_lib/NodeImpl.h>
 #include <red_black_tree_lib/KeyFinder.h>
+#include <red_black_tree_lib/PlaceToPutFinder.h>
 
 TEST(KeyFinderSuite, KeyFoundInInitialNode){
     auto node = NodePointer<int, int>(new NodeImpl<int, int>(2,3));
@@ -48,4 +49,43 @@ TEST(KeyFinderSuite, KeyFoundInRightNode){
     finder.find();
     ASSERT_TRUE(finder.nodeFound());
     ASSERT_EQ(finder.getFound(), right);
+}
+
+TEST(PlaceFinderSuite, Compilation){
+    auto parent = NodePointer<int, int>(new NodeImpl<int, int>(5,3));
+    auto finder = PlaceToPutFinder<int, int>(parent);
+    finder.setKeyToBePut(4);
+    finder.find();
+    finder.nodeFound();
+    finder.getFound();
+}
+
+TEST(PlaceFinderSuite, FindRightSide){
+    auto parent = NodePointer<int, int>(new NodeImpl<int, int>(5,3));
+    auto left = NodePointer<int, int>(new NodeImpl<int, int>(2,3));
+    auto right = NodePointer<int, int>(new NodeImpl<int, int>(8,3));
+    parent->setLeft(left);
+    parent->setRight(right);
+    auto finder = PlaceToPutFinder<int, int>(parent);
+    finder.setKeyToBePut(4);
+    ASSERT_FALSE(finder.nodeFound());
+    finder.find();
+    ASSERT_TRUE(finder.nodeFound());
+    ASSERT_EQ(finder.getFound(), left);
+    ASSERT_EQ(finder.getPlaceSide(), Side::RIGHT);
+}
+
+TEST(PlaceFinderSuite, FindLeftSide){
+    auto parent = NodePointer<int, int>(new NodeImpl<int, int>(5,3));
+    auto left = NodePointer<int, int>(new NodeImpl<int, int>(2,3));
+    auto right = NodePointer<int, int>(new NodeImpl<int, int>(8,3));
+    parent->setLeft(left);
+    parent->setRight(right);
+    auto finder = PlaceToPutFinder<int, int>(parent);
+    finder.setKeyToBePut(1);
+    ASSERT_FALSE(finder.nodeFound());
+    finder.find();
+    ASSERT_TRUE(finder.nodeFound());
+    ASSERT_EQ(finder.getFound(), left);
+    ASSERT_EQ(finder.getPlaceSide(), Side::LEFT);
 }

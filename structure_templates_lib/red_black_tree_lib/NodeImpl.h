@@ -15,6 +15,7 @@ public:
     NodeImpl(T key, U value);
     U& getContent() override;
     T getKey()override;
+    void setParent(NodePointer<T, U>) override;
     NodePointer<T, U> getParent() override;
     void setLeft(NodePointer<T, U>) override;
     NodePointer<T, U> getLeft() override;
@@ -80,6 +81,11 @@ void NodeImpl<T, U>::setLeft(NodePointer<T, U> node) {
 template<typename T, typename U>
 void NodeImpl<T, U>::setRight(NodePointer<T, U> node) {
     this->right = node;
+}
+
+template<typename T, typename U>
+void NodeImpl<T, U>::setParent(NodePointer<T, U> node) {
+    this->parent = node;
 }
 
 #endif //SDIZO_1_NODEIMPL_H
