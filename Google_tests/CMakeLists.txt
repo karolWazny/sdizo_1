@@ -6,7 +6,8 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 add_executable(Google_Tests_run
         ListTests.cpp
         RedBlackTreeTests.cpp
-        NodeTest.cpp)
+        NodeTest.cpp
+        FinderTest.cpp)
 
 # linking Google_Tests_run with structure_templates_lib which will be tested
 target_link_libraries(Google_Tests_run structure_templates_lib)

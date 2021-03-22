@@ -9,7 +9,8 @@ set(HEADER_FILES
         Compare.h
         Node.h
         Sentinel.h
-        NodeFinder.h)
+        NodeFinder.h
+        KeyFinder.h)
 
 set(SOURCE_FILES
         index.cpp)

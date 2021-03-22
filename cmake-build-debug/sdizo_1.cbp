@@ -672,6 +672,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/projects/clion/sdizo_1/Google_tests/FinderTest.cpp">
+			<Option target="Google_Tests_run"/>
+		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/Google_tests/ListTests.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
@@ -730,6 +733,9 @@
 			<Option target="linked_list_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/Compare.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/KeyFinder.h">
 			<Option target="red_black_tree_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/Node.h">

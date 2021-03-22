@@ -11,9 +11,9 @@ template <typename T, typename U>
 class NodeFinder
 {
 public:
-    NodePointer<T, U> find() = 0;
-    NodePointer<T, U> getFound() = 0;
-    bool nodeFound() = 0;
+    virtual NodePointer<T, U> find() = 0;
+    virtual NodePointer<T, U> getFound() = 0;
+    virtual bool nodeFound() = 0;
 };
 
 #endif //SDIZO_1_NODEFINDER_H

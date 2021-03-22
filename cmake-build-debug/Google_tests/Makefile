@@ -177,6 +177,39 @@ Google_Tests_run\fast:
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
 .PHONY : Google_Tests_run\fast
 
+FinderTest.obj: FinderTest.cpp.obj
+
+.PHONY : FinderTest.obj
+
+# target to build an object file
+FinderTest.cpp.obj:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.obj
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : FinderTest.cpp.obj
+
+FinderTest.i: FinderTest.cpp.i
+
+.PHONY : FinderTest.i
+
+# target to preprocess a source file
+FinderTest.cpp.i:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.i
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : FinderTest.cpp.i
+
+FinderTest.s: FinderTest.cpp.s
+
+.PHONY : FinderTest.s
+
+# target to generate assembly for a file
+FinderTest.cpp.s:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.s
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : FinderTest.cpp.s
+
 ListTests.obj: ListTests.cpp.obj
 
 .PHONY : ListTests.obj
@@ -288,6 +321,9 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... Google_Tests_run
+	@echo ... FinderTest.obj
+	@echo ... FinderTest.i
+	@echo ... FinderTest.s
 	@echo ... ListTests.obj
 	@echo ... ListTests.i
 	@echo ... ListTests.s
