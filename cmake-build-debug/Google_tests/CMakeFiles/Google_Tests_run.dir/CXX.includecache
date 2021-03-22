@@ -330,6 +330,12 @@ cxxabi.h
 acxx_demangle.h
 -
 
+../structure_templates_lib/red_black_tree_lib/ConsequentFinder.h
+Node.h
+../structure_templates_lib/red_black_tree_lib/Node.h
+NodeFinder.h
+../structure_templates_lib/red_black_tree_lib/NodeFinder.h
+
 ../structure_templates_lib/red_black_tree_lib/KeyFinder.h
 NodeFinder.h
 ../structure_templates_lib/red_black_tree_lib/NodeFinder.h
@@ -348,41 +354,27 @@ Node.h
 Sentinel.h
 ../structure_templates_lib/red_black_tree_lib/Sentinel.h
 
-../structure_templates_lib/red_black_tree_lib/NodePutter.h
-Node.h
-../structure_templates_lib/red_black_tree_lib/Node.h
-PlaceToPutFinder.h
-../structure_templates_lib/red_black_tree_lib/PlaceToPutFinder.h
-NodeImpl.h
-../structure_templates_lib/red_black_tree_lib/NodeImpl.h
-RootFinder.h
-../structure_templates_lib/red_black_tree_lib/RootFinder.h
-
 ../structure_templates_lib/red_black_tree_lib/PlaceToPutFinder.h
 NodeFinder.h
 ../structure_templates_lib/red_black_tree_lib/NodeFinder.h
-
-../structure_templates_lib/red_black_tree_lib/RedBlackTree.h
-Node.h
-../structure_templates_lib/red_black_tree_lib/Node.h
-NodeImpl.h
-../structure_templates_lib/red_black_tree_lib/NodeImpl.h
-KeyFinder.h
-../structure_templates_lib/red_black_tree_lib/KeyFinder.h
-NodePutter.h
-../structure_templates_lib/red_black_tree_lib/NodePutter.h
-
-../structure_templates_lib/red_black_tree_lib/RootFinder.h
-NodeFinder.h
-../structure_templates_lib/red_black_tree_lib/NodeFinder.h
+Side.h
+../structure_templates_lib/red_black_tree_lib/Side.h
 
 ../structure_templates_lib/red_black_tree_lib/Sentinel.h
 Node.h
 ../structure_templates_lib/red_black_tree_lib/Node.h
 
-D:/projects/clion/sdizo_1/Google_tests/RedBlackTreeTests.cpp
+../structure_templates_lib/red_black_tree_lib/Side.h
+
+D:/projects/clion/sdizo_1/Google_tests/FinderTest.cpp
 gtest/gtest.h
 D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
-red_black_tree_lib/RedBlackTree.h
+red_black_tree_lib/NodeImpl.h
+-
+red_black_tree_lib/KeyFinder.h
+-
+red_black_tree_lib/PlaceToPutFinder.h
+-
+red_black_tree_lib/ConsequentFinder.h
 -
 

@@ -25,7 +25,7 @@ private:
 
 template <typename T, typename U>
 RedBlackTree<T, U>::RedBlackTree() {
-    root = NodePointer<T, U>(new Sentinel<T, U>());
+    root = Sentinel<T, U>::getInstance();
 }
 
 template<typename T, typename U>

@@ -32,7 +32,7 @@ private:
 };
 
 template <typename T, typename U>
-NodePointer<T, U> NodeImpl<T, U>::sentinel = NodePointer<T, U>(new Sentinel<T, U>());
+NodePointer<T, U> NodeImpl<T, U>::sentinel = Sentinel<T, U>::getInstance();
 
 template<typename T, typename U>
 U& NodeImpl<T, U>::getContent() {
@@ -55,7 +55,7 @@ T NodeImpl<T, U>::getKey() {
 
 template<typename T, typename U>
 NodePointer<T, U> NodeImpl<T, U>::getParent() {
-    return parent;
+    return parent.lock();
 }
 
 template<typename T, typename U>
@@ -85,7 +85,10 @@ void NodeImpl<T, U>::setRight(NodePointer<T, U> node) {
 
 template<typename T, typename U>
 void NodeImpl<T, U>::setParent(NodePointer<T, U> node) {
-    this->parent = node;
+    if(node->isNil())
+        this->parent = sentinel;
+    else
+        this->parent = node;
 }
 
 #endif //SDIZO_1_NODEIMPL_H

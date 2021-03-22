@@ -8,7 +8,8 @@ add_executable(Google_Tests_run
         RedBlackTreeTests.cpp
         NodeTest.cpp
         FinderTest.cpp
-        PutterTest.cpp)
+        PutterTest.cpp
+        )
 
 # linking Google_Tests_run with structure_templates_lib which will be tested
 target_link_libraries(Google_Tests_run structure_templates_lib)

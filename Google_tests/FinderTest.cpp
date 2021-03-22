@@ -2,6 +2,7 @@
 #include <red_black_tree_lib/NodeImpl.h>
 #include <red_black_tree_lib/KeyFinder.h>
 #include <red_black_tree_lib/PlaceToPutFinder.h>
+#include <red_black_tree_lib/ConsequentFinder.h>
 
 TEST(KeyFinderSuite, KeyFoundInInitialNode){
     auto node = NodePointer<int, int>(new NodeImpl<int, int>(2,3));
@@ -88,4 +89,37 @@ TEST(PlaceFinderSuite, FindLeftSide){
     ASSERT_TRUE(finder.nodeFound());
     ASSERT_EQ(finder.getFound(), left);
     ASSERT_EQ(finder.getPlaceSide(), Side::LEFT);
+}
+
+TEST(PlaceFinderSuite, FindNoConsequent){
+    auto parent = NodePointer<int, int>(new NodeImpl<int, int>(20,20));
+    auto finder = ConsequentFinder<int, int>(parent);
+    finder.find();
+    ASSERT_TRUE(finder.getFound()->isNil());
+}
+
+TEST(PlaceFinderSuite, FindRightConsequent){
+    auto parent = NodePointer<int, int>(new NodeImpl<int, int>(20,20));
+    auto node2 = NodePointer<int, int>(new NodeImpl<int, int>(21,21));
+    auto node3 = NodePointer<int, int>(new NodeImpl<int, int>(19,19));
+    auto node4 = NodePointer<int, int>(new NodeImpl<int, int>(18,18));
+    parent->setRight(node2);
+    node2->setLeft(node3);
+    node3->setLeft(node4);
+    auto finder = ConsequentFinder<int, int>(parent);
+    finder.find();
+    ASSERT_EQ(finder.getFound(), node4);
+}
+
+TEST(PlaceFinderSuite, FindLeftConsequent){
+    auto parent = NodePointer<int, int>(new NodeImpl<int, int>(20,20));
+    auto node2 = NodePointer<int, int>(new NodeImpl<int, int>(21,21));
+    auto node3 = NodePointer<int, int>(new NodeImpl<int, int>(19,19));
+    auto node4 = NodePointer<int, int>(new NodeImpl<int, int>(18,18));
+    parent->setLeft(node2);
+    node2->setRight(node3);
+    node3->setRight(node4);
+    auto finder = ConsequentFinder<int, int>(parent);
+    finder.find();
+    ASSERT_EQ(finder.getFound(), node4);
 }

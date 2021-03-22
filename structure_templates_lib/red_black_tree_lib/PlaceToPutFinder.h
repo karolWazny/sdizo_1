@@ -2,12 +2,8 @@
 #define SDIZO_1_PLACETOPUTFINDER_H
 
 #include "NodeFinder.h"
+#include "Side.h"
 
-enum class Side : char
-{
-    RIGHT,
-    LEFT
-};
 
 template <typename T, typename U>
 class PlaceToPutFinder : public NodeFinder<T, U>

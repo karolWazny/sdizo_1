@@ -20,6 +20,8 @@ public:
     void setRight(NodePointer<T, U>) override;
     NodePointer<T, U> getRight() override;
     bool isNil() override;
+
+    static NodePointer<T, U> getInstance();
 private:
     static U content;
     static T key;
@@ -27,7 +29,7 @@ private:
 };
 
 template <typename T, typename U>
-NodePointer<T,U> Sentinel<T, U>::instance = NodePointer<T, U>(new Sentinel<T, U>);
+NodePointer<T,U> Sentinel<T, U>::instance = NodePointer<T, U>(new Sentinel<T, U>());
 
 template <typename T, typename U>
 U Sentinel<T, U>::content = NULL;
@@ -37,17 +39,17 @@ T Sentinel<T, U>::key = NULL;
 
 template<typename T, typename U>
 NodePointer<T, U> Sentinel<T, U>::getParent() {
-    return instance;
+    return getInstance();
 }
 
 template<typename T, typename U>
 NodePointer<T, U> Sentinel<T, U>::getLeft() {
-    return instance;
+    return getInstance();
 }
 
 template<typename T, typename U>
 NodePointer<T, U> Sentinel<T, U>::getRight() {
-    return instance;
+    return getInstance();
 }
 
 template<typename T, typename U>
@@ -78,6 +80,11 @@ void Sentinel<T, U>::setRight(NodePointer<T, U>) {
 template<typename T, typename U>
 void Sentinel<T, U>::setParent(NodePointer<T, U> parent) {
 
+}
+
+template<typename T, typename U>
+NodePointer<T, U> Sentinel<T, U>::getInstance() {
+    return instance;
 }
 
 #endif //SDIZO_1_SENTINEL_H

@@ -14,7 +14,7 @@ template <typename T, typename U>
 using NodePointer = std::shared_ptr<Node<T, U>>;
 
 template <typename T, typename U>
-using NodeWeakPtr = std::shared_ptr<Node<T, U>>;
+using NodeWeakPtr = std::weak_ptr<Node<T, U>>;
 
 template <typename T, typename U>
 class Node

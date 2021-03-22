@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/red_black_tree_lib.dir/Side.cpp.obj"
   "CMakeFiles/red_black_tree_lib.dir/index.cpp.obj"
   "red_black_tree_lib.lib"
   "red_black_tree_lib.pdb"

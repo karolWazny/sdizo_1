@@ -336,9 +336,6 @@
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/linked_list_lib/index.cpp">
 			<Option target="linked_list_lib"/>
 		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/Compare.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/ConsequentFinder.h">
 			<Option target="red_black_tree_lib"/>
 		</Unit>
@@ -367,6 +364,12 @@
 			<Option target="red_black_tree_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/Sentinel.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/Side.cpp">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/Side.h">
 			<Option target="red_black_tree_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/index.cpp">

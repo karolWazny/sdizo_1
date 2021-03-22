@@ -177,6 +177,39 @@ red_black_tree_lib\fast:
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
 .PHONY : red_black_tree_lib\fast
 
+Side.obj: Side.cpp.obj
+
+.PHONY : Side.obj
+
+# target to build an object file
+Side.cpp.obj:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\Side.cpp.obj
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
+.PHONY : Side.cpp.obj
+
+Side.i: Side.cpp.i
+
+.PHONY : Side.i
+
+# target to preprocess a source file
+Side.cpp.i:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\Side.cpp.i
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
+.PHONY : Side.cpp.i
+
+Side.s: Side.cpp.s
+
+.PHONY : Side.s
+
+# target to generate assembly for a file
+Side.cpp.s:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\Side.cpp.s
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
+.PHONY : Side.cpp.s
+
 index.obj: index.cpp.obj
 
 .PHONY : index.obj
@@ -222,6 +255,9 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... red_black_tree_lib
+	@echo ... Side.obj
+	@echo ... Side.i
+	@echo ... Side.s
 	@echo ... index.obj
 	@echo ... index.i
 	@echo ... index.s

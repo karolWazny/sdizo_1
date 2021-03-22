@@ -6,7 +6,6 @@ set(CMAKE_CXX_STANDARD 14)
 set(HEADER_FILES
         RedBlackTree.h
         NodeImpl.h
-        Compare.h
         Node.h
         Sentinel.h
         NodeFinder.h
@@ -14,9 +13,11 @@ set(HEADER_FILES
         PlaceToPutFinder.h
         NodePutter.h
         RootFinder.h
-        ConsequentFinder.h)
+        ConsequentFinder.h
+        Side.h)
 
 set(SOURCE_FILES
-        index.cpp)
+        index.cpp
+        Side.cpp)
 
 add_library(red_black_tree_lib STATIC ${HEADER_FILES} ${SOURCE_FILES})
