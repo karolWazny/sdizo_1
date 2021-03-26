@@ -330,6 +330,14 @@ cxxabi.h
 acxx_demangle.h
 -
 
+../structure_templates_lib/red_black_tree_lib/ConsequentLiberator.h
+Node.h
+../structure_templates_lib/red_black_tree_lib/Node.h
+NodeUtility.h
+../structure_templates_lib/red_black_tree_lib/NodeUtility.h
+Side.h
+../structure_templates_lib/red_black_tree_lib/Side.h
+
 ../structure_templates_lib/red_black_tree_lib/Node.h
 memory
 -
@@ -352,11 +360,9 @@ Node.h
 NodeFactory.h
 ../structure_templates_lib/red_black_tree_lib/NodeFactory.h
 
-../structure_templates_lib/red_black_tree_lib/NodeReplacer.h
+../structure_templates_lib/red_black_tree_lib/NodeUtility.h
 Node.h
 ../structure_templates_lib/red_black_tree_lib/Node.h
-Side.h
-../structure_templates_lib/red_black_tree_lib/Side.h
 RootFinder.h
 ../structure_templates_lib/red_black_tree_lib/RootFinder.h
 
@@ -370,11 +376,11 @@ Node.h
 
 ../structure_templates_lib/red_black_tree_lib/Side.h
 
-D:/projects/clion/sdizo_1/Google_tests/NodeReplacerTest.cpp
+D:/projects/clion/sdizo_1/Google_tests/LiberatorTest.cpp
 gtest/gtest.h
 D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
-red_black_tree_lib/NodeReplacer.h
+red_black_tree_lib/ConsequentLiberator.h
 -
-red_black_tree_lib/NodeImpl.h
+red_black_tree_lib/NodeFactory.h
 -
 

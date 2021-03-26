@@ -5,6 +5,8 @@
 #include "NodeImpl.h"
 #include "Sentinel.h"
 
+//todo rozwiązać zależność cykliczną
+
 template <typename T, typename U>
 class NodeFactory
 {

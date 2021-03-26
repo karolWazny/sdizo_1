@@ -3,19 +3,17 @@
 
 #include "Node.h"
 #include "Side.h"
-#include "RootFinder.h"
+#include "NodeUtility.h"
 
 template <typename T, typename U>
-class NodeReplacer
+class NodeReplacer : public NodeUtility<T, U>
 {
 public:
     explicit NodeReplacer(NodePointer<T, U> nodeToReplace);
     void replaceWithNode(NodePointer<T, U> replacementNode);
-    NodePointer<T, U> obtainRoot();
 private:
     void replace();
 
-    NodePointer<T, U> currentNode;
     NodePointer<T, U> replacement;
 };
 
@@ -61,13 +59,6 @@ void NodeReplacer<T, U>::replace() {
     right->setParent(replacement);
 
     currentNode = replacement;
-}
-
-template<typename T, typename U>
-NodePointer<T, U> NodeReplacer<T, U>::obtainRoot() {
-    auto finder = RootFinder<T, U>(currentNode);
-    finder.find();
-    return finder.getFound();
 }
 
 #endif //SDIZO_1_NODEREPLACER_H

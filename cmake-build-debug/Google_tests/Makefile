@@ -210,6 +210,39 @@ FinderTest.cpp.s:
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
 .PHONY : FinderTest.cpp.s
 
+LiberatorTest.obj: LiberatorTest.cpp.obj
+
+.PHONY : LiberatorTest.obj
+
+# target to build an object file
+LiberatorTest.cpp.obj:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : LiberatorTest.cpp.obj
+
+LiberatorTest.i: LiberatorTest.cpp.i
+
+.PHONY : LiberatorTest.i
+
+# target to preprocess a source file
+LiberatorTest.cpp.i:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.i
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : LiberatorTest.cpp.i
+
+LiberatorTest.s: LiberatorTest.cpp.s
+
+.PHONY : LiberatorTest.s
+
+# target to generate assembly for a file
+LiberatorTest.cpp.s:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.s
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : LiberatorTest.cpp.s
+
 ListTests.obj: ListTests.cpp.obj
 
 .PHONY : ListTests.obj
@@ -390,6 +423,9 @@ help:
 	@echo ... FinderTest.obj
 	@echo ... FinderTest.i
 	@echo ... FinderTest.s
+	@echo ... LiberatorTest.obj
+	@echo ... LiberatorTest.i
+	@echo ... LiberatorTest.s
 	@echo ... ListTests.obj
 	@echo ... ListTests.i
 	@echo ... ListTests.s

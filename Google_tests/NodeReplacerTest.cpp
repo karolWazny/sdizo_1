@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 #include <red_black_tree_lib/NodeReplacer.h>
-#include <red_black_tree_lib/NodeImpl.h>
+#include <red_black_tree_lib/NodeFactory.h>
 
 TEST(NodeReplacerSuite, Compilation){
     auto replacer = NodeReplacer<int, int>(NodeFactory<int, int>::makeNode(0,0));

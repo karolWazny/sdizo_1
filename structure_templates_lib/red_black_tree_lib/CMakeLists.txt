@@ -17,7 +17,8 @@ set(HEADER_FILES
         Side.h
         NodeReplacer.h
         NodeFactory.h
-        ConsequentLiberator.h)
+        ConsequentLiberator.h
+        NodeUtility.h)
 
 set(SOURCE_FILES
         index.cpp

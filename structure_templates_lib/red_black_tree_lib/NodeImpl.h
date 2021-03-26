@@ -1,7 +1,3 @@
-//
-// Created by admin on 19.03.2021.
-//
-
 #ifndef SDIZO_1_NODEIMPL_H
 #define SDIZO_1_NODEIMPL_H
 
@@ -75,20 +71,26 @@ bool NodeImpl<T, U>::isNil() {
 
 template<typename T, typename U>
 void NodeImpl<T, U>::setLeft(NodePointer<T, U> node) {
-    this->left = node;
+    if(node)
+        this->left = node;
+    else
+        this->left = sentinel;
 }
 
 template<typename T, typename U>
 void NodeImpl<T, U>::setRight(NodePointer<T, U> node) {
-    this->right = node;
+    if(node)
+        this->right = node;
+    else
+        this->right = sentinel;
 }
 
 template<typename T, typename U>
 void NodeImpl<T, U>::setParent(NodePointer<T, U> node) {
-    if(node->isNil())
-        this->parent = sentinel;
-    else
+    if(node)
         this->parent = node;
+    else
+        this->parent = sentinel;
 }
 
 #endif //SDIZO_1_NODEIMPL_H

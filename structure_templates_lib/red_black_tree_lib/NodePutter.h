@@ -4,17 +4,15 @@
 #include "Node.h"
 #include "PlaceToPutFinder.h"
 #include "NodeFactory.h"
-#include "RootFinder.h"
+#include "NodeUtility.h"
 
 template <typename T, typename U>
-class NodePutter
+class NodePutter : public NodeUtility<T, U>
 {
 public:
     explicit NodePutter(NodePointer<T, U> root);
     void put(T, U);
-    NodePointer<T, U> getRoot();
 private:
-    NodePointer<T, U> currentNode;
     NodePointer<T, U> root;
     Side sideOfPlaceToPut;
 };
@@ -42,14 +40,7 @@ void NodePutter<T, U>::put(T key, U value) {
         currentNode->setRight(nodeToBePut);
     }
     nodeToBePut->setParent(currentNode);
-    auto rootFinder = RootFinder<T, U>(nodeToBePut);
-    rootFinder.find();
-    root = rootFinder.getFound();
-}
-
-template<typename T, typename U>
-NodePointer<T, U> NodePutter<T, U>::getRoot() {
-    return root;
+    currentNode = nodeToBePut;
 }
 
 #endif //SDIZO_1_NODEPUTTER_H

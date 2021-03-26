@@ -289,6 +289,9 @@
 		<Unit filename="D:/projects/clion/sdizo_1/Google_tests/FinderTest.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/Google_tests/LiberatorTest.cpp">
+			<Option target="Google_Tests_run"/>
+		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/Google_tests/ListTests.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>

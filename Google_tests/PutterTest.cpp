@@ -25,7 +25,7 @@ TEST(KeyFinderSuite, PutIntoEmptyTree){
     node = node->getLeft();
     auto putter = NodePutter<int, int>(node);
     putter.put(1,4);
-    node = putter.getRoot();
+    node = putter.obtainRoot();
     ASSERT_FALSE(node->isNil());
     ASSERT_TRUE(node->getLeft()->isNil());
     ASSERT_TRUE(node->getRight()->isNil());

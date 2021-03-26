@@ -32,7 +32,7 @@ template<typename T, typename U>
 void RedBlackTree<T, U>::put(T key, U value) {
     auto putter = NodePutter<T, U>(root);
     putter.put(key, value);
-    root = putter.getRoot();
+    root = putter.obtainRoot();
 }
 
 template<typename T, typename U>
