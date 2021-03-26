@@ -5,6 +5,9 @@
 #include "NodeImpl.h"
 #include "Sentinel.h"
 
+#include "RBNode.h"
+#include "RedBlack.h"
+
 //todo rozwiązać zależność cykliczną
 
 template <typename T, typename U>
@@ -18,7 +21,8 @@ public:
 
 template<typename T, typename U>
 NodePointer<T, U> NodeFactory<T, U>::makeNode(T key, U value) {
-    return NodePointer<T, U>(new NodeImpl<T, U>(key, value));
+    //return NodePointer<T, U>(new NodeImpl<T, U>(key, value));
+    return NodePointer<T, U>(new RBNode<T, U>(new NodeImpl<T, U>(key, value), new RedBlack()));
 }
 
 template<typename T, typename U>

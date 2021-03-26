@@ -21,7 +21,8 @@ set(HEADER_FILES
         NodeUtility.h
         Colored.h
         RedBlack.h
-        Black.h)
+        Black.h
+        RBNode.h)
 
 set(SOURCE_FILES
         index.cpp

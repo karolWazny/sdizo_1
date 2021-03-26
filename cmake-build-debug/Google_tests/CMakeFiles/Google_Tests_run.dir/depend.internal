@@ -22,6 +22,7 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/FinderTest.cpp.obj
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-port.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-string.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-type-util.h
+ ../structure_templates_lib/red_black_tree_lib/Colored.h
  ../structure_templates_lib/red_black_tree_lib/ConsequentFinder.h
  ../structure_templates_lib/red_black_tree_lib/KeyFinder.h
  ../structure_templates_lib/red_black_tree_lib/Node.h
@@ -29,6 +30,8 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/FinderTest.cpp.obj
  ../structure_templates_lib/red_black_tree_lib/NodeFinder.h
  ../structure_templates_lib/red_black_tree_lib/NodeImpl.h
  ../structure_templates_lib/red_black_tree_lib/PlaceToPutFinder.h
+ ../structure_templates_lib/red_black_tree_lib/RBNode.h
+ ../structure_templates_lib/red_black_tree_lib/RedBlack.h
  ../structure_templates_lib/red_black_tree_lib/Sentinel.h
  ../structure_templates_lib/red_black_tree_lib/Side.h
  D:/projects/clion/sdizo_1/Google_tests/FinderTest.cpp
@@ -53,12 +56,15 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/LiberatorTest.cpp.obj
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-port.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-string.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-type-util.h
+ ../structure_templates_lib/red_black_tree_lib/Colored.h
  ../structure_templates_lib/red_black_tree_lib/ConsequentLiberator.h
  ../structure_templates_lib/red_black_tree_lib/Node.h
  ../structure_templates_lib/red_black_tree_lib/NodeFactory.h
  ../structure_templates_lib/red_black_tree_lib/NodeFinder.h
  ../structure_templates_lib/red_black_tree_lib/NodeImpl.h
  ../structure_templates_lib/red_black_tree_lib/NodeUtility.h
+ ../structure_templates_lib/red_black_tree_lib/RBNode.h
+ ../structure_templates_lib/red_black_tree_lib/RedBlack.h
  ../structure_templates_lib/red_black_tree_lib/RootFinder.h
  ../structure_templates_lib/red_black_tree_lib/Sentinel.h
  ../structure_templates_lib/red_black_tree_lib/Side.h
@@ -109,12 +115,15 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/NodeReplacerTest.cpp.obj
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-port.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-string.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-type-util.h
+ ../structure_templates_lib/red_black_tree_lib/Colored.h
  ../structure_templates_lib/red_black_tree_lib/Node.h
  ../structure_templates_lib/red_black_tree_lib/NodeFactory.h
  ../structure_templates_lib/red_black_tree_lib/NodeFinder.h
  ../structure_templates_lib/red_black_tree_lib/NodeImpl.h
  ../structure_templates_lib/red_black_tree_lib/NodeReplacer.h
  ../structure_templates_lib/red_black_tree_lib/NodeUtility.h
+ ../structure_templates_lib/red_black_tree_lib/RBNode.h
+ ../structure_templates_lib/red_black_tree_lib/RedBlack.h
  ../structure_templates_lib/red_black_tree_lib/RootFinder.h
  ../structure_templates_lib/red_black_tree_lib/Sentinel.h
  ../structure_templates_lib/red_black_tree_lib/Side.h
@@ -140,9 +149,12 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/NodeTest.cpp.obj
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-port.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-string.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-type-util.h
+ ../structure_templates_lib/red_black_tree_lib/Colored.h
  ../structure_templates_lib/red_black_tree_lib/Node.h
  ../structure_templates_lib/red_black_tree_lib/NodeFactory.h
  ../structure_templates_lib/red_black_tree_lib/NodeImpl.h
+ ../structure_templates_lib/red_black_tree_lib/RBNode.h
+ ../structure_templates_lib/red_black_tree_lib/RedBlack.h
  ../structure_templates_lib/red_black_tree_lib/Sentinel.h
  D:/projects/clion/sdizo_1/Google_tests/NodeTest.cpp
 Google_tests/CMakeFiles/Google_Tests_run.dir/PutterTest.cpp.obj
@@ -166,6 +178,7 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/PutterTest.cpp.obj
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-port.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-string.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-type-util.h
+ ../structure_templates_lib/red_black_tree_lib/Colored.h
  ../structure_templates_lib/red_black_tree_lib/Node.h
  ../structure_templates_lib/red_black_tree_lib/NodeFactory.h
  ../structure_templates_lib/red_black_tree_lib/NodeFinder.h
@@ -173,6 +186,8 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/PutterTest.cpp.obj
  ../structure_templates_lib/red_black_tree_lib/NodePutter.h
  ../structure_templates_lib/red_black_tree_lib/NodeUtility.h
  ../structure_templates_lib/red_black_tree_lib/PlaceToPutFinder.h
+ ../structure_templates_lib/red_black_tree_lib/RBNode.h
+ ../structure_templates_lib/red_black_tree_lib/RedBlack.h
  ../structure_templates_lib/red_black_tree_lib/RootFinder.h
  ../structure_templates_lib/red_black_tree_lib/Sentinel.h
  ../structure_templates_lib/red_black_tree_lib/Side.h
@@ -198,6 +213,7 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/RedBlackTreeTests.cpp.obj
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-port.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-string.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-type-util.h
+ ../structure_templates_lib/red_black_tree_lib/Colored.h
  ../structure_templates_lib/red_black_tree_lib/ConsequentFinder.h
  ../structure_templates_lib/red_black_tree_lib/ConsequentLiberator.h
  ../structure_templates_lib/red_black_tree_lib/KeyFinder.h
@@ -209,6 +225,8 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/RedBlackTreeTests.cpp.obj
  ../structure_templates_lib/red_black_tree_lib/NodeReplacer.h
  ../structure_templates_lib/red_black_tree_lib/NodeUtility.h
  ../structure_templates_lib/red_black_tree_lib/PlaceToPutFinder.h
+ ../structure_templates_lib/red_black_tree_lib/RBNode.h
+ ../structure_templates_lib/red_black_tree_lib/RedBlack.h
  ../structure_templates_lib/red_black_tree_lib/RedBlackTree.h
  ../structure_templates_lib/red_black_tree_lib/RootFinder.h
  ../structure_templates_lib/red_black_tree_lib/Sentinel.h

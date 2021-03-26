@@ -330,6 +330,8 @@ cxxabi.h
 acxx_demangle.h
 -
 
+../structure_templates_lib/red_black_tree_lib/Colored.h
+
 ../structure_templates_lib/red_black_tree_lib/ConsequentFinder.h
 Node.h
 ../structure_templates_lib/red_black_tree_lib/Node.h
@@ -359,6 +361,10 @@ NodeImpl.h
 ../structure_templates_lib/red_black_tree_lib/NodeImpl.h
 Sentinel.h
 ../structure_templates_lib/red_black_tree_lib/Sentinel.h
+RBNode.h
+../structure_templates_lib/red_black_tree_lib/RBNode.h
+RedBlack.h
+../structure_templates_lib/red_black_tree_lib/RedBlack.h
 
 ../structure_templates_lib/red_black_tree_lib/NodeFinder.h
 Node.h
@@ -400,6 +406,16 @@ NodeFinder.h
 Side.h
 ../structure_templates_lib/red_black_tree_lib/Side.h
 
+../structure_templates_lib/red_black_tree_lib/RBNode.h
+Colored.h
+../structure_templates_lib/red_black_tree_lib/Colored.h
+Node.h
+../structure_templates_lib/red_black_tree_lib/Node.h
+
+../structure_templates_lib/red_black_tree_lib/RedBlack.h
+Colored.h
+../structure_templates_lib/red_black_tree_lib/Colored.h
+
 ../structure_templates_lib/red_black_tree_lib/RedBlackTree.h
 Node.h
 ../structure_templates_lib/red_black_tree_lib/Node.h
@@ -424,12 +440,46 @@ Node.h
 
 ../structure_templates_lib/red_black_tree_lib/Side.h
 
+D:/projects/clion/sdizo_1/Google_tests/FinderTest.cpp
+gtest/gtest.h
+D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
+red_black_tree_lib/NodeFactory.h
+-
+red_black_tree_lib/KeyFinder.h
+-
+red_black_tree_lib/PlaceToPutFinder.h
+-
+red_black_tree_lib/ConsequentFinder.h
+-
+
 D:/projects/clion/sdizo_1/Google_tests/LiberatorTest.cpp
 gtest/gtest.h
 D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
 red_black_tree_lib/ConsequentLiberator.h
 -
 red_black_tree_lib/NodeFactory.h
+-
+
+D:/projects/clion/sdizo_1/Google_tests/NodeReplacerTest.cpp
+gtest/gtest.h
+D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
+red_black_tree_lib/NodeReplacer.h
+-
+red_black_tree_lib/NodeFactory.h
+-
+
+D:/projects/clion/sdizo_1/Google_tests/NodeTest.cpp
+gtest/gtest.h
+D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
+red_black_tree_lib/NodeFactory.h
+-
+
+D:/projects/clion/sdizo_1/Google_tests/PutterTest.cpp
+gtest/gtest.h
+D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
+red_black_tree_lib/NodeFactory.h
+-
+red_black_tree_lib/NodePutter.h
 -
 
 D:/projects/clion/sdizo_1/Google_tests/RedBlackTreeTests.cpp

@@ -19,7 +19,7 @@
 			</Target>
 			<Target title="sdizo_1">
 				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/sdizo_1.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir=""/>
+				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
@@ -43,7 +43,7 @@
 			</Target>
 			<Target title="sdizo_1/fast">
 				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/sdizo_1.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir=""/>
+				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
@@ -405,7 +405,7 @@
 			</Target>
 			<Target title="Google_Tests_run">
 				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/Google_tests/Google_Tests_run.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir=""/>
+				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/Google_tests"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
@@ -431,7 +431,7 @@
 			</Target>
 			<Target title="Google_Tests_run/fast">
 				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/Google_tests/Google_Tests_run.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir=""/>
+				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/Google_tests"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
@@ -781,6 +781,9 @@
 			<Option target="red_black_tree_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/PlaceToPutFinder.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/RBNode.h">
 			<Option target="red_black_tree_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/RedBlack.cpp">
