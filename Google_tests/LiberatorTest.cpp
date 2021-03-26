@@ -44,33 +44,43 @@ TEST(LiberatorSuite, LiberateRootChildless){
 TEST(LiberatorSuite, LiberateLeftConsequent){
     auto root = NodeFactory<int, int>::makeNode(5,5);
     auto consequent = NodeFactory<int, int>::makeNode(3,3);
-    auto consequentChild = NodeFactory<int, int>::makeNode(4,4);
+    auto consequentChild = NodeFactory<int, int>::makeNode(2,2);
+    auto right = NodeFactory<int, int>::makeNode(6,6);
     root->setLeft(consequent);
     consequent->setParent(root);
-    consequent->setRight(consequentChild);
-    consequentChild->setParent(consequent);
-    auto liberator = ConsequentLiberator<int, int>(consequent);
-    liberator.free();
-    root = liberator.obtainRoot();
-
-    ASSERT_EQ(root->getLeft(), consequentChild);
-    ASSERT_EQ(root, consequentChild->getParent());
-}
-
-TEST(LiberatorSuite, LiberateRightConsequent){
-    auto root = NodeFactory<int, int>::makeNode(5,5);
-    auto consequent = NodeFactory<int, int>::makeNode(8,8);
-    auto consequentChild = NodeFactory<int, int>::makeNode(6,6);
-    root->setRight(consequent);
-    consequent->setParent(root);
+    root->setRight(right);
+    right->setParent(root);
     consequent->setLeft(consequentChild);
     consequentChild->setParent(consequent);
     auto liberator = ConsequentLiberator<int, int>(consequent);
     liberator.free();
     root = liberator.obtainRoot();
 
-    ASSERT_EQ(root->getRight(), consequentChild);
+    ASSERT_EQ(root->getLeft(), consequentChild);
+    ASSERT_EQ(root->getRight(), right);
     ASSERT_EQ(root, consequentChild->getParent());
+    ASSERT_EQ(root, right->getParent());
+}
+
+TEST(LiberatorSuite, LiberateRightConsequent){
+    auto root = NodeFactory<int, int>::makeNode(5,5);
+    auto consequent = NodeFactory<int, int>::makeNode(8,8);
+    auto consequentChild = NodeFactory<int, int>::makeNode(10,10);
+    auto left = NodeFactory<int, int>::makeNode(3,3);
+    root->setRight(consequent);
+    consequent->setParent(root);
+    consequent->setRight(consequentChild);
+    consequentChild->setParent(consequent);
+    root->setLeft(left);
+    left->setParent(root);
+    auto liberator = ConsequentLiberator<int, int>(consequent);
+    liberator.free();
+    root = liberator.obtainRoot();
+
+    ASSERT_EQ(root->getRight(), consequentChild);
+    ASSERT_EQ(root->getLeft(), left);
+    ASSERT_EQ(root, consequentChild->getParent());
+    ASSERT_EQ(root, left->getParent());
 }
 
 TEST(LiberatorSuite, LiberateRightChildless){

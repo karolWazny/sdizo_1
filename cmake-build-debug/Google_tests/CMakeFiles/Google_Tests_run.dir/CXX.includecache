@@ -330,6 +330,12 @@ cxxabi.h
 acxx_demangle.h
 -
 
+../structure_templates_lib/red_black_tree_lib/ConsequentFinder.h
+Node.h
+../structure_templates_lib/red_black_tree_lib/Node.h
+NodeFinder.h
+../structure_templates_lib/red_black_tree_lib/NodeFinder.h
+
 ../structure_templates_lib/red_black_tree_lib/ConsequentLiberator.h
 Node.h
 ../structure_templates_lib/red_black_tree_lib/Node.h
@@ -337,6 +343,10 @@ NodeUtility.h
 ../structure_templates_lib/red_black_tree_lib/NodeUtility.h
 Side.h
 ../structure_templates_lib/red_black_tree_lib/Side.h
+
+../structure_templates_lib/red_black_tree_lib/KeyFinder.h
+NodeFinder.h
+../structure_templates_lib/red_black_tree_lib/NodeFinder.h
 
 ../structure_templates_lib/red_black_tree_lib/Node.h
 memory
@@ -360,11 +370,49 @@ Node.h
 NodeFactory.h
 ../structure_templates_lib/red_black_tree_lib/NodeFactory.h
 
+../structure_templates_lib/red_black_tree_lib/NodePutter.h
+Node.h
+../structure_templates_lib/red_black_tree_lib/Node.h
+PlaceToPutFinder.h
+../structure_templates_lib/red_black_tree_lib/PlaceToPutFinder.h
+NodeFactory.h
+../structure_templates_lib/red_black_tree_lib/NodeFactory.h
+NodeUtility.h
+../structure_templates_lib/red_black_tree_lib/NodeUtility.h
+
+../structure_templates_lib/red_black_tree_lib/NodeReplacer.h
+Node.h
+../structure_templates_lib/red_black_tree_lib/Node.h
+Side.h
+../structure_templates_lib/red_black_tree_lib/Side.h
+NodeUtility.h
+../structure_templates_lib/red_black_tree_lib/NodeUtility.h
+
 ../structure_templates_lib/red_black_tree_lib/NodeUtility.h
 Node.h
 ../structure_templates_lib/red_black_tree_lib/Node.h
 RootFinder.h
 ../structure_templates_lib/red_black_tree_lib/RootFinder.h
+
+../structure_templates_lib/red_black_tree_lib/PlaceToPutFinder.h
+NodeFinder.h
+../structure_templates_lib/red_black_tree_lib/NodeFinder.h
+Side.h
+../structure_templates_lib/red_black_tree_lib/Side.h
+
+../structure_templates_lib/red_black_tree_lib/RedBlackTree.h
+Node.h
+../structure_templates_lib/red_black_tree_lib/Node.h
+KeyFinder.h
+../structure_templates_lib/red_black_tree_lib/KeyFinder.h
+NodePutter.h
+../structure_templates_lib/red_black_tree_lib/NodePutter.h
+ConsequentFinder.h
+../structure_templates_lib/red_black_tree_lib/ConsequentFinder.h
+ConsequentLiberator.h
+../structure_templates_lib/red_black_tree_lib/ConsequentLiberator.h
+NodeReplacer.h
+../structure_templates_lib/red_black_tree_lib/NodeReplacer.h
 
 ../structure_templates_lib/red_black_tree_lib/RootFinder.h
 NodeFinder.h
@@ -382,5 +430,11 @@ D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
 red_black_tree_lib/ConsequentLiberator.h
 -
 red_black_tree_lib/NodeFactory.h
+-
+
+D:/projects/clion/sdizo_1/Google_tests/RedBlackTreeTests.cpp
+gtest/gtest.h
+D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
+red_black_tree_lib/RedBlackTree.h
 -
 

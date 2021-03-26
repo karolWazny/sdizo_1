@@ -197,12 +197,15 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\Googl
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-port.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-string.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-type-util.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\ConsequentFinder.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\ConsequentLiberator.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\KeyFinder.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\Node.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\NodeFactory.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\NodeFinder.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\NodeImpl.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\NodePutter.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\NodeReplacer.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\NodeUtility.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\PlaceToPutFinder.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\RedBlackTree.h

@@ -25,11 +25,11 @@ ConsequentLiberator<T, U>::ConsequentLiberator(NodePointer<T, U> consequent) {
 template<typename T, typename U>
 void ConsequentLiberator<T, U>::free(){
     auto child = nodeToFree->getRight();
-    auto consequentSide = Side::LEFT;
+    auto consequentSide = Side::RIGHT;
     if(child->isNil())
     {
         child = nodeToFree->getLeft();
-        consequentSide = Side::RIGHT;
+        consequentSide = Side::LEFT;
     }
     auto parent = nodeToFree->getParent();
     child->setParent(parent);

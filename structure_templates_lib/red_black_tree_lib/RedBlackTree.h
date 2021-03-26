@@ -6,9 +6,11 @@
 #define SDIZO_1_REDBLACKTREE_H
 
 #include "Node.h"
-#include "NodeImpl.h"
 #include "KeyFinder.h"
 #include "NodePutter.h"
+#include "ConsequentFinder.h"
+#include "ConsequentLiberator.h"
+#include "NodeReplacer.h"
 
 template <typename T, typename U>
 class RedBlackTree
@@ -50,7 +52,22 @@ bool RedBlackTree<T, U>::containsValue(U value) {
 
 template<typename T, typename U>
 void RedBlackTree<T, U>::removeKey(T key) {
-
+    auto finder = KeyFinder<T, U>(root);
+    finder.setDesiredKey(key);
+    finder.find();
+    bool treeContainsThatKey = finder.nodeFound();
+    if(treeContainsThatKey)
+    {
+        auto nodeToRemove = finder.getFound();
+        auto consequentFinder = ConsequentFinder<T, U>(nodeToRemove);
+        auto consequent = consequentFinder.find();
+        auto liberator = ConsequentLiberator<T, U>(consequent);
+        liberator.free();
+        root = liberator.obtainRoot();
+        auto replacer = NodeReplacer<T, U>(nodeToRemove);
+        replacer.replaceWithNode(consequent);
+        root = replacer.obtainRoot();
+    }
 }
 
 #endif //SDIZO_1_REDBLACKTREE_H
