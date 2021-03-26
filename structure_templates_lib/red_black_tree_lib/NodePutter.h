@@ -3,7 +3,7 @@
 
 #include "Node.h"
 #include "PlaceToPutFinder.h"
-#include "NodeImpl.h" //todo zrobić fabrykę abstrakcyjną
+#include "NodeFactory.h"
 #include "RootFinder.h"
 
 template <typename T, typename U>
@@ -32,7 +32,7 @@ void NodePutter<T, U>::put(T key, U value) {
     finder.find();
     sideOfPlaceToPut = finder.getPlaceSide();
     currentNode = finder.getFound();
-    auto nodeToBePut = NodePointer<T, U>(new NodeImpl<T, U>(key, value));
+    auto nodeToBePut = NodeFactory<T, U>::makeNode(key, value);
     if(sideOfPlaceToPut == Side::LEFT)
     {
         currentNode->setLeft(nodeToBePut);

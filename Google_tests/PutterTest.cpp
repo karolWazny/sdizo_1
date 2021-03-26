@@ -1,9 +1,9 @@
 #include "gtest/gtest.h"
-#include <red_black_tree_lib/NodeImpl.h>
+#include <red_black_tree_lib/NodeFactory.h>
 #include <red_black_tree_lib/NodePutter.h>
 
 TEST(KeyFinderSuite, PutOnTheRight){
-    auto node = NodePointer<int, int>(new NodeImpl<int, int>(2,3));
+    auto node = NodeFactory<int, int>::makeNode(2,3);
     auto putter = NodePutter<int, int>(node);
     putter.put(5,4);
     ASSERT_FALSE(node->getRight()->isNil());
@@ -12,7 +12,7 @@ TEST(KeyFinderSuite, PutOnTheRight){
 }
 
 TEST(KeyFinderSuite, PutOnTheLeft){
-    auto node = NodePointer<int, int>(new NodeImpl<int, int>(2,3));
+    auto node = NodeFactory<int, int>::makeNode(2,3);
     auto putter = NodePutter<int, int>(node);
     putter.put(1,4);
     ASSERT_FALSE(node->getLeft()->isNil());
@@ -21,7 +21,7 @@ TEST(KeyFinderSuite, PutOnTheLeft){
 }
 
 TEST(KeyFinderSuite, PutIntoEmptyTree){
-    auto node = NodePointer<int, int>(new NodeImpl<int, int>(2,3));
+    auto node = NodeFactory<int, int>::makeNode(2,3);
     node = node->getLeft();
     auto putter = NodePutter<int, int>(node);
     putter.put(1,4);

@@ -330,19 +330,17 @@ cxxabi.h
 acxx_demangle.h
 -
 
-../structure_templates_lib/red_black_tree_lib/ConsequentFinder.h
-Node.h
-../structure_templates_lib/red_black_tree_lib/Node.h
-NodeFinder.h
-../structure_templates_lib/red_black_tree_lib/NodeFinder.h
-
-../structure_templates_lib/red_black_tree_lib/KeyFinder.h
-NodeFinder.h
-../structure_templates_lib/red_black_tree_lib/NodeFinder.h
-
 ../structure_templates_lib/red_black_tree_lib/Node.h
 memory
 -
+
+../structure_templates_lib/red_black_tree_lib/NodeFactory.h
+Node.h
+../structure_templates_lib/red_black_tree_lib/Node.h
+NodeImpl.h
+../structure_templates_lib/red_black_tree_lib/NodeImpl.h
+Sentinel.h
+../structure_templates_lib/red_black_tree_lib/Sentinel.h
 
 ../structure_templates_lib/red_black_tree_lib/NodeFinder.h
 Node.h
@@ -351,14 +349,20 @@ Node.h
 ../structure_templates_lib/red_black_tree_lib/NodeImpl.h
 Node.h
 ../structure_templates_lib/red_black_tree_lib/Node.h
-Sentinel.h
-../structure_templates_lib/red_black_tree_lib/Sentinel.h
+NodeFactory.h
+../structure_templates_lib/red_black_tree_lib/NodeFactory.h
 
-../structure_templates_lib/red_black_tree_lib/PlaceToPutFinder.h
-NodeFinder.h
-../structure_templates_lib/red_black_tree_lib/NodeFinder.h
+../structure_templates_lib/red_black_tree_lib/NodeReplacer.h
+Node.h
+../structure_templates_lib/red_black_tree_lib/Node.h
 Side.h
 ../structure_templates_lib/red_black_tree_lib/Side.h
+RootFinder.h
+../structure_templates_lib/red_black_tree_lib/RootFinder.h
+
+../structure_templates_lib/red_black_tree_lib/RootFinder.h
+NodeFinder.h
+../structure_templates_lib/red_black_tree_lib/NodeFinder.h
 
 ../structure_templates_lib/red_black_tree_lib/Sentinel.h
 Node.h
@@ -366,15 +370,11 @@ Node.h
 
 ../structure_templates_lib/red_black_tree_lib/Side.h
 
-D:/projects/clion/sdizo_1/Google_tests/FinderTest.cpp
+D:/projects/clion/sdizo_1/Google_tests/NodeReplacerTest.cpp
 gtest/gtest.h
 D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
+red_black_tree_lib/NodeReplacer.h
+-
 red_black_tree_lib/NodeImpl.h
--
-red_black_tree_lib/KeyFinder.h
--
-red_black_tree_lib/PlaceToPutFinder.h
--
-red_black_tree_lib/ConsequentFinder.h
 -
 

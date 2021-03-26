@@ -14,7 +14,10 @@ set(HEADER_FILES
         NodePutter.h
         RootFinder.h
         ConsequentFinder.h
-        Side.h)
+        Side.h
+        NodeReplacer.h
+        NodeFactory.h
+        ConsequentLiberator.h)
 
 set(SOURCE_FILES
         index.cpp

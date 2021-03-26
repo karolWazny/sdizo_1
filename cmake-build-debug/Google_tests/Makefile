@@ -243,6 +243,39 @@ ListTests.cpp.s:
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
 .PHONY : ListTests.cpp.s
 
+NodeReplacerTest.obj: NodeReplacerTest.cpp.obj
+
+.PHONY : NodeReplacerTest.obj
+
+# target to build an object file
+NodeReplacerTest.cpp.obj:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : NodeReplacerTest.cpp.obj
+
+NodeReplacerTest.i: NodeReplacerTest.cpp.i
+
+.PHONY : NodeReplacerTest.i
+
+# target to preprocess a source file
+NodeReplacerTest.cpp.i:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.i
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : NodeReplacerTest.cpp.i
+
+NodeReplacerTest.s: NodeReplacerTest.cpp.s
+
+.PHONY : NodeReplacerTest.s
+
+# target to generate assembly for a file
+NodeReplacerTest.cpp.s:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.s
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : NodeReplacerTest.cpp.s
+
 NodeTest.obj: NodeTest.cpp.obj
 
 .PHONY : NodeTest.obj
@@ -360,6 +393,9 @@ help:
 	@echo ... ListTests.obj
 	@echo ... ListTests.i
 	@echo ... ListTests.s
+	@echo ... NodeReplacerTest.obj
+	@echo ... NodeReplacerTest.i
+	@echo ... NodeReplacerTest.s
 	@echo ... NodeTest.obj
 	@echo ... NodeTest.i
 	@echo ... NodeTest.s
