@@ -18,10 +18,15 @@ set(HEADER_FILES
         NodeReplacer.h
         NodeFactory.h
         ConsequentLiberator.h
-        NodeUtility.h)
+        NodeUtility.h
+        Colored.h
+        RedBlack.h
+        Black.h)
 
 set(SOURCE_FILES
         index.cpp
-        Side.cpp)
+        Side.cpp
+        RedBlack.cpp
+        Black.cpp)
 
 add_library(red_black_tree_lib STATIC ${HEADER_FILES} ${SOURCE_FILES})

@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/Black.cpp" "D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/red_black_tree_lib/CMakeFiles/red_black_tree_lib.dir/Black.cpp.obj"
+  "D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/RedBlack.cpp" "D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/red_black_tree_lib/CMakeFiles/red_black_tree_lib.dir/RedBlack.cpp.obj"
   "D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/Side.cpp" "D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/red_black_tree_lib/CMakeFiles/red_black_tree_lib.dir/Side.cpp.obj"
   "D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/index.cpp" "D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/red_black_tree_lib/CMakeFiles/red_black_tree_lib.dir/index.cpp.obj"
   )
