@@ -45,4 +45,9 @@ void ConsequentLiberator<T, U>::free(){
     currentNode = child;
 }
 
+template<typename T, typename U>
+NodePointer<T, U> ConsequentLiberator<T, U>::getFreed() {
+    return nodeToFree;
+}
+
 #endif //SDIZO_1_CONSEQUENTLIBERATOR_H
