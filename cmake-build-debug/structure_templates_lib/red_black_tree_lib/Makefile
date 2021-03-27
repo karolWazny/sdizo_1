@@ -177,104 +177,71 @@ red_black_tree_lib\fast:
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
 .PHONY : red_black_tree_lib\fast
 
-Black.obj: Black.cpp.obj
+colors\Black.obj: colors\Black.cpp.obj
 
-.PHONY : Black.obj
-
-# target to build an object file
-Black.cpp.obj:
-	cd D:\projects\clion\sdizo_1\cmake-build-debug
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\Black.cpp.obj
-	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
-.PHONY : Black.cpp.obj
-
-Black.i: Black.cpp.i
-
-.PHONY : Black.i
-
-# target to preprocess a source file
-Black.cpp.i:
-	cd D:\projects\clion\sdizo_1\cmake-build-debug
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\Black.cpp.i
-	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
-.PHONY : Black.cpp.i
-
-Black.s: Black.cpp.s
-
-.PHONY : Black.s
-
-# target to generate assembly for a file
-Black.cpp.s:
-	cd D:\projects\clion\sdizo_1\cmake-build-debug
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\Black.cpp.s
-	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
-.PHONY : Black.cpp.s
-
-RedBlack.obj: RedBlack.cpp.obj
-
-.PHONY : RedBlack.obj
+.PHONY : colors\Black.obj
 
 # target to build an object file
-RedBlack.cpp.obj:
+colors\Black.cpp.obj:
 	cd D:\projects\clion\sdizo_1\cmake-build-debug
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\RedBlack.cpp.obj
+	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\colors\Black.cpp.obj
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
-.PHONY : RedBlack.cpp.obj
+.PHONY : colors\Black.cpp.obj
 
-RedBlack.i: RedBlack.cpp.i
+colors\Black.i: colors\Black.cpp.i
 
-.PHONY : RedBlack.i
+.PHONY : colors\Black.i
 
 # target to preprocess a source file
-RedBlack.cpp.i:
+colors\Black.cpp.i:
 	cd D:\projects\clion\sdizo_1\cmake-build-debug
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\RedBlack.cpp.i
+	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\colors\Black.cpp.i
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
-.PHONY : RedBlack.cpp.i
+.PHONY : colors\Black.cpp.i
 
-RedBlack.s: RedBlack.cpp.s
+colors\Black.s: colors\Black.cpp.s
 
-.PHONY : RedBlack.s
+.PHONY : colors\Black.s
 
 # target to generate assembly for a file
-RedBlack.cpp.s:
+colors\Black.cpp.s:
 	cd D:\projects\clion\sdizo_1\cmake-build-debug
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\RedBlack.cpp.s
+	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\colors\Black.cpp.s
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
-.PHONY : RedBlack.cpp.s
+.PHONY : colors\Black.cpp.s
 
-Side.obj: Side.cpp.obj
+colors\RedBlack.obj: colors\RedBlack.cpp.obj
 
-.PHONY : Side.obj
+.PHONY : colors\RedBlack.obj
 
 # target to build an object file
-Side.cpp.obj:
+colors\RedBlack.cpp.obj:
 	cd D:\projects\clion\sdizo_1\cmake-build-debug
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\Side.cpp.obj
+	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\colors\RedBlack.cpp.obj
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
-.PHONY : Side.cpp.obj
+.PHONY : colors\RedBlack.cpp.obj
 
-Side.i: Side.cpp.i
+colors\RedBlack.i: colors\RedBlack.cpp.i
 
-.PHONY : Side.i
+.PHONY : colors\RedBlack.i
 
 # target to preprocess a source file
-Side.cpp.i:
+colors\RedBlack.cpp.i:
 	cd D:\projects\clion\sdizo_1\cmake-build-debug
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\Side.cpp.i
+	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\colors\RedBlack.cpp.i
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
-.PHONY : Side.cpp.i
+.PHONY : colors\RedBlack.cpp.i
 
-Side.s: Side.cpp.s
+colors\RedBlack.s: colors\RedBlack.cpp.s
 
-.PHONY : Side.s
+.PHONY : colors\RedBlack.s
 
 # target to generate assembly for a file
-Side.cpp.s:
+colors\RedBlack.cpp.s:
 	cd D:\projects\clion\sdizo_1\cmake-build-debug
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\Side.cpp.s
+	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\colors\RedBlack.cpp.s
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
-.PHONY : Side.cpp.s
+.PHONY : colors\RedBlack.cpp.s
 
 index.obj: index.cpp.obj
 
@@ -309,6 +276,39 @@ index.cpp.s:
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
 .PHONY : index.cpp.s
 
+node_util\Side.obj: node_util\Side.cpp.obj
+
+.PHONY : node_util\Side.obj
+
+# target to build an object file
+node_util\Side.cpp.obj:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\node_util\Side.cpp.obj
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
+.PHONY : node_util\Side.cpp.obj
+
+node_util\Side.i: node_util\Side.cpp.i
+
+.PHONY : node_util\Side.i
+
+# target to preprocess a source file
+node_util\Side.cpp.i:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\node_util\Side.cpp.i
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
+.PHONY : node_util\Side.cpp.i
+
+node_util\Side.s: node_util\Side.cpp.s
+
+.PHONY : node_util\Side.s
+
+# target to generate assembly for a file
+node_util\Side.cpp.s:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\node_util\Side.cpp.s
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
+.PHONY : node_util\Side.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -321,18 +321,18 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... red_black_tree_lib
-	@echo ... Black.obj
-	@echo ... Black.i
-	@echo ... Black.s
-	@echo ... RedBlack.obj
-	@echo ... RedBlack.i
-	@echo ... RedBlack.s
-	@echo ... Side.obj
-	@echo ... Side.i
-	@echo ... Side.s
+	@echo ... colors/Black.obj
+	@echo ... colors/Black.i
+	@echo ... colors/Black.s
+	@echo ... colors/RedBlack.obj
+	@echo ... colors/RedBlack.i
+	@echo ... colors/RedBlack.s
 	@echo ... index.obj
 	@echo ... index.i
 	@echo ... index.s
+	@echo ... node_util/Side.obj
+	@echo ... node_util/Side.i
+	@echo ... node_util/Side.s
 .PHONY : help
 
 

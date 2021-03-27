@@ -86,95 +86,95 @@ structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\ind
 <<
 	cd D:\projects\clion\sdizo_1\cmake-build-debug
 
-structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\Side.cpp.obj: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\flags.make
-structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\Side.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\Side.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object structure_templates_lib/red_black_tree_lib/CMakeFiles/red_black_tree_lib.dir/Side.cpp.obj"
+structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\node_util\Side.cpp.obj: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\flags.make
+structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\node_util\Side.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\Side.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object structure_templates_lib/red_black_tree_lib/CMakeFiles/red_black_tree_lib.dir/node_util/Side.cpp.obj"
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
 	C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\red_black_tree_lib.dir\Side.cpp.obj /FdCMakeFiles\red_black_tree_lib.dir\red_black_tree_lib.pdb /FS -c D:\projects\clion\sdizo_1\structure_templates_lib\red_black_tree_lib\Side.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\red_black_tree_lib.dir\node_util\Side.cpp.obj /FdCMakeFiles\red_black_tree_lib.dir\red_black_tree_lib.pdb /FS -c D:\projects\clion\sdizo_1\structure_templates_lib\red_black_tree_lib\node_util\Side.cpp
 <<
 	cd D:\projects\clion\sdizo_1\cmake-build-debug
 
-structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\Side.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/red_black_tree_lib.dir/Side.cpp.i"
+structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\node_util\Side.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/red_black_tree_lib.dir/node_util/Side.cpp.i"
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
-	C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\cl.exe > CMakeFiles\red_black_tree_lib.dir\Side.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\projects\clion\sdizo_1\structure_templates_lib\red_black_tree_lib\Side.cpp
+	C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\cl.exe > CMakeFiles\red_black_tree_lib.dir\node_util\Side.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\projects\clion\sdizo_1\structure_templates_lib\red_black_tree_lib\node_util\Side.cpp
 <<
 	cd D:\projects\clion\sdizo_1\cmake-build-debug
 
-structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\Side.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/red_black_tree_lib.dir/Side.cpp.s"
-	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
-	C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\red_black_tree_lib.dir\Side.cpp.s /c D:\projects\clion\sdizo_1\structure_templates_lib\red_black_tree_lib\Side.cpp
-<<
-	cd D:\projects\clion\sdizo_1\cmake-build-debug
-
-structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\RedBlack.cpp.obj: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\flags.make
-structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\RedBlack.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\RedBlack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object structure_templates_lib/red_black_tree_lib/CMakeFiles/red_black_tree_lib.dir/RedBlack.cpp.obj"
+structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\node_util\Side.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/red_black_tree_lib.dir/node_util/Side.cpp.s"
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
 	C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\red_black_tree_lib.dir\RedBlack.cpp.obj /FdCMakeFiles\red_black_tree_lib.dir\red_black_tree_lib.pdb /FS -c D:\projects\clion\sdizo_1\structure_templates_lib\red_black_tree_lib\RedBlack.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\red_black_tree_lib.dir\node_util\Side.cpp.s /c D:\projects\clion\sdizo_1\structure_templates_lib\red_black_tree_lib\node_util\Side.cpp
 <<
 	cd D:\projects\clion\sdizo_1\cmake-build-debug
 
-structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\RedBlack.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/red_black_tree_lib.dir/RedBlack.cpp.i"
-	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
-	C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\cl.exe > CMakeFiles\red_black_tree_lib.dir\RedBlack.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\projects\clion\sdizo_1\structure_templates_lib\red_black_tree_lib\RedBlack.cpp
-<<
-	cd D:\projects\clion\sdizo_1\cmake-build-debug
-
-structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\RedBlack.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/red_black_tree_lib.dir/RedBlack.cpp.s"
+structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\colors\RedBlack.cpp.obj: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\flags.make
+structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\colors\RedBlack.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\colors\RedBlack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object structure_templates_lib/red_black_tree_lib/CMakeFiles/red_black_tree_lib.dir/colors/RedBlack.cpp.obj"
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
 	C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\red_black_tree_lib.dir\RedBlack.cpp.s /c D:\projects\clion\sdizo_1\structure_templates_lib\red_black_tree_lib\RedBlack.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\red_black_tree_lib.dir\colors\RedBlack.cpp.obj /FdCMakeFiles\red_black_tree_lib.dir\red_black_tree_lib.pdb /FS -c D:\projects\clion\sdizo_1\structure_templates_lib\red_black_tree_lib\colors\RedBlack.cpp
 <<
 	cd D:\projects\clion\sdizo_1\cmake-build-debug
 
-structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\Black.cpp.obj: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\flags.make
-structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\Black.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\Black.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object structure_templates_lib/red_black_tree_lib/CMakeFiles/red_black_tree_lib.dir/Black.cpp.obj"
+structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\colors\RedBlack.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/red_black_tree_lib.dir/colors/RedBlack.cpp.i"
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
+	C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\cl.exe > CMakeFiles\red_black_tree_lib.dir\colors\RedBlack.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\projects\clion\sdizo_1\structure_templates_lib\red_black_tree_lib\colors\RedBlack.cpp
+<<
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+
+structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\colors\RedBlack.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/red_black_tree_lib.dir/colors/RedBlack.cpp.s"
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
 	C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\red_black_tree_lib.dir\Black.cpp.obj /FdCMakeFiles\red_black_tree_lib.dir\red_black_tree_lib.pdb /FS -c D:\projects\clion\sdizo_1\structure_templates_lib\red_black_tree_lib\Black.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\red_black_tree_lib.dir\colors\RedBlack.cpp.s /c D:\projects\clion\sdizo_1\structure_templates_lib\red_black_tree_lib\colors\RedBlack.cpp
 <<
 	cd D:\projects\clion\sdizo_1\cmake-build-debug
 
-structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\Black.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/red_black_tree_lib.dir/Black.cpp.i"
-	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
-	C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\cl.exe > CMakeFiles\red_black_tree_lib.dir\Black.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\projects\clion\sdizo_1\structure_templates_lib\red_black_tree_lib\Black.cpp
-<<
-	cd D:\projects\clion\sdizo_1\cmake-build-debug
-
-structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\Black.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/red_black_tree_lib.dir/Black.cpp.s"
+structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\colors\Black.cpp.obj: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\flags.make
+structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\colors\Black.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\colors\Black.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object structure_templates_lib/red_black_tree_lib/CMakeFiles/red_black_tree_lib.dir/colors/Black.cpp.obj"
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
 	C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\red_black_tree_lib.dir\Black.cpp.s /c D:\projects\clion\sdizo_1\structure_templates_lib\red_black_tree_lib\Black.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\red_black_tree_lib.dir\colors\Black.cpp.obj /FdCMakeFiles\red_black_tree_lib.dir\red_black_tree_lib.pdb /FS -c D:\projects\clion\sdizo_1\structure_templates_lib\red_black_tree_lib\colors\Black.cpp
+<<
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+
+structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\colors\Black.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/red_black_tree_lib.dir/colors/Black.cpp.i"
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
+	C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\cl.exe > CMakeFiles\red_black_tree_lib.dir\colors\Black.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\projects\clion\sdizo_1\structure_templates_lib\red_black_tree_lib\colors\Black.cpp
+<<
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+
+structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\colors\Black.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/red_black_tree_lib.dir/colors/Black.cpp.s"
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib
+	C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\red_black_tree_lib.dir\colors\Black.cpp.s /c D:\projects\clion\sdizo_1\structure_templates_lib\red_black_tree_lib\colors\Black.cpp
 <<
 	cd D:\projects\clion\sdizo_1\cmake-build-debug
 
 # Object files for target red_black_tree_lib
 red_black_tree_lib_OBJECTS = \
 "CMakeFiles\red_black_tree_lib.dir\index.cpp.obj" \
-"CMakeFiles\red_black_tree_lib.dir\Side.cpp.obj" \
-"CMakeFiles\red_black_tree_lib.dir\RedBlack.cpp.obj" \
-"CMakeFiles\red_black_tree_lib.dir\Black.cpp.obj"
+"CMakeFiles\red_black_tree_lib.dir\node_util\Side.cpp.obj" \
+"CMakeFiles\red_black_tree_lib.dir\colors\RedBlack.cpp.obj" \
+"CMakeFiles\red_black_tree_lib.dir\colors\Black.cpp.obj"
 
 # External object files for target red_black_tree_lib
 red_black_tree_lib_EXTERNAL_OBJECTS =
 
 structure_templates_lib\red_black_tree_lib\red_black_tree_lib.lib: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\index.cpp.obj
-structure_templates_lib\red_black_tree_lib\red_black_tree_lib.lib: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\Side.cpp.obj
-structure_templates_lib\red_black_tree_lib\red_black_tree_lib.lib: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\RedBlack.cpp.obj
-structure_templates_lib\red_black_tree_lib\red_black_tree_lib.lib: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\Black.cpp.obj
+structure_templates_lib\red_black_tree_lib\red_black_tree_lib.lib: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\node_util\Side.cpp.obj
+structure_templates_lib\red_black_tree_lib\red_black_tree_lib.lib: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\colors\RedBlack.cpp.obj
+structure_templates_lib\red_black_tree_lib\red_black_tree_lib.lib: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\colors\Black.cpp.obj
 structure_templates_lib\red_black_tree_lib\red_black_tree_lib.lib: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make
 structure_templates_lib\red_black_tree_lib\red_black_tree_lib.lib: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library red_black_tree_lib.lib"

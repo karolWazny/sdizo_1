@@ -1,8 +1,8 @@
 #include "gtest/gtest.h"
-#include <red_black_tree_lib/NodeFactory.h>
-#include <red_black_tree_lib/KeyFinder.h>
-#include <red_black_tree_lib/PlaceToPutFinder.h>
-#include <red_black_tree_lib/ConsequentFinder.h>
+#include <red_black_tree_lib/nodes/NodeFactory.h>
+#include <red_black_tree_lib/node_util/KeyFinder.h>
+#include <red_black_tree_lib/node_util/PlaceToPutFinder.h>
+#include <red_black_tree_lib/node_util/ConsequentFinder.h>
 
 TEST(KeyFinderSuite, KeyFoundInInitialNode){
     auto node = NodeFactory<int, int>::makeNode(2,3);

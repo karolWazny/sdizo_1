@@ -5,29 +5,32 @@ set(CMAKE_CXX_STANDARD 14)
 
 set(HEADER_FILES
         RedBlackTree.h
-        NodeImpl.h
-        Node.h
-        Sentinel.h
-        NodeFinder.h
-        KeyFinder.h
-        PlaceToPutFinder.h
-        NodePutter.h
-        RootFinder.h
-        ConsequentFinder.h
-        Side.h
-        NodeReplacer.h
-        NodeFactory.h
-        ConsequentLiberator.h
-        NodeUtility.h
-        Colored.h
-        RedBlack.h
-        Black.h
-        RBNode.h)
+        nodes/NodeImpl.h
+        nodes/Node.h
+        nodes/Sentinel.h
+        node_util/Side.h
+        nodes/NodeFactory.h
+        colors/Colored.h
+        colors/RedBlack.h
+        colors/Black.h
+        nodes/RBNodeImpl.h
+        nodes/Node.h
+        node_util/NodeFinder.h
+        node_util/KeyFinder.h
+        node_util/PlaceToPutFinder.h
+        node_util/NodePutter.h
+        node_util/ConsequentFinder.h
+        node_util/NodeReplacer.h
+        node_util/ConsequentLiberator.h
+        node_util/NodeUtility.h
+        node_util/RootFinder.h
+        nodes/RBSentinel.h
+        nodes/RBNode.h)
 
 set(SOURCE_FILES
         index.cpp
-        Side.cpp
-        RedBlack.cpp
-        Black.cpp)
+        node_util/Side.cpp
+        colors/RedBlack.cpp
+        colors/Black.cpp)
 
 add_library(red_black_tree_lib STATIC ${HEADER_FILES} ${SOURCE_FILES})

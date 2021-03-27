@@ -336,73 +336,79 @@
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/linked_list_lib/index.cpp">
 			<Option target="linked_list_lib"/>
 		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/Black.cpp">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/Black.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/Colored.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/ConsequentFinder.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/ConsequentLiberator.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/KeyFinder.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/Node.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/NodeFactory.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/NodeFinder.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/NodeImpl.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/NodePutter.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/NodeReplacer.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/NodeUtility.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/PlaceToPutFinder.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/RBNode.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/RedBlack.cpp">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/RedBlack.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/RedBlackTree.h">
 			<Option target="red_black_tree_lib"/>
 		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/RootFinder.h">
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/colors/Black.cpp">
 			<Option target="red_black_tree_lib"/>
 		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/Sentinel.h">
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/colors/Black.h">
 			<Option target="red_black_tree_lib"/>
 		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/Side.cpp">
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/colors/Colored.h">
 			<Option target="red_black_tree_lib"/>
 		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/Side.h">
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/colors/RedBlack.cpp">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/colors/RedBlack.h">
 			<Option target="red_black_tree_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/index.cpp">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/ConsequentFinder.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/ConsequentLiberator.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/KeyFinder.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/NodeFinder.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/NodePutter.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/NodeReplacer.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/NodeUtility.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/PlaceToPutFinder.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/RootFinder.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/Side.cpp">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/Side.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/Node.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/NodeFactory.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/NodeImpl.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/RBNode.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/RBNodeImpl.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/RBSentinel.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/Sentinel.h">
 			<Option target="red_black_tree_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/tree_lib/BinaryTree.h">

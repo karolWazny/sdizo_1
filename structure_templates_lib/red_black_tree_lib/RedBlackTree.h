@@ -1,16 +1,12 @@
-//
-// Created by admin on 19.03.2021.
-//
-
 #ifndef SDIZO_1_REDBLACKTREE_H
 #define SDIZO_1_REDBLACKTREE_H
 
-#include "Node.h"
-#include "KeyFinder.h"
-#include "NodePutter.h"
-#include "ConsequentFinder.h"
-#include "ConsequentLiberator.h"
-#include "NodeReplacer.h"
+#include "red_black_tree_lib/nodes/Node.h"
+#include "red_black_tree_lib/node_util/KeyFinder.h"
+#include "red_black_tree_lib/node_util/NodePutter.h"
+#include "red_black_tree_lib/node_util/ConsequentFinder.h"
+#include "red_black_tree_lib/node_util/ConsequentLiberator.h"
+#include "red_black_tree_lib/node_util/NodeReplacer.h"
 
 template <typename T, typename U>
 class RedBlackTree
