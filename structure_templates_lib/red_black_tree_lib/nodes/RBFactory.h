@@ -3,7 +3,7 @@
 
 #include "Node.h"
 #include "NodeImpl.h"
-#include "Sentinel.h"
+#include "RBSentinel.h"
 #include "RBNodeImpl.h"
 #include "red_black_tree_lib/colors/RedBlack.h"
 
@@ -29,7 +29,7 @@ NodePointer<T, U> RBFactory<T, U>::makeNode(T key, U value) {
 
 template<typename T, typename U>
 NodePointer<T, U> RBFactory<T, U>::makeSentinel(void) {
-    return Sentinel<T, U>::getInstance();
+    return RBSentinel<T, U>::getInstance();
 }
 
 template<typename T, typename U>

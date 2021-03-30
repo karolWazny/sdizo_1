@@ -2,7 +2,7 @@
 #define SDIZO_1_NODEIMPL_H
 
 #include "Node.h"
-#include "SimpleFactory.h"
+#include "Sentinel.h"
 
 template <typename T, typename U>
 class NodeImpl : public Node<T, U>
@@ -28,7 +28,7 @@ private:
 };
 
 template <typename T, typename U>
-NodePointer<T, U> NodeImpl<T, U>::sentinel = SimpleFactory<T, U>::makeSentinel();
+NodePointer<T, U> NodeImpl<T, U>::sentinel = Sentinel<T, U>::getInstance();
 
 template<typename T, typename U>
 U& NodeImpl<T, U>::getContent() {

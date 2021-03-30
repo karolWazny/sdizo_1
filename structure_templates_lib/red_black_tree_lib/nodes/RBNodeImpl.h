@@ -2,6 +2,7 @@
 #define SDIZO_1_RBNODEIMPL_H
 
 #include "RBNode.h"
+#include "RBSentinel.h"
 
 template <typename T, typename U>
 class RBNodeImpl : public RBNode<T, U>
@@ -25,13 +26,23 @@ public:
     bool isNil() override;
 
 private:
+    RBNodePtr<T, U> sentinel();
     std::unique_ptr<Node<T, U>> node;
     std::unique_ptr<Colored> colored;
+
 };
+
+template<typename T, typename U>
+RBNodePtr<T, U> RBNodeImpl<T, U>::sentinel() {
+    return RBSentinel<T, U>::getInstance();
+}
 
 template<typename T, typename U>
 RBNodeImpl<T, U>::RBNodeImpl(Node<T, U> * nodeImpl, Colored * coloredImpl) {
     node = std::unique_ptr<Node<T, U>>(nodeImpl);
+    node->setRight(sentinel());
+    node->setLeft(sentinel());
+    node->setParent(sentinel());
     colored = std::unique_ptr<Colored>(coloredImpl);
 }
 
@@ -67,6 +78,9 @@ T RBNodeImpl<T, U>::getKey() {
 
 template<typename T, typename U>
 void RBNodeImpl<T, U>::setParent(NodePointer<T, U> parent) {
+    if(!parent)
+        node->setParent(sentinel());
+    else
     node->setParent(parent);
 }
 
@@ -77,6 +91,9 @@ NodePointer<T, U> RBNodeImpl<T, U>::getParent() {
 
 template<typename T, typename U>
 void RBNodeImpl<T, U>::setLeft(NodePointer<T, U> left) {
+    if(!left)
+        node->setLeft(sentinel());
+    else
     node->setLeft(left);
 }
 
@@ -87,6 +104,9 @@ NodePointer<T, U> RBNodeImpl<T, U>::getLeft() {
 
 template<typename T, typename U>
 void RBNodeImpl<T, U>::setRight(NodePointer<T, U> right) {
+    if(!right)
+        node->setRight(sentinel());
+    else
     node->setRight(right);
 }
 

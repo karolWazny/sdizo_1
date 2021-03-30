@@ -304,6 +304,9 @@
 		<Unit filename="D:/projects/clion/sdizo_1/Google_tests/PutterTest.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/Google_tests/RBNodeTest.cpp">
+			<Option target="Google_Tests_run"/>
+		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/Google_tests/RedBlackTreeTests.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>

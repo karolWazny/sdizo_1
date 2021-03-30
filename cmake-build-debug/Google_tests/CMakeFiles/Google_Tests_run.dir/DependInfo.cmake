@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/projects/clion/sdizo_1/Google_tests/NodeReplacerTest.cpp" "D:/projects/clion/sdizo_1/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/NodeReplacerTest.cpp.obj"
   "D:/projects/clion/sdizo_1/Google_tests/NodeTest.cpp" "D:/projects/clion/sdizo_1/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/NodeTest.cpp.obj"
   "D:/projects/clion/sdizo_1/Google_tests/PutterTest.cpp" "D:/projects/clion/sdizo_1/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/PutterTest.cpp.obj"
+  "D:/projects/clion/sdizo_1/Google_tests/RBNodeTest.cpp" "D:/projects/clion/sdizo_1/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/RBNodeTest.cpp.obj"
   "D:/projects/clion/sdizo_1/Google_tests/RedBlackTreeTests.cpp" "D:/projects/clion/sdizo_1/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/RedBlackTreeTests.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")

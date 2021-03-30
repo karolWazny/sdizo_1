@@ -2314,7 +2314,7 @@ apply to googletest tests, as shown here:
 </testsuites>
 ```
 
-*   The sentinel `<testsuites>` element corresponds to the entire test program.
+*   The rbsentinel `<testsuites>` element corresponds to the entire test program.
 *   `<testsuite>` elements correspond to googletest test suites.
 *   `<testcase>` elements correspond to googletest test functions.
 

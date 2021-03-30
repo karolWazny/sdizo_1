@@ -375,6 +375,39 @@ PutterTest.cpp.s:
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
 .PHONY : PutterTest.cpp.s
 
+RBNodeTest.obj: RBNodeTest.cpp.obj
+
+.PHONY : RBNodeTest.obj
+
+# target to build an object file
+RBNodeTest.cpp.obj:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\RBNodeTest.cpp.obj
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : RBNodeTest.cpp.obj
+
+RBNodeTest.i: RBNodeTest.cpp.i
+
+.PHONY : RBNodeTest.i
+
+# target to preprocess a source file
+RBNodeTest.cpp.i:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\RBNodeTest.cpp.i
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : RBNodeTest.cpp.i
+
+RBNodeTest.s: RBNodeTest.cpp.s
+
+.PHONY : RBNodeTest.s
+
+# target to generate assembly for a file
+RBNodeTest.cpp.s:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\RBNodeTest.cpp.s
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : RBNodeTest.cpp.s
+
 RedBlackTreeTests.obj: RedBlackTreeTests.cpp.obj
 
 .PHONY : RedBlackTreeTests.obj
@@ -438,6 +471,9 @@ help:
 	@echo ... PutterTest.obj
 	@echo ... PutterTest.i
 	@echo ... PutterTest.s
+	@echo ... RBNodeTest.obj
+	@echo ... RBNodeTest.i
+	@echo ... RBNodeTest.s
 	@echo ... RedBlackTreeTests.obj
 	@echo ... RedBlackTreeTests.i
 	@echo ... RedBlackTreeTests.s
