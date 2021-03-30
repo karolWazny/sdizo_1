@@ -831,6 +831,12 @@
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/SimpleFactory.h">
 			<Option target="red_black_tree_lib"/>
 		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/rbutil/DeletePropertyRestorer.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/rbutil/PutPropertyRestorer.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/tree_lib/BinaryTree.h">
 			<Option target="tree_lib"/>
 		</Unit>

@@ -337,6 +337,8 @@ red_black_tree_lib/nodes/Node.h
 ../structure_templates_lib/red_black_tree_lib/node_util/NodeRotator.h
 NodeUtility.h
 ../structure_templates_lib/red_black_tree_lib/node_util/NodeUtility.h
+red_black_tree_lib/nodes/Node.h
+../structure_templates_lib/red_black_tree_lib/node_util/red_black_tree_lib/nodes/Node.h
 
 ../structure_templates_lib/red_black_tree_lib/node_util/NodeUtility.h
 red_black_tree_lib/nodes/Node.h
@@ -348,9 +350,13 @@ RootFinder.h
 red_black_tree_lib/node_util/NodeFinder.h
 ../structure_templates_lib/red_black_tree_lib/node_util/red_black_tree_lib/node_util/NodeFinder.h
 
+../structure_templates_lib/red_black_tree_lib/node_util/Side.h
+
 ../structure_templates_lib/red_black_tree_lib/nodes/Node.h
 memory
 -
+red_black_tree_lib/node_util/Side.h
+../structure_templates_lib/red_black_tree_lib/nodes/red_black_tree_lib/node_util/Side.h
 
 ../structure_templates_lib/red_black_tree_lib/nodes/NodeFactory.h
 Node.h

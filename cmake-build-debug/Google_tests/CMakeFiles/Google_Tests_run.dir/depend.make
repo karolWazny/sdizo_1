@@ -146,6 +146,7 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\NodeRotatorTest.cpp.obj: ..\structu
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeRotatorTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\NodeRotator.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeRotatorTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\NodeUtility.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeRotatorTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\RootFinder.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\NodeRotatorTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\Side.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeRotatorTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Node.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeRotatorTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeFactory.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeRotatorTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeImpl.h
@@ -173,6 +174,7 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\Google_tests\l
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-port.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-string.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-type-util.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\Side.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Node.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeFactory.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeImpl.h
@@ -236,6 +238,7 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\RBNodeTest.cpp.obj: ..\Google_tests
 Google_tests\CMakeFiles\Google_Tests_run.dir\RBNodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\colors\Black.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RBNodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\colors\Colored.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RBNodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\colors\RedBlack.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\RBNodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\Side.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RBNodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Node.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RBNodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeFactory.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RBNodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeImpl.h
