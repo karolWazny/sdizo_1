@@ -6,7 +6,9 @@ set(CMAKE_CXX_STANDARD 14)
 set(HEADER_FILES
         LinkedList.h
         LinkedListItem.h
-        INextable.h)
+        INextable.h
+        LinkedListIterator.h
+        )
 
 set(SOURCE_FILES
         index.cpp)

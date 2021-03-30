@@ -59,19 +59,102 @@ CMAKE_BINARY_DIR = D:\projects\clion\sdizo_1\cmake-build-debug
 # The main recursive "all" target.
 all: CMakeFiles\sdizo_1.dir\all
 all: structure_templates_lib\all
+all: Google_tests\all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: structure_templates_lib\preinstall
+preinstall: Google_tests\preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles\sdizo_1.dir\clean
 clean: structure_templates_lib\clean
+clean: Google_tests\clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory Google_tests
+
+# Recursive "all" directory target.
+Google_tests\all: Google_tests\CMakeFiles\Google_Tests_run.dir\all
+Google_tests\all: Google_tests\lib\all
+
+.PHONY : Google_tests\all
+
+# Recursive "preinstall" directory target.
+Google_tests\preinstall: Google_tests\lib\preinstall
+
+.PHONY : Google_tests\preinstall
+
+# Recursive "clean" directory target.
+Google_tests\clean: Google_tests\CMakeFiles\Google_Tests_run.dir\clean
+Google_tests\clean: Google_tests\lib\clean
+
+.PHONY : Google_tests\clean
+
+#=============================================================================
+# Directory level rules for directory Google_tests\lib
+
+# Recursive "all" directory target.
+Google_tests\lib\all: Google_tests\lib\googlemock\all
+
+.PHONY : Google_tests\lib\all
+
+# Recursive "preinstall" directory target.
+Google_tests\lib\preinstall: Google_tests\lib\googlemock\preinstall
+
+.PHONY : Google_tests\lib\preinstall
+
+# Recursive "clean" directory target.
+Google_tests\lib\clean: Google_tests\lib\googlemock\clean
+
+.PHONY : Google_tests\lib\clean
+
+#=============================================================================
+# Directory level rules for directory Google_tests\lib\googlemock
+
+# Recursive "all" directory target.
+Google_tests\lib\googlemock\all: Google_tests\lib\googlemock\CMakeFiles\gmock_main.dir\all
+Google_tests\lib\googlemock\all: Google_tests\lib\googlemock\CMakeFiles\gmock.dir\all
+Google_tests\lib\googlemock\all: Google_tests\lib\googletest\all
+
+.PHONY : Google_tests\lib\googlemock\all
+
+# Recursive "preinstall" directory target.
+Google_tests\lib\googlemock\preinstall: Google_tests\lib\googletest\preinstall
+
+.PHONY : Google_tests\lib\googlemock\preinstall
+
+# Recursive "clean" directory target.
+Google_tests\lib\googlemock\clean: Google_tests\lib\googlemock\CMakeFiles\gmock_main.dir\clean
+Google_tests\lib\googlemock\clean: Google_tests\lib\googlemock\CMakeFiles\gmock.dir\clean
+Google_tests\lib\googlemock\clean: Google_tests\lib\googletest\clean
+
+.PHONY : Google_tests\lib\googlemock\clean
+
+#=============================================================================
+# Directory level rules for directory Google_tests\lib\googletest
+
+# Recursive "all" directory target.
+Google_tests\lib\googletest\all: Google_tests\lib\googletest\CMakeFiles\gtest.dir\all
+Google_tests\lib\googletest\all: Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\all
+
+.PHONY : Google_tests\lib\googletest\all
+
+# Recursive "preinstall" directory target.
+Google_tests\lib\googletest\preinstall:
+
+.PHONY : Google_tests\lib\googletest\preinstall
+
+# Recursive "clean" directory target.
+Google_tests\lib\googletest\clean: Google_tests\lib\googletest\CMakeFiles\gtest.dir\clean
+Google_tests\lib\googletest\clean: Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\clean
+
+.PHONY : Google_tests\lib\googletest\clean
 
 #=============================================================================
 # Directory level rules for directory structure_templates_lib
@@ -82,6 +165,7 @@ structure_templates_lib\all: structure_templates_lib\array_lib\all
 structure_templates_lib\all: structure_templates_lib\binary_heap_lib\all
 structure_templates_lib\all: structure_templates_lib\linked_list_lib\all
 structure_templates_lib\all: structure_templates_lib\red_black_tree_lib\all
+structure_templates_lib\all: structure_templates_lib\tree_lib\all
 
 .PHONY : structure_templates_lib\all
 
@@ -90,6 +174,7 @@ structure_templates_lib\preinstall: structure_templates_lib\array_lib\preinstall
 structure_templates_lib\preinstall: structure_templates_lib\binary_heap_lib\preinstall
 structure_templates_lib\preinstall: structure_templates_lib\linked_list_lib\preinstall
 structure_templates_lib\preinstall: structure_templates_lib\red_black_tree_lib\preinstall
+structure_templates_lib\preinstall: structure_templates_lib\tree_lib\preinstall
 
 .PHONY : structure_templates_lib\preinstall
 
@@ -99,6 +184,7 @@ structure_templates_lib\clean: structure_templates_lib\array_lib\clean
 structure_templates_lib\clean: structure_templates_lib\binary_heap_lib\clean
 structure_templates_lib\clean: structure_templates_lib\linked_list_lib\clean
 structure_templates_lib\clean: structure_templates_lib\red_black_tree_lib\clean
+structure_templates_lib\clean: structure_templates_lib\tree_lib\clean
 
 .PHONY : structure_templates_lib\clean
 
@@ -175,22 +261,41 @@ structure_templates_lib\red_black_tree_lib\clean: structure_templates_lib\red_bl
 .PHONY : structure_templates_lib\red_black_tree_lib\clean
 
 #=============================================================================
+# Directory level rules for directory structure_templates_lib\tree_lib
+
+# Recursive "all" directory target.
+structure_templates_lib\tree_lib\all: structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\all
+
+.PHONY : structure_templates_lib\tree_lib\all
+
+# Recursive "preinstall" directory target.
+structure_templates_lib\tree_lib\preinstall:
+
+.PHONY : structure_templates_lib\tree_lib\preinstall
+
+# Recursive "clean" directory target.
+structure_templates_lib\tree_lib\clean: structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\clean
+
+.PHONY : structure_templates_lib\tree_lib\clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/sdizo_1.dir
 
 # All Build rule for target.
 CMakeFiles\sdizo_1.dir\all: structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all
 CMakeFiles\sdizo_1.dir\all: structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\all
-CMakeFiles\sdizo_1.dir\all: structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
 CMakeFiles\sdizo_1.dir\all: structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
+CMakeFiles\sdizo_1.dir\all: structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
+CMakeFiles\sdizo_1.dir\all: structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\all
 CMakeFiles\sdizo_1.dir\all: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=9,10 "Built target sdizo_1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=33,34 "Built target sdizo_1"
 .PHONY : CMakeFiles\sdizo_1.dir\all
 
 # Build rule for subdir invocation for target.
 CMakeFiles\sdizo_1.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 17
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles\sdizo_1.dir\rule
@@ -210,17 +315,18 @@ CMakeFiles\sdizo_1.dir\clean:
 
 # All Build rule for target.
 structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all: structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\all
-structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all: structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
 structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all: structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
+structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all: structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
+structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all: structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\all
 structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
 	$(MAKE) $(MAKESILENT) -f structure_templates_lib\CMakeFiles\structure_templates_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\CMakeFiles\structure_templates_lib.dir\depend
 	$(MAKE) $(MAKESILENT) -f structure_templates_lib\CMakeFiles\structure_templates_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\CMakeFiles\structure_templates_lib.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=11,12 "Built target structure_templates_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=35,36 "Built target structure_templates_lib"
 .PHONY : structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all
 
 # Build rule for subdir invocation for target.
 structure_templates_lib\CMakeFiles\structure_templates_lib.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 0
 .PHONY : structure_templates_lib\CMakeFiles\structure_templates_lib.dir\rule
@@ -242,7 +348,7 @@ structure_templates_lib\CMakeFiles\structure_templates_lib.dir\clean:
 structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\all:
 	$(MAKE) $(MAKESILENT) -f structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\depend
 	$(MAKE) $(MAKESILENT) -f structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target array_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=11,12 "Built target array_lib"
 .PHONY : structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\all
 
 # Build rule for subdir invocation for target.
@@ -269,7 +375,7 @@ structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\clean:
 structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all:
 	$(MAKE) $(MAKESILENT) -f structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\depend
 	$(MAKE) $(MAKESILENT) -f structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target binary_heap_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=13,14 "Built target binary_heap_lib"
 .PHONY : structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
 
 # Build rule for subdir invocation for target.
@@ -296,7 +402,7 @@ structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\clean:
 structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\all:
 	$(MAKE) $(MAKESILENT) -f structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\depend
 	$(MAKE) $(MAKESILENT) -f structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target linked_list_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=26,27 "Built target linked_list_lib"
 .PHONY : structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
 
 # Build rule for subdir invocation for target.
@@ -323,12 +429,12 @@ structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\clean:
 structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all:
 	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\depend
 	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=7,8 "Built target red_black_tree_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=28,29,30,31,32 "Built target red_black_tree_lib"
 .PHONY : structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
 
 # Build rule for subdir invocation for target.
 structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 0
 .PHONY : structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\rule
@@ -342,6 +448,175 @@ red_black_tree_lib: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_bl
 structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\clean:
 	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\clean
 .PHONY : structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\clean
+
+#=============================================================================
+# Target rules for target structure_templates_lib/tree_lib/CMakeFiles/tree_lib.dir
+
+# All Build rule for target.
+structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\all:
+	$(MAKE) $(MAKESILENT) -f structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\depend
+	$(MAKE) $(MAKESILENT) -f structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=37,38 "Built target tree_lib"
+.PHONY : structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\all
+
+# Build rule for subdir invocation for target.
+structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 0
+.PHONY : structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\rule
+
+# Convenience name for target.
+tree_lib: structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\rule
+
+.PHONY : tree_lib
+
+# clean rule for target.
+structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\clean:
+	$(MAKE) $(MAKESILENT) -f structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\clean
+.PHONY : structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\clean
+
+#=============================================================================
+# Target rules for target Google_tests/CMakeFiles/Google_Tests_run.dir
+
+# All Build rule for target.
+Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all
+Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\all
+Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
+Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
+Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\all
+Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
+Google_tests\CMakeFiles\Google_Tests_run.dir\all: Google_tests\lib\googletest\CMakeFiles\gtest.dir\all
+Google_tests\CMakeFiles\Google_Tests_run.dir\all: Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\all
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\depend
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target Google_Tests_run"
+.PHONY : Google_tests\CMakeFiles\Google_Tests_run.dir\all
+
+# Build rule for subdir invocation for target.
+Google_tests\CMakeFiles\Google_Tests_run.dir\rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 29
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 0
+.PHONY : Google_tests\CMakeFiles\Google_Tests_run.dir\rule
+
+# Convenience name for target.
+Google_Tests_run: Google_tests\CMakeFiles\Google_Tests_run.dir\rule
+
+.PHONY : Google_Tests_run
+
+# clean rule for target.
+Google_tests\CMakeFiles\Google_Tests_run.dir\clean:
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\clean
+.PHONY : Google_tests\CMakeFiles\Google_Tests_run.dir\clean
+
+#=============================================================================
+# Target rules for target Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir
+
+# All Build rule for target.
+Google_tests\lib\googlemock\CMakeFiles\gmock_main.dir\all:
+	$(MAKE) $(MAKESILENT) -f Google_tests\lib\googlemock\CMakeFiles\gmock_main.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\lib\googlemock\CMakeFiles\gmock_main.dir\depend
+	$(MAKE) $(MAKESILENT) -f Google_tests\lib\googlemock\CMakeFiles\gmock_main.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\lib\googlemock\CMakeFiles\gmock_main.dir\build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=18,19,20,21 "Built target gmock_main"
+.PHONY : Google_tests\lib\googlemock\CMakeFiles\gmock_main.dir\all
+
+# Build rule for subdir invocation for target.
+Google_tests\lib\googlemock\CMakeFiles\gmock_main.dir\rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) Google_tests\lib\googlemock\CMakeFiles\gmock_main.dir\all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 0
+.PHONY : Google_tests\lib\googlemock\CMakeFiles\gmock_main.dir\rule
+
+# Convenience name for target.
+gmock_main: Google_tests\lib\googlemock\CMakeFiles\gmock_main.dir\rule
+
+.PHONY : gmock_main
+
+# clean rule for target.
+Google_tests\lib\googlemock\CMakeFiles\gmock_main.dir\clean:
+	$(MAKE) $(MAKESILENT) -f Google_tests\lib\googlemock\CMakeFiles\gmock_main.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\lib\googlemock\CMakeFiles\gmock_main.dir\clean
+.PHONY : Google_tests\lib\googlemock\CMakeFiles\gmock_main.dir\clean
+
+#=============================================================================
+# Target rules for target Google_tests/lib/googlemock/CMakeFiles/gmock.dir
+
+# All Build rule for target.
+Google_tests\lib\googlemock\CMakeFiles\gmock.dir\all:
+	$(MAKE) $(MAKESILENT) -f Google_tests\lib\googlemock\CMakeFiles\gmock.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\lib\googlemock\CMakeFiles\gmock.dir\depend
+	$(MAKE) $(MAKESILENT) -f Google_tests\lib\googlemock\CMakeFiles\gmock.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\lib\googlemock\CMakeFiles\gmock.dir\build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=15,16,17 "Built target gmock"
+.PHONY : Google_tests\lib\googlemock\CMakeFiles\gmock.dir\all
+
+# Build rule for subdir invocation for target.
+Google_tests\lib\googlemock\CMakeFiles\gmock.dir\rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) Google_tests\lib\googlemock\CMakeFiles\gmock.dir\all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 0
+.PHONY : Google_tests\lib\googlemock\CMakeFiles\gmock.dir\rule
+
+# Convenience name for target.
+gmock: Google_tests\lib\googlemock\CMakeFiles\gmock.dir\rule
+
+.PHONY : gmock
+
+# clean rule for target.
+Google_tests\lib\googlemock\CMakeFiles\gmock.dir\clean:
+	$(MAKE) $(MAKESILENT) -f Google_tests\lib\googlemock\CMakeFiles\gmock.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\lib\googlemock\CMakeFiles\gmock.dir\clean
+.PHONY : Google_tests\lib\googlemock\CMakeFiles\gmock.dir\clean
+
+#=============================================================================
+# Target rules for target Google_tests/lib/googletest/CMakeFiles/gtest.dir
+
+# All Build rule for target.
+Google_tests\lib\googletest\CMakeFiles\gtest.dir\all:
+	$(MAKE) $(MAKESILENT) -f Google_tests\lib\googletest\CMakeFiles\gtest.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\lib\googletest\CMakeFiles\gtest.dir\depend
+	$(MAKE) $(MAKESILENT) -f Google_tests\lib\googletest\CMakeFiles\gtest.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\lib\googletest\CMakeFiles\gtest.dir\build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=22,23 "Built target gtest"
+.PHONY : Google_tests\lib\googletest\CMakeFiles\gtest.dir\all
+
+# Build rule for subdir invocation for target.
+Google_tests\lib\googletest\CMakeFiles\gtest.dir\rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) Google_tests\lib\googletest\CMakeFiles\gtest.dir\all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 0
+.PHONY : Google_tests\lib\googletest\CMakeFiles\gtest.dir\rule
+
+# Convenience name for target.
+gtest: Google_tests\lib\googletest\CMakeFiles\gtest.dir\rule
+
+.PHONY : gtest
+
+# clean rule for target.
+Google_tests\lib\googletest\CMakeFiles\gtest.dir\clean:
+	$(MAKE) $(MAKESILENT) -f Google_tests\lib\googletest\CMakeFiles\gtest.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\lib\googletest\CMakeFiles\gtest.dir\clean
+.PHONY : Google_tests\lib\googletest\CMakeFiles\gtest.dir\clean
+
+#=============================================================================
+# Target rules for target Google_tests/lib/googletest/CMakeFiles/gtest_main.dir
+
+# All Build rule for target.
+Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\all: Google_tests\lib\googletest\CMakeFiles\gtest.dir\all
+	$(MAKE) $(MAKESILENT) -f Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\depend
+	$(MAKE) $(MAKESILENT) -f Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=24,25 "Built target gtest_main"
+.PHONY : Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\all
+
+# Build rule for subdir invocation for target.
+Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 0
+.PHONY : Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\rule
+
+# Convenience name for target.
+gtest_main: Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\rule
+
+.PHONY : gtest_main
+
+# clean rule for target.
+Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\clean:
+	$(MAKE) $(MAKESILENT) -f Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\clean
+.PHONY : Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

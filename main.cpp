@@ -1,15 +1,15 @@
 #include <iostream>
-#include "linked_list_lib/LinkedList.h"
-#include "array_lib/Array.h"
-#include "binary_heap_lib/BinaryHeap.h"
+#include <red_black_tree_lib/RedBlackTree.h>
+#include <linked_list_lib/LinkedList.h>
 
 int main() {
-    auto heap = BinaryHeap<int>();
-    heap.add(5);
-    heap.add(4);
-    heap.add(6);
-    std::cout << heap.contains(3) << std::endl;
-    std::cout << heap.contains(4) << std::endl;
-    heap.remove(4);
-    std::cout << heap.contains(4) << std::endl;
+    auto tree = RedBlackTree<int>();
+    auto lista = LinkedList<int>();
+    lista.pushBack(3);
+    lista.pushBack(5);
+    lista.pushFront(7);
+    lista.remove(5);
+    lista.remove(8);
+    lista.get(1);
+    lista.toString();
 }
