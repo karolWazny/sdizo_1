@@ -1,11 +1,11 @@
 #include "gtest/gtest.h"
-#include <red_black_tree_lib/nodes/NodeFactory.h>
+#include <red_black_tree_lib/nodes/SimpleFactory.h>
 #include <red_black_tree_lib/node_util/KeyFinder.h>
 #include <red_black_tree_lib/node_util/PlaceToPutFinder.h>
 #include <red_black_tree_lib/node_util/ConsequentFinder.h>
 
 TEST(KeyFinderSuite, KeyFoundInInitialNode){
-    auto node = NodeFactory<int, int>::makeNode(2,3);
+    auto node = SimpleFactory<int, int>::makeNode(2, 3);
     auto finder = KeyFinder<int, int>(node);
     finder.setDesiredKey(2);
     ASSERT_FALSE(finder.nodeFound());
@@ -15,7 +15,7 @@ TEST(KeyFinderSuite, KeyFoundInInitialNode){
 }
 
 TEST(KeyFinderSuite, KeyNotFoundInSingleNode){
-    auto node = NodeFactory<int, int>::makeNode(2,3);
+    auto node = SimpleFactory<int, int>::makeNode(2, 3);
     auto finder = KeyFinder<int, int>(node);
     finder.setDesiredKey(3);
     ASSERT_FALSE(finder.nodeFound());
@@ -25,9 +25,9 @@ TEST(KeyFinderSuite, KeyNotFoundInSingleNode){
 }
 
 TEST(KeyFinderSuite, KeyFoundInLeftNode){
-    auto parent = NodeFactory<int, int>::makeNode(5,3);
-    auto left = NodeFactory<int, int>::makeNode(2,3);
-    auto right = NodeFactory<int, int>::makeNode(8,3);
+    auto parent = SimpleFactory<int, int>::makeNode(5, 3);
+    auto left = SimpleFactory<int, int>::makeNode(2, 3);
+    auto right = SimpleFactory<int, int>::makeNode(8, 3);
     parent->setLeft(left);
     parent->setRight(right);
     auto finder = KeyFinder<int, int>(parent);
@@ -39,9 +39,9 @@ TEST(KeyFinderSuite, KeyFoundInLeftNode){
 }
 
 TEST(KeyFinderSuite, KeyFoundInRightNode){
-    auto parent = NodeFactory<int, int>::makeNode(5,3);
-    auto left = NodeFactory<int, int>::makeNode(2,3);
-    auto right = NodeFactory<int, int>::makeNode(8,3);
+    auto parent = SimpleFactory<int, int>::makeNode(5, 3);
+    auto left = SimpleFactory<int, int>::makeNode(2, 3);
+    auto right = SimpleFactory<int, int>::makeNode(8, 3);
     parent->setLeft(left);
     parent->setRight(right);
     auto finder = KeyFinder<int, int>(parent);
@@ -53,7 +53,7 @@ TEST(KeyFinderSuite, KeyFoundInRightNode){
 }
 
 TEST(PlaceFinderSuite, Compilation){
-    auto parent = NodeFactory<int, int>::makeNode(5,3);
+    auto parent = SimpleFactory<int, int>::makeNode(5, 3);
     auto finder = PlaceToPutFinder<int, int>(parent);
     finder.setKeyToBePut(4);
     finder.find();
@@ -62,9 +62,9 @@ TEST(PlaceFinderSuite, Compilation){
 }
 
 TEST(PlaceFinderSuite, FindRightSide){
-    auto parent = NodeFactory<int, int>::makeNode(5,3);
-    auto left = NodeFactory<int, int>::makeNode(2,3);
-    auto right = NodeFactory<int, int>::makeNode(8,3);
+    auto parent = SimpleFactory<int, int>::makeNode(5, 3);
+    auto left = SimpleFactory<int, int>::makeNode(2, 3);
+    auto right = SimpleFactory<int, int>::makeNode(8, 3);
     parent->setLeft(left);
     parent->setRight(right);
     auto finder = PlaceToPutFinder<int, int>(parent);
@@ -77,9 +77,9 @@ TEST(PlaceFinderSuite, FindRightSide){
 }
 
 TEST(PlaceFinderSuite, FindLeftSide){
-    auto parent = NodeFactory<int, int>::makeNode(5,3);
-    auto left = NodeFactory<int, int>::makeNode(2,3);
-    auto right = NodeFactory<int, int>::makeNode(8,3);
+    auto parent = SimpleFactory<int, int>::makeNode(5, 3);
+    auto left = SimpleFactory<int, int>::makeNode(2, 3);
+    auto right = SimpleFactory<int, int>::makeNode(8, 3);
     parent->setLeft(left);
     parent->setRight(right);
     auto finder = PlaceToPutFinder<int, int>(parent);
@@ -92,17 +92,17 @@ TEST(PlaceFinderSuite, FindLeftSide){
 }
 
 TEST(PlaceFinderSuite, FindNoConsequent){
-    auto parent = NodeFactory<int, int>::makeNode(20,20);
+    auto parent = SimpleFactory<int, int>::makeNode(20, 20);
     auto finder = ConsequentFinder<int, int>(parent);
     finder.find();
     ASSERT_TRUE(finder.getFound()->isNil());
 }
 
 TEST(PlaceFinderSuite, FindRightConsequent){
-    auto parent = NodeFactory<int, int>::makeNode(20,20);
-    auto node2 = NodeFactory<int, int>::makeNode(21,21);
-    auto node3 = NodeFactory<int, int>::makeNode(19,19);
-    auto node4 = NodeFactory<int, int>::makeNode(18,18);
+    auto parent = SimpleFactory<int, int>::makeNode(20, 20);
+    auto node2 = SimpleFactory<int, int>::makeNode(21, 21);
+    auto node3 = SimpleFactory<int, int>::makeNode(19, 19);
+    auto node4 = SimpleFactory<int, int>::makeNode(18, 18);
     parent->setRight(node2);
     node2->setLeft(node3);
     node3->setLeft(node4);
@@ -112,10 +112,10 @@ TEST(PlaceFinderSuite, FindRightConsequent){
 }
 
 TEST(PlaceFinderSuite, FindLeftConsequent){
-    auto parent = NodeFactory<int, int>::makeNode(20,20);
-    auto node2 = NodeFactory<int, int>::makeNode(21,21);
-    auto node3 = NodeFactory<int, int>::makeNode(19,19);
-    auto node4 = NodeFactory<int, int>::makeNode(18,18);
+    auto parent = SimpleFactory<int, int>::makeNode(20, 20);
+    auto node2 = SimpleFactory<int, int>::makeNode(21, 21);
+    auto node3 = SimpleFactory<int, int>::makeNode(19, 19);
+    auto node4 = SimpleFactory<int, int>::makeNode(18, 18);
     parent->setLeft(node2);
     node2->setRight(node3);
     node3->setRight(node4);

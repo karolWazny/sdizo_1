@@ -21,8 +21,6 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.obj: ..\Google_tests
 Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-port.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-string.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-type-util.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\colors\Colored.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\colors\RedBlack.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\ConsequentFinder.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\KeyFinder.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\NodeFinder.h
@@ -31,9 +29,8 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.obj: ..\structure_te
 Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Node.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeFactory.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeImpl.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\RBNode.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\RBNodeImpl.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Sentinel.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\SimpleFactory.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\FinderTest.cpp.obj: ..\Google_tests\FinderTest.cpp
 
 Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\gtest-death-test.h
@@ -56,8 +53,6 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj: ..\Google_te
 Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-port.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-string.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-type-util.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\colors\Colored.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\colors\RedBlack.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\ConsequentLiberator.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\NodeFinder.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\NodeUtility.h
@@ -66,9 +61,8 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj: ..\structure
 Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Node.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeFactory.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeImpl.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\RBNode.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\RBNodeImpl.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Sentinel.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\SimpleFactory.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj: ..\Google_tests\LiberatorTest.cpp
 
 Google_tests\CMakeFiles\Google_Tests_run.dir\ListTests.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\gtest-death-test.h
@@ -116,8 +110,6 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj: ..\Google
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-port.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-string.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-type-util.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\colors\Colored.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\colors\RedBlack.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\NodeFinder.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\NodeReplacer.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\NodeUtility.h
@@ -126,9 +118,8 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj: ..\struct
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Node.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeFactory.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeImpl.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\RBNode.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\RBNodeImpl.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Sentinel.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\SimpleFactory.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj: ..\Google_tests\NodeReplacerTest.cpp
 
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\gtest-death-test.h
@@ -151,14 +142,11 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\Google_tests\l
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-port.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-string.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-type-util.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\colors\Colored.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\colors\RedBlack.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Node.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeFactory.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeImpl.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\RBNode.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\RBNodeImpl.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Sentinel.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\SimpleFactory.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\NodeTest.cpp.obj: ..\Google_tests\NodeTest.cpp
 
 Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\gtest-death-test.h
@@ -181,8 +169,6 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\Google_tests
 Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-port.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-string.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\internal\gtest-type-util.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\colors\Colored.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\colors\RedBlack.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\NodeFinder.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\NodePutter.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\NodeUtility.h
@@ -192,9 +178,8 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\structure_te
 Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Node.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeFactory.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeImpl.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\RBNode.h
-Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\RBNodeImpl.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Sentinel.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\SimpleFactory.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\PutterTest.cpp.obj: ..\Google_tests\PutterTest.cpp
 
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\Google_tests\lib\googletest\include\gtest\gtest-death-test.h
@@ -233,8 +218,10 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\struc
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Node.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeFactory.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeImpl.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\RBFactory.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\RBNode.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\RBNodeImpl.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Sentinel.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\SimpleFactory.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\Google_tests\RedBlackTreeTests.cpp
 

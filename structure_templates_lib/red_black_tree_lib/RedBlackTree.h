@@ -7,6 +7,7 @@
 #include "red_black_tree_lib/node_util/ConsequentFinder.h"
 #include "red_black_tree_lib/node_util/ConsequentLiberator.h"
 #include "red_black_tree_lib/node_util/NodeReplacer.h"
+#include "red_black_tree_lib/nodes/RBFactory.h"
 
 template <typename T, typename U>
 class RedBlackTree
@@ -23,12 +24,12 @@ private:
 
 template <typename T, typename U>
 RedBlackTree<T, U>::RedBlackTree() {
-    root = NodeFactory<T, U>::makeSentinel();
+    root = SimpleFactory<T, U>::makeSentinel();
 }
 
 template<typename T, typename U>
 void RedBlackTree<T, U>::put(T key, U value) {
-    auto putter = NodePutter<T, U>(root, NodeFactory<T, U>());
+    auto putter = NodePutter<T, U>(root, new RBFactory<T, U>());
     putter.put(key, value);
     root = putter.obtainRoot();
 }

@@ -343,6 +343,8 @@ red_black_tree_lib/node_util/ConsequentLiberator.h
 ../structure_templates_lib/red_black_tree_lib/red_black_tree_lib/node_util/ConsequentLiberator.h
 red_black_tree_lib/node_util/NodeReplacer.h
 ../structure_templates_lib/red_black_tree_lib/red_black_tree_lib/node_util/NodeReplacer.h
+red_black_tree_lib/nodes/RBFactory.h
+../structure_templates_lib/red_black_tree_lib/red_black_tree_lib/nodes/RBFactory.h
 
 ../structure_templates_lib/red_black_tree_lib/colors/Colored.h
 
@@ -377,6 +379,8 @@ red_black_tree_lib/nodes/Node.h
 ../structure_templates_lib/red_black_tree_lib/node_util/red_black_tree_lib/nodes/Node.h
 PlaceToPutFinder.h
 ../structure_templates_lib/red_black_tree_lib/node_util/PlaceToPutFinder.h
+red_black_tree_lib/nodes/SimpleFactory.h
+../structure_templates_lib/red_black_tree_lib/node_util/red_black_tree_lib/nodes/SimpleFactory.h
 red_black_tree_lib/nodes/NodeFactory.h
 ../structure_templates_lib/red_black_tree_lib/node_util/red_black_tree_lib/nodes/NodeFactory.h
 NodeUtility.h
@@ -415,6 +419,16 @@ memory
 ../structure_templates_lib/red_black_tree_lib/nodes/NodeFactory.h
 Node.h
 ../structure_templates_lib/red_black_tree_lib/nodes/Node.h
+
+../structure_templates_lib/red_black_tree_lib/nodes/NodeImpl.h
+Node.h
+../structure_templates_lib/red_black_tree_lib/nodes/Node.h
+SimpleFactory.h
+../structure_templates_lib/red_black_tree_lib/nodes/SimpleFactory.h
+
+../structure_templates_lib/red_black_tree_lib/nodes/RBFactory.h
+Node.h
+../structure_templates_lib/red_black_tree_lib/nodes/Node.h
 NodeImpl.h
 ../structure_templates_lib/red_black_tree_lib/nodes/NodeImpl.h
 Sentinel.h
@@ -423,10 +437,6 @@ RBNodeImpl.h
 ../structure_templates_lib/red_black_tree_lib/nodes/RBNodeImpl.h
 red_black_tree_lib/colors/RedBlack.h
 ../structure_templates_lib/red_black_tree_lib/nodes/red_black_tree_lib/colors/RedBlack.h
-
-../structure_templates_lib/red_black_tree_lib/nodes/NodeImpl.h
-Node.h
-../structure_templates_lib/red_black_tree_lib/nodes/Node.h
 NodeFactory.h
 ../structure_templates_lib/red_black_tree_lib/nodes/NodeFactory.h
 
@@ -444,13 +454,15 @@ RBNode.h
 Node.h
 ../structure_templates_lib/red_black_tree_lib/nodes/Node.h
 
-D:/projects/clion/sdizo_1/Google_tests/PutterTest.cpp
-gtest/gtest.h
-D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
-red_black_tree_lib/nodes/NodeFactory.h
--
-red_black_tree_lib/node_util/NodePutter.h
--
+../structure_templates_lib/red_black_tree_lib/nodes/SimpleFactory.h
+Node.h
+../structure_templates_lib/red_black_tree_lib/nodes/Node.h
+NodeImpl.h
+../structure_templates_lib/red_black_tree_lib/nodes/NodeImpl.h
+Sentinel.h
+../structure_templates_lib/red_black_tree_lib/nodes/Sentinel.h
+NodeFactory.h
+../structure_templates_lib/red_black_tree_lib/nodes/NodeFactory.h
 
 D:/projects/clion/sdizo_1/Google_tests/RedBlackTreeTests.cpp
 gtest/gtest.h

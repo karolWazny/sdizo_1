@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include <red_black_tree_lib/nodes/NodeFactory.h>
+#include <red_black_tree_lib/nodes/SimpleFactory.h>
 
 TEST(NodeSuite, Compilation){
     auto node = NodeImpl<int, int>(2, 3);

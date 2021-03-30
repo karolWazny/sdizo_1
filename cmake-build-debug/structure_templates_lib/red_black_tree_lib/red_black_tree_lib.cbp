@@ -129,6 +129,9 @@
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/NodeImpl.h">
 			<Option target="red_black_tree_lib"/>
 		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/RBFactory.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/RBNode.h">
 			<Option target="red_black_tree_lib"/>
 		</Unit>
@@ -139,6 +142,9 @@
 			<Option target="red_black_tree_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/Sentinel.h">
+			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/SimpleFactory.h">
 			<Option target="red_black_tree_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/CMakeLists.txt">

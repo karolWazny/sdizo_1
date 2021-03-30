@@ -9,7 +9,7 @@ set(HEADER_FILES
         nodes/Node.h
         nodes/Sentinel.h
         node_util/Side.h
-        nodes/NodeFactory.h
+        nodes/SimpleFactory.h
         colors/Colored.h
         colors/RedBlack.h
         colors/Black.h
@@ -25,7 +25,9 @@ set(HEADER_FILES
         node_util/NodeUtility.h
         node_util/RootFinder.h
         nodes/RBSentinel.h
-        nodes/RBNode.h)
+        nodes/RBNode.h
+        nodes/NodeFactory.h
+        nodes/RBFactory.h)
 
 set(SOURCE_FILES
         index.cpp
