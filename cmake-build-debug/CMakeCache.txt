@@ -336,12 +336,6 @@ linked_list_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/st
 linked_list_lib_SOURCE_DIR:STATIC=D:/projects/clion/sdizo_1/structure_templates_lib/linked_list_lib
 
 //Value Computed by CMake
-node_util_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/red_black_tree_lib/node_util_lib
-
-//Value Computed by CMake
-node_util_lib_SOURCE_DIR:STATIC=D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util_lib
-
-//Value Computed by CMake
 red_black_tree_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/red_black_tree_lib
 
 //Value Computed by CMake

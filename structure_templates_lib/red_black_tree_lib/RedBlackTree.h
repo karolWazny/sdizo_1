@@ -28,7 +28,7 @@ RedBlackTree<T, U>::RedBlackTree() {
 
 template<typename T, typename U>
 void RedBlackTree<T, U>::put(T key, U value) {
-    auto putter = NodePutter<T, U>(root);
+    auto putter = NodePutter<T, U>(root, NodeFactory<T, U>());
     putter.put(key, value);
     root = putter.obtainRoot();
 }
