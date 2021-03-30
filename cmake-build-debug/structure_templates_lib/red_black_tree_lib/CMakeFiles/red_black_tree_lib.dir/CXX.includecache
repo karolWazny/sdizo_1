@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../structure_templates_lib/red_black_tree_lib/colors/Colored.h
+
+D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/colors/Black.cpp
+Black.h
+D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/colors/Black.h
+
+D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/colors/Black.h
+Colored.h
+D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/colors/Colored.h
+
+D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/colors/Colored.h
+
+D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/colors/RedBlack.cpp
+RedBlack.h
+D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/colors/RedBlack.h
+
+D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/colors/RedBlack.h
+red_black_tree_lib/colors/Colored.h
+D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/colors/red_black_tree_lib/colors/Colored.h
+
+D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/Side.cpp
+Side.h
+D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/Side.h
+
+D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/Side.h
+
