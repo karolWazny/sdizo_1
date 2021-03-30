@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/projects/clion/sdizo_1/Google_tests/LiberatorTest.cpp" "D:/projects/clion/sdizo_1/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/LiberatorTest.cpp.obj"
   "D:/projects/clion/sdizo_1/Google_tests/ListTests.cpp" "D:/projects/clion/sdizo_1/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/ListTests.cpp.obj"
   "D:/projects/clion/sdizo_1/Google_tests/NodeReplacerTest.cpp" "D:/projects/clion/sdizo_1/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/NodeReplacerTest.cpp.obj"
+  "D:/projects/clion/sdizo_1/Google_tests/NodeRotatorTest.cpp" "D:/projects/clion/sdizo_1/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/NodeRotatorTest.cpp.obj"
   "D:/projects/clion/sdizo_1/Google_tests/NodeTest.cpp" "D:/projects/clion/sdizo_1/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/NodeTest.cpp.obj"
   "D:/projects/clion/sdizo_1/Google_tests/PutterTest.cpp" "D:/projects/clion/sdizo_1/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/PutterTest.cpp.obj"
   "D:/projects/clion/sdizo_1/Google_tests/RBNodeTest.cpp" "D:/projects/clion/sdizo_1/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/RBNodeTest.cpp.obj"

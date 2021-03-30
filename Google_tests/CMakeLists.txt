@@ -11,7 +11,8 @@ add_executable(Google_Tests_run
         PutterTest.cpp
         NodeReplacerTest.cpp
         LiberatorTest.cpp
-        RBNodeTest.cpp)
+        RBNodeTest.cpp
+        NodeRotatorTest.cpp)
 
 # linking Google_Tests_run with structure_templates_lib which will be tested
 target_link_libraries(Google_Tests_run structure_templates_lib)

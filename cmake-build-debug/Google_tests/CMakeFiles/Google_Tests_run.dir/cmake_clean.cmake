@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Google_Tests_run.dir/LiberatorTest.cpp.obj"
   "CMakeFiles/Google_Tests_run.dir/ListTests.cpp.obj"
   "CMakeFiles/Google_Tests_run.dir/NodeReplacerTest.cpp.obj"
+  "CMakeFiles/Google_Tests_run.dir/NodeRotatorTest.cpp.obj"
   "CMakeFiles/Google_Tests_run.dir/NodeTest.cpp.obj"
   "CMakeFiles/Google_Tests_run.dir/PutterTest.cpp.obj"
   "CMakeFiles/Google_Tests_run.dir/RBNodeTest.cpp.obj"

@@ -27,7 +27,8 @@ set(HEADER_FILES
         nodes/RBSentinel.h
         nodes/RBNode.h
         nodes/NodeFactory.h
-        nodes/RBFactory.h)
+        nodes/RBFactory.h
+        node_util/NodeRotator.h)
 
 set(SOURCE_FILES
         index.cpp

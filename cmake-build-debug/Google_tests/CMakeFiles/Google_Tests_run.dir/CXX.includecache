@@ -330,15 +330,23 @@ cxxabi.h
 acxx_demangle.h
 -
 
-../structure_templates_lib/red_black_tree_lib/colors/Black.h
-Colored.h
-../structure_templates_lib/red_black_tree_lib/colors/Colored.h
+../structure_templates_lib/red_black_tree_lib/node_util/NodeFinder.h
+red_black_tree_lib/nodes/Node.h
+../structure_templates_lib/red_black_tree_lib/node_util/red_black_tree_lib/nodes/Node.h
 
-../structure_templates_lib/red_black_tree_lib/colors/Colored.h
+../structure_templates_lib/red_black_tree_lib/node_util/NodeRotator.h
+NodeUtility.h
+../structure_templates_lib/red_black_tree_lib/node_util/NodeUtility.h
 
-../structure_templates_lib/red_black_tree_lib/colors/RedBlack.h
-red_black_tree_lib/colors/Colored.h
-../structure_templates_lib/red_black_tree_lib/colors/red_black_tree_lib/colors/Colored.h
+../structure_templates_lib/red_black_tree_lib/node_util/NodeUtility.h
+red_black_tree_lib/nodes/Node.h
+../structure_templates_lib/red_black_tree_lib/node_util/red_black_tree_lib/nodes/Node.h
+RootFinder.h
+../structure_templates_lib/red_black_tree_lib/node_util/RootFinder.h
+
+../structure_templates_lib/red_black_tree_lib/node_util/RootFinder.h
+red_black_tree_lib/node_util/NodeFinder.h
+../structure_templates_lib/red_black_tree_lib/node_util/red_black_tree_lib/node_util/NodeFinder.h
 
 ../structure_templates_lib/red_black_tree_lib/nodes/Node.h
 memory
@@ -354,47 +362,25 @@ Node.h
 Sentinel.h
 ../structure_templates_lib/red_black_tree_lib/nodes/Sentinel.h
 
-../structure_templates_lib/red_black_tree_lib/nodes/RBFactory.h
+../structure_templates_lib/red_black_tree_lib/nodes/Sentinel.h
+Node.h
+../structure_templates_lib/red_black_tree_lib/nodes/Node.h
+
+../structure_templates_lib/red_black_tree_lib/nodes/SimpleFactory.h
 Node.h
 ../structure_templates_lib/red_black_tree_lib/nodes/Node.h
 NodeImpl.h
 ../structure_templates_lib/red_black_tree_lib/nodes/NodeImpl.h
-RBSentinel.h
-../structure_templates_lib/red_black_tree_lib/nodes/RBSentinel.h
-RBNodeImpl.h
-../structure_templates_lib/red_black_tree_lib/nodes/RBNodeImpl.h
-red_black_tree_lib/colors/RedBlack.h
-../structure_templates_lib/red_black_tree_lib/nodes/red_black_tree_lib/colors/RedBlack.h
+Sentinel.h
+../structure_templates_lib/red_black_tree_lib/nodes/Sentinel.h
 NodeFactory.h
 ../structure_templates_lib/red_black_tree_lib/nodes/NodeFactory.h
 
-../structure_templates_lib/red_black_tree_lib/nodes/RBNode.h
-red_black_tree_lib/colors/Colored.h
-../structure_templates_lib/red_black_tree_lib/nodes/red_black_tree_lib/colors/Colored.h
-Node.h
-../structure_templates_lib/red_black_tree_lib/nodes/Node.h
-
-../structure_templates_lib/red_black_tree_lib/nodes/RBNodeImpl.h
-RBNode.h
-../structure_templates_lib/red_black_tree_lib/nodes/RBNode.h
-RBSentinel.h
-../structure_templates_lib/red_black_tree_lib/nodes/RBSentinel.h
-
-../structure_templates_lib/red_black_tree_lib/nodes/RBSentinel.h
-RBNode.h
-../structure_templates_lib/red_black_tree_lib/nodes/RBNode.h
-Sentinel.h
-../structure_templates_lib/red_black_tree_lib/nodes/Sentinel.h
-red_black_tree_lib/colors/Black.h
-../structure_templates_lib/red_black_tree_lib/nodes/red_black_tree_lib/colors/Black.h
-
-../structure_templates_lib/red_black_tree_lib/nodes/Sentinel.h
-Node.h
-../structure_templates_lib/red_black_tree_lib/nodes/Node.h
-
-D:/projects/clion/sdizo_1/Google_tests/RBNodeTest.cpp
+D:/projects/clion/sdizo_1/Google_tests/NodeRotatorTest.cpp
 gtest/gtest.h
 D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
-red_black_tree_lib/nodes/RBFactory.h
+red_black_tree_lib/node_util/NodeRotator.h
+-
+red_black_tree_lib/nodes/SimpleFactory.h
 -
 
