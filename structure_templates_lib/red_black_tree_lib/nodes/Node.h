@@ -6,6 +6,7 @@
 #define SDIZO_1_NODE_H
 
 #include <memory>
+#include "red_black_tree_lib/node_util/Side.h"
 
 template <typename T, typename U>
 class Node;
@@ -29,6 +30,24 @@ public:
     virtual void setRight(NodePointer<T, U>) = 0;
     virtual NodePointer<T, U> getRight() = 0;
     virtual bool isNil() = 0;
+    NodePointer<T, U> get(Side side);
+    void setSide(NodePointer<T, U> node, Side side);
 };
+
+template<typename T, typename U>
+NodePointer<T, U> Node<T, U>::get(Side side) {
+    if(side == Side::RIGHT)
+        return getRight();
+    else
+        return getLeft();
+}
+
+template<typename T, typename U>
+void Node<T, U>::setSide(NodePointer<T, U> node, Side side) {
+    if(side == Side::RIGHT)
+        return setRight(node);
+    else
+        return setLeft(node);
+}
 
 #endif //SDIZO_1_NODE_H
