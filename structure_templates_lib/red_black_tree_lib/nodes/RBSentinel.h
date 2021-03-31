@@ -69,8 +69,9 @@ T RBSentinel<T, U>::getKey() {
 }
 
 template<typename T, typename U>
-void RBSentinel<T, U>::setParent(NodePointer<T, U>) {
-
+void RBSentinel<T, U>::setParent(NodePointer<T, U> node) {
+    if(parent != instance)
+        parent = node;
 }
 
 template<typename T, typename U>

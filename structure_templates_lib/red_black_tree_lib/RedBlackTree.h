@@ -6,6 +6,7 @@
 #include "red_black_tree_lib/nodes/RBFactory.h"
 #include "RBPutter.h"
 #include "RBRemover.h"
+#include "TreePrinter.h"
 
 template <typename T, typename U>
 class RedBlackTree
@@ -16,6 +17,7 @@ public:
     bool containsKey(T key);
     bool containsValue(U value);
     void removeKey(T key);
+    string toString();
 private:
     NodePointer<T, U> root;
 };
@@ -50,6 +52,11 @@ void RedBlackTree<T, U>::removeKey(T key) {
     auto remover = RBRemover<T, U>(root);
     remover.remove(key);
     root = remover.obtainRoot();
+}
+
+template<typename T, typename U>
+string RedBlackTree<T, U>::toString() {
+    return TreePrinter<T, U>().toString(root);
 }
 
 #endif //SDIZO_1_REDBLACKTREE_H

@@ -1,6 +1,7 @@
 #ifndef SDIZO_1_RBREMOVER_H
 #define SDIZO_1_RBREMOVER_H
 
+#include <red_black_tree_lib/node_util/NodeRotator.h>
 #include "red_black_tree_lib/node_util/KeyFinder.h"
 #include "red_black_tree_lib/node_util/ConsequentFinder.h"
 #include "red_black_tree_lib/node_util/ConsequentLiberator.h"
@@ -75,8 +76,44 @@ void RBRemover<T, U>::remove(T key) {
         auto nodeW = rbcast(xParent->get(!xSide));
 
         while(!xParent->isNil() && nodeX->isBlack()){
+            if(nodeW->isRed()){
+                nodeW->paintBlack();
+                xParent->paintRed();
+                auto rotator = NodeRotator<T, U>();
+                rotator.rotate(xParent, xSide);
+                root = rotator.obtainRoot();
+                nodeW = rbcast(xParent->get(!consequentSide));
+            }
+            if(rbcast(nodeW->getLeft())->isBlack() && rbcast(nodeW->getRight())->isBlack()){
+                nodeW->paintRed();
+                nodeX = xParent;
+            } else {//tu nie jestem pewien zagnieżdżenia
+                if(rbcast(nodeW->get(!xSide))->isBlack()){
+                    rbcast(nodeW->get(xSide))->paintBlack();
+                    nodeW->paintRed();
+                    auto rotator = NodeRotator<T, U>();
+                    rotator.rotate(nodeW, !xSide);
+                    root = rotator.obtainRoot();
+                    nodeW = rbcast(xParent->get(!xSide));
+                }
+            }
+            if(xParent->isBlack())
+                nodeW->paintBlack();
+            else
+                nodeW->paintRed();
+            xParent->paintBlack();
+            rbcast(nodeW->get(!xSide))->paintBlack();
+            auto rotator = NodeRotator<T, U>();
+            rotator.rotate(xParent, xSide);
+            root = rotator.obtainRoot();
+            nodeX = rbcast(root);
 
-            break;
+
+            xParent = rbcast(consequent->getParent());
+            Side xSide = Side::RIGHT;
+            if(xParent->getKey() > nodeX->getKey())
+                xSide = Side::LEFT;
+            nodeW = rbcast(xParent->get(!xSide));
         }
         nodeX->paintBlack();
         //end added

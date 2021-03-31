@@ -25,8 +25,9 @@ void RBPutter<T, U>::put(T key, U value) {
     auto putter = NodePutter<T, U>(root, new RBFactory<T, U>());
     putter.put(key, value);
     auto freshNode = rbcast(putter.getFreshNode());
-    PutPropertyRestorer<T, U>().restoreFrom(freshNode);
-    currentNode = freshNode;
+    auto restorer = PutPropertyRestorer<T, U>();
+    restorer.restoreFrom(freshNode);
+    currentNode = restorer.obtainRoot();
 }
 
 #endif //SDIZO_1_RBPUTTER_H

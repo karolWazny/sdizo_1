@@ -352,6 +352,7 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\RBRemoverTest.cpp.obj: ..\structure
 Google_tests\CMakeFiles\Google_Tests_run.dir\RBRemoverTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\KeyFinder.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RBRemoverTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\NodeFinder.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RBRemoverTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\NodeReplacer.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\RBRemoverTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\NodeRotator.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RBRemoverTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\NodeUtility.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RBRemoverTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\RootFinder.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RBRemoverTest.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\Side.h
@@ -388,6 +389,7 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\Googl
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\RBPutter.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\RBRemover.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\RedBlackTree.h
+Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\TreePrinter.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\colors\Black.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\colors\Colored.h
 Google_tests\CMakeFiles\Google_Tests_run.dir\RedBlackTreeTests.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\colors\RedBlack.h

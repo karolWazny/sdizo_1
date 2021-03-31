@@ -339,6 +339,8 @@ red_black_tree_lib/rbutil/PutPropertyRestorer.h
 ../structure_templates_lib/red_black_tree_lib/red_black_tree_lib/rbutil/PutPropertyRestorer.h
 
 ../structure_templates_lib/red_black_tree_lib/RBRemover.h
+red_black_tree_lib/node_util/NodeRotator.h
+-
 red_black_tree_lib/node_util/KeyFinder.h
 ../structure_templates_lib/red_black_tree_lib/red_black_tree_lib/node_util/KeyFinder.h
 red_black_tree_lib/node_util/ConsequentFinder.h
@@ -359,6 +361,14 @@ RBPutter.h
 ../structure_templates_lib/red_black_tree_lib/RBPutter.h
 RBRemover.h
 ../structure_templates_lib/red_black_tree_lib/RBRemover.h
+TreePrinter.h
+../structure_templates_lib/red_black_tree_lib/TreePrinter.h
+
+../structure_templates_lib/red_black_tree_lib/TreePrinter.h
+string
+-
+red_black_tree_lib/nodes/Node.h
+../structure_templates_lib/red_black_tree_lib/red_black_tree_lib/nodes/Node.h
 
 ../structure_templates_lib/red_black_tree_lib/colors/Black.h
 Colored.h
@@ -508,17 +518,11 @@ red_black_tree_lib/nodes/Node.h
 red_black_tree_lib/node_util/NodeRotator.h
 ../structure_templates_lib/red_black_tree_lib/rbutil/red_black_tree_lib/node_util/NodeRotator.h
 
-D:/projects/clion/sdizo_1/Google_tests/RBRemoverTest.cpp
-gtest/gtest.h
-D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
-red_black_tree_lib/nodes/RBFactory.h
--
-red_black_tree_lib/RBRemover.h
--
-
 D:/projects/clion/sdizo_1/Google_tests/RedBlackTreeTests.cpp
 gtest/gtest.h
 D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
 red_black_tree_lib/RedBlackTree.h
+-
+iostream
 -
 

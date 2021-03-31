@@ -32,7 +32,8 @@ set(HEADER_FILES
         rbutil/PutPropertyRestorer.h
         rbutil/DeletePropertyRestorer.h
         RBPutter.h
-        RBRemover.h)
+        RBRemover.h
+        TreePrinter.h)
 
 set(SOURCE_FILES
         index.cpp
