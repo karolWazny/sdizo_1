@@ -13,6 +13,7 @@ public:
     NodePointer<T, U> find();
     NodePointer<T, U> getFound();
     bool nodeFound();
+    Side getConsequentSide();
 
 private:
     NodePointer<T, U> obtainCurrentChildOnTheSide(Side side);
@@ -61,6 +62,11 @@ NodePointer<T, U> ConsequentFinder<T, U>::getFound() {
 template<typename T, typename U>
 bool ConsequentFinder<T, U>::nodeFound() {
     return nodeWasFound;
+}
+
+template<typename T, typename U>
+Side ConsequentFinder<T, U>::getConsequentSide() {
+    return consequentSide;
 }
 
 #endif //SDIZO_1_CONSEQUENTFINDER_H

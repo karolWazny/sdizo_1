@@ -18,7 +18,7 @@ public:
     static NodePointer<T, U> makeSentinel(void);
 
     NodePointer<T, U> createNode(T, U) override;
-    NodePointer<T, U> createSentinel(T, U) override;
+    NodePointer<T, U> createSentinel(NodePointer<T, U> parent) override;
     NodePointer<T, U> createSentinel(void) override;
 };
 
@@ -43,8 +43,8 @@ NodePointer<T, U> RBFactory<T, U>::createNode(T key, U value) {
 }
 
 template<typename T, typename U>
-NodePointer<T, U> RBFactory<T, U>::createSentinel(T key, U value) {
-    return makeSentinel(); //todo do poprawy
+NodePointer<T, U> RBFactory<T, U>::createSentinel(NodePointer<T, U> parent) {
+    return NodePointer<T, U>(new RBSentinel<T, U>(parent));
 }
 
 template<typename T, typename U>

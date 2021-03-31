@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Google_Tests_run.dir/PutRestorerTest.cpp.obj"
   "CMakeFiles/Google_Tests_run.dir/PutterTest.cpp.obj"
   "CMakeFiles/Google_Tests_run.dir/RBNodeTest.cpp.obj"
+  "CMakeFiles/Google_Tests_run.dir/RBRemoverTest.cpp.obj"
   "CMakeFiles/Google_Tests_run.dir/RedBlackTreeTests.cpp.obj"
   "Google_Tests_run.exe"
   "Google_Tests_run.exe.manifest"

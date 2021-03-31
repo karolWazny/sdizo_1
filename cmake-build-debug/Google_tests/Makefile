@@ -507,6 +507,39 @@ RBNodeTest.cpp.s:
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
 .PHONY : RBNodeTest.cpp.s
 
+RBRemoverTest.obj: RBRemoverTest.cpp.obj
+
+.PHONY : RBRemoverTest.obj
+
+# target to build an object file
+RBRemoverTest.cpp.obj:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\RBRemoverTest.cpp.obj
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : RBRemoverTest.cpp.obj
+
+RBRemoverTest.i: RBRemoverTest.cpp.i
+
+.PHONY : RBRemoverTest.i
+
+# target to preprocess a source file
+RBRemoverTest.cpp.i:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\RBRemoverTest.cpp.i
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : RBRemoverTest.cpp.i
+
+RBRemoverTest.s: RBRemoverTest.cpp.s
+
+.PHONY : RBRemoverTest.s
+
+# target to generate assembly for a file
+RBRemoverTest.cpp.s:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\RBRemoverTest.cpp.s
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : RBRemoverTest.cpp.s
+
 RedBlackTreeTests.obj: RedBlackTreeTests.cpp.obj
 
 .PHONY : RedBlackTreeTests.obj
@@ -582,6 +615,9 @@ help:
 	@echo ... RBNodeTest.obj
 	@echo ... RBNodeTest.i
 	@echo ... RBNodeTest.s
+	@echo ... RBRemoverTest.obj
+	@echo ... RBRemoverTest.i
+	@echo ... RBRemoverTest.s
 	@echo ... RedBlackTreeTests.obj
 	@echo ... RedBlackTreeTests.i
 	@echo ... RedBlackTreeTests.s

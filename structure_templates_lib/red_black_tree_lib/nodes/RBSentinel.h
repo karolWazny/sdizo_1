@@ -10,6 +10,7 @@ class RBSentinel : public RBNode<T, U>
 {
 public:
     RBSentinel();
+    RBSentinel(NodePointer<T, U>& parent);
 
     virtual U& getContent();
     virtual T getKey();
@@ -33,11 +34,13 @@ private:
     static T key;
     Black black;
 
-    static RBNodePtr<T, U> instance;
+    NodePointer<T, U>& parent;
+
+    static NodePointer<T, U> instance;
 };
 
 template <typename T, typename U>
-RBNodePtr<T,U> RBSentinel<T, U>::instance = RBNodePtr<T, U>(new RBSentinel<T, U>());
+NodePointer<T,U> RBSentinel<T, U>::instance = RBNodePtr<T, U>(new RBSentinel<T, U>());
 
 template <typename T, typename U>
 U RBSentinel<T, U>::content = NULL;
@@ -45,9 +48,13 @@ U RBSentinel<T, U>::content = NULL;
 template <typename T, typename U>
 T RBSentinel<T, U>::key = NULL;
 
+template<typename T, typename U>
+RBSentinel<T, U>::RBSentinel(NodePointer<T, U>& node):parent(node) {
+    this->black = Black();
+}
 
 template<typename T, typename U>
-RBSentinel<T, U>::RBSentinel() {
+RBSentinel<T, U>::RBSentinel():parent(instance) {
     this->black = Black();
 }
 
@@ -68,7 +75,7 @@ void RBSentinel<T, U>::setParent(NodePointer<T, U>) {
 
 template<typename T, typename U>
 NodePointer<T, U> RBSentinel<T, U>::getParent() {
-    return getInstance();
+    return parent;
 }
 
 template<typename T, typename U>
@@ -98,7 +105,7 @@ bool RBSentinel<T, U>::isNil() {
 
 template<typename T, typename U>
 RBNodePtr<T, U> RBSentinel<T, U>::getInstance() {
-    return instance;
+    return rbcast(instance);
 }
 
 template<typename T, typename U>
@@ -120,6 +127,5 @@ template<typename T, typename U>
 void RBSentinel<T, U>::paintRed() {
     black.paintRed();
 }
-
 
 #endif //SDIZO_1_RBSENTINEL_H

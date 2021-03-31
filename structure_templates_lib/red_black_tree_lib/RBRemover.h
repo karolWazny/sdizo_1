@@ -1,7 +1,6 @@
 #ifndef SDIZO_1_RBREMOVER_H
 #define SDIZO_1_RBREMOVER_H
 
-#include "red_black_tree_lib/nodes/Node.h"
 #include "red_black_tree_lib/node_util/KeyFinder.h"
 #include "red_black_tree_lib/node_util/ConsequentFinder.h"
 #include "red_black_tree_lib/node_util/ConsequentLiberator.h"
@@ -32,15 +31,32 @@ void RBRemover<T, U>::remove(T key) {
     bool treeContainsThatKey = finder.nodeFound();
     if(treeContainsThatKey)
     {
-        auto nodeToRemove = finder.getFound();
+        auto nodeToRemove = rbcast(finder.getFound());
         auto consequentFinder = ConsequentFinder<T, U>(nodeToRemove);
-        auto consequent = consequentFinder.find();
+        auto consequent = rbcast(consequentFinder.find());
+        auto consequentSide = consequentFinder.getConsequentSide();
+
+        if(consequent->get(consequentSide)->isNil()){
+            auto customSentinel = RBFactory<T, U>().createSentinel(consequent);
+            consequent->setSide(customSentinel, consequentSide);
+        }
+
         auto liberator = ConsequentLiberator<T, U>(consequent);
         liberator.free();
         root = liberator.obtainRoot();
         auto replacer = NodeReplacer<T, U>(nodeToRemove);
         replacer.replaceWithNode(consequent);
         root = replacer.obtainRoot();
+
+
+        bool consequentWasBlack = false;
+        if(consequent->isBlack())
+            consequentWasBlack = true;
+
+        if(nodeToRemove->isBlack())
+            consequent->paintBlack();
+        else
+            consequent->paintRed();
     }
 }
 
