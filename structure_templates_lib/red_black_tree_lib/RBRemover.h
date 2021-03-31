@@ -32,6 +32,7 @@ void RBRemover<T, U>::remove(T key) {
     bool treeContainsThatKey = finder.nodeFound();
     if(treeContainsThatKey)
     {
+        //todo gdzieś tu jest punkt wrażliwy na usuwanie bezdzietnego węzła! naprawić to!
         auto nodeToRemove = rbcast(finder.getFound());
         auto consequentFinder = ConsequentFinder<T, U>(nodeToRemove);
         auto consequent = rbcast(consequentFinder.find());
@@ -40,7 +41,7 @@ void RBRemover<T, U>::remove(T key) {
 
 
         //added
-        if(consequent->get(consequentSide)->isNil()){
+        /*if(consequent->get(consequentSide)->isNil()){
             auto customSentinel = RBFactory<T, U>().createSentinel(consequent);
             consequent->setSide(customSentinel, consequentSide);
         }
@@ -48,20 +49,20 @@ void RBRemover<T, U>::remove(T key) {
 
         bool consequentWasBlack = false;
         if(consequent->isBlack())
-            consequentWasBlack = true;
+            consequentWasBlack = true;*/
         //end added
 
 
 
         auto liberator = ConsequentLiberator<T, U>(consequent);
         liberator.free();
-        root = liberator.obtainRoot();
+        root = liberator.obtainRoot();//todo chyba tutaj
         auto replacer = NodeReplacer<T, U>(nodeToRemove);
         replacer.replaceWithNode(consequent);
-        root = replacer.obtainRoot();
+        root = replacer.obtainRoot();//todo i tutaj
 
         //added
-        if(nodeX == nodeToRemove)
+        /*if(nodeX == nodeToRemove)
             nodeX = consequent;
 
         if(nodeToRemove->isBlack())
@@ -96,26 +97,27 @@ void RBRemover<T, U>::remove(T key) {
                     root = rotator.obtainRoot();
                     nodeW = rbcast(xParent->get(!xSide));
                 }
+
+                if(xParent->isBlack())
+                    nodeW->paintBlack();
+                else
+                    nodeW->paintRed();
+                xParent->paintBlack();
+                rbcast(nodeW->get(!xSide))->paintBlack();
+                auto rotator = NodeRotator<T, U>();
+                rotator.rotate(xParent, xSide);
+                root = rotator.obtainRoot();
+                nodeX = rbcast(root);
+
+
+                xParent = rbcast(consequent->getParent());
+                Side xSide = Side::RIGHT;
+                if(xParent->getKey() > nodeX->getKey())
+                    xSide = Side::LEFT;
+                nodeW = rbcast(xParent->get(!xSide));
             }
-            if(xParent->isBlack())
-                nodeW->paintBlack();
-            else
-                nodeW->paintRed();
-            xParent->paintBlack();
-            rbcast(nodeW->get(!xSide))->paintBlack();
-            auto rotator = NodeRotator<T, U>();
-            rotator.rotate(xParent, xSide);
-            root = rotator.obtainRoot();
-            nodeX = rbcast(root);
-
-
-            xParent = rbcast(consequent->getParent());
-            Side xSide = Side::RIGHT;
-            if(xParent->getKey() > nodeX->getKey())
-                xSide = Side::LEFT;
-            nodeW = rbcast(xParent->get(!xSide));
         }
-        nodeX->paintBlack();
+        nodeX->paintBlack();*/
         //end added
     }
 }
