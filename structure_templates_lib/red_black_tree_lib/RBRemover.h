@@ -54,12 +54,12 @@ void RBRemover<T, U>::remove(T key) {
 
 
 
-        auto liberator = ConsequentLiberator<T, U>(consequent);
-        liberator.free();
+        auto liberator = ConsequentLiberator<T, U>(root);
+        liberator.free(consequent);
         root = liberator.obtainRoot();//todo chyba tutaj
         auto replacer = NodeReplacer<T, U>(nodeToRemove);
         replacer.replaceWithNode(consequent);
-        root = replacer.obtainRoot();//todo i tutaj
+        //root = replacer.obtainRoot();//todo i tutaj
 
         //added
         /*if(nodeX == nodeToRemove)

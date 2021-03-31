@@ -10,20 +10,21 @@ template <typename T, typename U>
 class ConsequentLiberator : public NodeUtility<T, U>
 {
 public:
-    explicit ConsequentLiberator(NodePointer<T, U> consequent);
-    void free();
+    explicit ConsequentLiberator(NodePointer<T, U> root);
+    void free(NodePointer<T, U> node);
     NodePointer<T, U> getFreed();
 private:
     NodePointer<T, U> nodeToFree;
 };
 
 template<typename T, typename U>
-ConsequentLiberator<T, U>::ConsequentLiberator(NodePointer<T, U> consequent) {
-    currentNode = nodeToFree = consequent;
+ConsequentLiberator<T, U>::ConsequentLiberator(NodePointer<T, U> root) {
+    currentNode = root;
 }
 
 template<typename T, typename U>
-void ConsequentLiberator<T, U>::free(){
+void ConsequentLiberator<T, U>::free(NodePointer<T, U> node){
+    nodeToFree = node;
     auto child = nodeToFree->getRight();
     auto consequentSide = Side::RIGHT;
     if(child->isNil())
@@ -42,7 +43,8 @@ void ConsequentLiberator<T, U>::free(){
         parent->setRight(child);
     }
 
-    currentNode = child;
+    if(currentNode == nodeToFree)
+        currentNode = child;
 }
 
 template<typename T, typename U>

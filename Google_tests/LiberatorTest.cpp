@@ -12,7 +12,7 @@ TEST(LiberatorSuite, LiberateRootWithRightChild){
     root->setRight(right);
     right->setParent(root);
     auto liberator = ConsequentLiberator<int, int>(root);
-    liberator.free();
+    liberator.free(root);
     root = liberator.obtainRoot();
 
     ASSERT_EQ(root, right);
@@ -25,7 +25,7 @@ TEST(LiberatorSuite, LiberateRootWithLeftChild){
     root->setLeft(left);
     left->setParent(root);
     auto liberator = ConsequentLiberator<int, int>(root);
-    liberator.free();
+    liberator.free(root);
     root = liberator.obtainRoot();
 
     ASSERT_EQ(root, left);
@@ -35,7 +35,7 @@ TEST(LiberatorSuite, LiberateRootWithLeftChild){
 TEST(LiberatorSuite, LiberateRootChildless){
     auto root = SimpleFactory<int, int>::makeNode(5, 5);
     auto liberator = ConsequentLiberator<int, int>(root);
-    liberator.free();
+    liberator.free(root);
     root = liberator.obtainRoot();
 
     ASSERT_TRUE(root->isNil());
@@ -52,8 +52,8 @@ TEST(LiberatorSuite, LiberateLeftConsequent){
     right->setParent(root);
     consequent->setLeft(consequentChild);
     consequentChild->setParent(consequent);
-    auto liberator = ConsequentLiberator<int, int>(consequent);
-    liberator.free();
+    auto liberator = ConsequentLiberator<int, int>(root);
+    liberator.free(consequent);
     root = liberator.obtainRoot();
 
     ASSERT_EQ(root->getLeft(), consequentChild);
@@ -73,8 +73,8 @@ TEST(LiberatorSuite, LiberateRightConsequent){
     consequentChild->setParent(consequent);
     root->setLeft(left);
     left->setParent(root);
-    auto liberator = ConsequentLiberator<int, int>(consequent);
-    liberator.free();
+    auto liberator = ConsequentLiberator<int, int>(root);
+    liberator.free(consequent);
     root = liberator.obtainRoot();
 
     ASSERT_EQ(root->getRight(), consequentChild);
@@ -88,8 +88,8 @@ TEST(LiberatorSuite, LiberateRightChildless){
     auto consequent = SimpleFactory<int, int>::makeNode(8, 8);
     root->setRight(consequent);
     consequent->setParent(root);
-    auto liberator = ConsequentLiberator<int, int>(consequent);
-    liberator.free();
+    auto liberator = ConsequentLiberator<int, int>(root);
+    liberator.free(consequent);
     root = liberator.obtainRoot();
 
     ASSERT_TRUE(root->getRight()->isNil());
@@ -100,8 +100,8 @@ TEST(LiberatorSuite, LiberateLeftChildless){
     auto consequent = SimpleFactory<int, int>::makeNode(3, 3);
     root->setLeft(consequent);
     consequent->setParent(root);
-    auto liberator = ConsequentLiberator<int, int>(consequent);
-    liberator.free();
+    auto liberator = ConsequentLiberator<int, int>(root);
+    liberator.free(consequent);
     root = liberator.obtainRoot();
 
     ASSERT_TRUE(root->getLeft()->isNil());

@@ -58,6 +58,7 @@ void NodeReplacer<T, U>::replace() {
     replacement->setRight(right);
     right->setParent(replacement);
 
+    //if(!replacement->isNil())//todo nie wiem, czy to rozwiązuje problem, na razie zostawię zakomentowane
     currentNode = replacement;
 }
 
