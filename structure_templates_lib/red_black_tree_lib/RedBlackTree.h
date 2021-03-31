@@ -9,6 +9,7 @@
 #include "red_black_tree_lib/node_util/NodeReplacer.h"
 #include "red_black_tree_lib/nodes/RBFactory.h"
 #include "RBPutter.h"
+#include "RBRemover.h"
 
 template <typename T, typename U>
 class RedBlackTree
@@ -51,22 +52,9 @@ bool RedBlackTree<T, U>::containsValue(U value) {
 
 template<typename T, typename U>
 void RedBlackTree<T, U>::removeKey(T key) {
-    auto finder = KeyFinder<T, U>(root);
-    finder.setDesiredKey(key);
-    finder.find();
-    bool treeContainsThatKey = finder.nodeFound();
-    if(treeContainsThatKey)
-    {
-        auto nodeToRemove = finder.getFound();
-        auto consequentFinder = ConsequentFinder<T, U>(nodeToRemove);
-        auto consequent = consequentFinder.find();
-        auto liberator = ConsequentLiberator<T, U>(consequent);
-        liberator.free();
-        root = liberator.obtainRoot();
-        auto replacer = NodeReplacer<T, U>(nodeToRemove);
-        replacer.replaceWithNode(consequent);
-        root = replacer.obtainRoot();
-    }
+    auto remover = RBRemover<T, U>(root);
+    remover.remove(key);
+    root = remover.obtainRoot();
 }
 
 #endif //SDIZO_1_REDBLACKTREE_H

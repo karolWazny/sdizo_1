@@ -286,6 +286,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/projects/clion/sdizo_1/Google_tests/DeleteRestorerTest.cpp">
+			<Option target="Google_Tests_run"/>
+		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/Google_tests/FinderTest.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>

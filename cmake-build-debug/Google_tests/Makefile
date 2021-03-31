@@ -177,6 +177,39 @@ Google_Tests_run\fast:
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
 .PHONY : Google_Tests_run\fast
 
+DeleteRestorerTest.obj: DeleteRestorerTest.cpp.obj
+
+.PHONY : DeleteRestorerTest.obj
+
+# target to build an object file
+DeleteRestorerTest.cpp.obj:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\DeleteRestorerTest.cpp.obj
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : DeleteRestorerTest.cpp.obj
+
+DeleteRestorerTest.i: DeleteRestorerTest.cpp.i
+
+.PHONY : DeleteRestorerTest.i
+
+# target to preprocess a source file
+DeleteRestorerTest.cpp.i:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\DeleteRestorerTest.cpp.i
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : DeleteRestorerTest.cpp.i
+
+DeleteRestorerTest.s: DeleteRestorerTest.cpp.s
+
+.PHONY : DeleteRestorerTest.s
+
+# target to generate assembly for a file
+DeleteRestorerTest.cpp.s:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\DeleteRestorerTest.cpp.s
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : DeleteRestorerTest.cpp.s
+
 FinderTest.obj: FinderTest.cpp.obj
 
 .PHONY : FinderTest.obj
@@ -519,6 +552,9 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... Google_Tests_run
+	@echo ... DeleteRestorerTest.obj
+	@echo ... DeleteRestorerTest.i
+	@echo ... DeleteRestorerTest.s
 	@echo ... FinderTest.obj
 	@echo ... FinderTest.i
 	@echo ... FinderTest.s
