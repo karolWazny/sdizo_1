@@ -375,6 +375,39 @@ NodeTest.cpp.s:
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
 .PHONY : NodeTest.cpp.s
 
+PutRestorerTest.obj: PutRestorerTest.cpp.obj
+
+.PHONY : PutRestorerTest.obj
+
+# target to build an object file
+PutRestorerTest.cpp.obj:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\PutRestorerTest.cpp.obj
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : PutRestorerTest.cpp.obj
+
+PutRestorerTest.i: PutRestorerTest.cpp.i
+
+.PHONY : PutRestorerTest.i
+
+# target to preprocess a source file
+PutRestorerTest.cpp.i:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\PutRestorerTest.cpp.i
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : PutRestorerTest.cpp.i
+
+PutRestorerTest.s: PutRestorerTest.cpp.s
+
+.PHONY : PutRestorerTest.s
+
+# target to generate assembly for a file
+PutRestorerTest.cpp.s:
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\PutRestorerTest.cpp.s
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+.PHONY : PutRestorerTest.cpp.s
+
 PutterTest.obj: PutterTest.cpp.obj
 
 .PHONY : PutterTest.obj
@@ -504,6 +537,9 @@ help:
 	@echo ... NodeTest.obj
 	@echo ... NodeTest.i
 	@echo ... NodeTest.s
+	@echo ... PutRestorerTest.obj
+	@echo ... PutRestorerTest.i
+	@echo ... PutRestorerTest.s
 	@echo ... PutterTest.obj
 	@echo ... PutterTest.i
 	@echo ... PutterTest.s

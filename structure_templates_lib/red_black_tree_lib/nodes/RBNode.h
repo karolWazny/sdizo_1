@@ -30,4 +30,9 @@ public:
     virtual void paintRed() = 0;
 };
 
+template <typename T, typename U>
+RBNodePtr<T, U> rbcast(NodePointer<T, U> node) {
+    return std::dynamic_pointer_cast<RBNode<int, int>>(node);
+}
+
 #endif //SDIZO_1_RBNODE_H

@@ -44,6 +44,7 @@ RBNodeImpl<T, U>::RBNodeImpl(Node<T, U> * nodeImpl, Colored * coloredImpl) {
     node->setLeft(sentinel());
     node->setParent(sentinel());
     colored = std::unique_ptr<Colored>(coloredImpl);
+    colored->paintRed();
 }
 
 template<typename T, typename U>

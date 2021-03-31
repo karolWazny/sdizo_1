@@ -30,7 +30,8 @@ set(HEADER_FILES
         nodes/RBFactory.h
         node_util/NodeRotator.h
         rbutil/PutPropertyRestorer.h
-        rbutil/DeletePropertyRestorer.h)
+        rbutil/DeletePropertyRestorer.h
+        RBPutter.h)
 
 set(SOURCE_FILES
         index.cpp

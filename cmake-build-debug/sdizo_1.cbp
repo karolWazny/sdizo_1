@@ -690,6 +690,9 @@
 		<Unit filename="D:/projects/clion/sdizo_1/Google_tests/NodeTest.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/Google_tests/PutRestorerTest.cpp">
+			<Option target="Google_Tests_run"/>
+		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/Google_tests/PutterTest.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
@@ -746,6 +749,9 @@
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/linked_list_lib/index.cpp">
 			<Option target="linked_list_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/RBPutter.h">
+			<Option target="red_black_tree_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/RedBlackTree.h">
 			<Option target="red_black_tree_lib"/>

@@ -8,6 +8,7 @@
 #include "red_black_tree_lib/node_util/ConsequentLiberator.h"
 #include "red_black_tree_lib/node_util/NodeReplacer.h"
 #include "red_black_tree_lib/nodes/RBFactory.h"
+#include "RBPutter.h"
 
 template <typename T, typename U>
 class RedBlackTree
@@ -29,7 +30,8 @@ RedBlackTree<T, U>::RedBlackTree() {
 
 template<typename T, typename U>
 void RedBlackTree<T, U>::put(T key, U value) {
-    auto putter = NodePutter<T, U>(root, new RBFactory<T, U>());
+    //auto putter = NodePutter<T, U>(root, new RBFactory<T, U>());
+    auto putter = RBPutter<T, U>(root);
     putter.put(key, value);
     root = putter.obtainRoot();
 }

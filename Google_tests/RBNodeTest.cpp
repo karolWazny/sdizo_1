@@ -30,3 +30,10 @@ TEST(RBNodesuite, GetRightEmpty){
     ASSERT_TRUE(child->isNil());
     ASSERT_TRUE((std::dynamic_pointer_cast<RBNode<int, int>>(child))->isBlack());
 }
+
+TEST(RBNodesuite, GetParentEmpty){
+    auto node = RBFactory<int, int>().createNode(2, 3);
+    auto parent = node->getParent();
+    ASSERT_TRUE(parent->isNil());
+    ASSERT_TRUE((std::dynamic_pointer_cast<RBNode<int, int>>(parent))->isBlack());
+}

@@ -14,8 +14,10 @@ public:
     explicit NodePutter(NodePointer<T, U> root, NodeFactory<T, U>* nodeFactory);
     explicit NodePutter(NodePointer<T, U> root);
     void put(T, U);
+    NodePointer<T, U> getFreshNode();
 private:
     NodePointer<T, U> root;
+    NodePointer<T, U> freshNode;
     Side sideOfPlaceToPut;
     std::unique_ptr<NodeFactory<T, U>> factory;
 };
@@ -41,17 +43,16 @@ void NodePutter<T, U>::put(T key, U value) {
     finder.find();
     sideOfPlaceToPut = finder.getPlaceSide();
     currentNode = finder.getFound();
-    auto nodeToBePut = factory->createNode(key, value);
-    if(sideOfPlaceToPut == Side::LEFT)
-    {
-        currentNode->setLeft(nodeToBePut);
-    }
-    else
-    {
-        currentNode->setRight(nodeToBePut);
-    }
-    nodeToBePut->setParent(currentNode);
-    currentNode = nodeToBePut;
+    freshNode = factory->createNode(key, value);
+    currentNode->setSide(freshNode, sideOfPlaceToPut);
+    if(!currentNode->isNil())
+        freshNode->setParent(currentNode);
+    currentNode = freshNode;
+}
+
+template<typename T, typename U>
+NodePointer<T, U> NodePutter<T, U>::getFreshNode() {
+    return freshNode;
 }
 
 

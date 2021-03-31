@@ -182,6 +182,45 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/NodeTest.cpp.obj
  ../structure_templates_lib/red_black_tree_lib/nodes/Sentinel.h
  ../structure_templates_lib/red_black_tree_lib/nodes/SimpleFactory.h
  D:/projects/clion/sdizo_1/Google_tests/NodeTest.cpp
+Google_tests/CMakeFiles/Google_Tests_run.dir/PutRestorerTest.cpp.obj
+ ../Google_tests/lib/googletest/include/gtest/gtest-death-test.h
+ ../Google_tests/lib/googletest/include/gtest/gtest-matchers.h
+ ../Google_tests/lib/googletest/include/gtest/gtest-message.h
+ ../Google_tests/lib/googletest/include/gtest/gtest-param-test.h
+ ../Google_tests/lib/googletest/include/gtest/gtest-printers.h
+ ../Google_tests/lib/googletest/include/gtest/gtest-test-part.h
+ ../Google_tests/lib/googletest/include/gtest/gtest-typed-test.h
+ ../Google_tests/lib/googletest/include/gtest/gtest.h
+ ../Google_tests/lib/googletest/include/gtest/gtest_pred_impl.h
+ ../Google_tests/lib/googletest/include/gtest/gtest_prod.h
+ ../Google_tests/lib/googletest/include/gtest/internal/custom/gtest-port.h
+ ../Google_tests/lib/googletest/include/gtest/internal/custom/gtest-printers.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-death-test-internal.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-filepath.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-internal.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-param-util.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-port-arch.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-port.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-string.h
+ ../Google_tests/lib/googletest/include/gtest/internal/gtest-type-util.h
+ ../structure_templates_lib/red_black_tree_lib/colors/Black.h
+ ../structure_templates_lib/red_black_tree_lib/colors/Colored.h
+ ../structure_templates_lib/red_black_tree_lib/colors/RedBlack.h
+ ../structure_templates_lib/red_black_tree_lib/node_util/NodeFinder.h
+ ../structure_templates_lib/red_black_tree_lib/node_util/NodeRotator.h
+ ../structure_templates_lib/red_black_tree_lib/node_util/NodeUtility.h
+ ../structure_templates_lib/red_black_tree_lib/node_util/RootFinder.h
+ ../structure_templates_lib/red_black_tree_lib/node_util/Side.h
+ ../structure_templates_lib/red_black_tree_lib/nodes/Node.h
+ ../structure_templates_lib/red_black_tree_lib/nodes/NodeFactory.h
+ ../structure_templates_lib/red_black_tree_lib/nodes/NodeImpl.h
+ ../structure_templates_lib/red_black_tree_lib/nodes/RBFactory.h
+ ../structure_templates_lib/red_black_tree_lib/nodes/RBNode.h
+ ../structure_templates_lib/red_black_tree_lib/nodes/RBNodeImpl.h
+ ../structure_templates_lib/red_black_tree_lib/nodes/RBSentinel.h
+ ../structure_templates_lib/red_black_tree_lib/nodes/Sentinel.h
+ ../structure_templates_lib/red_black_tree_lib/rbutil/PutPropertyRestorer.h
+ D:/projects/clion/sdizo_1/Google_tests/PutRestorerTest.cpp
 Google_tests/CMakeFiles/Google_Tests_run.dir/PutterTest.cpp.obj
  ../Google_tests/lib/googletest/include/gtest/gtest-death-test.h
  ../Google_tests/lib/googletest/include/gtest/gtest-matchers.h
@@ -270,6 +309,7 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/RedBlackTreeTests.cpp.obj
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-port.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-string.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-type-util.h
+ ../structure_templates_lib/red_black_tree_lib/RBPutter.h
  ../structure_templates_lib/red_black_tree_lib/RedBlackTree.h
  ../structure_templates_lib/red_black_tree_lib/colors/Black.h
  ../structure_templates_lib/red_black_tree_lib/colors/Colored.h
@@ -280,6 +320,7 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/RedBlackTreeTests.cpp.obj
  ../structure_templates_lib/red_black_tree_lib/node_util/NodeFinder.h
  ../structure_templates_lib/red_black_tree_lib/node_util/NodePutter.h
  ../structure_templates_lib/red_black_tree_lib/node_util/NodeReplacer.h
+ ../structure_templates_lib/red_black_tree_lib/node_util/NodeRotator.h
  ../structure_templates_lib/red_black_tree_lib/node_util/NodeUtility.h
  ../structure_templates_lib/red_black_tree_lib/node_util/PlaceToPutFinder.h
  ../structure_templates_lib/red_black_tree_lib/node_util/RootFinder.h
@@ -293,4 +334,5 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/RedBlackTreeTests.cpp.obj
  ../structure_templates_lib/red_black_tree_lib/nodes/RBSentinel.h
  ../structure_templates_lib/red_black_tree_lib/nodes/Sentinel.h
  ../structure_templates_lib/red_black_tree_lib/nodes/SimpleFactory.h
+ ../structure_templates_lib/red_black_tree_lib/rbutil/PutPropertyRestorer.h
  D:/projects/clion/sdizo_1/Google_tests/RedBlackTreeTests.cpp

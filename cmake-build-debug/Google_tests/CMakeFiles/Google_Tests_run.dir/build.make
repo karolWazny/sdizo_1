@@ -286,6 +286,31 @@ Google_tests\CMakeFiles\Google_Tests_run.dir\NodeRotatorTest.cpp.s: cmake_force
 <<
 	cd D:\projects\clion\sdizo_1\cmake-build-debug
 
+Google_tests\CMakeFiles\Google_Tests_run.dir\PutRestorerTest.cpp.obj: Google_tests\CMakeFiles\Google_Tests_run.dir\flags.make
+Google_tests\CMakeFiles\Google_Tests_run.dir\PutRestorerTest.cpp.obj: ..\Google_tests\PutRestorerTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object Google_tests/CMakeFiles/Google_Tests_run.dir/PutRestorerTest.cpp.obj"
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+	C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Google_Tests_run.dir\PutRestorerTest.cpp.obj /FdCMakeFiles\Google_Tests_run.dir\ /FS -c D:\projects\clion\sdizo_1\Google_tests\PutRestorerTest.cpp
+<<
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+
+Google_tests\CMakeFiles\Google_Tests_run.dir\PutRestorerTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Google_Tests_run.dir/PutRestorerTest.cpp.i"
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+	C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\cl.exe > CMakeFiles\Google_Tests_run.dir\PutRestorerTest.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\projects\clion\sdizo_1\Google_tests\PutRestorerTest.cpp
+<<
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+
+Google_tests\CMakeFiles\Google_Tests_run.dir\PutRestorerTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Google_Tests_run.dir/PutRestorerTest.cpp.s"
+	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
+	C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Google_Tests_run.dir\PutRestorerTest.cpp.s /c D:\projects\clion\sdizo_1\Google_tests\PutRestorerTest.cpp
+<<
+	cd D:\projects\clion\sdizo_1\cmake-build-debug
+
 # Object files for target Google_Tests_run
 Google_Tests_run_OBJECTS = \
 "CMakeFiles\Google_Tests_run.dir\ListTests.cpp.obj" \
@@ -296,7 +321,8 @@ Google_Tests_run_OBJECTS = \
 "CMakeFiles\Google_Tests_run.dir\NodeReplacerTest.cpp.obj" \
 "CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj" \
 "CMakeFiles\Google_Tests_run.dir\RBNodeTest.cpp.obj" \
-"CMakeFiles\Google_Tests_run.dir\NodeRotatorTest.cpp.obj"
+"CMakeFiles\Google_Tests_run.dir\NodeRotatorTest.cpp.obj" \
+"CMakeFiles\Google_Tests_run.dir\PutRestorerTest.cpp.obj"
 
 # External object files for target Google_Tests_run
 Google_Tests_run_EXTERNAL_OBJECTS =
@@ -310,6 +336,7 @@ Google_tests\Google_Tests_run.exe: Google_tests\CMakeFiles\Google_Tests_run.dir\
 Google_tests\Google_Tests_run.exe: Google_tests\CMakeFiles\Google_Tests_run.dir\LiberatorTest.cpp.obj
 Google_tests\Google_Tests_run.exe: Google_tests\CMakeFiles\Google_Tests_run.dir\RBNodeTest.cpp.obj
 Google_tests\Google_Tests_run.exe: Google_tests\CMakeFiles\Google_Tests_run.dir\NodeRotatorTest.cpp.obj
+Google_tests\Google_Tests_run.exe: Google_tests\CMakeFiles\Google_Tests_run.dir\PutRestorerTest.cpp.obj
 Google_tests\Google_Tests_run.exe: Google_tests\CMakeFiles\Google_Tests_run.dir\build.make
 Google_tests\Google_Tests_run.exe: structure_templates_lib\structure_templates_lib.lib
 Google_tests\Google_Tests_run.exe: lib\gtestd.lib
@@ -321,7 +348,7 @@ Google_tests\Google_Tests_run.exe: structure_templates_lib\red_black_tree_lib\re
 Google_tests\Google_Tests_run.exe: structure_templates_lib\tree_lib\tree_lib.lib
 Google_tests\Google_Tests_run.exe: lib\gtestd.lib
 Google_tests\Google_Tests_run.exe: Google_tests\CMakeFiles\Google_Tests_run.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Google_Tests_run.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable Google_Tests_run.exe"
 	cd D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests
 	"D:\Program_Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\Google_Tests_run.dir --rc=D:\WINDOW~1\10\bin\100190~1.0\x86\rc.exe --mt=D:\WINDOW~1\10\bin\100190~1.0\x86\mt.exe --manifests  -- C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\Google_Tests_run.dir\objects1.rsp @<<
  /out:Google_Tests_run.exe /implib:Google_Tests_run.lib /pdb:D:\projects\clion\sdizo_1\cmake-build-debug\Google_tests\Google_Tests_run.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  ..\structure_templates_lib\structure_templates_lib.lib ..\lib\gtestd.lib ..\lib\gtest_maind.lib ..\structure_templates_lib\array_lib\array_lib.lib ..\structure_templates_lib\binary_heap_lib\binary_heap_lib.lib ..\structure_templates_lib\linked_list_lib\linked_list_lib.lib ..\structure_templates_lib\red_black_tree_lib\red_black_tree_lib.lib ..\structure_templates_lib\tree_lib\tree_lib.lib ..\lib\gtestd.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
