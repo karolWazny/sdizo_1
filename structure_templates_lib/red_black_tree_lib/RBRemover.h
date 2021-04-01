@@ -32,17 +32,20 @@ void RBRemover<T, U>::remove(T key) {
     bool treeContainsThatKey = finder.nodeFound();
     if(treeContainsThatKey)
     {
-        //todo gdzieś tu jest punkt wrażliwy na usuwanie bezdzietnego węzła! naprawić to!
         auto nodeToRemove = rbcast(finder.getFound());
         auto consequentFinder = ConsequentFinder<T, U>(nodeToRemove);
         auto consequent = rbcast(consequentFinder.find());
         auto consequentSide = consequentFinder.getConsequentSide();
 
         //v2
-        //zapisujemy w nodeX pozycję w drzewie zajmowaną przez ojca następnika
-        auto nodeX = rbcast(consequent->getParent());
-        if(nodeX == nodeToRemove)
-            nodeX = consequent;
+        //zapisujemy w doubleParent pozycję w drzewie zajmowaną przez ojca następnika
+        auto doubleBlackParent = rbcast(consequent->getParent());
+        if(doubleBlackParent == nodeToRemove)
+            doubleBlackParent = consequent;
+
+        auto doubleBlackSide = Side::RIGHT;
+        if(doubleBlackParent->getKey() > consequent->getKey())
+            doubleBlackSide = Side::LEFT;
 
         //zapamiętujemy kolor następnika
         bool consequentWasBlack = false;
@@ -81,9 +84,6 @@ void RBRemover<T, U>::remove(T key) {
 
         //v2
         //przekolorowanie następnika na kolor węzła usuwanego
-        if(nodeX == nodeToRemove)
-            nodeX = consequent;
-
         if(nodeToRemove->isBlack())
             consequent->paintBlack();
         else
@@ -92,31 +92,27 @@ void RBRemover<T, U>::remove(T key) {
         //
         if(consequentWasBlack)
         {
-            auto xChild = rbcast(nodeX->get(consequentSide));
-            if(xChild->isRed())
+            auto doubleBlack = rbcast(doubleBlackParent->get(doubleBlackSide));
+            if(doubleBlack->isRed())
             {
-                xChild->paintBlack();
+                doubleBlack->paintBlack();
                 return;
             }
 
             //przygotowanie genealogii do przesuwania czarności w górę
-            auto xParent = rbcast(nodeX->getParent());
-            auto xSide = Side::RIGHT;
-            if(xParent->getKey() > nodeX->getKey())
-                xSide = Side::LEFT;
-            auto xSibling = rbcast(xParent->get(!xSide));
+            auto doubleBlackSibling = rbcast(doubleBlackParent->get(!doubleBlackSide));
 
             //przypadek: brat x jest czerwony (sprowadzenie do któregoś z kolejnych przypadków)
-            if(xSibling->isRed())
+            if(doubleBlackSibling->isRed())
             {
                 auto rotator = NodeRotator<T, U>();
-                rotator.rotate(xParent, xSide);
-                xParent->paintRed();
-                xSibling->paintBlack();
-                xSibling = rbcast(xParent->get(!xSide));
+                rotator.rotate(doubleBlackParent, doubleBlackSide);
+                doubleBlackParent->paintRed();
+                doubleBlackSibling->paintBlack();
+                doubleBlackSibling = rbcast(doubleBlackParent->get(!doubleBlackSide));
             }
             //przypadek: brat x jest czarny i ma czarnych synów
-            if(rbcast(xSibling->getRight())->isBlack() && rbcast(xSibling->getLeft())->isBlack())
+            if(rbcast(doubleBlackSibling->getRight())->isBlack() && rbcast(doubleBlackSibling->getLeft())->isBlack())
             {
 
             }
