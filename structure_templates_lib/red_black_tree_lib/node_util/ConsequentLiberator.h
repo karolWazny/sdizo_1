@@ -25,24 +25,15 @@ ConsequentLiberator<T, U>::ConsequentLiberator(NodePointer<T, U> root) {
 template<typename T, typename U>
 void ConsequentLiberator<T, U>::free(NodePointer<T, U> node){
     nodeToFree = node;
-    auto child = nodeToFree->getRight();
-    auto consequentSide = Side::RIGHT;
-    if(child->isNil())
-    {
-        child = nodeToFree->getLeft();
-        consequentSide = Side::LEFT;
-    }
     auto parent = nodeToFree->getParent();
+    Side consequentSide = Side::LEFT;
+    if(parent->getKey() > nodeToFree->getKey())
+        consequentSide = Side::RIGHT;
+    auto child = nodeToFree->get(consequentSide);
+    if(child->isNil())
+        child = nodeToFree->get(!consequentSide);
     child->setParent(parent);
-    if(consequentSide == Side::LEFT)
-    {
-        parent->setLeft(child);
-    }
-    else
-    {
-        parent->setRight(child);
-    }
-
+    parent->setSide(child, !consequentSide);
     if(currentNode == nodeToFree)
         currentNode = child;
 }
