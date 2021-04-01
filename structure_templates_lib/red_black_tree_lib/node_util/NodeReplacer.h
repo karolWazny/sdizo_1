@@ -31,22 +31,14 @@ void NodeReplacer<T, U>::replaceWithNode(NodePointer<T, U> replacementNode) {
 template<typename T, typename U>
 void NodeReplacer<T, U>::replace() {
     auto parent = currentNode->getParent();
-    Side nodeToReplaceSide;
+    Side nodeToReplaceSide= Side::RIGHT;
     if(parent->getKey() > currentNode->getKey())
     {
         nodeToReplaceSide = Side::LEFT;
     }
-    else
+    if(!parent->isNil())
     {
-        nodeToReplaceSide = Side::RIGHT;
-    }
-    if(nodeToReplaceSide == Side::LEFT)
-    {
-        parent->setLeft(replacement);
-    }
-    else
-    {
-        parent->setRight(replacement);
+        parent->setSide(replacement, nodeToReplaceSide);
     }
     replacement->setParent(parent);
 

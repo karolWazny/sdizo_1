@@ -41,7 +41,7 @@ void RBRemover<T, U>::remove(T key) {
 
 
         //added
-        /*if(consequent->get(consequentSide)->isNil()){
+        if(consequent->get(consequentSide)->isNil()){
             auto customSentinel = RBFactory<T, U>().createSentinel(consequent);
             consequent->setSide(customSentinel, consequentSide);
         }
@@ -49,7 +49,7 @@ void RBRemover<T, U>::remove(T key) {
 
         bool consequentWasBlack = false;
         if(consequent->isBlack())
-            consequentWasBlack = true;*/
+            consequentWasBlack = true;
         //end added
 
 
@@ -59,10 +59,11 @@ void RBRemover<T, U>::remove(T key) {
         root = liberator.obtainRoot();//todo chyba tutaj
         auto replacer = NodeReplacer<T, U>(nodeToRemove);
         replacer.replaceWithNode(consequent);
-        //root = replacer.obtainRoot();//todo i tutaj
+        if(root == nodeToRemove)
+            root = replacer.obtainRoot();
 
         //added
-        /*if(nodeX == nodeToRemove)
+        if(nodeX == nodeToRemove)
             nodeX = consequent;
 
         if(nodeToRemove->isBlack())
@@ -76,7 +77,7 @@ void RBRemover<T, U>::remove(T key) {
             xSide = Side::LEFT;
         auto nodeW = rbcast(xParent->get(!xSide));
 
-        while(!xParent->isNil() && nodeX->isBlack()){
+        /*while(!xParent->isNil() && nodeX->isBlack()){
             if(nodeW->isRed()){
                 nodeW->paintBlack();
                 xParent->paintRed();
