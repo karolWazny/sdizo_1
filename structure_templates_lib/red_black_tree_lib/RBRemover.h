@@ -38,10 +38,20 @@ void RBRemover<T, U>::remove(T key) {
         auto consequent = rbcast(consequentFinder.find());
         auto consequentSide = consequentFinder.getConsequentSide();
 
+        //v2
+        //zapisujemy w nodeX pozycję w drzewie zajmowaną przez ojca następnika
+        auto nodeX = rbcast(consequent->getParent());
+        if(nodeX == nodeToRemove)
+            nodeX = consequent;
+
+        //zapamiętujemy kolor następnika
+        bool consequentWasBlack = false;
+        if(consequent->isBlack())
+            consequentWasBlack = true;
 
 
         //added
-        if(consequent->get(consequentSide)->isNil()){
+        /*if(consequent->get(consequentSide)->isNil()){
             auto customSentinel = RBFactory<T, U>().createSentinel(consequent);
             consequent->setSide(customSentinel, consequentSide);
         }
@@ -49,7 +59,14 @@ void RBRemover<T, U>::remove(T key) {
 
         bool consequentWasBlack = false;
         if(consequent->isBlack())
-            consequentWasBlack = true;
+            consequentWasBlack = true;*/
+
+        /*auto xParent = rbcast(nodeX->getParent());
+        Side xSide = Side::RIGHT;
+        if(xParent->getKey() > nodeX->getKey())
+            xSide = Side::LEFT;
+        auto nodeW = rbcast(xParent->get(!xSide));*/
+
         //end added
 
 
@@ -62,7 +79,8 @@ void RBRemover<T, U>::remove(T key) {
         if(root == nodeToRemove)
             root = replacer.obtainRoot();
 
-        //added
+        //v2
+        //przekolorowanie następnika na kolor węzła usuwanego
         if(nodeX == nodeToRemove)
             nodeX = consequent;
 
@@ -70,55 +88,95 @@ void RBRemover<T, U>::remove(T key) {
             consequent->paintBlack();
         else
             consequent->paintRed();
-
-        auto xParent = rbcast(consequent->getParent());
-        Side xSide = Side::RIGHT;
-        if(xParent->getKey() > nodeX->getKey())
-            xSide = Side::LEFT;
-        auto nodeW = rbcast(xParent->get(!xSide));
-
-        /*while(!xParent->isNil() && nodeX->isBlack()){
-            if(nodeW->isRed()){
-                nodeW->paintBlack();
-                xParent->paintRed();
-                auto rotator = NodeRotator<T, U>();
-                rotator.rotate(xParent, xSide);
-                root = rotator.obtainRoot();
-                nodeW = rbcast(xParent->get(!consequentSide));
+        //v2
+        //
+        if(consequentWasBlack)
+        {
+            auto xChild = rbcast(nodeX->get(consequentSide));
+            if(xChild->isRed())
+            {
+                xChild->paintBlack();
+                return;
             }
-            if(rbcast(nodeW->getLeft())->isBlack() && rbcast(nodeW->getRight())->isBlack()){
-                nodeW->paintRed();
-                nodeX = xParent;
-            } else {//tu nie jestem pewien zagnieżdżenia
-                if(rbcast(nodeW->get(!xSide))->isBlack()){
-                    rbcast(nodeW->get(xSide))->paintBlack();
-                    nodeW->paintRed();
-                    auto rotator = NodeRotator<T, U>();
-                    rotator.rotate(nodeW, !xSide);
-                    root = rotator.obtainRoot();
-                    nodeW = rbcast(xParent->get(!xSide));
-                }
 
-                if(xParent->isBlack())
-                    nodeW->paintBlack();
-                else
-                    nodeW->paintRed();
-                xParent->paintBlack();
-                rbcast(nodeW->get(!xSide))->paintBlack();
+            //przygotowanie genealogii do przesuwania czarności w górę
+            auto xParent = rbcast(nodeX->getParent());
+            auto xSide = Side::RIGHT;
+            if(xParent->getKey() > nodeX->getKey())
+                xSide = Side::LEFT;
+            auto xSibling = rbcast(xParent->get(!xSide));
+
+            //przypadek: brat x jest czerwony (sprowadzenie do któregoś z kolejnych przypadków)
+            if(xSibling->isRed())
+            {
                 auto rotator = NodeRotator<T, U>();
                 rotator.rotate(xParent, xSide);
-                root = rotator.obtainRoot();
-                nodeX = rbcast(root);
+                xParent->paintRed();
+                xSibling->paintBlack();
+                xSibling = rbcast(xParent->get(!xSide));
+            }
+            //przypadek: brat x jest czarny i ma czarnych synów
+            if(rbcast(xSibling->getRight())->isBlack() && rbcast(xSibling->getLeft())->isBlack())
+            {
 
-
-                xParent = rbcast(consequent->getParent());
-                Side xSide = Side::RIGHT;
-                if(xParent->getKey() > nodeX->getKey())
-                    xSide = Side::LEFT;
-                nodeW = rbcast(xParent->get(!xSide));
             }
         }
-        nodeX->paintBlack();*/
+
+        //added
+       /* if(nodeX == nodeToRemove)
+            nodeX = consequent;
+
+        if(nodeToRemove->isBlack())
+            consequent->paintBlack();
+        else
+            consequent->paintRed();
+
+        if(consequentWasBlack){
+
+            //wątpliwy fragment
+            while(!xParent->isNil() && nodeX->isBlack()){
+                if(nodeW->isRed()){
+                    nodeW->paintBlack();
+                    xParent->paintRed();
+                    auto rotator = NodeRotator<T, U>();
+                    rotator.rotate(xParent, xSide);
+                    root = rotator.obtainRoot();
+                    nodeW = rbcast(xParent->get(!consequentSide));
+                }
+                if(rbcast(nodeW->getLeft())->isBlack() && rbcast(nodeW->getRight())->isBlack()){
+                    nodeW->paintRed();
+                    nodeX = xParent;
+                } else {//tu nie jestem pewien zagnieżdżenia
+                    if(rbcast(nodeW->get(!xSide))->isBlack()){
+                        rbcast(nodeW->get(xSide))->paintBlack();
+                        nodeW->paintRed();
+                        auto rotator = NodeRotator<T, U>();
+                        rotator.rotate(nodeW, !xSide);
+                        root = rotator.obtainRoot();
+                        nodeW = rbcast(xParent->get(!xSide));
+                    }
+
+                    if(xParent->isBlack())
+                        nodeW->paintBlack();
+                    else
+                        nodeW->paintRed();
+                    xParent->paintBlack();
+                    rbcast(nodeW->get(!xSide))->paintBlack();
+                    auto rotator = NodeRotator<T, U>();
+                    rotator.rotate(xParent, xSide);
+                    root = rotator.obtainRoot();
+                    nodeX = rbcast(root);
+
+
+                    xParent = rbcast(consequent->getParent());
+                    Side xSide = Side::RIGHT;
+                    if(xParent->getKey() > nodeX->getKey())
+                        xSide = Side::LEFT;
+                    nodeW = rbcast(xParent->get(!xSide));
+                }
+            }
+            nodeX->paintBlack();
+        }*/
         //end added
     }
 }

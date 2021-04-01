@@ -89,3 +89,29 @@ TEST(RedBlackTestSuite, DeletingSmallest){
         }
     }
 }
+
+TEST(RedBlackTestSuite, DeletingSmallestSmallAmount){
+    auto tree = RedBlackTree<int, int>();
+    for(int i = 0; i < 10; i++)
+    {
+        tree.put(i, i);
+        for(int j = 0; j <= i; j++)
+        {
+            ASSERT_TRUE(tree.containsKey(j));
+        }
+    }
+    for(int i = 0; i < 10; i++)
+    {
+        //std::cout<<tree.toString()<<std::endl;
+        ASSERT_TRUE(tree.containsKey(i));
+        tree.removeKey(i);
+        for(int j = 0; j <= i; j++)
+        {
+            ASSERT_FALSE(tree.containsKey(j));
+        }
+        for(int j = i + 1; j < 10; j++)
+        {
+            ASSERT_TRUE(tree.containsKey(j));
+        }
+    }
+}
