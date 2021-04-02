@@ -37,6 +37,14 @@ void RBRemover<T, U>::remove(T key) {
         auto consequent = rbcast(consequentFinder.find());
         auto consequentSide = consequentFinder.getConsequentSide();
 
+        if(consequent->isNil())
+        {
+            //...to nie wiem, co Ci zrobię!
+            auto customSentinel = RBFactory<T, U>().createSentinel(nodeToRemove);
+            nodeToRemove->setSide(customSentinel, consequentSide);
+            consequent = rbcast(customSentinel);
+        }
+
         //v2
         //zapisujemy w doubleParent pozycję w drzewie zajmowaną przez ojca następnika
         auto doubleBlackParent = rbcast(consequent->getParent());
@@ -44,7 +52,9 @@ void RBRemover<T, U>::remove(T key) {
             doubleBlackParent = consequent;
 
         auto doubleBlackSide = Side::RIGHT;
-        if(doubleBlackParent->getKey() > consequent->getKey())
+        //auto parentKey = doubleBlackParent->getKey();
+        auto consKey = consequent->getKey();
+        if(doubleBlackParent->getKey() > consequent->getKey())//to tu
             doubleBlackSide = Side::LEFT;
 
         //zapamiętujemy kolor następnika
@@ -55,7 +65,7 @@ void RBRemover<T, U>::remove(T key) {
 
         auto liberator = ConsequentLiberator<T, U>(root);
         liberator.free(consequent);
-        root = liberator.obtainRoot();//todo chyba tutaj
+        root = liberator.obtainRoot();
         auto replacer = NodeReplacer<T, U>(nodeToRemove);
         replacer.replaceWithNode(consequent);
         if(root == nodeToRemove)

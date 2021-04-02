@@ -38,6 +38,8 @@ private:
 
     NodePointer<T, U>& parent;
 
+    NodePointer<T, U> parentPointer;
+
     static NodePointer<T, U> instance;
 };
 
@@ -51,8 +53,9 @@ template <typename T, typename U>
 T RBSentinel<T, U>::key = NULL;
 
 template<typename T, typename U>
-RBSentinel<T, U>::RBSentinel(NodePointer<T, U>& node):parent(node) {
+RBSentinel<T, U>::RBSentinel(NodePointer<T, U>& node):parent(parentPointer) {
     this->black = Black();
+    parent = node;
 }
 
 template<typename T, typename U>
