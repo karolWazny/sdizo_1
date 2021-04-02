@@ -93,28 +93,70 @@ void RBRemover<T, U>::remove(T key) {
         if(consequentWasBlack)
         {
             auto doubleBlack = rbcast(doubleBlackParent->get(doubleBlackSide));
-            if(doubleBlack->isRed())
-            {
-                doubleBlack->paintBlack();
-                return;
-            }
 
-            //przygotowanie genealogii do przesuwania czarności w górę
-            auto doubleBlackSibling = rbcast(doubleBlackParent->get(!doubleBlackSide));
-
-            //przypadek: brat x jest czerwony (sprowadzenie do któregoś z kolejnych przypadków)
-            if(doubleBlackSibling->isRed())
+            while(true)
             {
-                auto rotator = NodeRotator<T, U>();
-                rotator.rotate(doubleBlackParent, doubleBlackSide);
-                doubleBlackParent->paintRed();
-                doubleBlackSibling->paintBlack();
-                doubleBlackSibling = rbcast(doubleBlackParent->get(!doubleBlackSide));
-            }
-            //przypadek: brat x jest czarny i ma czarnych synów
-            if(rbcast(doubleBlackSibling->getRight())->isBlack() && rbcast(doubleBlackSibling->getLeft())->isBlack())
-            {
+                if(doubleBlack->isRed() || doubleBlackParent->isNil())
+                {
+                    doubleBlack->paintBlack();
+                    return;
+                }
 
+                //przygotowanie genealogii do przesuwania czarności w górę
+                auto doubleBlackSibling = rbcast(doubleBlackParent->get(!doubleBlackSide));
+
+                //przypadek: brat x jest czerwony (sprowadzenie do któregoś z kolejnych przypadków)
+                if(doubleBlackSibling->isRed())
+                {
+                    auto rotator = NodeRotator<T, U>();
+                    rotator.rotate(doubleBlackParent, doubleBlackSide);
+                    root = rotator.obtainRoot();
+                    doubleBlackParent->paintRed();
+                    doubleBlackSibling->paintBlack();
+                    doubleBlackSibling = rbcast(doubleBlackParent->get(!doubleBlackSide));
+                }
+                //przypadek: brat x jest czarny i ma czarnych synów
+                if(rbcast(doubleBlackSibling->getRight())->isBlack() && rbcast(doubleBlackSibling->getLeft())->isBlack())
+                {
+                    doubleBlackSibling->paintRed();
+                    doubleBlack = doubleBlackParent;
+
+                    //aktualizacja genealogii
+                    doubleBlackParent = rbcast(doubleBlack->getParent());
+                    doubleBlackSide = Side::RIGHT;
+                    if(doubleBlackParent->getKey() > doubleBlack->getKey())
+                        doubleBlackSide = Side::LEFT;
+                    doubleBlackSibling = rbcast(doubleBlackParent->get(!doubleBlackSide));
+
+                    continue;
+                }
+                //przypadek: brat x jest czarny i ma czerwonego syna z tej samej strony, czarnego z przeciwnej
+                if(rbcast(doubleBlackSibling->get(!doubleBlackSide))->isBlack())
+                {
+                    auto rotator = NodeRotator<T, U>();
+                    rotator.rotate(doubleBlackSibling, !doubleBlackSide);
+                    doubleBlackSibling->paintRed();
+                    rbcast(doubleBlackSibling->getParent())->paintBlack();
+
+                    //aktualizacja genealogii
+                    doubleBlackSibling = rbcast(doubleBlackParent->get(!doubleBlackSide));
+                }
+                //przypadek: brat x jest czarny i ma syna czerwonego syna z przeciwnej strony
+                if(rbcast(doubleBlackSibling->get(!doubleBlackSide))->isRed())
+                {
+                    auto rotator = NodeRotator<T, U>();
+                    rotator.rotate(doubleBlackParent, doubleBlackSide);
+                    root = rotator.obtainRoot();
+                    if(doubleBlackParent->isRed())
+                        doubleBlackSibling->paintRed();
+                    else
+                        doubleBlackSibling->paintBlack();
+
+                    doubleBlackParent->paintBlack();
+
+                    rbcast(doubleBlackSibling->get(!doubleBlackSide))->paintBlack();
+                    break;
+                }
             }
         }
 
