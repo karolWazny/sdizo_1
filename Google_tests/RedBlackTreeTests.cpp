@@ -96,12 +96,12 @@ TEST(RedBlackTestSuite, DeletingReversedAdding){
     auto tree = RedBlackTree<int, int>();
     for(int i = 99; i >= 0; i--)
     {
-        std::cout << std::to_string(i)<<" "<<tree.toString() << std::endl;
+        //std::cout << std::to_string(i)<<" "<<tree.toString() << std::endl;
         if(i == 94)
             tree.put(i, i);
         else
             tree.put(i, i);
-        std::cout <<tree.toString() << std::endl;
+        std::cout << std::to_string(i)<<" "<<tree.toString() << std::endl;
         for(int j = 99; j >= i; j--)
         {
             ASSERT_TRUE(tree.containsKey(j));

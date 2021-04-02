@@ -46,7 +46,7 @@ void NodeReplacer<T, U>::replace() {
     {
         auto left = currentNode->getLeft();
         replacement->setLeft(left);
-        left->setParent(replacement);//todo tu się coś chrzani
+        left->setParent(replacement);
 
         auto right = currentNode->getRight();
         replacement->setRight(right);

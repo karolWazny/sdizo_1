@@ -36,7 +36,7 @@ void PutPropertyRestorer<T, U>::restoreFrom(RBNodePtr<T, U> freshNode) {
         } else {
             NodeRotator<T, U> rotator = NodeRotator<T, U>();
             if(startingSide != parentSide)
-            {
+            {//todo w tym warunku jest coś skopane, uruchamia się dopiero w tym nowym teście
                 startingNode = parent;
                 rotator.rotate(startingNode, parentSide);
                 updateGenealogy();//todo tutaj diabeł tkwi
