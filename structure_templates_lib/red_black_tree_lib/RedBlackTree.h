@@ -8,6 +8,7 @@
 #include "RBRemover.h"
 #include "TreePrinter.h"
 
+
 template <typename T, typename U>
 class RedBlackTree
 {
@@ -32,6 +33,7 @@ void RedBlackTree<T, U>::put(T key, U value) {
     auto putter = RBPutter<T, U>(root);
     putter.put(key, value);
     root = putter.obtainRoot();
+    rbcast(root)->checkAmountOfBlackToLeaves();
 }
 
 template<typename T, typename U>
@@ -52,6 +54,7 @@ void RedBlackTree<T, U>::removeKey(T key) {
     auto remover = RBRemover<T, U>(root);
     remover.remove(key);
     root = remover.obtainRoot();
+    rbcast(root)->checkAmountOfBlackToLeaves();
 }
 
 template<typename T, typename U>

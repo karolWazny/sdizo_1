@@ -4,6 +4,10 @@
 #include "RBNode.h"
 #include "RBSentinel.h"
 
+
+//todo tylko do testów
+#include <iostream>
+
 template <typename T, typename U>
 class RBNodeImpl : public RBNode<T, U>
 {
@@ -24,6 +28,8 @@ public:
     void setRight(NodePointer<T, U>) override;
     NodePointer<T, U> getRight() override;
     bool isNil() override;
+
+    int checkAmountOfBlackToLeaves() override;
 
 private:
     RBNodePtr<T, U> sentinel();
@@ -119,6 +125,23 @@ NodePointer<T, U> RBNodeImpl<T, U>::getRight() {
 template<typename T, typename U>
 bool RBNodeImpl<T, U>::isNil() {
     return node->isNil();
+}
+
+template<typename T, typename U>
+int RBNodeImpl<T, U>::checkAmountOfBlackToLeaves() {
+    int leftNumber, rightNumber;
+    leftNumber = rbcast(getLeft())->checkAmountOfBlackToLeaves();
+    rightNumber = rbcast(getRight())->checkAmountOfBlackToLeaves();
+    if(leftNumber != rightNumber)
+    {
+        std::cout << "My key: "<<std::to_string(getKey())<<", left blacks: "
+            <<std::to_string(leftNumber)<<", right blacks: "
+            <<std::to_string(rightNumber)<<std::endl;
+        throw "Niezachowane własności drzewa!";
+    }
+    if(isBlack())
+        leftNumber++;
+    return leftNumber;
 }
 
 #endif //SDIZO_1_RBNODEIMPL_H

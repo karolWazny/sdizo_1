@@ -10,7 +10,7 @@ class RBSentinel : public RBNode<T, U>
 {
 public:
     RBSentinel();
-    RBSentinel(NodePointer<T, U>& parent);
+    RBSentinel(NodePointer<T, U>& node);
 
     virtual U& getContent();
     virtual T getKey();
@@ -26,6 +26,8 @@ public:
     virtual bool isRed();
     virtual void paintBlack();
     virtual void paintRed();
+
+    int checkAmountOfBlackToLeaves() override;
 
     static RBNodePtr<T, U> getInstance();
 
@@ -127,6 +129,11 @@ void RBSentinel<T, U>::paintBlack() {
 template<typename T, typename U>
 void RBSentinel<T, U>::paintRed() {
     black.paintRed();
+}
+
+template<typename T, typename U>
+int RBSentinel<T, U>::checkAmountOfBlackToLeaves() {
+    return 1;
 }
 
 #endif //SDIZO_1_RBSENTINEL_H

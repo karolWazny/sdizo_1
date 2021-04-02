@@ -86,7 +86,7 @@ TEST(RedBlackTestSuite, DeletingSmallest){
         {
             ASSERT_FALSE(tree.containsKey(j));
         }
-        //std::cout<<tree.toString()<<std::endl;
+        std::cout<<tree.toString()<<std::endl;
         for(int j = i + 1; j < 100; j++)
         {
             ASSERT_TRUE(tree.containsKey(j));

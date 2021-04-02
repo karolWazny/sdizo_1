@@ -28,6 +28,8 @@ public:
     virtual bool isRed() = 0;
     virtual void paintBlack() = 0;
     virtual void paintRed() = 0;
+
+    virtual int checkAmountOfBlackToLeaves() = 0;
 };
 
 template <typename T, typename U>
