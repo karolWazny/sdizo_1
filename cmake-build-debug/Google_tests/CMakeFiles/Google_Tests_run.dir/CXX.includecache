@@ -512,10 +512,6 @@ Sentinel.h
 NodeFactory.h
 ../structure_templates_lib/red_black_tree_lib/nodes/NodeFactory.h
 
-../structure_templates_lib/red_black_tree_lib/rbutil/DeletePropertyRestorer.h
-red_black_tree_lib/nodes/RBNode.h
-../structure_templates_lib/red_black_tree_lib/rbutil/red_black_tree_lib/nodes/RBNode.h
-
 ../structure_templates_lib/red_black_tree_lib/rbutil/PutPropertyRestorer.h
 red_black_tree_lib/node_util/NodeUtility.h
 ../structure_templates_lib/red_black_tree_lib/rbutil/red_black_tree_lib/node_util/NodeUtility.h
@@ -523,28 +519,6 @@ red_black_tree_lib/nodes/Node.h
 ../structure_templates_lib/red_black_tree_lib/rbutil/red_black_tree_lib/nodes/Node.h
 red_black_tree_lib/node_util/NodeRotator.h
 ../structure_templates_lib/red_black_tree_lib/rbutil/red_black_tree_lib/node_util/NodeRotator.h
-
-D:/projects/clion/sdizo_1/Google_tests/DeleteRestorerTest.cpp
-gtest/gtest.h
-D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
-red_black_tree_lib/nodes/RBFactory.h
--
-red_black_tree_lib/rbutil/DeletePropertyRestorer.h
--
-
-D:/projects/clion/sdizo_1/Google_tests/PutRestorerTest.cpp
-gtest/gtest.h
-D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
-red_black_tree_lib/nodes/RBFactory.h
--
-red_black_tree_lib/rbutil/PutPropertyRestorer.h
--
-
-D:/projects/clion/sdizo_1/Google_tests/RBNodeTest.cpp
-gtest/gtest.h
-D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
-red_black_tree_lib/nodes/RBFactory.h
--
 
 D:/projects/clion/sdizo_1/Google_tests/RBRemoverTest.cpp
 gtest/gtest.h

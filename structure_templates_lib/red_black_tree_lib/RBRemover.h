@@ -72,6 +72,11 @@ void RBRemover<T, U>::remove(T key) {
         if(consequentWasBlack)
         {
             auto doubleBlack = rbcast(doubleBlackParent->get(doubleBlackSide));
+            if(doubleBlack->isNil())
+            {
+                doubleBlack = rbcast(RBFactory<T, U>().createSentinel(doubleBlackParent));
+                doubleBlackParent->setSide(doubleBlack, doubleBlackSide);
+            }
 
             while(true)
             {
