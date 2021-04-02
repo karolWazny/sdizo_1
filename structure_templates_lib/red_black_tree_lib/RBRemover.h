@@ -39,7 +39,6 @@ void RBRemover<T, U>::remove(T key) {
 
         if(consequent->isNil())
         {
-            //...to nie wiem, co Ci zrobię!
             auto customSentinel = RBFactory<T, U>().createSentinel(nodeToRemove);
             nodeToRemove->setSide(customSentinel, consequentSide);
             consequent = rbcast(customSentinel);
@@ -50,24 +49,21 @@ void RBRemover<T, U>::remove(T key) {
         auto doubleBlackParent = rbcast(consequent->getParent());
         if(doubleBlackParent == nodeToRemove)
             doubleBlackParent = consequent;
+        //zabezpieczenie przypadku granicznego
 
         auto doubleBlackSide = Side::RIGHT;
-        //auto parentKey = doubleBlackParent->getKey();
-        auto consKey = consequent->getKey();
-        if(doubleBlackParent->getKey() > consequent->getKey())//to tu
+        if(doubleBlackParent->getKey() > consequent->getKey())
             doubleBlackSide = Side::LEFT;
 
         //zapamiętujemy kolor następnika
-        bool consequentWasBlack = false;
-        if(consequent->isBlack())
-            consequentWasBlack = true;
+        bool consequentWasBlack = consequent->isBlack();
 
 
         auto liberator = ConsequentLiberator<T, U>(root);
         liberator.free(consequent);
         root = liberator.obtainRoot();
         auto replacer = NodeReplacer<T, U>(nodeToRemove);
-        replacer.replaceWithNode(consequent);
+        replacer.replaceWithNode(consequent);//todo tu coś nie gra
         if(root == nodeToRemove)
             root = replacer.obtainRoot();
 
@@ -88,9 +84,12 @@ void RBRemover<T, U>::remove(T key) {
                 doubleBlackParent->setSide(doubleBlack, doubleBlackSide);
             }
 
+            //kontrolujemy customową zaślepkę
+            int count = 0;
+
             while(true)
             {
-                if(doubleBlack->isRed() || doubleBlackParent->isNil())
+                if(doubleBlack->isRed() || (doubleBlackParent->isNil() && count > 0))
                 {
                     doubleBlack->paintBlack();
                     return;
@@ -166,6 +165,7 @@ void RBRemover<T, U>::remove(T key) {
 
                     //break;
                 }
+                count++;
             }
         }
     }

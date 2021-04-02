@@ -42,16 +42,18 @@ void NodeReplacer<T, U>::replace() {
     }
     replacement->setParent(parent);
 
-    auto left = currentNode->getLeft();
-    replacement->setLeft(left);
-    left->setParent(replacement);
+    if(!replacement->isNil()) //na próbę, oryginalnie bezwarunkowo
+    {
+        auto left = currentNode->getLeft();
+        replacement->setLeft(left);
+        left->setParent(replacement);//todo tu się coś chrzani
 
-    auto right = currentNode->getRight();
-    replacement->setRight(right);
-    right->setParent(replacement);
+        auto right = currentNode->getRight();
+        replacement->setRight(right);
+        right->setParent(replacement);
 
-    //if(!replacement->isNil())//todo nie wiem, czy to rozwiązuje problem, na razie zostawię zakomentowane
-    currentNode = replacement;
+        currentNode = replacement;
+    }
 }
 
 #endif //SDIZO_1_NODEREPLACER_H
