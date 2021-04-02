@@ -93,6 +93,8 @@ void RBNodeImpl<T, U>::setParent(NodePointer<T, U> parent) {
 
 template<typename T, typename U>
 NodePointer<T, U> RBNodeImpl<T, U>::getParent() {
+    if(!node->getParent())
+        setParent(nullptr);//todo roboczo, wypadałoby to usunąć potem
     return node->getParent();
 }
 

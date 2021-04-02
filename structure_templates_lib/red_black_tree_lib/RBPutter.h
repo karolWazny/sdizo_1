@@ -26,7 +26,7 @@ void RBPutter<T, U>::put(T key, U value) {
     putter.put(key, value);
     auto freshNode = rbcast(putter.getFreshNode());
     auto restorer = PutPropertyRestorer<T, U>();
-    restorer.restoreFrom(freshNode);
+    restorer.restoreFrom(freshNode);//todo tutaj siedzi diabeł
     currentNode = restorer.obtainRoot();
 }
 

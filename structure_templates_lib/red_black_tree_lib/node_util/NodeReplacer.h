@@ -42,7 +42,7 @@ void NodeReplacer<T, U>::replace() {
     }
     replacement->setParent(parent);
 
-    if(!replacement->isNil()) //na próbę, oryginalnie bezwarunkowo
+    if(!replacement->isNil())
     {
         auto left = currentNode->getLeft();
         replacement->setLeft(left);

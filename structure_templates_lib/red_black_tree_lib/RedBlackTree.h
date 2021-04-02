@@ -31,7 +31,7 @@ RedBlackTree<T, U>::RedBlackTree() {
 template<typename T, typename U>
 void RedBlackTree<T, U>::put(T key, U value) {
     auto putter = RBPutter<T, U>(root);
-    putter.put(key, value);
+    putter.put(key, value);//todo tutaj
     root = putter.obtainRoot();
     rbcast(root)->checkAmountOfBlackToLeaves();
 }

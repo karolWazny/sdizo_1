@@ -39,7 +39,7 @@ void PutPropertyRestorer<T, U>::restoreFrom(RBNodePtr<T, U> freshNode) {
             {
                 startingNode = parent;
                 rotator.rotate(startingNode, parentSide);
-                updateGenealogy();
+                updateGenealogy();//todo tutaj diabeł tkwi
             }
             parent->paintBlack();
             grand->paintRed();
@@ -55,7 +55,7 @@ template<typename T, typename U>
 void PutPropertyRestorer<T, U>::updateGenealogy() {
     currentNode = startingNode;
     parent = rbcast(startingNode->getParent());
-    grand = rbcast(parent->getParent());
+    grand = rbcast(parent->getParent());//todo i tu leży pies pogrzebany
     if(parent->getKey() < grand->getKey())
         parentSide = Side::LEFT;
     else
