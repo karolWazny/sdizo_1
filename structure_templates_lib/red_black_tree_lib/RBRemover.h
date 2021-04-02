@@ -37,8 +37,14 @@ void RBRemover<T, U>::remove(T key) {
         auto consequent = rbcast(consequentFinder.find());
         auto consequentSide = consequentFinder.getConsequentSide();
 
+
         if(consequent->isNil())
         {
+            if(nodeToRemove == root)
+            {
+                root = RBFactory<T, U>::makeSentinel();
+                return;
+            }
             auto customSentinel = RBFactory<T, U>().createSentinel(nodeToRemove);
             nodeToRemove->setSide(customSentinel, consequentSide);
             consequent = rbcast(customSentinel);

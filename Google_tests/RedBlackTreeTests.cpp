@@ -37,32 +37,6 @@ TEST(RedBlackTestSuite, RemoveRoot){
     ASSERT_TRUE(tree.containsKey(40));
 }
 
-/*TEST(RedBlackTestSuite, LotsaWork){
-    auto tree = RedBlackTree<int, int>();
-    for(int i = 0; i < 100; i++)
-    {
-        tree.put(i, i);
-        for(int j = 0; j <= i; j++)
-        {
-            ASSERT_TRUE(tree.containsKey(j));
-        }
-    }
-    std::cout<<tree.toString()<<std::endl;
-    for(int i = 0; i < 100; i++)
-    {
-        ASSERT_TRUE(tree.containsKey(i));
-        tree.removeKey(i);
-        for(int j = 0; j <= i; j++)
-        {
-            ASSERT_FALSE(tree.containsKey(j));
-        }
-        for(int j = i + 1; j < 100; j++)
-        {
-            std::cout<<tree.toString()<<std::endl;
-            //ASSERT_TRUE(tree.containsKey(j));
-        }
-    }
-}*/
 
 TEST(RedBlackTestSuite, DeletingSmallest){
     auto tree = RedBlackTree<int, int>();
@@ -76,14 +50,15 @@ TEST(RedBlackTestSuite, DeletingSmallest){
     }
     for(int i = 0; i < 100; i++)
     {
-        //std::cout<<tree.toString()<<std::endl;
         ASSERT_TRUE(tree.containsKey(i));
             tree.removeKey(i);
         for(int j = 0; j <= i; j++)
         {
-            ASSERT_FALSE(tree.containsKey(j));
+            if(j == 99)
+                ASSERT_FALSE(tree.containsKey(99));
+            else
+                ASSERT_FALSE(tree.containsKey(j));
         }
-        std::cout<<tree.toString()<<std::endl;
         for(int j = i + 1; j < 100; j++)
         {
             ASSERT_TRUE(tree.containsKey(j));
@@ -111,6 +86,34 @@ TEST(RedBlackTestSuite, DeletingSmallestSmallAmount){
             ASSERT_FALSE(tree.containsKey(j));
         }
         for(int j = i + 1; j < 10; j++)
+        {
+            ASSERT_TRUE(tree.containsKey(j));
+        }
+    }
+}
+
+TEST(RedBlackTestSuite, DeletingReversedAdding){
+    auto tree = RedBlackTree<int, int>();
+    for(int i = 0; i < 100; i++)
+    {
+        tree.put(i, i);
+        for(int j = 0; j <= i; j++)
+        {
+            ASSERT_TRUE(tree.containsKey(j));
+        }
+    }
+    for(int i = 0; i < 100; i++)
+    {
+        ASSERT_TRUE(tree.containsKey(i));
+        tree.removeKey(i);
+        for(int j = 0; j <= i; j++)
+        {
+            if(j == 99)
+                ASSERT_FALSE(tree.containsKey(99));
+            else
+                ASSERT_FALSE(tree.containsKey(j));
+        }
+        for(int j = i + 1; j < 100; j++)
         {
             ASSERT_TRUE(tree.containsKey(j));
         }
