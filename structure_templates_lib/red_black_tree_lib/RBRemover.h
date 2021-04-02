@@ -63,7 +63,7 @@ void RBRemover<T, U>::remove(T key) {
         liberator.free(consequent);
         root = liberator.obtainRoot();
         auto replacer = NodeReplacer<T, U>(nodeToRemove);
-        replacer.replaceWithNode(consequent);//todo tu coś nie gra
+        replacer.replaceWithNode(consequent);
         if(root == nodeToRemove)
             root = replacer.obtainRoot();
 
@@ -94,6 +94,7 @@ void RBRemover<T, U>::remove(T key) {
                     doubleBlack->paintBlack();
                     return;
                 }
+                count++;
 
                 //przygotowanie genealogii do przesuwania czarności w górę
                 auto doubleBlackSibling = rbcast(doubleBlackParent->get(!doubleBlackSide));
@@ -153,19 +154,12 @@ void RBRemover<T, U>::remove(T key) {
 
                     rbcast(doubleBlackSibling->get(!doubleBlackSide))->paintBlack();
 
-                    //doubleBlackParent->paintBlack();
+                    doubleBlackParent->paintBlack();
                     //alternatywna próba:
                     doubleBlack = doubleBlackParent;
-                    //iiii aktualizacja genealogii
-                    doubleBlackParent = rbcast(doubleBlack->getParent());
-                    doubleBlackSide = Side::RIGHT;
-                    if(doubleBlackParent->getKey() > doubleBlack->getKey())
-                        doubleBlackSide = Side::LEFT;
-                    doubleBlackSibling = rbcast(doubleBlackParent->get(!doubleBlackSide));
 
-                    //break;
+                    break;
                 }
-                count++;
             }
         }
     }

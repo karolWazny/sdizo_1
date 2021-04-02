@@ -78,9 +78,6 @@ TEST(RedBlackTestSuite, DeletingSmallest){
     {
         //std::cout<<tree.toString()<<std::endl;
         ASSERT_TRUE(tree.containsKey(i));
-        if(i == 33)
-            tree.removeKey(i);
-        else
             tree.removeKey(i);
         for(int j = 0; j <= i; j++)
         {
