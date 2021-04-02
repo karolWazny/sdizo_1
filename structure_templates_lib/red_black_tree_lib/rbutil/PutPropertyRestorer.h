@@ -17,6 +17,7 @@ private:
     RBNodePtr<T, U> parent;
     RBNodePtr<T, U> uncle;
     RBNodePtr<T, U> grand;
+    RBNodePtr<T, U> root;
     Side parentSide;
     Side startingSide;
 };
@@ -39,11 +40,13 @@ void PutPropertyRestorer<T, U>::restoreFrom(RBNodePtr<T, U> freshNode) {
             {//todo w tym warunku jest coś skopane, uruchamia się dopiero w tym nowym teście
                 startingNode = parent;
                 rotator.rotate(startingNode, parentSide);
+                root = rbcast(rotator.obtainRoot());
                 updateGenealogy();//todo tutaj diabeł tkwi
             }
             parent->paintBlack();
             grand->paintRed();
             rotator.rotate(grand, !parentSide);
+            root = rbcast(rotator.obtainRoot());
             break;
         }
         //jedziemy w górę
@@ -60,7 +63,7 @@ void PutPropertyRestorer<T, U>::updateGenealogy() {
         parentSide = Side::LEFT;
     else
         parentSide = Side::RIGHT;
-    if(currentNode->getKey() < parent->getKey())
+    if(startingNode->getKey() < parent->getKey())
         startingSide = Side::LEFT;
     else
         startingSide = Side::RIGHT;

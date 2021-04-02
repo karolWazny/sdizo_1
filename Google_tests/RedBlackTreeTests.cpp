@@ -101,7 +101,7 @@ TEST(RedBlackTestSuite, DeletingReversedAdding){
             tree.put(i, i);
         else
             tree.put(i, i);
-        std::cout << std::to_string(i)<<" "<<tree.toString() << std::endl;
+        //std::cout << std::to_string(i)<<" "<<tree.toString() << std::endl;
         for(int j = 99; j >= i; j--)
         {
             ASSERT_TRUE(tree.containsKey(j));
@@ -110,6 +110,7 @@ TEST(RedBlackTestSuite, DeletingReversedAdding){
     for(int i = 0; i < 100; i++)
     {
         ASSERT_TRUE(tree.containsKey(i));
+        std::cout << std::to_string(i)<<" "<<tree.toString() << std::endl;
         tree.removeKey(i);
         for(int j = 0; j <= i; j++)
         {
