@@ -94,10 +94,10 @@ TEST(RedBlackTestSuite, DeletingSmallestSmallAmount){
 
 TEST(RedBlackTestSuite, DeletingReversedAdding){
     auto tree = RedBlackTree<int, int>();
-    for(int i = 0; i < 100; i++)
+    for(int i = 99; i >= 0; i--)
     {
         tree.put(i, i);
-        for(int j = 0; j <= i; j++)
+        for(int j = 99; j >= i; j--)
         {
             ASSERT_TRUE(tree.containsKey(j));
         }
