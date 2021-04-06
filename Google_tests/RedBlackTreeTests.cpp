@@ -135,7 +135,6 @@ TEST(RedBlackTestSuite, DeletingGreatest){
     }
     for(int i = 99; i >= 0; i--)
     {
-        //std::cout<<tree.toString()<<std::endl;
         ASSERT_TRUE(tree.containsKey(i));
         tree.removeKey(i);
         for(int j = 99; j >= i; j--)

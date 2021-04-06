@@ -58,7 +58,7 @@ void RBRemover<T, U>::remove(T key) {
         //zabezpieczenie przypadku granicznego
 
         auto doubleBlackSide = Side::RIGHT;
-        if(doubleBlackParent->getKey() > consequent->getKey())
+        if(doubleBlackParent->getRight() != consequent)
             doubleBlackSide = Side::LEFT;
 
         //zapamiętujemy kolor następnika
@@ -127,7 +127,7 @@ void RBRemover<T, U>::remove(T key) {
                     //aktualizacja genealogii
                     doubleBlackParent = rbcast(doubleBlack->getParent());
                     doubleBlackSide = Side::RIGHT;
-                    if(doubleBlackParent->getKey() > doubleBlack->getKey())
+                    if(doubleBlackParent->getRight() != doubleBlack)
                         doubleBlackSide = Side::LEFT;
                     doubleBlackSibling = rbcast(doubleBlackParent->get(!doubleBlackSide));
 
