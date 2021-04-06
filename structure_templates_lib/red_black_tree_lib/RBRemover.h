@@ -73,6 +73,9 @@ void RBRemover<T, U>::remove(T key) {
         if(root == nodeToRemove)
             root = replacer.obtainRoot();
 
+        if(nodeToRemove->isRed() && consequent->isNil())
+            return;
+
         //v2
         //przekolorowanie następnika na kolor węzła usuwanego
         if(nodeToRemove->isBlack())
