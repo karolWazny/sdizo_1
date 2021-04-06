@@ -122,3 +122,29 @@ TEST(RedBlackTestSuite, DeletingReversedAdding){
         }
     }
 }
+
+TEST(RedBlackTestSuite, DeletingGreatest){
+    auto tree = RedBlackTree<int, int>();
+    for(int i = 99; i >= 0; i--)
+    {
+        tree.put(i, i);
+        for(int j = 99; j >= i; j--)
+        {
+            ASSERT_TRUE(tree.containsKey(j));
+        }
+    }
+    for(int i = 99; i >= 0; i--)
+    {
+        //std::cout<<tree.toString()<<std::endl;
+        ASSERT_TRUE(tree.containsKey(i));
+        tree.removeKey(i);
+        for(int j = 99; j >= i; j--)
+        {
+            ASSERT_FALSE(tree.containsKey(j));
+        }
+        for(int j = i -1; j >=0; j--)
+        {
+            ASSERT_TRUE(tree.containsKey(j));
+        }
+    }
+}
