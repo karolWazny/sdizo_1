@@ -147,3 +147,28 @@ TEST(RedBlackTestSuite, DeletingGreatest){
         }
     }
 }
+
+TEST(RedBlackTestSuite, AddingGreatestDeletingSmallest){
+    auto tree = RedBlackTree<int, int>();
+    for(int i = 99; i >= 0; i--)
+    {
+        tree.put(i, i);
+        for(int j = 99; j >= i; j--)
+        {
+            ASSERT_TRUE(tree.containsKey(j));
+        }
+    }
+    for(int i = 0; i < 100; i++)
+    {
+        ASSERT_TRUE(tree.containsKey(i));
+        tree.removeKey(i);
+        for(int j = 0; j <= i; j++)
+        {
+            ASSERT_FALSE(tree.containsKey(j));
+        }
+        for(int j = i + 1; j < 100; j++)
+        {
+            ASSERT_TRUE(tree.containsKey(j));
+        }
+    }
+}
