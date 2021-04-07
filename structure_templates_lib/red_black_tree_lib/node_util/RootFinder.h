@@ -3,28 +3,28 @@
 
 #include "red_black_tree_lib/node_util/NodeFinder.h"
 
-template <typename T, typename U>
+template <typename T>
 class RootFinder
 {
 public:
-    explicit RootFinder(NodePointer<T, U> initialNode);
+    explicit RootFinder(NodePointer<T> initialNode);
 
-    NodePointer<T, U> find();
-    NodePointer<T, U> getFound();
+    NodePointer<T> find();
+    NodePointer<T> getFound();
     bool nodeFound();
 private:
     bool nodeWasFound;
-    NodePointer<T, U> currentNode;
+    NodePointer<T> currentNode;
 };
 
-template<typename T, typename U>
-RootFinder<T, U>::RootFinder(NodePointer<T, U> initialNode) {
+template<typename T>
+RootFinder<T>::RootFinder(NodePointer<T> initialNode) {
     currentNode = initialNode;
     nodeWasFound = false;
 }
 
-template<typename T, typename U>
-NodePointer<T, U> RootFinder<T, U>::find() {
+template<typename T>
+NodePointer<T> RootFinder<T>::find() {
     auto temp = currentNode->getParent();
     while(!temp->isNil())
     {
@@ -35,13 +35,13 @@ NodePointer<T, U> RootFinder<T, U>::find() {
     return getFound();
 }
 
-template<typename T, typename U>
-NodePointer<T, U> RootFinder<T, U>::getFound() {
+template<typename T>
+NodePointer<T> RootFinder<T>::getFound() {
     return currentNode;
 }
 
-template<typename T, typename U>
-bool RootFinder<T, U>::nodeFound() {
+template<typename T>
+bool RootFinder<T>::nodeFound() {
     return nodeWasFound;
 }
 

@@ -9,46 +9,46 @@
 
 #include "NodeFactory.h"
 
-template <typename T, typename U>
-class RBFactory : public NodeFactory<T, U>
+template <typename T>
+class RBFactory : public NodeFactory<T>
 {
 public:
-    static NodePointer<T, U> makeNode(T, U);
-    static NodePointer<T, U> makeSentinel(T, U);
-    static NodePointer<T, U> makeSentinel(void);
+    static NodePointer<T> makeNode(T);
+    static NodePointer<T> makeSentinel(T);
+    static NodePointer<T> makeSentinel(void);
 
-    NodePointer<T, U> createNode(T, U) override;
-    NodePointer<T, U> createSentinel(NodePointer<T, U> parent) override;
-    NodePointer<T, U> createSentinel(void) override;
+    NodePointer<T> createNode(T) override;
+    NodePointer<T> createSentinel(NodePointer<T> parent) override;
+    NodePointer<T> createSentinel(void) override;
 };
 
-template<typename T, typename U>
-NodePointer<T, U> RBFactory<T, U>::makeNode(T key, U value) {
-    return NodePointer<T, U>(new RBNodeImpl<T, U>(new NodeImpl<T, U>(key, value), new RedBlack()));
+template<typename T>
+NodePointer<T> RBFactory<T>::makeNode(T key) {
+    return NodePointer<T>(new RBNodeImpl<T>(new NodeImpl<T>(key), new RedBlack()));
 }
 
-template<typename T, typename U>
-NodePointer<T, U> RBFactory<T, U>::makeSentinel(void) {
-    return RBSentinel<T, U>::getInstance();
+template<typename T>
+NodePointer<T> RBFactory<T>::makeSentinel(void) {
+    return RBSentinel<T>::getInstance();
 }
 
-template<typename T, typename U>
-NodePointer<T, U> RBFactory<T, U>::makeSentinel(T, U) {
-    return NodePointer<T, U>();
+template<typename T>
+NodePointer<T> RBFactory<T>::makeSentinel(T) {
+    return NodePointer<T>();
 }
 
-template<typename T, typename U>
-NodePointer<T, U> RBFactory<T, U>::createNode(T key, U value) {
-    return makeNode(key, value);
+template<typename T>
+NodePointer<T> RBFactory<T>::createNode(T key) {
+    return makeNode(key);
 }
 
-template<typename T, typename U>
-NodePointer<T, U> RBFactory<T, U>::createSentinel(NodePointer<T, U> parent) {
-    return NodePointer<T, U>(new RBSentinel<T, U>(parent));
+template<typename T>
+NodePointer<T> RBFactory<T>::createSentinel(NodePointer<T> parent) {
+    return NodePointer<T>(new RBSentinel<T>(parent));
 }
 
-template<typename T, typename U>
-NodePointer<T, U> RBFactory<T, U>::createSentinel(void) {
+template<typename T>
+NodePointer<T> RBFactory<T>::createSentinel(void) {
     return makeSentinel();
 }
 

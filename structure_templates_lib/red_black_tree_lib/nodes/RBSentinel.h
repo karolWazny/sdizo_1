@@ -5,21 +5,20 @@
 #include "Sentinel.h"
 #include "red_black_tree_lib/colors/Black.h"
 
-template <typename T, typename U>
-class RBSentinel : public RBNode<T, U>
+template <typename T>
+class RBSentinel : public RBNode<T>
 {
 public:
     RBSentinel();
-    RBSentinel(NodePointer<T, U>& node);
+    RBSentinel(NodePointer<T>& node);
 
-    virtual U& getContent();
     virtual T getKey();
-    virtual void setParent(NodePointer<T, U>);
-    virtual NodePointer<T, U> getParent();
-    virtual void setLeft(NodePointer<T, U>);
-    virtual NodePointer<T, U> getLeft();
-    virtual void setRight(NodePointer<T, U>);
-    virtual NodePointer<T, U> getRight();
+    virtual void setParent(NodePointer<T>);
+    virtual NodePointer<T> getParent();
+    virtual void setLeft(NodePointer<T>);
+    virtual NodePointer<T> getLeft();
+    virtual void setRight(NodePointer<T>);
+    virtual NodePointer<T> getRight();
     virtual bool isNil();
 
     virtual bool isBlack();
@@ -29,113 +28,104 @@ public:
 
     int checkAmountOfBlackToLeaves() override;
 
-    static RBNodePtr<T, U> getInstance();
+    static RBNodePtr<T> getInstance();
 
 private:
-    static U content;
     static T key;
     Black black;
 
-    NodePointer<T, U>& parent;
+    NodePointer<T>& parent;
 
-    NodePointer<T, U> parentPointer;
+    NodePointer<T> parentPointer;
 
-    static NodePointer<T, U> instance;
+    static NodePointer<T> instance;
 };
 
-template <typename T, typename U>
-NodePointer<T,U> RBSentinel<T, U>::instance = RBNodePtr<T, U>(new RBSentinel<T, U>());
+template <typename T>
+NodePointer<T> RBSentinel<T>::instance = RBNodePtr<T>(new RBSentinel<T>());
 
-template <typename T, typename U>
-U RBSentinel<T, U>::content = NULL;
+template <typename T>
+T RBSentinel<T>::key = NULL;
 
-template <typename T, typename U>
-T RBSentinel<T, U>::key = NULL;
-
-template<typename T, typename U>
-RBSentinel<T, U>::RBSentinel(NodePointer<T, U>& node):parent(parentPointer) {
+template<typename T>
+RBSentinel<T>::RBSentinel(NodePointer<T>& node):parent(parentPointer) {
     this->black = Black();
     parent = node;
 }
 
-template<typename T, typename U>
-RBSentinel<T, U>::RBSentinel():parent(instance) {
+template<typename T>
+RBSentinel<T>::RBSentinel():parent(instance) {
     this->black = Black();
 }
 
-template<typename T, typename U>
-U &RBSentinel<T, U>::getContent() {
-    return content;
-}
-
-template<typename T, typename U>
-T RBSentinel<T, U>::getKey() {
+template<typename T>
+T RBSentinel<T>::getKey() {
     return key;
 }
 
-template<typename T, typename U>
-void RBSentinel<T, U>::setParent(NodePointer<T, U> node) {
+template<typename T>
+void RBSentinel<T>::setParent(NodePointer<T> node) {
     if(parent != instance)
         parent = node;
 }
 
-template<typename T, typename U>
-NodePointer<T, U> RBSentinel<T, U>::getParent() {
+template<typename T>
+NodePointer<T> RBSentinel<T>::getParent() {
     return parent;
 }
 
-template<typename T, typename U>
-void RBSentinel<T, U>::setLeft(NodePointer<T, U>) {
+template<typename T>
+void RBSentinel<T>::setLeft(NodePointer<T>) {
 
 }
 
-template<typename T, typename U>
-NodePointer<T, U> RBSentinel<T, U>::getLeft() {
+template<typename T>
+NodePointer<T> RBSentinel<T>::getLeft() {
     return getInstance();
 }
 
-template<typename T, typename U>
-void RBSentinel<T, U>::setRight(NodePointer<T, U>) {
+template<typename T>
+void RBSentinel<T>::setRight(NodePointer<T>) {
 
 }
 
-template<typename T, typename U>
-NodePointer<T, U> RBSentinel<T, U>::getRight() {
+template<typename T>
+NodePointer<T> RBSentinel<T>::getRight() {
     return getInstance();
 }
 
-template<typename T, typename U>
-bool RBSentinel<T, U>::isNil() {
+template<typename T>
+bool RBSentinel<T>::isNil() {
     return true;
 }
 
-template<typename T, typename U>
-RBNodePtr<T, U> RBSentinel<T, U>::getInstance() {
+template<typename T>
+RBNodePtr<T> RBSentinel<T>::getInstance() {
     return rbcast(instance);
 }
 
-template<typename T, typename U>
-bool RBSentinel<T, U>::isBlack() {
+template<typename T>
+bool RBSentinel<T>::isBlack() {
     return black.isBlack();
 }
 
-template<typename T, typename U>
-bool RBSentinel<T, U>::isRed() {
+template<typename T>
+bool RBSentinel<T>::isRed() {
     return black.isRed();
 }
 
-template<typename T, typename U>
-void RBSentinel<T, U>::paintBlack() {
+template<typename T>
+void RBSentinel<T>::paintBlack() {
     black.paintBlack();
 }
 
-template<typename T, typename U>
-void RBSentinel<T, U>::paintRed() {
+template<typename T>
+void RBSentinel<T>::paintRed() {
     black.paintRed();
 }
 
-template<typename T, typename U>
-int RBSentinel<T, U>::checkAmountOfBlackToLeaves() {
+template<typename T>
+int RBSentinel<T>::checkAmountOfBlackToLeaves() {
     return 1;
 }
 

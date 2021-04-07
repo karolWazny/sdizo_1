@@ -4,24 +4,23 @@
 #include "red_black_tree_lib/colors/Colored.h"
 #include "Node.h"
 
-template <typename T, typename U>
+template <typename T>
 class RBNode;
 
-template <typename T, typename U>
-using RBNodePtr = std::shared_ptr<RBNode<T, U>>;
+template <typename T>
+using RBNodePtr = std::shared_ptr<RBNode<T>>;
 
-template <typename T, typename U>
-class RBNode : public Colored, public Node<T, U>
+template <typename T>
+class RBNode : public Colored, public Node<T>
 {
 public:
-    virtual U& getContent() = 0;
     virtual T getKey() = 0;
-    virtual void setParent(NodePointer<T, U>) = 0;
-    virtual NodePointer<T, U> getParent() = 0;
-    virtual void setLeft(NodePointer<T, U>) = 0;
-    virtual NodePointer<T, U> getLeft() = 0;
-    virtual void setRight(NodePointer<T, U>) = 0;
-    virtual NodePointer<T, U> getRight() = 0;
+    virtual void setParent(NodePointer<T>) = 0;
+    virtual NodePointer<T> getParent() = 0;
+    virtual void setLeft(NodePointer<T>) = 0;
+    virtual NodePointer<T> getLeft() = 0;
+    virtual void setRight(NodePointer<T>) = 0;
+    virtual NodePointer<T> getRight() = 0;
     virtual bool isNil() = 0;
 
     virtual bool isBlack() = 0;
@@ -32,9 +31,9 @@ public:
     virtual int checkAmountOfBlackToLeaves() = 0;
 };
 
-template <typename T, typename U>
-RBNodePtr<T, U> rbcast(NodePointer<T, U> node) {
-    return std::dynamic_pointer_cast<RBNode<int, int>>(node);
+template <typename T>
+RBNodePtr<T> rbcast(NodePointer<T> node) {
+    return std::dynamic_pointer_cast<RBNode<T>>(node);
 }
 
 #endif //SDIZO_1_RBNODE_H

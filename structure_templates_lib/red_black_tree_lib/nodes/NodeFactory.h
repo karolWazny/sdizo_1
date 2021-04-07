@@ -3,15 +3,15 @@
 
 #include "Node.h"
 
-template <typename T, typename U>
+template <typename T>
 class NodeFactory
 {
 public:
-    virtual NodePointer<T, U> createNode(T, U) = 0;
+    virtual NodePointer<T> createNode(T) = 0;
 
-    virtual NodePointer<T, U> createSentinel(NodePointer<T, U> parent) = 0;
+    virtual NodePointer<T> createSentinel(NodePointer<T> parent) = 0;
 
-    virtual NodePointer<T, U> createSentinel() = 0;
+    virtual NodePointer<T> createSentinel() = 0;
 };
 
 #endif //SDIZO_1_NODEFACTORY_H

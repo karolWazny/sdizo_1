@@ -6,25 +6,25 @@
 
 using string = std::string;
 
-template<typename T,typename U>
+template<typename T>
 class TreePrinter
 {
 public:
-    string toString(NodePointer<T, U> root);
+    string toString(NodePointer<T> root);
 private:
-    string stringarize(NodePointer<T, U> root);
+    string stringarize(NodePointer<T> root);
 };
 
-template<typename T, typename U>
-string TreePrinter<T, U>::toString(NodePointer <T, U> root) {
+template<typename T>
+string TreePrinter<T>::toString(NodePointer <T> root) {
     string output = "[";
     output += stringarize(root);
     output += "]";
     return output;
 }
 
-template<typename T, typename U>
-string TreePrinter<T, U>::stringarize(NodePointer <T, U> root) {
+template<typename T>
+string TreePrinter<T>::stringarize(NodePointer <T> root) {
     if(root->isNil())
         return "";
     string output;

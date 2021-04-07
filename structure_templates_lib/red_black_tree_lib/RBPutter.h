@@ -5,27 +5,27 @@
 #include "red_black_tree_lib/node_util/NodePutter.h"
 #include "red_black_tree_lib/rbutil/PutPropertyRestorer.h"
 
-template <typename T, typename U>
-class RBPutter : public NodeUtility<T, U>
+template <typename T>
+class RBPutter : public NodeUtility<T>
 {
 public:
-    explicit RBPutter(NodePointer<T, U> root);
-    void put(T, U);
+    explicit RBPutter(NodePointer<T> root);
+    void put(T);
 private:
-    NodePointer<T, U> root;
+    NodePointer<T> root;
 };
 
-template<typename T, typename U>
-RBPutter<T, U>::RBPutter(NodePointer<T, U> root) {
+template<typename T>
+RBPutter<T>::RBPutter(NodePointer<T> root) {
     this->root = root;
 }
 
-template<typename T, typename U>
-void RBPutter<T, U>::put(T key, U value) {
-    auto putter = NodePutter<T, U>(root, new RBFactory<T, U>());
-    putter.put(key, value);
+template<typename T>
+void RBPutter<T>::put(T key) {
+    auto putter = NodePutter<T>(root, new RBFactory<T>());
+    putter.put(key);
     auto freshNode = rbcast(putter.getFreshNode());
-    auto restorer = PutPropertyRestorer<T, U>();
+    auto restorer = PutPropertyRestorer<T>();
     restorer.restoreFrom(freshNode);//todo tutaj siedzi diabeł
     currentNode = restorer.obtainRoot();
 }

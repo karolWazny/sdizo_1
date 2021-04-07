@@ -3,12 +3,12 @@
 #include <red_black_tree_lib/RBRemover.h>
 
 TEST(RemoverSuite, SimpleCaseRedSuccessor){
-    auto factory = RBFactory<int, int>();
-    auto root = rbcast(factory.makeNode(10, 10));
-    auto nodeToRemove = rbcast(factory.makeNode(20, 20));
-    auto right = rbcast(factory.makeNode(30, 30));
-    auto successor = rbcast(factory.makeNode(25, 25));
-    auto successorChild = rbcast(factory.makeNode(28, 28));
+    auto factory = RBFactory<int>();
+    auto root = rbcast(factory.makeNode(10));
+    auto nodeToRemove = rbcast(factory.makeNode(20));
+    auto right = rbcast(factory.makeNode(30));
+    auto successor = rbcast(factory.makeNode(25));
+    auto successorChild = rbcast(factory.makeNode(28));
 
     root->setRight(nodeToRemove);
     nodeToRemove->setParent(root);
@@ -25,7 +25,7 @@ TEST(RemoverSuite, SimpleCaseRedSuccessor){
     successor->setRight(successorChild);
     successorChild->setParent(successor);
 
-    auto remover = RBRemover<int, int>(root);
+    auto remover = RBRemover<int>(root);
     remover.remove(nodeToRemove->getKey());
 
     ASSERT_EQ(root->getRight(), successor);

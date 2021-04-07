@@ -4,32 +4,32 @@
 #include "NodeUtility.h"
 #include "red_black_tree_lib/nodes/Node.h"
 
-template <typename T, typename U>
-class NodeRotator : public NodeUtility<T, U>
+template <typename T>
+class NodeRotator : public NodeUtility<T>
 {
 public:
-    void rotateRight(NodePointer<T, U> nodeToRotate);
-    void rotateLeft(NodePointer<T, U> nodeToRotate);
-    void rotate(NodePointer<T, U> node, Side rotationDirection);
+    void rotateRight(NodePointer<T> nodeToRotate);
+    void rotateLeft(NodePointer<T> nodeToRotate);
+    void rotate(NodePointer<T> node, Side rotationDirection);
 private:
-    void rotate(NodePointer<T, U> nodeToRotate);
+    void rotate(NodePointer<T> nodeToRotate);
 
     Side direction;
-    NodePointer<T, U> nodeToRotate;
+    NodePointer<T> nodeToRotate;
 };
 
-template<typename T, typename U>
-void NodeRotator<T, U>::rotateRight(NodePointer<T, U> node) {
+template<typename T>
+void NodeRotator<T>::rotateRight(NodePointer<T> node) {
     rotate(node, Side::RIGHT);
 }
 
-template<typename T, typename U>
-void NodeRotator<T, U>::rotateLeft(NodePointer<T, U> node) {
+template<typename T>
+void NodeRotator<T>::rotateLeft(NodePointer<T> node) {
     rotate(node, Side::LEFT);
 }
 
-template<typename T, typename U>
-void NodeRotator<T, U>::rotate(NodePointer<T, U> node) {
+template<typename T>
+void NodeRotator<T>::rotate(NodePointer<T> node) {
     this->nodeToRotate = node;
     auto child = nodeToRotate->get(!direction);
     auto parent = nodeToRotate->getParent();
@@ -46,8 +46,8 @@ void NodeRotator<T, U>::rotate(NodePointer<T, U> node) {
     currentNode = nodeToRotate;
 }
 
-template<typename T, typename U>
-void NodeRotator<T, U>::rotate(NodePointer<T, U> node, Side rotationDirection) {
+template<typename T>
+void NodeRotator<T>::rotate(NodePointer<T> node, Side rotationDirection) {
     this->direction = rotationDirection;
     rotate(node);
 }

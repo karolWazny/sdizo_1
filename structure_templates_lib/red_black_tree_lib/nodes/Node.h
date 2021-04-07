@@ -8,42 +8,41 @@
 #include <memory>
 #include "red_black_tree_lib/node_util/Side.h"
 
-template <typename T, typename U>
+template <typename T>
 class Node;
 
-template <typename T, typename U>
-using NodePointer = std::shared_ptr<Node<T, U>>;
+template <typename T>
+using NodePointer = std::shared_ptr<Node<T>>;
 
-template <typename T, typename U>
-using NodeWeakPtr = std::weak_ptr<Node<T, U>>;
+template <typename T>
+using NodeWeakPtr = std::weak_ptr<Node<T>>;
 
-template <typename T, typename U>
+template <typename T>
 class Node
 {
 public:
-    virtual U& getContent() = 0;
     virtual T getKey() = 0;
-    virtual void setParent(NodePointer<T, U>) = 0;
-    virtual NodePointer<T, U> getParent() = 0;
-    virtual void setLeft(NodePointer<T, U>) = 0;
-    virtual NodePointer<T, U> getLeft() = 0;
-    virtual void setRight(NodePointer<T, U>) = 0;
-    virtual NodePointer<T, U> getRight() = 0;
+    virtual void setParent(NodePointer<T>) = 0;
+    virtual NodePointer<T> getParent() = 0;
+    virtual void setLeft(NodePointer<T>) = 0;
+    virtual NodePointer<T> getLeft() = 0;
+    virtual void setRight(NodePointer<T>) = 0;
+    virtual NodePointer<T> getRight() = 0;
     virtual bool isNil() = 0;
-    NodePointer<T, U> get(Side side);
-    void setSide(NodePointer<T, U> node, Side side);
+    NodePointer<T> get(Side side);
+    void setSide(NodePointer<T> node, Side side);
 };
 
-template<typename T, typename U>
-NodePointer<T, U> Node<T, U>::get(Side side) {
+template<typename T>
+NodePointer<T> Node<T>::get(Side side) {
     if(side == Side::RIGHT)
         return getRight();
     else
         return getLeft();
 }
 
-template<typename T, typename U>
-void Node<T, U>::setSide(NodePointer<T, U> node, Side side) {
+template<typename T>
+void Node<T>::setSide(NodePointer<T> node, Side side) {
     if(side == Side::RIGHT)
         return setRight(node);
     else

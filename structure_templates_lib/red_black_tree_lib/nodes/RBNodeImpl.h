@@ -8,44 +8,43 @@
 //todo tylko do testów
 #include <iostream>
 
-template <typename T, typename U>
-class RBNodeImpl : public RBNode<T, U>
+template <typename T>
+class RBNodeImpl : public RBNode<T>
 {
 public:
-    RBNodeImpl(Node<T, U>*, Colored*);
+    RBNodeImpl(Node<T>*, Colored*);
 
     bool isBlack() override;
     bool isRed() override;
     void paintBlack() override;
     void paintRed() override;
 
-    U& getContent() override;
     T getKey()override;
-    void setParent(NodePointer<T, U>) override;
-    NodePointer<T, U> getParent() override;
-    void setLeft(NodePointer<T, U>) override;
-    NodePointer<T, U> getLeft() override;
-    void setRight(NodePointer<T, U>) override;
-    NodePointer<T, U> getRight() override;
+    void setParent(NodePointer<T>) override;
+    NodePointer<T> getParent() override;
+    void setLeft(NodePointer<T>) override;
+    NodePointer<T> getLeft() override;
+    void setRight(NodePointer<T>) override;
+    NodePointer<T> getRight() override;
     bool isNil() override;
 
     int checkAmountOfBlackToLeaves() override;
 
 private:
-    RBNodePtr<T, U> sentinel();
-    std::unique_ptr<Node<T, U>> node;
+    RBNodePtr<T> sentinel();
+    std::unique_ptr<Node<T>> node;
     std::unique_ptr<Colored> colored;
 
 };
 
-template<typename T, typename U>
-RBNodePtr<T, U> RBNodeImpl<T, U>::sentinel() {
-    return RBSentinel<T, U>::getInstance();
+template<typename T>
+RBNodePtr<T> RBNodeImpl<T>::sentinel() {
+    return RBSentinel<T>::getInstance();
 }
 
-template<typename T, typename U>
-RBNodeImpl<T, U>::RBNodeImpl(Node<T, U> * nodeImpl, Colored * coloredImpl) {
-    node = std::unique_ptr<Node<T, U>>(nodeImpl);
+template<typename T>
+RBNodeImpl<T>::RBNodeImpl(Node<T> * nodeImpl, Colored * coloredImpl) {
+    node = std::unique_ptr<Node<T>>(nodeImpl);
     node->setRight(sentinel());
     node->setLeft(sentinel());
     node->setParent(sentinel());
@@ -53,82 +52,77 @@ RBNodeImpl<T, U>::RBNodeImpl(Node<T, U> * nodeImpl, Colored * coloredImpl) {
     colored->paintRed();
 }
 
-template<typename T, typename U>
-bool RBNodeImpl<T, U>::isBlack() {
+template<typename T>
+bool RBNodeImpl<T>::isBlack() {
     return colored->isBlack();
 }
 
-template<typename T, typename U>
-bool RBNodeImpl<T, U>::isRed() {
+template<typename T>
+bool RBNodeImpl<T>::isRed() {
     return colored->isRed();
 }
 
-template<typename T, typename U>
-void RBNodeImpl<T, U>::paintBlack() {
+template<typename T>
+void RBNodeImpl<T>::paintBlack() {
     colored->paintBlack();
 }
 
-template<typename T, typename U>
-void RBNodeImpl<T, U>::paintRed() {
+template<typename T>
+void RBNodeImpl<T>::paintRed() {
     colored->paintRed();
 }
 
-template<typename T, typename U>
-U &RBNodeImpl<T, U>::getContent() {
-    return node->getContent();
-}
-
-template<typename T, typename U>
-T RBNodeImpl<T, U>::getKey() {
+template<typename T>
+T RBNodeImpl<T>::getKey() {
     return node->getKey();
 }
 
-template<typename T, typename U>
-void RBNodeImpl<T, U>::setParent(NodePointer<T, U> parent) {
+template<typename T>
+void RBNodeImpl<T>::setParent(NodePointer<T> parent) {
     if(!parent)
         node->setParent(sentinel());
     else
     node->setParent(parent);
 }
 
-template<typename T, typename U>
-NodePointer<T, U> RBNodeImpl<T, U>::getParent() {
+template<typename T>
+NodePointer<T> RBNodeImpl<T>::getParent() {
     return node->getParent();
 }
 
-template<typename T, typename U>
-void RBNodeImpl<T, U>::setLeft(NodePointer<T, U> left) {
+template<typename T>
+void RBNodeImpl<T>::setLeft(NodePointer<T> left) {
     if(!left)
         node->setLeft(sentinel());
     else
     node->setLeft(left);
 }
 
-template<typename T, typename U>
-NodePointer<T, U> RBNodeImpl<T, U>::getLeft() {
+template<typename T>
+NodePointer<T> RBNodeImpl<T>::getLeft() {
     return node->getLeft();
 }
 
-template<typename T, typename U>
-void RBNodeImpl<T, U>::setRight(NodePointer<T, U> right) {
+template<typename T>
+void RBNodeImpl<T>::setRight(NodePointer<T> right) {
     if(!right)
         node->setRight(sentinel());
     else
     node->setRight(right);
 }
 
-template<typename T, typename U>
-NodePointer<T, U> RBNodeImpl<T, U>::getRight() {
+template<typename T>
+NodePointer<T> RBNodeImpl<T>::getRight() {
     return node->getRight();
 }
 
-template<typename T, typename U>
-bool RBNodeImpl<T, U>::isNil() {
+template<typename T>
+bool RBNodeImpl<T>::isNil() {
     return node->isNil();
 }
 
-template<typename T, typename U>
-int RBNodeImpl<T, U>::checkAmountOfBlackToLeaves() {
+template<typename T>
+int RBNodeImpl<T>::checkAmountOfBlackToLeaves() {
     int leftNumber, rightNumber;
     leftNumber = rbcast(getLeft())->checkAmountOfBlackToLeaves();
     rightNumber = rbcast(getRight())->checkAmountOfBlackToLeaves();

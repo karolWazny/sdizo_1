@@ -3,15 +3,15 @@
 #include <red_black_tree_lib/nodes/SimpleFactory.h>
 
 TEST(LiberatorSuite, Compilation){
-    auto replacer = ConsequentLiberator<int, int>(SimpleFactory<int, int>::makeNode(0, 0));
+    auto replacer = ConsequentLiberator<int>(SimpleFactory<int>::makeNode(0));
 }
 
 TEST(LiberatorSuite, LiberateRootWithRightChild){
-    auto root = SimpleFactory<int, int>::makeNode(5, 5);
-    auto right = SimpleFactory<int, int>::makeNode(7, 7);
+    auto root = SimpleFactory<int>::makeNode(5);
+    auto right = SimpleFactory<int>::makeNode(7);
     root->setRight(right);
     right->setParent(root);
-    auto liberator = ConsequentLiberator<int, int>(root);
+    auto liberator = ConsequentLiberator<int>(root);
     liberator.free(root);
     root = liberator.obtainRoot();
 
@@ -20,11 +20,11 @@ TEST(LiberatorSuite, LiberateRootWithRightChild){
 }
 
 TEST(LiberatorSuite, LiberateRootWithLeftChild){
-    auto root = SimpleFactory<int, int>::makeNode(5, 5);
-    auto left = SimpleFactory<int, int>::makeNode(3, 3);
+    auto root = SimpleFactory<int>::makeNode(5);
+    auto left = SimpleFactory<int>::makeNode(3);
     root->setLeft(left);
     left->setParent(root);
-    auto liberator = ConsequentLiberator<int, int>(root);
+    auto liberator = ConsequentLiberator<int>(root);
     liberator.free(root);
     root = liberator.obtainRoot();
 
@@ -33,8 +33,8 @@ TEST(LiberatorSuite, LiberateRootWithLeftChild){
 }
 
 TEST(LiberatorSuite, LiberateRootChildless){
-    auto root = SimpleFactory<int, int>::makeNode(5, 5);
-    auto liberator = ConsequentLiberator<int, int>(root);
+    auto root = SimpleFactory<int>::makeNode(5);
+    auto liberator = ConsequentLiberator<int>(root);
     liberator.free(root);
     root = liberator.obtainRoot();
 
@@ -42,17 +42,17 @@ TEST(LiberatorSuite, LiberateRootChildless){
 }
 
 TEST(LiberatorSuite, LiberateLeftConsequent){
-    auto root = SimpleFactory<int, int>::makeNode(5, 5);
-    auto consequent = SimpleFactory<int, int>::makeNode(3, 3);
-    auto consequentChild = SimpleFactory<int, int>::makeNode(2, 2);
-    auto right = SimpleFactory<int, int>::makeNode(6, 6);
+    auto root = SimpleFactory<int>::makeNode(5);
+    auto consequent = SimpleFactory<int>::makeNode(3);
+    auto consequentChild = SimpleFactory<int>::makeNode(2);
+    auto right = SimpleFactory<int>::makeNode(6);
     root->setLeft(consequent);
     consequent->setParent(root);
     root->setRight(right);
     right->setParent(root);
     consequent->setLeft(consequentChild);
     consequentChild->setParent(consequent);
-    auto liberator = ConsequentLiberator<int, int>(root);
+    auto liberator = ConsequentLiberator<int>(root);
     liberator.free(consequent);
     root = liberator.obtainRoot();
 
@@ -63,17 +63,17 @@ TEST(LiberatorSuite, LiberateLeftConsequent){
 }
 
 TEST(LiberatorSuite, LiberateRightConsequent){
-    auto root = SimpleFactory<int, int>::makeNode(5, 5);
-    auto consequent = SimpleFactory<int, int>::makeNode(8, 8);
-    auto consequentChild = SimpleFactory<int, int>::makeNode(10, 10);
-    auto left = SimpleFactory<int, int>::makeNode(3, 3);
+    auto root = SimpleFactory<int>::makeNode(5);
+    auto consequent = SimpleFactory<int>::makeNode(8);
+    auto consequentChild = SimpleFactory<int>::makeNode(10);
+    auto left = SimpleFactory<int>::makeNode(3);
     root->setRight(consequent);
     consequent->setParent(root);
     consequent->setRight(consequentChild);
     consequentChild->setParent(consequent);
     root->setLeft(left);
     left->setParent(root);
-    auto liberator = ConsequentLiberator<int, int>(root);
+    auto liberator = ConsequentLiberator<int>(root);
     liberator.free(consequent);
     root = liberator.obtainRoot();
 
@@ -84,11 +84,11 @@ TEST(LiberatorSuite, LiberateRightConsequent){
 }
 
 TEST(LiberatorSuite, LiberateRightChildless){
-    auto root = SimpleFactory<int, int>::makeNode(5, 5);
-    auto consequent = SimpleFactory<int, int>::makeNode(8, 8);
+    auto root = SimpleFactory<int>::makeNode(5);
+    auto consequent = SimpleFactory<int>::makeNode(8);
     root->setRight(consequent);
     consequent->setParent(root);
-    auto liberator = ConsequentLiberator<int, int>(root);
+    auto liberator = ConsequentLiberator<int>(root);
     liberator.free(consequent);
     root = liberator.obtainRoot();
 
@@ -96,11 +96,11 @@ TEST(LiberatorSuite, LiberateRightChildless){
 }
 
 TEST(LiberatorSuite, LiberateLeftChildless){
-    auto root = SimpleFactory<int, int>::makeNode(5, 5);
-    auto consequent = SimpleFactory<int, int>::makeNode(3, 3);
+    auto root = SimpleFactory<int>::makeNode(5);
+    auto consequent = SimpleFactory<int>::makeNode(3);
     root->setLeft(consequent);
     consequent->setParent(root);
-    auto liberator = ConsequentLiberator<int, int>(root);
+    auto liberator = ConsequentLiberator<int>(root);
     liberator.free(consequent);
     root = liberator.obtainRoot();
 

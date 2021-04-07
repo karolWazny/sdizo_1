@@ -3,16 +3,16 @@
 #include <red_black_tree_lib/nodes/SimpleFactory.h>
 
 TEST(NodeRotatorSuite, Compilation){
-    auto node = SimpleFactory<int, int>().createNode(2, 2);
-    auto rotator = NodeRotator<int, int>();
+    auto node = SimpleFactory<int>().createNode(2);
+    auto rotator = NodeRotator<int>();
 }
 
 TEST(NodeRotatorSuite, RotationRightNoParentNoAdditionalChilds){
-    auto nodeToRotate = SimpleFactory<int, int>().createNode(2, 2);
-    auto child = SimpleFactory<int, int>().createNode(3, 3);
+    auto nodeToRotate = SimpleFactory<int>().createNode(2);
+    auto child = SimpleFactory<int>().createNode(3);
     nodeToRotate->setLeft(child);
     child->setParent(nodeToRotate);
-    auto rotator = NodeRotator<int, int>();
+    auto rotator = NodeRotator<int>();
     rotator.rotateRight(nodeToRotate);
     ASSERT_TRUE(nodeToRotate->getLeft()->isNil());
     ASSERT_TRUE(nodeToRotate->getRight()->isNil());
@@ -25,11 +25,11 @@ TEST(NodeRotatorSuite, RotationRightNoParentNoAdditionalChilds){
 }
 
 TEST(NodeRotatorSuite, RotationLeftNoParentNoAdditionalChilds){
-    auto nodeToRotate = SimpleFactory<int, int>().createNode(2, 2);
-    auto child = SimpleFactory<int, int>().createNode(1, 1);
+    auto nodeToRotate = SimpleFactory<int>().createNode(2);
+    auto child = SimpleFactory<int>().createNode(1);
     nodeToRotate->setRight(child);
     child->setParent(nodeToRotate);
-    auto rotator = NodeRotator<int, int>();
+    auto rotator = NodeRotator<int>();
     rotator.rotateLeft(nodeToRotate);
     ASSERT_TRUE(nodeToRotate->getRight()->isNil());
     ASSERT_TRUE(nodeToRotate->getLeft()->isNil());
@@ -42,14 +42,14 @@ TEST(NodeRotatorSuite, RotationLeftNoParentNoAdditionalChilds){
 }
 
 TEST(NodeRotatorSuite, RotationRightLeftChildNoAdditionalChilds){
-    auto parent = SimpleFactory<int, int>().createNode(5, 5);
-    auto nodeToRotate = SimpleFactory<int, int>().createNode(2, 2);
-    auto child = SimpleFactory<int, int>().createNode(3, 3);
+    auto parent = SimpleFactory<int>().createNode(5);
+    auto nodeToRotate = SimpleFactory<int>().createNode(2);
+    auto child = SimpleFactory<int>().createNode(3);
     nodeToRotate->setLeft(child);
     child->setParent(nodeToRotate);
     parent->setLeft(nodeToRotate);
     nodeToRotate->setParent(parent);
-    auto rotator = NodeRotator<int, int>();
+    auto rotator = NodeRotator<int>();
     rotator.rotateRight(nodeToRotate);
     ASSERT_TRUE(nodeToRotate->getLeft()->isNil());
     ASSERT_TRUE(nodeToRotate->getRight()->isNil());
@@ -63,14 +63,14 @@ TEST(NodeRotatorSuite, RotationRightLeftChildNoAdditionalChilds){
 }
 
 TEST(NodeRotatorSuite, RotationRightRightChildNoAdditionalChilds){
-    auto parent = SimpleFactory<int, int>().createNode(0, 0);
-    auto nodeToRotate = SimpleFactory<int, int>().createNode(2, 2);
-    auto child = SimpleFactory<int, int>().createNode(3, 3);
+    auto parent = SimpleFactory<int>().createNode(0);
+    auto nodeToRotate = SimpleFactory<int>().createNode(2);
+    auto child = SimpleFactory<int>().createNode(3);
     nodeToRotate->setLeft(child);
     child->setParent(nodeToRotate);
     parent->setRight(nodeToRotate);
     nodeToRotate->setParent(parent);
-    auto rotator = NodeRotator<int, int>();
+    auto rotator = NodeRotator<int>();
     rotator.rotateRight(nodeToRotate);
     ASSERT_TRUE(nodeToRotate->getLeft()->isNil());
     ASSERT_TRUE(nodeToRotate->getRight()->isNil());
@@ -84,14 +84,14 @@ TEST(NodeRotatorSuite, RotationRightRightChildNoAdditionalChilds){
 }
 
 TEST(NodeRotatorSuite, RotationLeftRightChildNoAdditionalChilds){
-    auto parent = SimpleFactory<int, int>().createNode(0, 0);
-    auto nodeToRotate = SimpleFactory<int, int>().createNode(2, 2);
-    auto child = SimpleFactory<int, int>().createNode(3, 3);
+    auto parent = SimpleFactory<int>().createNode(0);
+    auto nodeToRotate = SimpleFactory<int>().createNode(2);
+    auto child = SimpleFactory<int>().createNode(3);
     nodeToRotate->setRight(child);
     child->setParent(nodeToRotate);
     parent->setRight(nodeToRotate);
     nodeToRotate->setParent(parent);
-    auto rotator = NodeRotator<int, int>();
+    auto rotator = NodeRotator<int>();
     rotator.rotateLeft(nodeToRotate);
     ASSERT_TRUE(nodeToRotate->getRight()->isNil());
     ASSERT_TRUE(nodeToRotate->getLeft()->isNil());
@@ -105,14 +105,14 @@ TEST(NodeRotatorSuite, RotationLeftRightChildNoAdditionalChilds){
 }
 
 TEST(NodeRotatorSuite, RotationRightNoParentAdditionalChilds){
-    auto nodeToRotate = SimpleFactory<int, int>().createNode(2, 2);
-    auto child = SimpleFactory<int, int>().createNode(3, 3);
-    auto otherChild = SimpleFactory<int, int>().createNode(3, 3);
-    auto leftGrand = SimpleFactory<int, int>().createNode(3, 3);
-    auto rightGrand = SimpleFactory<int, int>().createNode(3, 3);
+    auto nodeToRotate = SimpleFactory<int>().createNode(2);
+    auto child = SimpleFactory<int>().createNode(3);
+    auto otherChild = SimpleFactory<int>().createNode(3);
+    auto leftGrand = SimpleFactory<int>().createNode(3);
+    auto rightGrand = SimpleFactory<int>().createNode(3);
     nodeToRotate->setLeft(child);
     child->setParent(nodeToRotate);
-    auto rotator = NodeRotator<int, int>();
+    auto rotator = NodeRotator<int>();
 
     otherChild->setParent(nodeToRotate);
     nodeToRotate->setRight(otherChild);
@@ -145,14 +145,14 @@ TEST(NodeRotatorSuite, RotationRightNoParentAdditionalChilds){
 }
 
 TEST(NodeRotatorSuite, RotationLeftNoParentAdditionalChilds){
-    auto nodeToRotate = SimpleFactory<int, int>().createNode(2, 2);
-    auto child = SimpleFactory<int, int>().createNode(3, 3);
-    auto otherChild = SimpleFactory<int, int>().createNode(3, 3);
-    auto leftGrand = SimpleFactory<int, int>().createNode(3, 3);
-    auto rightGrand = SimpleFactory<int, int>().createNode(3, 3);
+    auto nodeToRotate = SimpleFactory<int>().createNode(2);
+    auto child = SimpleFactory<int>().createNode(3);
+    auto otherChild = SimpleFactory<int>().createNode(3);
+    auto leftGrand = SimpleFactory<int>().createNode(3);
+    auto rightGrand = SimpleFactory<int>().createNode(3);
     nodeToRotate->setRight(child);
     child->setParent(nodeToRotate);
-    auto rotator = NodeRotator<int, int>();
+    auto rotator = NodeRotator<int>();
 
     otherChild->setParent(nodeToRotate);
     nodeToRotate->setLeft(otherChild);

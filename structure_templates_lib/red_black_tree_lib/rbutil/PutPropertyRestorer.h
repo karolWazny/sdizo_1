@@ -5,25 +5,25 @@
 #include "red_black_tree_lib/nodes/Node.h"
 #include "red_black_tree_lib/node_util/NodeRotator.h"
 
-template <typename T, typename U>
-class PutPropertyRestorer : public NodeUtility<T, U>
+template <typename T>
+class PutPropertyRestorer : public NodeUtility<T>
 {
 public:
-    void restoreFrom(RBNodePtr<T, U> freshNode);
+    void restoreFrom(RBNodePtr<T> freshNode);
 private:
     void updateGenealogy();
 
-    RBNodePtr<T, U> startingNode;
-    RBNodePtr<T, U> parent;
-    RBNodePtr<T, U> uncle;
-    RBNodePtr<T, U> grand;
-    RBNodePtr<T, U> root;
+    RBNodePtr<T> startingNode;
+    RBNodePtr<T> parent;
+    RBNodePtr<T> uncle;
+    RBNodePtr<T> grand;
+    RBNodePtr<T> root;
     Side parentSide;
     Side startingSide;
 };
 
-template<typename T, typename U>
-void PutPropertyRestorer<T, U>::restoreFrom(RBNodePtr<T, U> freshNode) {
+template<typename T>
+void PutPropertyRestorer<T>::restoreFrom(RBNodePtr<T> freshNode) {
     startingNode = freshNode;
     updateGenealogy();
     while(parent->isRed()){
@@ -35,7 +35,7 @@ void PutPropertyRestorer<T, U>::restoreFrom(RBNodePtr<T, U> freshNode) {
             parent->paintBlack();
             startingNode = grand;
         } else {
-            NodeRotator<T, U> rotator = NodeRotator<T, U>();
+            NodeRotator<T> rotator = NodeRotator<T>();
             if(startingSide != parentSide)
             {
                 startingNode = parent;
@@ -54,8 +54,8 @@ void PutPropertyRestorer<T, U>::restoreFrom(RBNodePtr<T, U> freshNode) {
     }
 }
 
-template<typename T, typename U>
-void PutPropertyRestorer<T, U>::updateGenealogy() {
+template<typename T>
+void PutPropertyRestorer<T>::updateGenealogy() {
     currentNode = startingNode;
     parent = rbcast(startingNode->getParent());
     grand = rbcast(parent->getParent());//todo i tu leży pies pogrzebany

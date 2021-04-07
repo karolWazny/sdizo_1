@@ -5,31 +5,31 @@
 #include "Side.h"
 #include "NodeUtility.h"
 
-template <typename T, typename U>
-class NodeReplacer : public NodeUtility<T, U>
+template <typename T>
+class NodeReplacer : public NodeUtility<T>
 {
 public:
-    explicit NodeReplacer(NodePointer<T, U> nodeToReplace);
-    void replaceWithNode(NodePointer<T, U> replacementNode);
+    explicit NodeReplacer(NodePointer<T> nodeToReplace);
+    void replaceWithNode(NodePointer<T> replacementNode);
 private:
     void replace();
 
-    NodePointer<T, U> replacement;
+    NodePointer<T> replacement;
 };
 
-template<typename T, typename U>
-NodeReplacer<T, U>::NodeReplacer(NodePointer<T, U> nodeToReplace) {
+template<typename T>
+NodeReplacer<T>::NodeReplacer(NodePointer<T> nodeToReplace) {
     this->currentNode = nodeToReplace;
 }
 
-template<typename T, typename U>
-void NodeReplacer<T, U>::replaceWithNode(NodePointer<T, U> replacementNode) {
+template<typename T>
+void NodeReplacer<T>::replaceWithNode(NodePointer<T> replacementNode) {
     this->replacement = replacementNode;
     replace();
 }
 
-template<typename T, typename U>
-void NodeReplacer<T, U>::replace() {
+template<typename T>
+void NodeReplacer<T>::replace() {
     auto parent = currentNode->getParent();
     Side nodeToReplaceSide= Side::RIGHT;
     if(parent->getKey() > currentNode->getKey())

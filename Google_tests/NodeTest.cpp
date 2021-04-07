@@ -2,23 +2,16 @@
 #include <red_black_tree_lib/nodes/SimpleFactory.h>
 
 TEST(NodeSuite, Compilation){
-    auto node = NodeImpl<int, int>(2, 3);
-}
-
-TEST(NodeSuite, GetContentReturnsReference){
-    auto node = NodeImpl<int, int>(2, 3);
-    ASSERT_EQ(node.getContent(), 3);
-    node.getContent()++;
-    ASSERT_EQ(node.getContent(), 4);
+    auto node = NodeImpl<int>(2);
 }
 
 TEST(Nodesuite, GetKey){
-    auto node = NodeImpl<int, int>(2, 3);
+    auto node = NodeImpl<int>(2);
     ASSERT_EQ(node.getKey(), 2);
 }
 
 TEST(Nodesuite, GetLeftEmpty){
-    auto node = NodeImpl<int, int>(2, 3);
+    auto node = NodeImpl<int>(2);
     auto child = node.getLeft();
     ASSERT_TRUE(child->isNil());
 }

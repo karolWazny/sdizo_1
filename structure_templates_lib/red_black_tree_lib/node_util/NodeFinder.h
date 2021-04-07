@@ -7,12 +7,12 @@
 
 #include "red_black_tree_lib/nodes/Node.h"
 
-template <typename T, typename U>
+template <typename T>
 class NodeFinder
 {
 public:
-    virtual NodePointer<T, U> find() = 0;
-    virtual NodePointer<T, U> getFound() = 0;
+    virtual NodePointer<T> find() = 0;
+    virtual NodePointer<T> getFound() = 0;
     virtual bool nodeFound() = 0;
 };
 

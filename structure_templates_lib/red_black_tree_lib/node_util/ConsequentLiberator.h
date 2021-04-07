@@ -6,24 +6,24 @@
 #include "Side.h"
 
 
-template <typename T, typename U>
-class ConsequentLiberator : public NodeUtility<T, U>
+template <typename T>
+class ConsequentLiberator : public NodeUtility<T>
 {
 public:
-    explicit ConsequentLiberator(NodePointer<T, U> root);
-    void free(NodePointer<T, U> node);
-    NodePointer<T, U> getFreed();
+    explicit ConsequentLiberator(NodePointer<T> root);
+    void free(NodePointer<T> node);
+    NodePointer<T> getFreed();
 private:
-    NodePointer<T, U> nodeToFree;
+    NodePointer<T> nodeToFree;
 };
 
-template<typename T, typename U>
-ConsequentLiberator<T, U>::ConsequentLiberator(NodePointer<T, U> root) {
+template<typename T>
+ConsequentLiberator<T>::ConsequentLiberator(NodePointer<T> root) {
     currentNode = root;
 }
 
-template<typename T, typename U>
-void ConsequentLiberator<T, U>::free(NodePointer<T, U> node){
+template<typename T>
+void ConsequentLiberator<T>::free(NodePointer<T> node){
     nodeToFree = node;
     auto parent = nodeToFree->getParent();
     Side consequentSide = Side::LEFT;
@@ -38,8 +38,8 @@ void ConsequentLiberator<T, U>::free(NodePointer<T, U> node){
         currentNode = child;
 }
 
-template<typename T, typename U>
-NodePointer<T, U> ConsequentLiberator<T, U>::getFreed() {
+template<typename T>
+NodePointer<T> ConsequentLiberator<T>::getFreed() {
     return nodeToFree;
 }
 

@@ -3,12 +3,12 @@
 #include <red_black_tree_lib/rbutil/PutPropertyRestorer.h>
 
 TEST(PutRestorerSuite, Compilation){
-    auto restorer = PutPropertyRestorer<int, int>();
+    auto restorer = PutPropertyRestorer<int>();
 }
 
 TEST(PutRestorerSuite, BlackParentAddedIsLeft){
-    auto parent = std::dynamic_pointer_cast<RBNode<int, int>>(RBFactory<int, int>().createNode(5,5));
-    auto child = std::dynamic_pointer_cast<RBNode<int, int>>(RBFactory<int, int>().createNode(3,3));
+    auto parent = std::dynamic_pointer_cast<RBNode<int>>(RBFactory<int>().createNode(5));
+    auto child = std::dynamic_pointer_cast<RBNode<int>>(RBFactory<int>().createNode(3));
 
     parent->paintBlack();
     child->paintRed();
@@ -16,7 +16,7 @@ TEST(PutRestorerSuite, BlackParentAddedIsLeft){
     parent->setLeft(child);
     child->setParent(parent);
 
-    auto restorer = PutPropertyRestorer<int, int>();
+    auto restorer = PutPropertyRestorer<int>();
 
     restorer.restoreFrom(child);
 
@@ -28,8 +28,8 @@ TEST(PutRestorerSuite, BlackParentAddedIsLeft){
 }
 
 TEST(PutRestorerSuite, BlackParentAddedIsRight){
-    auto parent = std::dynamic_pointer_cast<RBNode<int, int>>(RBFactory<int, int>().createNode(5,5));
-    auto child = std::dynamic_pointer_cast<RBNode<int, int>>(RBFactory<int, int>().createNode(8,8));
+    auto parent = std::dynamic_pointer_cast<RBNode<int>>(RBFactory<int>().createNode(5));
+    auto child = std::dynamic_pointer_cast<RBNode<int>>(RBFactory<int>().createNode(8));
 
     parent->paintBlack();
     child->paintRed();
@@ -37,7 +37,7 @@ TEST(PutRestorerSuite, BlackParentAddedIsRight){
     parent->setRight(child);
     child->setParent(parent);
 
-    auto restorer = PutPropertyRestorer<int, int>();
+    auto restorer = PutPropertyRestorer<int>();
 
     restorer.restoreFrom(child);
 
@@ -49,10 +49,10 @@ TEST(PutRestorerSuite, BlackParentAddedIsRight){
 }
 
 TEST(PutRestorerSuite, ParentIsLeftUncleIsRed){
-    auto grand = rbcast(RBFactory<int, int>().createNode(7,7));
-    auto parent = rbcast(RBFactory<int, int>().createNode(5,5));
-    auto uncle = rbcast(RBFactory<int, int>().createNode(8,8));
-    auto child = rbcast(RBFactory<int, int>().createNode(6,6));
+    auto grand = rbcast(RBFactory<int>().createNode(7));
+    auto parent = rbcast(RBFactory<int>().createNode(5));
+    auto uncle = rbcast(RBFactory<int>().createNode(8));
+    auto child = rbcast(RBFactory<int>().createNode(6));
 
     Side parentSide = Side::LEFT;
 
@@ -70,7 +70,7 @@ TEST(PutRestorerSuite, ParentIsLeftUncleIsRed){
     uncle->paintRed();
     child->paintRed();
 
-    auto restorer = PutPropertyRestorer<int, int>();
+    auto restorer = PutPropertyRestorer<int>();
     restorer.restoreFrom(child);
 
     auto root = restorer.obtainRoot();
@@ -94,10 +94,10 @@ TEST(PutRestorerSuite, ParentIsLeftUncleIsRed){
 }
 
 TEST(PutRestorerSuite, ParentIsRightUncleIsRed){
-    auto grand = rbcast(RBFactory<int, int>().createNode(7,7));
-    auto parent = rbcast(RBFactory<int, int>().createNode(8,8));
-    auto uncle = rbcast(RBFactory<int, int>().createNode(4,4));
-    auto child = rbcast(RBFactory<int, int>().createNode(9,9));
+    auto grand = rbcast(RBFactory<int>().createNode(7));
+    auto parent = rbcast(RBFactory<int>().createNode(8));
+    auto uncle = rbcast(RBFactory<int>().createNode(4));
+    auto child = rbcast(RBFactory<int>().createNode(9));
 
     Side parentSide = Side::RIGHT;
 
@@ -115,7 +115,7 @@ TEST(PutRestorerSuite, ParentIsRightUncleIsRed){
     uncle->paintRed();
     child->paintRed();
 
-    auto restorer = PutPropertyRestorer<int, int>();
+    auto restorer = PutPropertyRestorer<int>();
     restorer.restoreFrom(child);
 
     auto root = restorer.obtainRoot();

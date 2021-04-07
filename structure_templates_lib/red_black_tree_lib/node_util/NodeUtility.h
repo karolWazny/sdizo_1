@@ -4,18 +4,18 @@
 #include "red_black_tree_lib/nodes/Node.h"
 #include "RootFinder.h"
 
-template <typename T, typename U>
+template <typename T>
 class NodeUtility
 {
 public:
-    NodePointer<T, U> obtainRoot();
+    NodePointer<T> obtainRoot();
 protected:
-    NodePointer<T, U> currentNode;
+    NodePointer<T> currentNode;
 };
 
-template<typename T, typename U>
-NodePointer<T, U> NodeUtility<T, U>::obtainRoot(){
-    auto rootFinder = RootFinder<T, U>(currentNode);
+template<typename T>
+NodePointer<T> NodeUtility<T>::obtainRoot(){
+    auto rootFinder = RootFinder<T>(currentNode);
     rootFinder.find();
     return rootFinder.getFound();
 }

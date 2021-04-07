@@ -7,33 +7,33 @@
 #include "red_black_tree_lib/node_util/ConsequentLiberator.h"
 #include "red_black_tree_lib/node_util/NodeReplacer.h"
 
-template <typename T, typename U>
+template <typename T>
 class RBRemover
 {
 public:
-    explicit RBRemover(NodePointer<T, U> root);
+    explicit RBRemover(NodePointer<T> root);
     void remove(T key);
-    NodePointer<T, U> obtainRoot();
+    NodePointer<T> obtainRoot();
 
 private:
-    NodePointer<T, U> root;
+    NodePointer<T> root;
 };
 
-template<typename T, typename U>
-RBRemover<T, U>::RBRemover(NodePointer <T, U> root) {
+template<typename T>
+RBRemover<T>::RBRemover(NodePointer <T> root) {
     this->root = root;
 }
 
-template<typename T, typename U>
-void RBRemover<T, U>::remove(T key) {
-    auto finder = KeyFinder<T, U>(root);
+template<typename T>
+void RBRemover<T>::remove(T key) {
+    auto finder = KeyFinder<T>(root);
     finder.setDesiredKey(key);
     finder.find();
     bool treeContainsThatKey = finder.nodeFound();
     if(treeContainsThatKey)
     {
         auto nodeToRemove = rbcast(finder.getFound());
-        auto consequentFinder = ConsequentFinder<T, U>(nodeToRemove);
+        auto consequentFinder = ConsequentFinder<T>(nodeToRemove);
         auto consequent = rbcast(consequentFinder.find());
         auto consequentSide = consequentFinder.getConsequentSide();
 
@@ -42,10 +42,10 @@ void RBRemover<T, U>::remove(T key) {
         {
             if(nodeToRemove == root)
             {
-                root = RBFactory<T, U>::makeSentinel();
+                root = RBFactory<T>::makeSentinel();
                 return;
             }
-            auto customSentinel = RBFactory<T, U>().createSentinel(nodeToRemove);
+            auto customSentinel = RBFactory<T>().createSentinel(nodeToRemove);
             nodeToRemove->setSide(customSentinel, consequentSide);
             consequent = rbcast(customSentinel);
         }
@@ -65,10 +65,10 @@ void RBRemover<T, U>::remove(T key) {
         bool consequentWasBlack = consequent->isBlack();
 
 
-        auto liberator = ConsequentLiberator<T, U>(root);
+        auto liberator = ConsequentLiberator<T>(root);
         liberator.free(consequent);
         root = liberator.obtainRoot();
-        auto replacer = NodeReplacer<T, U>(nodeToRemove);
+        auto replacer = NodeReplacer<T>(nodeToRemove);
         replacer.replaceWithNode(consequent);
         if(root == nodeToRemove)
             root = replacer.obtainRoot();
@@ -89,7 +89,7 @@ void RBRemover<T, U>::remove(T key) {
             auto doubleBlack = rbcast(doubleBlackParent->get(doubleBlackSide));
             if(doubleBlack->isNil())
             {
-                doubleBlack = rbcast(RBFactory<T, U>().createSentinel(doubleBlackParent));
+                doubleBlack = rbcast(RBFactory<T>().createSentinel(doubleBlackParent));
                 doubleBlackParent->setSide(doubleBlack, doubleBlackSide);
             }
 
@@ -111,7 +111,7 @@ void RBRemover<T, U>::remove(T key) {
                 //przypadek: brat x jest czerwony (sprowadzenie do któregoś z kolejnych przypadków)
                 if(doubleBlackSibling->isRed())
                 {
-                    auto rotator = NodeRotator<T, U>();
+                    auto rotator = NodeRotator<T>();
                     rotator.rotate(doubleBlackParent, doubleBlackSide);
                     root = rotator.obtainRoot();
                     doubleBlackParent->paintRed();
@@ -136,7 +136,7 @@ void RBRemover<T, U>::remove(T key) {
                 //przypadek: brat x jest czarny i ma czerwonego syna z tej samej strony, czarnego z przeciwnej
                 if(rbcast(doubleBlackSibling->get(!doubleBlackSide))->isBlack())
                 {
-                    auto rotator = NodeRotator<T, U>();
+                    auto rotator = NodeRotator<T>();
                     rotator.rotate(doubleBlackSibling, !doubleBlackSide);
                     doubleBlackSibling->paintRed();
                     rbcast(doubleBlackSibling->getParent())->paintBlack();
@@ -147,7 +147,7 @@ void RBRemover<T, U>::remove(T key) {
                 //przypadek: brat x jest czarny i ma syna czerwonego syna z przeciwnej strony
                 if(rbcast(doubleBlackSibling->get(!doubleBlackSide))->isRed())
                 {
-                    auto rotator = NodeRotator<T, U>();
+                    auto rotator = NodeRotator<T>();
                     rotator.rotate(doubleBlackParent, doubleBlackSide);
                     root = rotator.obtainRoot();
                     auto siblingWasBlack = doubleBlackSibling->isBlack();
@@ -174,8 +174,8 @@ void RBRemover<T, U>::remove(T key) {
     }
 }
 
-template<typename T, typename U>
-NodePointer<T, U> RBRemover<T, U>::obtainRoot() {
+template<typename T>
+NodePointer<T> RBRemover<T>::obtainRoot() {
     return root;
 }
 

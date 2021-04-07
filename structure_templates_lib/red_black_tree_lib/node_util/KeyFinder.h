@@ -3,37 +3,37 @@
 
 #include "red_black_tree_lib/node_util/NodeFinder.h"
 
-template <typename T, typename U>
-class KeyFinder : public NodeFinder<T, U>
+template <typename T>
+class KeyFinder : public NodeFinder<T>
 {
 public:
-    KeyFinder(NodePointer<T, U> startingNode);
+    KeyFinder(NodePointer<T> startingNode);
     void setDesiredKey(T key);
 
-    NodePointer<T, U> find() override;
-    NodePointer<T, U> getFound() override;
+    NodePointer<T> find() override;
+    NodePointer<T> getFound() override;
     bool nodeFound() override;
 private:
-    NodePointer<T, U> currentNode;
+    NodePointer<T> currentNode;
     T currentKey;
     T desiredKey;
     bool nodeWasFound;
 };
 
-template<typename T, typename U>
-KeyFinder<T, U>::KeyFinder(NodePointer<T, U> startingNode) {
+template<typename T>
+KeyFinder<T>::KeyFinder(NodePointer<T> startingNode) {
     this->currentNode = startingNode;
     nodeWasFound = false;
 }
 
 
-template<typename T, typename U>
-void KeyFinder<T, U>::setDesiredKey(T key) {
+template<typename T>
+void KeyFinder<T>::setDesiredKey(T key) {
     this->desiredKey = key;
 }
 
-template<typename T, typename U>
-NodePointer<T, U> KeyFinder<T, U>::find() {
+template<typename T>
+NodePointer<T> KeyFinder<T>::find() {
     while(!currentNode->isNil())
     {
         currentKey = currentNode->getKey();
@@ -54,13 +54,13 @@ NodePointer<T, U> KeyFinder<T, U>::find() {
     return currentNode;
 }
 
-template<typename T, typename U>
-NodePointer<T, U> KeyFinder<T, U>::getFound() {
+template<typename T>
+NodePointer<T> KeyFinder<T>::getFound() {
     return currentNode;
 }
 
-template<typename T, typename U>
-bool KeyFinder<T, U>::nodeFound() {
+template<typename T>
+bool KeyFinder<T>::nodeFound() {
     return nodeWasFound;
 }
 

@@ -5,13 +5,13 @@
 #include "Side.h"
 
 
-template <typename T, typename U>
-class PlaceToPutFinder : public NodeFinder<T, U>
+template <typename T>
+class PlaceToPutFinder : public NodeFinder<T>
 {
 public:
-    explicit PlaceToPutFinder(NodePointer<T, U> initialNode);
-    NodePointer<T, U> find();
-    NodePointer<T, U> getFound();
+    explicit PlaceToPutFinder(NodePointer<T> initialNode);
+    NodePointer<T> find();
+    NodePointer<T> getFound();
     bool nodeFound();
 
     void setKeyToBePut(T key);
@@ -19,26 +19,26 @@ public:
 
 private:
     bool nodeWasFound;
-    NodePointer<T, U> currentNode;
+    NodePointer<T> currentNode;
     T currentNodeKey;
-    NodePointer<T, U> currentChild;
+    NodePointer<T> currentChild;
     Side currentChildSide;
     T keyToBePut;
 };
 
-template<typename T, typename U>
-PlaceToPutFinder<T, U>::PlaceToPutFinder(NodePointer<T, U> initialNode) {
+template<typename T>
+PlaceToPutFinder<T>::PlaceToPutFinder(NodePointer<T> initialNode) {
     currentNode = initialNode;
     nodeWasFound = false;
 }
 
-template<typename T, typename U>
-void PlaceToPutFinder<T, U>::setKeyToBePut(T key) {
+template<typename T>
+void PlaceToPutFinder<T>::setKeyToBePut(T key) {
     keyToBePut = key;
 }
 
-template<typename T, typename U>
-NodePointer<T, U> PlaceToPutFinder<T, U>::find() {
+template<typename T>
+NodePointer<T> PlaceToPutFinder<T>::find() {
     currentNodeKey = currentNode->getKey();
     if(currentNodeKey > keyToBePut)
     {
@@ -68,18 +68,18 @@ NodePointer<T, U> PlaceToPutFinder<T, U>::find() {
     return currentNode;
 }
 
-template<typename T, typename U>
-NodePointer<T, U> PlaceToPutFinder<T, U>::getFound() {
+template<typename T>
+NodePointer<T> PlaceToPutFinder<T>::getFound() {
     return currentNode;
 }
 
-template<typename T, typename U>
-bool PlaceToPutFinder<T, U>::nodeFound() {
+template<typename T>
+bool PlaceToPutFinder<T>::nodeFound() {
     return nodeWasFound;
 }
 
-template<typename T, typename U>
-Side PlaceToPutFinder<T, U>::getPlaceSide() {
+template<typename T>
+Side PlaceToPutFinder<T>::getPlaceSide() {
     return currentChildSide;
 }
 

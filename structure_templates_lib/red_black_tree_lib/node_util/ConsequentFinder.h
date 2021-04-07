@@ -4,32 +4,32 @@
 #include "red_black_tree_lib/nodes/Node.h"
 #include "red_black_tree_lib/node_util/NodeFinder.h"
 
-template <typename T, typename U>
-class ConsequentFinder : public NodeFinder<T, U>
+template <typename T>
+class ConsequentFinder : public NodeFinder<T>
 {
 public:
-    explicit ConsequentFinder(NodePointer<T, U> initialNode);
+    explicit ConsequentFinder(NodePointer<T> initialNode);
 
-    NodePointer<T, U> find();
-    NodePointer<T, U> getFound();
+    NodePointer<T> find();
+    NodePointer<T> getFound();
     bool nodeFound();
     Side getConsequentSide();
 
 private:
-    NodePointer<T, U> obtainCurrentChildOnTheSide(Side side);
+    NodePointer<T> obtainCurrentChildOnTheSide(Side side);
 
-    NodePointer<T, U> currentNode;
+    NodePointer<T> currentNode;
     Side consequentSide;
     bool nodeWasFound;
 };
 
-template<typename T, typename U>
-ConsequentFinder<T, U>::ConsequentFinder(NodePointer<T, U> initialNode) {
+template<typename T>
+ConsequentFinder<T>::ConsequentFinder(NodePointer<T> initialNode) {
     currentNode = initialNode;
 }
 
-template<typename T, typename U>
-NodePointer<T, U> ConsequentFinder<T, U>::find() {
+template<typename T>
+NodePointer<T> ConsequentFinder<T>::find() {
     auto buffer = currentNode->getRight();
     consequentSide = Side::RIGHT;
     if(buffer->isNil())
@@ -49,23 +49,23 @@ NodePointer<T, U> ConsequentFinder<T, U>::find() {
     return currentNode;
 }
 
-template<typename T, typename U>
-NodePointer<T, U> ConsequentFinder<T, U>::obtainCurrentChildOnTheSide(Side side) {
+template<typename T>
+NodePointer<T> ConsequentFinder<T>::obtainCurrentChildOnTheSide(Side side) {
     return (side == Side::LEFT ? currentNode->getLeft() : currentNode->getRight());
 }
 
-template<typename T, typename U>
-NodePointer<T, U> ConsequentFinder<T, U>::getFound() {
+template<typename T>
+NodePointer<T> ConsequentFinder<T>::getFound() {
     return currentNode;
 }
 
-template<typename T, typename U>
-bool ConsequentFinder<T, U>::nodeFound() {
+template<typename T>
+bool ConsequentFinder<T>::nodeFound() {
     return nodeWasFound;
 }
 
-template<typename T, typename U>
-Side ConsequentFinder<T, U>::getConsequentSide() {
+template<typename T>
+Side ConsequentFinder<T>::getConsequentSide() {
     return consequentSide;
 }
 

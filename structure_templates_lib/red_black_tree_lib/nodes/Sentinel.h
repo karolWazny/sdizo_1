@@ -3,83 +3,73 @@
 
 #include "Node.h"
 
-template <typename T, typename U>
-class Sentinel : public Node<T, U>
+template <typename T>
+class Sentinel : public Node<T>
 {
 public:
-    U& getContent();
     T getKey();
-    void setParent(NodePointer<T, U>);
-    NodePointer<T, U> getParent();
-    void setLeft(NodePointer<T, U>) override;
-    NodePointer<T, U> getLeft() override;
-    void setRight(NodePointer<T, U>) override;
-    NodePointer<T, U> getRight() override;
+    void setParent(NodePointer<T>);
+    NodePointer<T> getParent();
+    void setLeft(NodePointer<T>) override;
+    NodePointer<T> getLeft() override;
+    void setRight(NodePointer<T>) override;
+    NodePointer<T> getRight() override;
     bool isNil() override;
 
-    static NodePointer<T, U> getInstance();
+    static NodePointer<T> getInstance();
 private:
-    static U content;
     static T key;
-    static NodePointer<T, U> instance;
+    static NodePointer<T> instance;
 };
 
-template <typename T, typename U>
-NodePointer<T,U> Sentinel<T, U>::instance = NodePointer<T, U>(new Sentinel<T, U>());
+template <typename T>
+NodePointer<T> Sentinel<T>::instance = NodePointer<T>(new Sentinel<T>());
 
-template <typename T, typename U>
-U Sentinel<T, U>::content = NULL;
+template <typename T>
+T Sentinel<T>::key = NULL;
 
-template <typename T, typename U>
-T Sentinel<T, U>::key = NULL;
-
-template<typename T, typename U>
-NodePointer<T, U> Sentinel<T, U>::getParent() {
+template<typename T>
+NodePointer<T> Sentinel<T>::getParent() {
     return getInstance();
 }
 
-template<typename T, typename U>
-NodePointer<T, U> Sentinel<T, U>::getLeft() {
+template<typename T>
+NodePointer<T> Sentinel<T>::getLeft() {
     return getInstance();
 }
 
-template<typename T, typename U>
-NodePointer<T, U> Sentinel<T, U>::getRight() {
+template<typename T>
+NodePointer<T> Sentinel<T>::getRight() {
     return getInstance();
 }
 
-template<typename T, typename U>
-U &Sentinel<T, U>::getContent() {
-    return content;
-}
-
-template<typename T, typename U>
-T Sentinel<T, U>::getKey() {
+template<typename T>
+T Sentinel<T>::getKey() {
     return key;
 }
 
-template<typename T, typename U>
-bool Sentinel<T, U>::isNil() {
+template<typename T>
+bool Sentinel<T>::isNil() {
     return true;
 }
 
-template<typename T, typename U>
-void Sentinel<T, U>::setLeft(NodePointer<T, U>) {
+template<typename T>
+void Sentinel<T>::setLeft(NodePointer<T>) {
     //nil z definicji jest bezdzietny
 }
 
-template<typename T, typename U>
-void Sentinel<T, U>::setRight(NodePointer<T, U>) {
+template<typename T>
+void Sentinel<T>::setRight(NodePointer<T>) {
     //nil z definicji jest bezdzietny
 }
 
-template<typename T, typename U>
-void Sentinel<T, U>::setParent(NodePointer<T, U> parent) {
+template<typename T>
+void Sentinel<T>::setParent(NodePointer<T> parent) {
 
 }
 
-template<typename T, typename U>
-NodePointer<T, U> Sentinel<T, U>::getInstance() {
+template<typename T>
+NodePointer<T> Sentinel<T>::getInstance() {
     return instance;
 }
 

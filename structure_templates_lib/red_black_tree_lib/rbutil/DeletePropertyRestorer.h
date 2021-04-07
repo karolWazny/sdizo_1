@@ -3,7 +3,7 @@
 
 #include "red_black_tree_lib/nodes/RBNode.h"
 
-template <typename T, typename U>
+template <typename T>
 class DeletePropertyRestorer
 {
 
