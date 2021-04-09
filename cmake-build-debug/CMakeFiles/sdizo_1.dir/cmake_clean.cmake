@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/sdizo_1.dir/main.cpp.obj"
+  "CMakeFiles/sdizo_1.dir/program/Main.cpp.obj"
   "sdizo_1.exe"
   "sdizo_1.exe.manifest"
   "sdizo_1.lib"

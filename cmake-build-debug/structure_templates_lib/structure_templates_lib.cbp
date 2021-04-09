@@ -25,6 +25,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -49,6 +50,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -73,6 +75,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -97,6 +100,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -121,6 +125,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -145,6 +150,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -169,6 +175,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -193,6 +200,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -217,6 +225,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -241,6 +250,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -265,6 +275,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -289,6 +300,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>

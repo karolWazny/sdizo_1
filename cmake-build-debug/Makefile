@@ -171,7 +171,7 @@ structure_templates_lib: cmake_check_build_system
 
 # fast build rule for target.
 structure_templates_lib\fast:
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\CMakeFiles\structure_templates_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\CMakeFiles\structure_templates_lib.dir\build
+	$(MAKE) $(MAKESILENT) -f program\CMakeFiles\structure_templates_lib.dir\build.make /nologo -$(MAKEFLAGS) program\CMakeFiles\structure_templates_lib.dir\build
 .PHONY : structure_templates_lib\fast
 
 #=============================================================================
@@ -184,7 +184,7 @@ array_lib: cmake_check_build_system
 
 # fast build rule for target.
 array_lib\fast:
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\build
+	$(MAKE) $(MAKESILENT) -f program\array_lib\CMakeFiles\array_lib.dir\build.make /nologo -$(MAKEFLAGS) program\array_lib\CMakeFiles\array_lib.dir\build
 .PHONY : array_lib\fast
 
 #=============================================================================
@@ -197,7 +197,7 @@ binary_heap_lib: cmake_check_build_system
 
 # fast build rule for target.
 binary_heap_lib\fast:
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\build
+	$(MAKE) $(MAKESILENT) -f program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\build.make /nologo -$(MAKEFLAGS) program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\build
 .PHONY : binary_heap_lib\fast
 
 #=============================================================================
@@ -210,7 +210,7 @@ linked_list_lib: cmake_check_build_system
 
 # fast build rule for target.
 linked_list_lib\fast:
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\build
+	$(MAKE) $(MAKESILENT) -f program\linked_list_lib\CMakeFiles\linked_list_lib.dir\build.make /nologo -$(MAKEFLAGS) program\linked_list_lib\CMakeFiles\linked_list_lib.dir\build
 .PHONY : linked_list_lib\fast
 
 #=============================================================================
@@ -223,7 +223,7 @@ red_black_tree_lib: cmake_check_build_system
 
 # fast build rule for target.
 red_black_tree_lib\fast:
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build
+	$(MAKE) $(MAKESILENT) -f program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build
 .PHONY : red_black_tree_lib\fast
 
 #=============================================================================
@@ -236,7 +236,7 @@ tree_lib: cmake_check_build_system
 
 # fast build rule for target.
 tree_lib\fast:
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\build
+	$(MAKE) $(MAKESILENT) -f program\tree_lib\CMakeFiles\tree_lib.dir\build.make /nologo -$(MAKEFLAGS) program\tree_lib\CMakeFiles\tree_lib.dir\build
 .PHONY : tree_lib\fast
 
 #=============================================================================
@@ -304,32 +304,32 @@ gtest_main\fast:
 	$(MAKE) $(MAKESILENT) -f Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\build
 .PHONY : gtest_main\fast
 
-main.obj: main.cpp.obj
+program\Main.obj: program\Main.cpp.obj
 
-.PHONY : main.obj
+.PHONY : program\Main.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\main.cpp.obj
-.PHONY : main.cpp.obj
+program\Main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\Main.cpp.obj
+.PHONY : program\Main.cpp.obj
 
-main.i: main.cpp.i
+program\Main.i: program\Main.cpp.i
 
-.PHONY : main.i
+.PHONY : program\Main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\main.cpp.i
-.PHONY : main.cpp.i
+program\Main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\Main.cpp.i
+.PHONY : program\Main.cpp.i
 
-main.s: main.cpp.s
+program\Main.s: program\Main.cpp.s
 
-.PHONY : main.s
+.PHONY : program\Main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\main.cpp.s
-.PHONY : main.cpp.s
+program\Main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\Main.cpp.s
+.PHONY : program\Main.cpp.s
 
 # Help Target
 help:
@@ -354,9 +354,9 @@ help:
 	@echo ... sdizo_1
 	@echo ... structure_templates_lib
 	@echo ... tree_lib
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... program/Main.obj
+	@echo ... program/Main.i
+	@echo ... program/Main.s
 .PHONY : help
 
 

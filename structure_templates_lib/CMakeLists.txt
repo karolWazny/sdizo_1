@@ -6,7 +6,10 @@ set(CMAKE_CXX_STANDARD 14)
 set(SOURCE_FILES
         index.cpp)
 
-add_library(structure_templates_lib ${SOURCE_FILES})
+set(HEADER_FILES
+        structures.h)
+
+add_library(structure_templates_lib ${SOURCE_FILES} ${HEADER_FILES})
 
 add_subdirectory(array_lib)
 add_subdirectory(binary_heap_lib)

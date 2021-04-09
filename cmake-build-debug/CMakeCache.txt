@@ -284,13 +284,13 @@ Google_tests_SOURCE_DIR:STATIC=D:/projects/clion/sdizo_1/Google_tests
 INSTALL_GTEST:BOOL=ON
 
 //Value Computed by CMake
-array_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/array_lib
+array_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/program/array_lib
 
 //Value Computed by CMake
 array_lib_SOURCE_DIR:STATIC=D:/projects/clion/sdizo_1/structure_templates_lib/array_lib
 
 //Value Computed by CMake
-binary_heap_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/binary_heap_lib
+binary_heap_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/program/binary_heap_lib
 
 //Value Computed by CMake
 binary_heap_lib_SOURCE_DIR:STATIC=D:/projects/clion/sdizo_1/structure_templates_lib/binary_heap_lib
@@ -330,13 +330,13 @@ gtest_hide_internal_symbols:BOOL=OFF
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
 //Value Computed by CMake
-linked_list_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/linked_list_lib
+linked_list_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/program/linked_list_lib
 
 //Value Computed by CMake
 linked_list_lib_SOURCE_DIR:STATIC=D:/projects/clion/sdizo_1/structure_templates_lib/linked_list_lib
 
 //Value Computed by CMake
-red_black_tree_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/red_black_tree_lib
+red_black_tree_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/program/red_black_tree_lib
 
 //Value Computed by CMake
 red_black_tree_lib_SOURCE_DIR:STATIC=D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib
@@ -348,13 +348,13 @@ sdizo_1_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug
 sdizo_1_SOURCE_DIR:STATIC=D:/projects/clion/sdizo_1
 
 //Value Computed by CMake
-structure_templates_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib
+structure_templates_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/program
 
 //Value Computed by CMake
 structure_templates_lib_SOURCE_DIR:STATIC=D:/projects/clion/sdizo_1/structure_templates_lib
 
 //Value Computed by CMake
-tree_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/tree_lib
+tree_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/program/tree_lib
 
 //Value Computed by CMake
 tree_lib_SOURCE_DIR:STATIC=D:/projects/clion/sdizo_1/structure_templates_lib/tree_lib

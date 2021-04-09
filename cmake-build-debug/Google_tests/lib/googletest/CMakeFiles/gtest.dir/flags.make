@@ -6,5 +6,5 @@ CXX_FLAGS = /DWIN32 /D_WINDOWS /GR  /Zi /Ob0 /Od /RTC1 -MDd   -GS -W4 -WX -wd425
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -ID:\projects\clion\sdizo_1\structure_templates_lib -ID:\projects\clion\sdizo_1\Google_tests\lib\googletest\include -ID:\projects\clion\sdizo_1\Google_tests\lib\googletest 
+CXX_INCLUDES = -ID:\projects\clion\sdizo_1\structure_templates_lib -ID:\projects\clion\sdizo_1\program -ID:\projects\clion\sdizo_1\Google_tests\lib\googletest\include -ID:\projects\clion\sdizo_1\Google_tests\lib\googletest 
 

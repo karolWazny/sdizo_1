@@ -58,20 +58,20 @@ CMAKE_BINARY_DIR = D:\projects\clion\sdizo_1\cmake-build-debug
 
 # The main recursive "all" target.
 all: CMakeFiles\sdizo_1.dir\all
-all: structure_templates_lib\all
+all: program\all
 all: Google_tests\all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: structure_templates_lib\preinstall
+preinstall: program\preinstall
 preinstall: Google_tests\preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles\sdizo_1.dir\clean
-clean: structure_templates_lib\clean
+clean: program\clean
 clean: Google_tests\clean
 
 .PHONY : clean
@@ -157,137 +157,137 @@ Google_tests\lib\googletest\clean: Google_tests\lib\googletest\CMakeFiles\gtest_
 .PHONY : Google_tests\lib\googletest\clean
 
 #=============================================================================
-# Directory level rules for directory structure_templates_lib
+# Directory level rules for directory program
 
 # Recursive "all" directory target.
-structure_templates_lib\all: structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all
-structure_templates_lib\all: structure_templates_lib\array_lib\all
-structure_templates_lib\all: structure_templates_lib\binary_heap_lib\all
-structure_templates_lib\all: structure_templates_lib\linked_list_lib\all
-structure_templates_lib\all: structure_templates_lib\red_black_tree_lib\all
-structure_templates_lib\all: structure_templates_lib\tree_lib\all
+program\all: program\CMakeFiles\structure_templates_lib.dir\all
+program\all: program\array_lib\all
+program\all: program\binary_heap_lib\all
+program\all: program\linked_list_lib\all
+program\all: program\red_black_tree_lib\all
+program\all: program\tree_lib\all
 
-.PHONY : structure_templates_lib\all
+.PHONY : program\all
 
 # Recursive "preinstall" directory target.
-structure_templates_lib\preinstall: structure_templates_lib\array_lib\preinstall
-structure_templates_lib\preinstall: structure_templates_lib\binary_heap_lib\preinstall
-structure_templates_lib\preinstall: structure_templates_lib\linked_list_lib\preinstall
-structure_templates_lib\preinstall: structure_templates_lib\red_black_tree_lib\preinstall
-structure_templates_lib\preinstall: structure_templates_lib\tree_lib\preinstall
+program\preinstall: program\array_lib\preinstall
+program\preinstall: program\binary_heap_lib\preinstall
+program\preinstall: program\linked_list_lib\preinstall
+program\preinstall: program\red_black_tree_lib\preinstall
+program\preinstall: program\tree_lib\preinstall
 
-.PHONY : structure_templates_lib\preinstall
+.PHONY : program\preinstall
 
 # Recursive "clean" directory target.
-structure_templates_lib\clean: structure_templates_lib\CMakeFiles\structure_templates_lib.dir\clean
-structure_templates_lib\clean: structure_templates_lib\array_lib\clean
-structure_templates_lib\clean: structure_templates_lib\binary_heap_lib\clean
-structure_templates_lib\clean: structure_templates_lib\linked_list_lib\clean
-structure_templates_lib\clean: structure_templates_lib\red_black_tree_lib\clean
-structure_templates_lib\clean: structure_templates_lib\tree_lib\clean
+program\clean: program\CMakeFiles\structure_templates_lib.dir\clean
+program\clean: program\array_lib\clean
+program\clean: program\binary_heap_lib\clean
+program\clean: program\linked_list_lib\clean
+program\clean: program\red_black_tree_lib\clean
+program\clean: program\tree_lib\clean
 
-.PHONY : structure_templates_lib\clean
+.PHONY : program\clean
 
 #=============================================================================
-# Directory level rules for directory structure_templates_lib\array_lib
+# Directory level rules for directory program\array_lib
 
 # Recursive "all" directory target.
-structure_templates_lib\array_lib\all: structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\all
+program\array_lib\all: program\array_lib\CMakeFiles\array_lib.dir\all
 
-.PHONY : structure_templates_lib\array_lib\all
+.PHONY : program\array_lib\all
 
 # Recursive "preinstall" directory target.
-structure_templates_lib\array_lib\preinstall:
+program\array_lib\preinstall:
 
-.PHONY : structure_templates_lib\array_lib\preinstall
+.PHONY : program\array_lib\preinstall
 
 # Recursive "clean" directory target.
-structure_templates_lib\array_lib\clean: structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\clean
+program\array_lib\clean: program\array_lib\CMakeFiles\array_lib.dir\clean
 
-.PHONY : structure_templates_lib\array_lib\clean
+.PHONY : program\array_lib\clean
 
 #=============================================================================
-# Directory level rules for directory structure_templates_lib\binary_heap_lib
+# Directory level rules for directory program\binary_heap_lib
 
 # Recursive "all" directory target.
-structure_templates_lib\binary_heap_lib\all: structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
+program\binary_heap_lib\all: program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
 
-.PHONY : structure_templates_lib\binary_heap_lib\all
+.PHONY : program\binary_heap_lib\all
 
 # Recursive "preinstall" directory target.
-structure_templates_lib\binary_heap_lib\preinstall:
+program\binary_heap_lib\preinstall:
 
-.PHONY : structure_templates_lib\binary_heap_lib\preinstall
+.PHONY : program\binary_heap_lib\preinstall
 
 # Recursive "clean" directory target.
-structure_templates_lib\binary_heap_lib\clean: structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\clean
+program\binary_heap_lib\clean: program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\clean
 
-.PHONY : structure_templates_lib\binary_heap_lib\clean
+.PHONY : program\binary_heap_lib\clean
 
 #=============================================================================
-# Directory level rules for directory structure_templates_lib\linked_list_lib
+# Directory level rules for directory program\linked_list_lib
 
 # Recursive "all" directory target.
-structure_templates_lib\linked_list_lib\all: structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
+program\linked_list_lib\all: program\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
 
-.PHONY : structure_templates_lib\linked_list_lib\all
+.PHONY : program\linked_list_lib\all
 
 # Recursive "preinstall" directory target.
-structure_templates_lib\linked_list_lib\preinstall:
+program\linked_list_lib\preinstall:
 
-.PHONY : structure_templates_lib\linked_list_lib\preinstall
+.PHONY : program\linked_list_lib\preinstall
 
 # Recursive "clean" directory target.
-structure_templates_lib\linked_list_lib\clean: structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\clean
+program\linked_list_lib\clean: program\linked_list_lib\CMakeFiles\linked_list_lib.dir\clean
 
-.PHONY : structure_templates_lib\linked_list_lib\clean
+.PHONY : program\linked_list_lib\clean
 
 #=============================================================================
-# Directory level rules for directory structure_templates_lib\red_black_tree_lib
+# Directory level rules for directory program\red_black_tree_lib
 
 # Recursive "all" directory target.
-structure_templates_lib\red_black_tree_lib\all: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
+program\red_black_tree_lib\all: program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
 
-.PHONY : structure_templates_lib\red_black_tree_lib\all
+.PHONY : program\red_black_tree_lib\all
 
 # Recursive "preinstall" directory target.
-structure_templates_lib\red_black_tree_lib\preinstall:
+program\red_black_tree_lib\preinstall:
 
-.PHONY : structure_templates_lib\red_black_tree_lib\preinstall
+.PHONY : program\red_black_tree_lib\preinstall
 
 # Recursive "clean" directory target.
-structure_templates_lib\red_black_tree_lib\clean: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\clean
+program\red_black_tree_lib\clean: program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\clean
 
-.PHONY : structure_templates_lib\red_black_tree_lib\clean
+.PHONY : program\red_black_tree_lib\clean
 
 #=============================================================================
-# Directory level rules for directory structure_templates_lib\tree_lib
+# Directory level rules for directory program\tree_lib
 
 # Recursive "all" directory target.
-structure_templates_lib\tree_lib\all: structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\all
+program\tree_lib\all: program\tree_lib\CMakeFiles\tree_lib.dir\all
 
-.PHONY : structure_templates_lib\tree_lib\all
+.PHONY : program\tree_lib\all
 
 # Recursive "preinstall" directory target.
-structure_templates_lib\tree_lib\preinstall:
+program\tree_lib\preinstall:
 
-.PHONY : structure_templates_lib\tree_lib\preinstall
+.PHONY : program\tree_lib\preinstall
 
 # Recursive "clean" directory target.
-structure_templates_lib\tree_lib\clean: structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\clean
+program\tree_lib\clean: program\tree_lib\CMakeFiles\tree_lib.dir\clean
 
-.PHONY : structure_templates_lib\tree_lib\clean
+.PHONY : program\tree_lib\clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/sdizo_1.dir
 
 # All Build rule for target.
-CMakeFiles\sdizo_1.dir\all: structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all
-CMakeFiles\sdizo_1.dir\all: structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\all
-CMakeFiles\sdizo_1.dir\all: structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
-CMakeFiles\sdizo_1.dir\all: structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
-CMakeFiles\sdizo_1.dir\all: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
-CMakeFiles\sdizo_1.dir\all: structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\all
+CMakeFiles\sdizo_1.dir\all: program\CMakeFiles\structure_templates_lib.dir\all
+CMakeFiles\sdizo_1.dir\all: program\array_lib\CMakeFiles\array_lib.dir\all
+CMakeFiles\sdizo_1.dir\all: program\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
+CMakeFiles\sdizo_1.dir\all: program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
+CMakeFiles\sdizo_1.dir\all: program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
+CMakeFiles\sdizo_1.dir\all: program\tree_lib\CMakeFiles\tree_lib.dir\all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=36,37 "Built target sdizo_1"
@@ -311,181 +311,181 @@ CMakeFiles\sdizo_1.dir\clean:
 .PHONY : CMakeFiles\sdizo_1.dir\clean
 
 #=============================================================================
-# Target rules for target structure_templates_lib/CMakeFiles/structure_templates_lib.dir
+# Target rules for target program/CMakeFiles/structure_templates_lib.dir
 
 # All Build rule for target.
-structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all: structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\all
-structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all: structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
-structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all: structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
-structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
-structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all: structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\all
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\CMakeFiles\structure_templates_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\CMakeFiles\structure_templates_lib.dir\depend
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\CMakeFiles\structure_templates_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\CMakeFiles\structure_templates_lib.dir\build
+program\CMakeFiles\structure_templates_lib.dir\all: program\array_lib\CMakeFiles\array_lib.dir\all
+program\CMakeFiles\structure_templates_lib.dir\all: program\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
+program\CMakeFiles\structure_templates_lib.dir\all: program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
+program\CMakeFiles\structure_templates_lib.dir\all: program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
+program\CMakeFiles\structure_templates_lib.dir\all: program\tree_lib\CMakeFiles\tree_lib.dir\all
+	$(MAKE) $(MAKESILENT) -f program\CMakeFiles\structure_templates_lib.dir\build.make /nologo -$(MAKEFLAGS) program\CMakeFiles\structure_templates_lib.dir\depend
+	$(MAKE) $(MAKESILENT) -f program\CMakeFiles\structure_templates_lib.dir\build.make /nologo -$(MAKEFLAGS) program\CMakeFiles\structure_templates_lib.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=38,39 "Built target structure_templates_lib"
-.PHONY : structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all
+.PHONY : program\CMakeFiles\structure_templates_lib.dir\all
 
 # Build rule for subdir invocation for target.
-structure_templates_lib\CMakeFiles\structure_templates_lib.dir\rule: cmake_check_build_system
+program\CMakeFiles\structure_templates_lib.dir\rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 15
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) program\CMakeFiles\structure_templates_lib.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 0
-.PHONY : structure_templates_lib\CMakeFiles\structure_templates_lib.dir\rule
+.PHONY : program\CMakeFiles\structure_templates_lib.dir\rule
 
 # Convenience name for target.
-structure_templates_lib: structure_templates_lib\CMakeFiles\structure_templates_lib.dir\rule
+structure_templates_lib: program\CMakeFiles\structure_templates_lib.dir\rule
 
 .PHONY : structure_templates_lib
 
 # clean rule for target.
-structure_templates_lib\CMakeFiles\structure_templates_lib.dir\clean:
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\CMakeFiles\structure_templates_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\CMakeFiles\structure_templates_lib.dir\clean
-.PHONY : structure_templates_lib\CMakeFiles\structure_templates_lib.dir\clean
+program\CMakeFiles\structure_templates_lib.dir\clean:
+	$(MAKE) $(MAKESILENT) -f program\CMakeFiles\structure_templates_lib.dir\build.make /nologo -$(MAKEFLAGS) program\CMakeFiles\structure_templates_lib.dir\clean
+.PHONY : program\CMakeFiles\structure_templates_lib.dir\clean
 
 #=============================================================================
-# Target rules for target structure_templates_lib/array_lib/CMakeFiles/array_lib.dir
+# Target rules for target program/array_lib/CMakeFiles/array_lib.dir
 
 # All Build rule for target.
-structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\all:
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\depend
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\build
+program\array_lib\CMakeFiles\array_lib.dir\all:
+	$(MAKE) $(MAKESILENT) -f program\array_lib\CMakeFiles\array_lib.dir\build.make /nologo -$(MAKEFLAGS) program\array_lib\CMakeFiles\array_lib.dir\depend
+	$(MAKE) $(MAKESILENT) -f program\array_lib\CMakeFiles\array_lib.dir\build.make /nologo -$(MAKEFLAGS) program\array_lib\CMakeFiles\array_lib.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=14,15 "Built target array_lib"
-.PHONY : structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\all
+.PHONY : program\array_lib\CMakeFiles\array_lib.dir\all
 
 # Build rule for subdir invocation for target.
-structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\rule: cmake_check_build_system
+program\array_lib\CMakeFiles\array_lib.dir\rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) program\array_lib\CMakeFiles\array_lib.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 0
-.PHONY : structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\rule
+.PHONY : program\array_lib\CMakeFiles\array_lib.dir\rule
 
 # Convenience name for target.
-array_lib: structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\rule
+array_lib: program\array_lib\CMakeFiles\array_lib.dir\rule
 
 .PHONY : array_lib
 
 # clean rule for target.
-structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\clean:
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\clean
-.PHONY : structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\clean
+program\array_lib\CMakeFiles\array_lib.dir\clean:
+	$(MAKE) $(MAKESILENT) -f program\array_lib\CMakeFiles\array_lib.dir\build.make /nologo -$(MAKEFLAGS) program\array_lib\CMakeFiles\array_lib.dir\clean
+.PHONY : program\array_lib\CMakeFiles\array_lib.dir\clean
 
 #=============================================================================
-# Target rules for target structure_templates_lib/binary_heap_lib/CMakeFiles/binary_heap_lib.dir
+# Target rules for target program/binary_heap_lib/CMakeFiles/binary_heap_lib.dir
 
 # All Build rule for target.
-structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all:
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\depend
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\build
+program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all:
+	$(MAKE) $(MAKESILENT) -f program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\build.make /nologo -$(MAKEFLAGS) program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\depend
+	$(MAKE) $(MAKESILENT) -f program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\build.make /nologo -$(MAKEFLAGS) program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=16,17 "Built target binary_heap_lib"
-.PHONY : structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
+.PHONY : program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
 
 # Build rule for subdir invocation for target.
-structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\rule: cmake_check_build_system
+program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 0
-.PHONY : structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\rule
+.PHONY : program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\rule
 
 # Convenience name for target.
-binary_heap_lib: structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\rule
+binary_heap_lib: program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\rule
 
 .PHONY : binary_heap_lib
 
 # clean rule for target.
-structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\clean:
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\clean
-.PHONY : structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\clean
+program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\clean:
+	$(MAKE) $(MAKESILENT) -f program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\build.make /nologo -$(MAKEFLAGS) program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\clean
+.PHONY : program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\clean
 
 #=============================================================================
-# Target rules for target structure_templates_lib/linked_list_lib/CMakeFiles/linked_list_lib.dir
+# Target rules for target program/linked_list_lib/CMakeFiles/linked_list_lib.dir
 
 # All Build rule for target.
-structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\all:
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\depend
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\build
+program\linked_list_lib\CMakeFiles\linked_list_lib.dir\all:
+	$(MAKE) $(MAKESILENT) -f program\linked_list_lib\CMakeFiles\linked_list_lib.dir\build.make /nologo -$(MAKEFLAGS) program\linked_list_lib\CMakeFiles\linked_list_lib.dir\depend
+	$(MAKE) $(MAKESILENT) -f program\linked_list_lib\CMakeFiles\linked_list_lib.dir\build.make /nologo -$(MAKEFLAGS) program\linked_list_lib\CMakeFiles\linked_list_lib.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=29,30 "Built target linked_list_lib"
-.PHONY : structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
+.PHONY : program\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
 
 # Build rule for subdir invocation for target.
-structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\rule: cmake_check_build_system
+program\linked_list_lib\CMakeFiles\linked_list_lib.dir\rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) program\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 0
-.PHONY : structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\rule
+.PHONY : program\linked_list_lib\CMakeFiles\linked_list_lib.dir\rule
 
 # Convenience name for target.
-linked_list_lib: structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\rule
+linked_list_lib: program\linked_list_lib\CMakeFiles\linked_list_lib.dir\rule
 
 .PHONY : linked_list_lib
 
 # clean rule for target.
-structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\clean:
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\clean
-.PHONY : structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\clean
+program\linked_list_lib\CMakeFiles\linked_list_lib.dir\clean:
+	$(MAKE) $(MAKESILENT) -f program\linked_list_lib\CMakeFiles\linked_list_lib.dir\build.make /nologo -$(MAKEFLAGS) program\linked_list_lib\CMakeFiles\linked_list_lib.dir\clean
+.PHONY : program\linked_list_lib\CMakeFiles\linked_list_lib.dir\clean
 
 #=============================================================================
-# Target rules for target structure_templates_lib/red_black_tree_lib/CMakeFiles/red_black_tree_lib.dir
+# Target rules for target program/red_black_tree_lib/CMakeFiles/red_black_tree_lib.dir
 
 # All Build rule for target.
-structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all:
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\depend
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build
+program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all:
+	$(MAKE) $(MAKESILENT) -f program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\depend
+	$(MAKE) $(MAKESILENT) -f program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=31,32,33,34,35 "Built target red_black_tree_lib"
-.PHONY : structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
+.PHONY : program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
 
 # Build rule for subdir invocation for target.
-structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\rule: cmake_check_build_system
+program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 0
-.PHONY : structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\rule
+.PHONY : program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\rule
 
 # Convenience name for target.
-red_black_tree_lib: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\rule
+red_black_tree_lib: program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\rule
 
 .PHONY : red_black_tree_lib
 
 # clean rule for target.
-structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\clean:
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\clean
-.PHONY : structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\clean
+program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\clean:
+	$(MAKE) $(MAKESILENT) -f program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\clean
+.PHONY : program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\clean
 
 #=============================================================================
-# Target rules for target structure_templates_lib/tree_lib/CMakeFiles/tree_lib.dir
+# Target rules for target program/tree_lib/CMakeFiles/tree_lib.dir
 
 # All Build rule for target.
-structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\all:
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\depend
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\build
+program\tree_lib\CMakeFiles\tree_lib.dir\all:
+	$(MAKE) $(MAKESILENT) -f program\tree_lib\CMakeFiles\tree_lib.dir\build.make /nologo -$(MAKEFLAGS) program\tree_lib\CMakeFiles\tree_lib.dir\depend
+	$(MAKE) $(MAKESILENT) -f program\tree_lib\CMakeFiles\tree_lib.dir\build.make /nologo -$(MAKEFLAGS) program\tree_lib\CMakeFiles\tree_lib.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=40,41 "Built target tree_lib"
-.PHONY : structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\all
+.PHONY : program\tree_lib\CMakeFiles\tree_lib.dir\all
 
 # Build rule for subdir invocation for target.
-structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\rule: cmake_check_build_system
+program\tree_lib\CMakeFiles\tree_lib.dir\rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) program\tree_lib\CMakeFiles\tree_lib.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles 0
-.PHONY : structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\rule
+.PHONY : program\tree_lib\CMakeFiles\tree_lib.dir\rule
 
 # Convenience name for target.
-tree_lib: structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\rule
+tree_lib: program\tree_lib\CMakeFiles\tree_lib.dir\rule
 
 .PHONY : tree_lib
 
 # clean rule for target.
-structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\clean:
-	$(MAKE) $(MAKESILENT) -f structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\build.make /nologo -$(MAKEFLAGS) structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\clean
-.PHONY : structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\clean
+program\tree_lib\CMakeFiles\tree_lib.dir\clean:
+	$(MAKE) $(MAKESILENT) -f program\tree_lib\CMakeFiles\tree_lib.dir\build.make /nologo -$(MAKEFLAGS) program\tree_lib\CMakeFiles\tree_lib.dir\clean
+.PHONY : program\tree_lib\CMakeFiles\tree_lib.dir\clean
 
 #=============================================================================
 # Target rules for target Google_tests/CMakeFiles/Google_Tests_run.dir
 
 # All Build rule for target.
-Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\CMakeFiles\structure_templates_lib.dir\all
-Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\array_lib\CMakeFiles\array_lib.dir\all
-Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
-Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
-Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
-Google_tests\CMakeFiles\Google_Tests_run.dir\all: structure_templates_lib\tree_lib\CMakeFiles\tree_lib.dir\all
+Google_tests\CMakeFiles\Google_Tests_run.dir\all: program\CMakeFiles\structure_templates_lib.dir\all
+Google_tests\CMakeFiles\Google_Tests_run.dir\all: program\array_lib\CMakeFiles\array_lib.dir\all
+Google_tests\CMakeFiles\Google_Tests_run.dir\all: program\linked_list_lib\CMakeFiles\linked_list_lib.dir\all
+Google_tests\CMakeFiles\Google_Tests_run.dir\all: program\binary_heap_lib\CMakeFiles\binary_heap_lib.dir\all
+Google_tests\CMakeFiles\Google_Tests_run.dir\all: program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\all
+Google_tests\CMakeFiles\Google_Tests_run.dir\all: program\tree_lib\CMakeFiles\tree_lib.dir\all
 Google_tests\CMakeFiles\Google_Tests_run.dir\all: Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\all
 Google_tests\CMakeFiles\Google_Tests_run.dir\all: Google_tests\lib\googletest\CMakeFiles\gtest.dir\all
 	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\depend

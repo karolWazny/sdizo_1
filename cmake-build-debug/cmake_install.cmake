@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/cmake_install.cmake")
+  include("D:/projects/clion/sdizo_1/cmake-build-debug/program/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

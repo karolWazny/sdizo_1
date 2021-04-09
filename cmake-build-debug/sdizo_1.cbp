@@ -25,6 +25,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -49,6 +50,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -116,13 +118,14 @@
 				</MakeCommands>
 			</Target>
 			<Target title="structure_templates_lib">
-				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/structure_templates_lib.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib"/>
+				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/program/structure_templates_lib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/program"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -133,20 +136,21 @@
 					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\Makefile VERBOSE=1 structure_templates_lib"/>
-					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\Makefile VERBOSE=1 structure_templates_lib"/>
+					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="structure_templates_lib/fast">
-				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/structure_templates_lib.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib"/>
+				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/program/structure_templates_lib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/program"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -157,20 +161,21 @@
 					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\Makefile VERBOSE=1 structure_templates_lib/fast"/>
-					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\Makefile VERBOSE=1 structure_templates_lib/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="array_lib">
-				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/array_lib/array_lib.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/array_lib"/>
+				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/program/array_lib/array_lib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/program/array_lib"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -181,20 +186,21 @@
 					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\array_lib\Makefile VERBOSE=1 array_lib"/>
-					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\array_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\array_lib\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\array_lib\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\array_lib\Makefile VERBOSE=1 array_lib"/>
+					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\array_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\array_lib\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\array_lib\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="array_lib/fast">
-				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/array_lib/array_lib.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/array_lib"/>
+				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/program/array_lib/array_lib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/program/array_lib"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -205,20 +211,21 @@
 					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\array_lib\Makefile VERBOSE=1 array_lib/fast"/>
-					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\array_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\array_lib\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\array_lib\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\array_lib\Makefile VERBOSE=1 array_lib/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\array_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\array_lib\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\array_lib\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="binary_heap_lib">
-				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/binary_heap_lib/binary_heap_lib.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/binary_heap_lib"/>
+				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/program/binary_heap_lib/binary_heap_lib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/program/binary_heap_lib"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -229,20 +236,21 @@
 					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\binary_heap_lib\Makefile VERBOSE=1 binary_heap_lib"/>
-					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\binary_heap_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\binary_heap_lib\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\binary_heap_lib\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\binary_heap_lib\Makefile VERBOSE=1 binary_heap_lib"/>
+					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\binary_heap_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\binary_heap_lib\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\binary_heap_lib\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="binary_heap_lib/fast">
-				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/binary_heap_lib/binary_heap_lib.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/binary_heap_lib"/>
+				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/program/binary_heap_lib/binary_heap_lib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/program/binary_heap_lib"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -253,20 +261,21 @@
 					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\binary_heap_lib\Makefile VERBOSE=1 binary_heap_lib/fast"/>
-					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\binary_heap_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\binary_heap_lib\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\binary_heap_lib\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\binary_heap_lib\Makefile VERBOSE=1 binary_heap_lib/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\binary_heap_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\binary_heap_lib\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\binary_heap_lib\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="linked_list_lib">
-				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/linked_list_lib/linked_list_lib.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/linked_list_lib"/>
+				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/program/linked_list_lib/linked_list_lib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/program/linked_list_lib"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -277,20 +286,21 @@
 					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\linked_list_lib\Makefile VERBOSE=1 linked_list_lib"/>
-					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\linked_list_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\linked_list_lib\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\linked_list_lib\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\linked_list_lib\Makefile VERBOSE=1 linked_list_lib"/>
+					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\linked_list_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\linked_list_lib\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\linked_list_lib\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="linked_list_lib/fast">
-				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/linked_list_lib/linked_list_lib.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/linked_list_lib"/>
+				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/program/linked_list_lib/linked_list_lib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/program/linked_list_lib"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -301,20 +311,21 @@
 					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\linked_list_lib\Makefile VERBOSE=1 linked_list_lib/fast"/>
-					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\linked_list_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\linked_list_lib\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\linked_list_lib\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\linked_list_lib\Makefile VERBOSE=1 linked_list_lib/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\linked_list_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\linked_list_lib\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\linked_list_lib\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="red_black_tree_lib">
-				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/red_black_tree_lib/red_black_tree_lib.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/red_black_tree_lib"/>
+				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/program/red_black_tree_lib/red_black_tree_lib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/program/red_black_tree_lib"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -325,20 +336,21 @@
 					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib\Makefile VERBOSE=1 red_black_tree_lib"/>
-					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\red_black_tree_lib\Makefile VERBOSE=1 red_black_tree_lib"/>
+					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\red_black_tree_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\red_black_tree_lib\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\red_black_tree_lib\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="red_black_tree_lib/fast">
-				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/red_black_tree_lib/red_black_tree_lib.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/red_black_tree_lib"/>
+				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/program/red_black_tree_lib/red_black_tree_lib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/program/red_black_tree_lib"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -349,20 +361,21 @@
 					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib\Makefile VERBOSE=1 red_black_tree_lib/fast"/>
-					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\red_black_tree_lib\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\red_black_tree_lib\Makefile VERBOSE=1 red_black_tree_lib/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\red_black_tree_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\red_black_tree_lib\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\red_black_tree_lib\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="tree_lib">
-				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/tree_lib/tree_lib.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/tree_lib"/>
+				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/program/tree_lib/tree_lib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/program/tree_lib"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -373,20 +386,21 @@
 					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\tree_lib\Makefile VERBOSE=1 tree_lib"/>
-					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\tree_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\tree_lib\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\tree_lib\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\tree_lib\Makefile VERBOSE=1 tree_lib"/>
+					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\tree_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\tree_lib\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\tree_lib\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="tree_lib/fast">
-				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/tree_lib/tree_lib.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/structure_templates_lib/tree_lib"/>
+				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/program/tree_lib/tree_lib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/program/tree_lib"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
@@ -397,10 +411,10 @@
 					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\tree_lib\Makefile VERBOSE=1 tree_lib/fast"/>
-					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\tree_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\tree_lib\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\structure_templates_lib\tree_lib\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\tree_lib\Makefile VERBOSE=1 tree_lib/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\tree_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\tree_lib\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\tree_lib\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Google_Tests_run">
@@ -411,6 +425,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googletest/include"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googletest"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
@@ -437,6 +452,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googletest/include"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googletest"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
@@ -463,6 +479,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googlemock/include"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googlemock"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googletest/include"/>
@@ -491,6 +508,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googlemock/include"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googlemock"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googletest/include"/>
@@ -519,6 +537,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googlemock/include"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googlemock"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googletest/include"/>
@@ -547,6 +566,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googlemock/include"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googlemock"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googletest/include"/>
@@ -575,6 +595,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googletest/include"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googletest"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
@@ -601,6 +622,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googletest/include"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googletest"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
@@ -627,6 +649,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googletest/include"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googletest"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
@@ -653,6 +676,7 @@
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
+					<Add directory="D:/projects/clion/sdizo_1/program"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googletest/include"/>
 					<Add directory="D:/projects/clion/sdizo_1/Google_tests/lib/googletest"/>
 					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
@@ -723,7 +747,10 @@
 		<Unit filename="D:/projects/clion/sdizo_1/Google_tests/lib/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/main.cpp">
+		<Unit filename="D:/projects/clion/sdizo_1/program/Main.cpp">
+			<Option target="sdizo_1"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/program/Main.h">
 			<Option target="sdizo_1"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/array_lib/Array.h">
@@ -854,6 +881,9 @@
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/rbutil/PutPropertyRestorer.h">
 			<Option target="red_black_tree_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/structures.h">
+			<Option target="structure_templates_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/tree_lib/BinaryTree.h">
 			<Option target="tree_lib"/>
