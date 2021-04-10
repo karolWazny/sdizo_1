@@ -304,6 +304,33 @@ gtest_main\fast:
 	$(MAKE) $(MAKESILENT) -f Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\lib\googletest\CMakeFiles\gtest_main.dir\build
 .PHONY : gtest_main\fast
 
+program\ArrayOperations.obj: program\ArrayOperations.cpp.obj
+
+.PHONY : program\ArrayOperations.obj
+
+# target to build an object file
+program\ArrayOperations.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj
+.PHONY : program\ArrayOperations.cpp.obj
+
+program\ArrayOperations.i: program\ArrayOperations.cpp.i
+
+.PHONY : program\ArrayOperations.i
+
+# target to preprocess a source file
+program\ArrayOperations.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.i
+.PHONY : program\ArrayOperations.cpp.i
+
+program\ArrayOperations.s: program\ArrayOperations.cpp.s
+
+.PHONY : program\ArrayOperations.s
+
+# target to generate assembly for a file
+program\ArrayOperations.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.s
+.PHONY : program\ArrayOperations.cpp.s
+
 program\Main.obj: program\Main.cpp.obj
 
 .PHONY : program\Main.obj
@@ -354,6 +381,9 @@ help:
 	@echo ... sdizo_1
 	@echo ... structure_templates_lib
 	@echo ... tree_lib
+	@echo ... program/ArrayOperations.obj
+	@echo ... program/ArrayOperations.i
+	@echo ... program/ArrayOperations.s
 	@echo ... program/Main.obj
 	@echo ... program/Main.i
 	@echo ... program/Main.s

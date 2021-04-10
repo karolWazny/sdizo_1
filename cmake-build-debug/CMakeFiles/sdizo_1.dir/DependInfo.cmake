@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/projects/clion/sdizo_1/program/Main.cpp" "D:/projects/clion/sdizo_1/cmake-build-debug/CMakeFiles/sdizo_1.dir/program/main.cpp.obj"
+  "D:/projects/clion/sdizo_1/program/ArrayOperations.cpp" "D:/projects/clion/sdizo_1/cmake-build-debug/CMakeFiles/sdizo_1.dir/program/ArrayOperations.cpp.obj"
+  "D:/projects/clion/sdizo_1/program/Main.cpp" "D:/projects/clion/sdizo_1/cmake-build-debug/CMakeFiles/sdizo_1.dir/program/Main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

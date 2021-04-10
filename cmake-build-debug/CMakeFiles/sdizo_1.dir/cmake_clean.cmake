@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/sdizo_1.dir/program/ArrayOperations.cpp.obj"
   "CMakeFiles/sdizo_1.dir/program/Main.cpp.obj"
   "sdizo_1.exe"
   "sdizo_1.exe.manifest"

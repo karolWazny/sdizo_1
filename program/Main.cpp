@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Main.h"
+#include "ArrayOperations.h"
 
 int main(){
     auto program = Main();
@@ -13,6 +14,7 @@ int Main::run() {
         displayMenu();
         std::getline(std::wcin, input);
         interpretInput();
+        //system("cls");
     }
     return 0;
 }
@@ -26,12 +28,12 @@ void Main::displayMenu() {
     menuText += L"2. Operacje na liscie.\n";
     menuText += L"3. Operacje na kopcu.\n";
     menuText += L"4. Operacje na drzewie czerwono-czarnym.\n";
+    menuText += L"5. Zakoncz program.\n";
     std::wcout << menuText;
 }
 
 void Main::interpretInput() {
     int option;
-    //option = std::stoi(input);
     try{
         option = std::stoi(input);
         switch(option){
@@ -47,6 +49,9 @@ void Main::interpretInput() {
             case 4:
                 rbTreeOperations();
                 break;
+            case 5:
+                keepGoing = false;
+                break;
             default:
                 throw 4;
         }
@@ -57,7 +62,8 @@ void Main::interpretInput() {
 }
 
 void Main::arrayOperations() {
-
+    auto operations = ArrayOperations();
+    operations.run();
 }
 
 void Main::listOperations() {

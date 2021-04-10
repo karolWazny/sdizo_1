@@ -533,16 +533,16 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Python
-FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.9_3.9.752.0_x64__qbz5n2kfra8p0/python3.9.exe][cfound components: Interpreter ][v3.9.2()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.9_3.9.1264.0_x64__qbz5n2kfra8p0/python3.9.exe][cfound components: Interpreter ][v3.9.4()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/sdizo_1
 //Path to a program.
-_Python_EXECUTABLE:INTERNAL=C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.9_3.9.752.0_x64__qbz5n2kfra8p0/python3.9.exe
+_Python_EXECUTABLE:INTERNAL=C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.9_3.9.1264.0_x64__qbz5n2kfra8p0/python3.9.exe
 //Python Properties
-_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;9;2;32;;cp39-win_amd64;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.752.0_x64__qbz5n2kfra8p0\Lib;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.752.0_x64__qbz5n2kfra8p0\Lib;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.752.0_x64__qbz5n2kfra8p0\Lib\site-packages;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.752.0_x64__qbz5n2kfra8p0\Lib\site-packages
-_Python_INTERPRETER_SIGNATURE:INTERNAL=46cac6ccb8d722dfd04f4d0fd8ef2f0e
+_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;9;4;32;;cp39-win_amd64;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.1264.0_x64__qbz5n2kfra8p0\Lib;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.1264.0_x64__qbz5n2kfra8p0\Lib;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.1264.0_x64__qbz5n2kfra8p0\Lib\site-packages;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.1264.0_x64__qbz5n2kfra8p0\Lib\site-packages
+_Python_INTERPRETER_SIGNATURE:INTERNAL=ca2bb48e680ac2b46627cfe29d5549d0
 generated_dir:INTERNAL=D:/projects/clion/sdizo_1/cmake-build-debug/Google_tests/lib/googletest/generated
 //ADVANCED property for variable: gmock_build_tests
 gmock_build_tests-ADVANCED:INTERNAL=1

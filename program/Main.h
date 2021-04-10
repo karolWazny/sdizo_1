@@ -2,7 +2,6 @@
 #define SDIZO_1_MAIN_H
 
 #include <string>
-#include <structures.h>
 
 using String = std::wstring;
 
