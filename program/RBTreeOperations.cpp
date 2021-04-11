@@ -82,5 +82,19 @@ void RBTreeOperations::removeElement() {
 }
 
 void RBTreeOperations::findElement() {
-
+    std::string text = "Podaj element, ktory chcesz wyszukac:\n";
+    std::cout << text;
+    std::getline(std::cin, input);
+    int value;
+    value = std::stoi(input);
+    bool contains = tree.containsKey(value);
+    if(contains)
+    {
+        text = "Drzewo zawiera element o wartosci ";
+    } else {
+        text = "Drzewo nie zawiera elementu o wartosci ";
+    }
+    text += std::to_string(value);
+    text += ".\n";
+    std::cout << text;
 }
