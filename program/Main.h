@@ -3,6 +3,10 @@
 
 #include <string>
 
+
+#include "ArrayOperations.h"
+#include "ListOperations.h"
+
 using String = std::wstring;
 
 class Main
@@ -19,6 +23,9 @@ public:
 private:
     bool keepGoing = true;
     String input;
+
+    ArrayOperations arrayOperator;
+    ListOperations listOperator;
 };
 
 #endif //SDIZO_1_MAIN_H

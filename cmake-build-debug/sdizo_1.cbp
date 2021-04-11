@@ -753,6 +753,12 @@
 		<Unit filename="D:/projects/clion/sdizo_1/program/ArrayOperations.h">
 			<Option target="sdizo_1"/>
 		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/program/ListOperations.cpp">
+			<Option target="sdizo_1"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/program/ListOperations.h">
+			<Option target="sdizo_1"/>
+		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/program/Main.cpp">
 			<Option target="sdizo_1"/>
 		</Unit>

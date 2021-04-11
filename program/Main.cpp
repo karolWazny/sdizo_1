@@ -1,6 +1,5 @@
 #include <iostream>
 #include "Main.h"
-#include "ArrayOperations.h"
 
 int main(){
     auto program = Main();
@@ -62,12 +61,11 @@ void Main::interpretInput() {
 }
 
 void Main::arrayOperations() {
-    auto operations = ArrayOperations();
-    operations.run();
+    arrayOperator.run();
 }
 
 void Main::listOperations() {
-
+    listOperator.run();
 }
 
 void Main::heapOperations() {

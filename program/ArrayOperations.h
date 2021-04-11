@@ -14,6 +14,7 @@ private:
     void displayArray();
     void addElement();
     void removeElement();
+    void findElement();
 
     array tab = array();
 

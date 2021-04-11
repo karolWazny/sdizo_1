@@ -331,6 +331,33 @@ program\ArrayOperations.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.s
 .PHONY : program\ArrayOperations.cpp.s
 
+program\ListOperations.obj: program\ListOperations.cpp.obj
+
+.PHONY : program\ListOperations.obj
+
+# target to build an object file
+program\ListOperations.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj
+.PHONY : program\ListOperations.cpp.obj
+
+program\ListOperations.i: program\ListOperations.cpp.i
+
+.PHONY : program\ListOperations.i
+
+# target to preprocess a source file
+program\ListOperations.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.i
+.PHONY : program\ListOperations.cpp.i
+
+program\ListOperations.s: program\ListOperations.cpp.s
+
+.PHONY : program\ListOperations.s
+
+# target to generate assembly for a file
+program\ListOperations.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.s
+.PHONY : program\ListOperations.cpp.s
+
 program\Main.obj: program\Main.cpp.obj
 
 .PHONY : program\Main.obj
@@ -384,6 +411,9 @@ help:
 	@echo ... program/ArrayOperations.obj
 	@echo ... program/ArrayOperations.i
 	@echo ... program/ArrayOperations.s
+	@echo ... program/ListOperations.obj
+	@echo ... program/ListOperations.i
+	@echo ... program/ListOperations.s
 	@echo ... program/Main.obj
 	@echo ... program/Main.i
 	@echo ... program/Main.s

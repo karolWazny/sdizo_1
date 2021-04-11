@@ -28,6 +28,11 @@ private:
     int length;
 };
 
+class IndexOutOfBoundException : public std::exception
+{
+
+};
+
 template <typename T>
 Array<T>::Array()
 {
@@ -96,6 +101,10 @@ void Array<T>::swap(const int index1, const int index2)
 template<typename T>
 void Array<T>::putAtPosition(T element, const int index)
 {
+    if(index > length)
+    {
+        throw IndexOutOfBoundException();
+    }
     auto newArray = std::make_unique<T[]>(length + 1);
     int newArrayCount = 0;
     for(int i = 0; i < length; i++, newArrayCount++)
