@@ -6,6 +6,7 @@
 
 #include "ArrayOperations.h"
 #include "ListOperations.h"
+#include "HeapOperations.h"
 
 using String = std::wstring;
 
@@ -26,6 +27,7 @@ private:
 
     ArrayOperations arrayOperator;
     ListOperations listOperator;
+    HeapOperations heapOperator;
 };
 
 #endif //SDIZO_1_MAIN_H

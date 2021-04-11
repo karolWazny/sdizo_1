@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/sdizo_1.dir/program/ArrayOperations.cpp.obj"
+  "CMakeFiles/sdizo_1.dir/program/HeapOperations.cpp.obj"
   "CMakeFiles/sdizo_1.dir/program/ListOperations.cpp.obj"
   "CMakeFiles/sdizo_1.dir/program/Main.cpp.obj"
   "sdizo_1.exe"

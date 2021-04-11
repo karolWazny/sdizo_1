@@ -118,11 +118,31 @@ CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\sdizo_1.dir\program\ListOperations.cpp.s /c D:\projects\clion\sdizo_1\program\ListOperations.cpp
 <<
 
+CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: CMakeFiles\sdizo_1.dir\flags.make
+CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\program\HeapOperations.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sdizo_1.dir/program/HeapOperations.cpp.obj"
+	C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj /FdCMakeFiles\sdizo_1.dir\ /FS -c D:\projects\clion\sdizo_1\program\HeapOperations.cpp
+<<
+
+CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sdizo_1.dir/program/HeapOperations.cpp.i"
+	C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\cl.exe > CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\projects\clion\sdizo_1\program\HeapOperations.cpp
+<<
+
+CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sdizo_1.dir/program/HeapOperations.cpp.s"
+	C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.s /c D:\projects\clion\sdizo_1\program\HeapOperations.cpp
+<<
+
 # Object files for target sdizo_1
 sdizo_1_OBJECTS = \
 "CMakeFiles\sdizo_1.dir\program\Main.cpp.obj" \
 "CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj" \
-"CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj"
+"CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj" \
+"CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj"
 
 # External object files for target sdizo_1
 sdizo_1_EXTERNAL_OBJECTS =
@@ -130,6 +150,7 @@ sdizo_1_EXTERNAL_OBJECTS =
 sdizo_1.exe: CMakeFiles\sdizo_1.dir\program\Main.cpp.obj
 sdizo_1.exe: CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj
 sdizo_1.exe: CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj
+sdizo_1.exe: CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj
 sdizo_1.exe: CMakeFiles\sdizo_1.dir\build.make
 sdizo_1.exe: program\structure_templates_lib.lib
 sdizo_1.exe: program\array_lib\array_lib.lib
@@ -138,7 +159,7 @@ sdizo_1.exe: program\linked_list_lib\linked_list_lib.lib
 sdizo_1.exe: program\red_black_tree_lib\red_black_tree_lib.lib
 sdizo_1.exe: program\tree_lib\tree_lib.lib
 sdizo_1.exe: CMakeFiles\sdizo_1.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable sdizo_1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\projects\clion\sdizo_1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable sdizo_1.exe"
 	"D:\Program_Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\sdizo_1.dir --rc=D:\WINDOW~1\10\bin\100190~1.0\x86\rc.exe --mt=D:\WINDOW~1\10\bin\100190~1.0\x86\mt.exe --manifests  -- C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\sdizo_1.dir\objects1.rsp @<<
  /out:sdizo_1.exe /implib:sdizo_1.lib /pdb:D:\projects\clion\sdizo_1\cmake-build-debug\sdizo_1.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  program\structure_templates_lib.lib program\array_lib\array_lib.lib program\binary_heap_lib\binary_heap_lib.lib program\linked_list_lib\linked_list_lib.lib program\red_black_tree_lib\red_black_tree_lib.lib program\tree_lib\tree_lib.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

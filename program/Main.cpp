@@ -69,7 +69,7 @@ void Main::listOperations() {
 }
 
 void Main::heapOperations() {
-
+    heapOperator.run();
 }
 
 void Main::rbTreeOperations() {

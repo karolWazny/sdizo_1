@@ -331,6 +331,33 @@ program\ArrayOperations.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.s
 .PHONY : program\ArrayOperations.cpp.s
 
+program\HeapOperations.obj: program\HeapOperations.cpp.obj
+
+.PHONY : program\HeapOperations.obj
+
+# target to build an object file
+program\HeapOperations.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj
+.PHONY : program\HeapOperations.cpp.obj
+
+program\HeapOperations.i: program\HeapOperations.cpp.i
+
+.PHONY : program\HeapOperations.i
+
+# target to preprocess a source file
+program\HeapOperations.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.i
+.PHONY : program\HeapOperations.cpp.i
+
+program\HeapOperations.s: program\HeapOperations.cpp.s
+
+.PHONY : program\HeapOperations.s
+
+# target to generate assembly for a file
+program\HeapOperations.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.s
+.PHONY : program\HeapOperations.cpp.s
+
 program\ListOperations.obj: program\ListOperations.cpp.obj
 
 .PHONY : program\ListOperations.obj
@@ -411,6 +438,9 @@ help:
 	@echo ... program/ArrayOperations.obj
 	@echo ... program/ArrayOperations.i
 	@echo ... program/ArrayOperations.s
+	@echo ... program/HeapOperations.obj
+	@echo ... program/HeapOperations.i
+	@echo ... program/HeapOperations.s
 	@echo ... program/ListOperations.obj
 	@echo ... program/ListOperations.i
 	@echo ... program/ListOperations.s
