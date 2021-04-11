@@ -7,6 +7,7 @@
 #include "ArrayOperations.h"
 #include "ListOperations.h"
 #include "HeapOperations.h"
+#include "RBTreeOperations.h"
 
 using String = std::wstring;
 
@@ -28,6 +29,7 @@ private:
     ArrayOperations arrayOperator;
     ListOperations listOperator;
     HeapOperations heapOperator;
+    RBTreeOperations rbOperator;
 };
 
 #endif //SDIZO_1_MAIN_H

@@ -6,7 +6,8 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(sdizo_1 program/Main.cpp
         program/ArrayOperations.cpp
         program/ListOperations.cpp
-        program/HeapOperations.cpp)
+        program/HeapOperations.cpp
+        program/RBTreeOperations.cpp)
 
 include_directories(structure_templates_lib program)
 add_subdirectory(structure_templates_lib program)

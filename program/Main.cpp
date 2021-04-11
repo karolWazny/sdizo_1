@@ -73,5 +73,5 @@ void Main::heapOperations() {
 }
 
 void Main::rbTreeOperations() {
-
+    rbOperator.run();
 }
