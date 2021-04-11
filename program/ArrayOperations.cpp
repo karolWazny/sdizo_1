@@ -38,6 +38,7 @@ void ArrayOperations::interpretInput() {
                 addElement();
                 break;
             case 4:
+                removeElement();
                 break;
             case 6:
                 displayArray();
@@ -65,4 +66,21 @@ void ArrayOperations::displayArray() {
 void ArrayOperations::addElement() {
     std::string text = "Podaj pozycje, na ktorej chcesz dodac element:\n";
     std::cout << text;
+    std::getline(std::cin, input);
+    int position = std::stoi(input);//todo walidacja
+    text = "Podaj wartosc, ktora chcesz umiescic:\n";
+    std::cout << text;
+    std::getline(std::cin, input);
+    int value = std::stoi(input);//todo walidacja
+    tab.putAtPosition(value, position);
+    text = "Dodano element: ";
+    text += std::to_string(value);
+    text += " na pozycji o ideksie ";
+    text += std::to_string(position);
+    text += "\n";
+    std::cout << text;
+}
+
+void ArrayOperations::removeElement() {
+
 }

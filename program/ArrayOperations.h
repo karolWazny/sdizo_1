@@ -13,6 +13,7 @@ private:
     void fromFile();
     void displayArray();
     void addElement();
+    void removeElement();
 
     array tab = array();
 
