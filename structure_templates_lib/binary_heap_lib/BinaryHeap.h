@@ -1,7 +1,3 @@
-//
-// Created by admin on 03.03.2021.
-//
-
 #ifndef SDIZO_1_BINARYHEAP_H
 #define SDIZO_1_BINARYHEAP_H
 
@@ -13,8 +9,11 @@ class BinaryHeap
 public:
     BinaryHeap();
     void add(T element);
-    void remove(T element);
+    bool remove(T element);
     bool contains(T element);
+    T getMax();
+    T extractMax();
+    int getSize();
 private:
     std::unique_ptr<T[]> content;
     int size;
@@ -25,7 +24,7 @@ private:
     int calculateParentPosition(int childPosition);
     int findPositionOfElementInSubtree(int subtreeRootPosition, T element);
     int calculateLeftChildPosition(int parentPosition);
-    int calculateRigthChildPositiont(int parentposition);
+    int calculateRightChildPosition(int parentPosition);
 };
 
 template<typename T>
@@ -84,12 +83,15 @@ int BinaryHeap<T>::calculateParentPosition(const int childPosition) {
 }
 
 template<typename T>
-void BinaryHeap<T>::remove(T element) {
+bool BinaryHeap<T>::remove(T element) {
     int position = findPositionOfElementInSubtree(0, element);
+    if(position == -1)
+        return false;
     size--;
-    swap(position, size)
+    swap(position, size);
     cascadeDownFrom(position);
     reallocateContent();
+    return true;
 }
 
 template<typename T>
@@ -108,7 +110,7 @@ int BinaryHeap<T>::findPositionOfElementInSubtree(const int subtreeRootPosition,
     {
         return buffer;
     }
-    return findPositionOfElementInSubtree(calculateRigthChildPositiont(subtreeRootPosition),
+    return findPositionOfElementInSubtree(calculateRightChildPosition(subtreeRootPosition),
                                           element);
 }
 
@@ -118,8 +120,8 @@ int BinaryHeap<T>::calculateLeftChildPosition(const int parentPosition) {
 }
 
 template<typename T>
-int BinaryHeap<T>::calculateRigthChildPositiont(const int parentposition) {
-    return calculateLeftChildPosition(parentposition) + 1;
+int BinaryHeap<T>::calculateRightChildPosition(const int parentPosition) {
+    return calculateLeftChildPosition(parentPosition) + 1;
 }
 
 template<typename T>
@@ -129,7 +131,7 @@ bool BinaryHeap<T>::contains(T element) {
 
 template<typename T>
 void BinaryHeap<T>::cascadeDownFrom(const int position) {
-    int rightChildPosition = calculateRigthChildPositiont(position);
+    int rightChildPosition = calculateRightChildPosition(position);
     int leftChildPosition = calculateLeftChildPosition(position);
     int biggerChildPosition;
     if(leftChildPosition >= size)
@@ -148,6 +150,26 @@ void BinaryHeap<T>::cascadeDownFrom(const int position) {
         swap(biggerChildPosition, position);
         cascadeDownFrom(biggerChildPosition);
     }
+}
+
+template<typename T>
+T BinaryHeap<T>::getMax() {
+    return content[0];
+}
+
+template<typename T>
+T BinaryHeap<T>::extractMax() {
+    T out = getMax();
+    size--;
+    swap(0, size);
+    cascadeDownFrom(0);
+    reallocateContent();
+    return out;
+}
+
+template<typename T>
+int BinaryHeap<T>::getSize() {
+    return size;
 }
 
 #endif //SDIZO_1_BINARYHEAP_H

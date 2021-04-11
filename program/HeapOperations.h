@@ -11,6 +11,10 @@ public:
 private:
     void displayMenu();
     void interpretInput();
+    void addElement();
+    void display();
+    void removeElement();
+    void findElement();
 
     bool active;
     std::string input;

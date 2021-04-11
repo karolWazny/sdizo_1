@@ -11,9 +11,9 @@ void HeapOperations::run() {
 }
 
 void HeapOperations::displayMenu() {
-    std::string text = "OPERACJE NA KOPCU\n"
+    std::string text = "OPERACJE NA KOPCU MAKSYMALNYM\n"
                        "1. Zbuduj z pliku\n"
-                       "2. Stworz nowa liste\n"
+                       "2. Stworz nowy kopiec\n"
                        "3. Dodaj element\n"
                        "4. Usun element\n"
                        "5. Znajdz element\n"
@@ -33,12 +33,16 @@ void HeapOperations::interpretInput() {
                 mHeap = heap();
                 break;
             case 3:
+                addElement();
                 break;
             case 4:
+                removeElement();
                 break;
             case 5:
+                findElement();
                 break;
             case 6:
+                display();
                 break;
             case 7:
                 active = false;
@@ -50,4 +54,67 @@ void HeapOperations::interpretInput() {
         std::wcout << L"Niewlasciwy symbol." << std::endl;
         return;
     }
+}
+
+void HeapOperations::addElement() {
+    std::string text = "Podaj wartosc, ktora chcesz umiescic:\n";
+    std::cout << text;
+    std::getline(std::cin, input);
+    int value = std::stoi(input);
+    mHeap.add(value);
+
+    std::cout << text;
+}
+
+void HeapOperations::display() {
+    //todo zaimplementowac sensowny sposob prezentacji kopca
+}
+
+void HeapOperations::removeElement() {
+    std::string text = "Podaj wartosc klucza, ktory chcesz usunac\n"
+                       "(uzyj 'max', zeby usunac element z korzenia kopca):\n";
+    std::cout << text;
+    std::getline(std::cin, input);
+    try{
+        int keyToRemove;
+        if(!mHeap.getSize())
+            throw IndexOutOfBoundException();
+        if(input == "max")
+        {
+            keyToRemove = mHeap.extractMax();
+            text = "Usunieto pierwszy element o wartosci ";
+        } else {
+            keyToRemove = std::stoi(input);
+            bool removed = mHeap.remove(keyToRemove);
+            if(removed){
+                text = "Usunieto element o wartosci ";
+            } else {
+                text = "Kopiec nie zawieral elementu o wartosci ";
+            }
+        }
+        text += std::to_string(keyToRemove);
+        text += ".\n";
+    } catch (IndexOutOfBoundException& e) {
+        text = "Niewlasciwy indeks!\n";
+    }
+
+    std::cout << text;
+}
+
+void HeapOperations::findElement() {
+    std::string text = "Podaj element, ktory chcesz wyszukac:\n";
+    std::cout << text;
+    std::getline(std::cin, input);
+    int value;
+    value = std::stoi(input);
+    bool contains = mHeap.contains(value);
+    if(contains)
+    {
+        text = "Kopiec zawiera element o wartosci ";
+    } else {
+        text = "Kopiec nie zawiera elementu o wartosci ";
+    }
+    text += std::to_string(value);
+    text += ".\n";
+    std::cout << text;
 }
