@@ -6,6 +6,14 @@ int main(){
     return program.run();
 }
 
+int main1(){
+    for(unsigned char i = 0; i < 256; i++)
+    {
+        std::cout << std::to_string(i) << '\t' << i << std::endl;
+    }
+    return 0;
+}
+
 int Main::run() {
     displayGreeting();
     while(keepGoing)

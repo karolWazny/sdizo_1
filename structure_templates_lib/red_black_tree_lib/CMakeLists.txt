@@ -24,6 +24,7 @@ set(HEADER_FILES
         node_util/ConsequentLiberator.h
         node_util/NodeUtility.h
         node_util/RootFinder.h
+        node_util/TreeSizer.h
         nodes/RBSentinel.h
         nodes/RBNode.h
         nodes/NodeFactory.h

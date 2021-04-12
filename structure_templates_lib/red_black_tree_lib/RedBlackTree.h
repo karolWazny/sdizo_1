@@ -18,6 +18,7 @@ public:
     bool containsKey(T key);
     void removeKey(T key);
     string toString();
+    string getRepresentation();
 private:
     NodePointer<T> root;
 };
@@ -54,6 +55,11 @@ void RedBlackTree<T>::removeKey(T key) {
 template<typename T>
 string RedBlackTree<T>::toString() {
     return TreePrinter<T>().toString(root);
+}
+
+template<typename T>
+string RedBlackTree<T>::getRepresentation() {
+    return TreePrinter<T>().rbMonospaceRepresentation(root);
 }
 
 #endif //SDIZO_1_REDBLACKTREE_H

@@ -42,6 +42,7 @@ void RBTreeOperations::interpretInput() {
                 findElement();
                 break;
             case 6:
+                display();
                 break;
             case 7:
                 active = false;
@@ -97,4 +98,8 @@ void RBTreeOperations::findElement() {
     text += std::to_string(value);
     text += ".\n";
     std::cout << text;
+}
+
+void RBTreeOperations::display() {
+    std::cout << tree.getRepresentation() << std::endl;
 }

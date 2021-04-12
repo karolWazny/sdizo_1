@@ -14,6 +14,7 @@ private:
     void addElement();
     void removeElement();
     void findElement();
+    void display();
 
     bool active;
 
