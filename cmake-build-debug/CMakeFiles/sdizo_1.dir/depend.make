@@ -24,6 +24,7 @@ CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_l
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\PlaceToPutFinder.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\RootFinder.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\Side.h
+CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\TreeSizer.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Node.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeFactory.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeImpl.h
@@ -61,6 +62,7 @@ CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_li
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\PlaceToPutFinder.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\RootFinder.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\Side.h
+CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\TreeSizer.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Node.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeFactory.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeImpl.h
@@ -98,6 +100,7 @@ CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_li
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\PlaceToPutFinder.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\RootFinder.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\Side.h
+CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\TreeSizer.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Node.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeFactory.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeImpl.h
@@ -135,6 +138,7 @@ CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\red_blac
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\PlaceToPutFinder.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\RootFinder.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\Side.h
+CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\TreeSizer.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Node.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeFactory.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeImpl.h
@@ -176,6 +180,7 @@ CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\PlaceToPutFinder.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\RootFinder.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\Side.h
+CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\node_util\TreeSizer.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\Node.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeFactory.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\red_black_tree_lib\nodes\NodeImpl.h

@@ -19,6 +19,7 @@ public:
     void removeKey(T key);
     string toString();
     string getRepresentation();
+    bool isEmpty();
 private:
     NodePointer<T> root;
 };
@@ -60,6 +61,11 @@ string RedBlackTree<T>::toString() {
 template<typename T>
 string RedBlackTree<T>::getRepresentation() {
     return TreePrinter<T>().rbMonospaceRepresentation(root);
+}
+
+template<typename T>
+bool RedBlackTree<T>::isEmpty() {
+    return root->isNil();
 }
 
 #endif //SDIZO_1_REDBLACKTREE_H

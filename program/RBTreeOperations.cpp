@@ -61,25 +61,36 @@ void RBTreeOperations::addElement() {
     std::cout << text;
     std::getline(std::cin, input);
     int value = std::stoi(input);
-    try{
-        tree.put(value);
-        text = "Dodano element ";
-        text += std::to_string(value);
-        text += ".\n";
-    } catch (IndexOutOfBoundException& e) {
-        text = "Niewlasciwy indeks!\n";
-    }
+    tree.put(value);
+    text = "Dodano element ";
+    text += std::to_string(value);
+    text += ".\n";
 
     std::cout << text;
 }
 
 void RBTreeOperations::removeElement() {
+    if(tree.isEmpty())
+    {
+        std::cout << "Nie mozna usunac klucza z pustego drzewa.\n"
+                     "Operacje anulowano.\n";
+        return;
+    }
     std::string text = "Podaj wartosc klucza, ktory chcesz usunac:\n";
     std::cout << text;
     std::getline(std::cin, input);
     int keyToRemove;
     keyToRemove = std::stoi(input);
+    if(!tree.containsKey(keyToRemove)){
+        std::cout << "Drzewo nie zawiera klucza o wartosci "
+            << std::to_string(keyToRemove)
+            << std::endl << "Operacje anulowano.\n";
+        return;
+    }
     tree.removeKey(keyToRemove);
+    std::cout << "Usunieto klucz o wartosci "
+        << std::to_string(keyToRemove)
+        << ".\n";
 }
 
 void RBTreeOperations::findElement() {

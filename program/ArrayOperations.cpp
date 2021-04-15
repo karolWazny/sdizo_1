@@ -107,6 +107,12 @@ void ArrayOperations::removeElement() {
     std::string text = "Podaj pozycje, z ktorej chcesz usunac element:\n"
                        "(uzyj 'last', zeby usunac ostatni element,\n"
                        "lub 'first', zeby usunac pierwszy):\n";
+    if(tab.getLength() == 0)
+    {
+        std::cout << "Nie mozna usunac elementu z pustej tablicy.\n"
+                     "Operacje anulowano.\n";
+        return;
+    }
     std::cout << text;
     std::getline(std::cin, input);
     try{
@@ -121,13 +127,15 @@ void ArrayOperations::removeElement() {
             tab.removeLast();
         } else {
             position = std::stoi(input);
+            if(position >= tab.getLength())
+                throw IndexOutOfBoundException();
             tab.removeAt(position);
         }
         text = "Usunieto element na pozycji o ideksie ";
         text += std::to_string(position);
         text += "\n";
     } catch (IndexOutOfBoundException& e) {
-        text = "Niewlasciwy indeks!\n";
+        text = "Niewlasciwy indeks!\nOperacje anulowano.\n";
     }
 
     std::cout << text;

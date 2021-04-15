@@ -101,10 +101,12 @@ void ListOperations::removeElement() {
     std::string text = "Podaj wartosc klucza, ktory chcesz usunac:\n"
                        "(uzyj 'last', zeby usunac ostatni element,\n"
                        "lub 'first', zeby usunac pierwszy):\n";
-    std::cout << text;
-    std::getline(std::cin, input);
     try{
+        if(linkedList.isEmpty())
+            throw IndexOutOfBoundException();
         int keyToRemove;
+        std::cout << text;
+        std::getline(std::cin, input);
         if(input == "first")
         {
             linkedList.removeFirst();
@@ -125,7 +127,8 @@ void ListOperations::removeElement() {
             text += ".\n";
         }
     } catch (IndexOutOfBoundException& e) {
-        text = "Niewlasciwy indeks!\n";
+        text = "Nie mozna usunac elementu z pustej listy.\n"
+               "Operacje anulowano.\n";
     }
 
     std::cout << text;
