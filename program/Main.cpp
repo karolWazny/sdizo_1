@@ -1,16 +1,18 @@
 #include <iostream>
 #include "Main.h"
 
+#include "fstream"
+
 int main(){
     auto program = Main();
     return program.run();
 }
 
 int main1(){
-    for(unsigned char i = 0; i < 256; i++)
-    {
-        std::cout << std::to_string(i) << '\t' << i << std::endl;
-    }
+    std::ofstream stream;
+    stream.open("plik.txt");
+    stream << "Raz dwa trzy, baba jaga patrzy.";
+    stream.close();
     return 0;
 }
 

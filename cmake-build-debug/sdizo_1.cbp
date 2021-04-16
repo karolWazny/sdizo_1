@@ -777,6 +777,12 @@
 		<Unit filename="D:/projects/clion/sdizo_1/program/RBTreeOperations.h">
 			<Option target="sdizo_1"/>
 		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/program/TextFileReader.cpp">
+			<Option target="sdizo_1"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/program/TextFileReader.h">
+			<Option target="sdizo_1"/>
+		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/array_lib/Array.h">
 			<Option target="array_lib"/>
 		</Unit>

@@ -83,8 +83,8 @@ void RBTreeOperations::removeElement() {
     keyToRemove = std::stoi(input);
     if(!tree.containsKey(keyToRemove)){
         std::cout << "Drzewo nie zawiera klucza o wartosci "
-            << std::to_string(keyToRemove)
-            << std::endl << "Operacje anulowano.\n";
+            << std::to_string(keyToRemove) << ".\n"
+            << "Operacje anulowano.\n";
         return;
     }
     tree.removeKey(keyToRemove);

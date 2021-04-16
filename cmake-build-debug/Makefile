@@ -439,6 +439,33 @@ program\RBTreeOperations.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.s
 .PHONY : program\RBTreeOperations.cpp.s
 
+program\TextFileReader.obj: program\TextFileReader.cpp.obj
+
+.PHONY : program\TextFileReader.obj
+
+# target to build an object file
+program\TextFileReader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\TextFileReader.cpp.obj
+.PHONY : program\TextFileReader.cpp.obj
+
+program\TextFileReader.i: program\TextFileReader.cpp.i
+
+.PHONY : program\TextFileReader.i
+
+# target to preprocess a source file
+program\TextFileReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\TextFileReader.cpp.i
+.PHONY : program\TextFileReader.cpp.i
+
+program\TextFileReader.s: program\TextFileReader.cpp.s
+
+.PHONY : program\TextFileReader.s
+
+# target to generate assembly for a file
+program\TextFileReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\TextFileReader.cpp.s
+.PHONY : program\TextFileReader.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -477,6 +504,9 @@ help:
 	@echo ... program/RBTreeOperations.obj
 	@echo ... program/RBTreeOperations.i
 	@echo ... program/RBTreeOperations.s
+	@echo ... program/TextFileReader.obj
+	@echo ... program/TextFileReader.i
+	@echo ... program/TextFileReader.s
 .PHONY : help
 
 

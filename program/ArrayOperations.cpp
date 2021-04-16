@@ -1,5 +1,6 @@
 #include "ArrayOperations.h"
 #include <iostream>
+#include "TextFileReader.h"
 
 void ArrayOperations::run() {
     active = true;
@@ -60,7 +61,22 @@ void ArrayOperations::interpretInput() {
 }
 
 void ArrayOperations::fromFile() {
-
+    std::string text = "Wprowadz nazwe, sciezke wzgledem aktualnego folderu,\n"
+                       "lub pelna sciezke do pliku:\n";
+    std::cout << text;
+    std::string filename;
+    std::getline(std::cin, filename);
+    try {
+        TextFileReader reader;
+        auto content = reader.fromFile(filename);
+        for(int i = 1; i <= content[0]; i++)
+        {
+            tab.pushBack(content[i]);
+        }
+    } catch(...) {
+        std::cout << "Wystapil problem.\n"
+                     "Operacje anulowano.\n";
+    }
 }
 
 void ArrayOperations::displayArray() {

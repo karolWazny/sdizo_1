@@ -367,8 +367,12 @@ TreePrinter.h
 ../structure_templates_lib/red_black_tree_lib/TreePrinter.h
 string
 -
-red_black_tree_lib/nodes/Node.h
-../structure_templates_lib/red_black_tree_lib/red_black_tree_lib/nodes/Node.h
+vector
+-
+red_black_tree_lib/nodes/RBNode.h
+../structure_templates_lib/red_black_tree_lib/red_black_tree_lib/nodes/RBNode.h
+red_black_tree_lib/node_util/TreeSizer.h
+../structure_templates_lib/red_black_tree_lib/red_black_tree_lib/node_util/TreeSizer.h
 
 ../structure_templates_lib/red_black_tree_lib/colors/Black.h
 Colored.h
@@ -446,6 +450,10 @@ red_black_tree_lib/node_util/NodeFinder.h
 
 ../structure_templates_lib/red_black_tree_lib/node_util/Side.h
 
+../structure_templates_lib/red_black_tree_lib/node_util/TreeSizer.h
+red_black_tree_lib/nodes/Node.h
+../structure_templates_lib/red_black_tree_lib/node_util/red_black_tree_lib/nodes/Node.h
+
 ../structure_templates_lib/red_black_tree_lib/nodes/Node.h
 memory
 -
@@ -519,14 +527,6 @@ red_black_tree_lib/nodes/Node.h
 ../structure_templates_lib/red_black_tree_lib/rbutil/red_black_tree_lib/nodes/Node.h
 red_black_tree_lib/node_util/NodeRotator.h
 ../structure_templates_lib/red_black_tree_lib/rbutil/red_black_tree_lib/node_util/NodeRotator.h
-
-D:/projects/clion/sdizo_1/Google_tests/RBRemoverTest.cpp
-gtest/gtest.h
-D:/projects/clion/sdizo_1/Google_tests/gtest/gtest.h
-red_black_tree_lib/nodes/RBFactory.h
--
-red_black_tree_lib/RBRemover.h
--
 
 D:/projects/clion/sdizo_1/Google_tests/RedBlackTreeTests.cpp
 gtest/gtest.h
