@@ -18,6 +18,13 @@ private:
     void timeMeasurment();
     void measureFindingTime();
     void measurePuttingTime();
+    void read();
+    int readInt();
+    unsigned long long measPutBeg(int size);
+    unsigned long long measPutMid(int size);
+    unsigned long long measPutEnd(int size);
+
+    array generateArray(int param);
 
     array tab = array();
 

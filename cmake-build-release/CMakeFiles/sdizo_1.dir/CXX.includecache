@@ -15,6 +15,8 @@ string
 ../structure_templates_lib/binary_heap_lib/BinaryHeap.h
 memory
 -
+string
+-
 
 ../structure_templates_lib/linked_list_lib/INextable.h
 memory
@@ -40,26 +42,6 @@ binary_heap_lib/BinaryHeap.h
 array_lib/Array.h
 ../structure_templates_lib/array_lib/Array.h
 
-../structure_templates_lib/trees_lib/RBPutter.h
-trees_lib/nodes/RBFactory.h
--
-trees_lib/node_util/NodePutter.h
-../structure_templates_lib/trees_lib/trees_lib/node_util/NodePutter.h
-trees_lib/rbutil/PutPropertyRestorer.h
-../structure_templates_lib/trees_lib/trees_lib/rbutil/PutPropertyRestorer.h
-
-../structure_templates_lib/trees_lib/RBRemover.h
-trees_lib/node_util/NodeRotator.h
--
-trees_lib/node_util/KeyFinder.h
-../structure_templates_lib/trees_lib/trees_lib/node_util/KeyFinder.h
-trees_lib/node_util/ConsequentFinder.h
-../structure_templates_lib/trees_lib/trees_lib/node_util/ConsequentFinder.h
-trees_lib/node_util/ConsequentLiberator.h
-../structure_templates_lib/trees_lib/trees_lib/node_util/ConsequentLiberator.h
-trees_lib/node_util/NodeReplacer.h
-../structure_templates_lib/trees_lib/trees_lib/node_util/NodeReplacer.h
-
 ../structure_templates_lib/trees_lib/RedBlackTree.h
 trees_lib/nodes/Node.h
 ../structure_templates_lib/trees_lib/trees_lib/nodes/Node.h
@@ -67,22 +49,12 @@ trees_lib/node_util/KeyFinder.h
 ../structure_templates_lib/trees_lib/trees_lib/node_util/KeyFinder.h
 trees_lib/nodes/RBFactory.h
 ../structure_templates_lib/trees_lib/trees_lib/nodes/RBFactory.h
-RBPutter.h
-../structure_templates_lib/trees_lib/RBPutter.h
-RBRemover.h
-../structure_templates_lib/trees_lib/RBRemover.h
-TreePrinter.h
-../structure_templates_lib/trees_lib/TreePrinter.h
-
-../structure_templates_lib/trees_lib/TreePrinter.h
-string
--
-vector
--
-trees_lib/nodes/RBNode.h
-../structure_templates_lib/trees_lib/trees_lib/nodes/RBNode.h
-trees_lib/node_util/TreeSizer.h
-../structure_templates_lib/trees_lib/trees_lib/node_util/TreeSizer.h
+trees_lib/rbutil/RBPutter.h
+../structure_templates_lib/trees_lib/trees_lib/rbutil/RBPutter.h
+trees_lib/rbutil/RBRemover.h
+../structure_templates_lib/trees_lib/trees_lib/rbutil/RBRemover.h
+trees_lib/node_util/TreePrinter.h
+../structure_templates_lib/trees_lib/trees_lib/node_util/TreePrinter.h
 
 ../structure_templates_lib/trees_lib/colors/Black.h
 Colored.h
@@ -160,6 +132,16 @@ trees_lib/node_util/NodeFinder.h
 
 ../structure_templates_lib/trees_lib/node_util/Side.h
 
+../structure_templates_lib/trees_lib/node_util/TreePrinter.h
+string
+-
+vector
+-
+trees_lib/nodes/RBNode.h
+../structure_templates_lib/trees_lib/node_util/trees_lib/nodes/RBNode.h
+trees_lib/node_util/TreeSizer.h
+../structure_templates_lib/trees_lib/node_util/trees_lib/node_util/TreeSizer.h
+
 ../structure_templates_lib/trees_lib/node_util/TreeSizer.h
 trees_lib/nodes/Node.h
 ../structure_templates_lib/trees_lib/node_util/trees_lib/nodes/Node.h
@@ -235,18 +217,42 @@ NodeFactory.h
 ../structure_templates_lib/trees_lib/rbutil/PutPropertyRestorer.h
 trees_lib/node_util/NodeUtility.h
 ../structure_templates_lib/trees_lib/rbutil/trees_lib/node_util/NodeUtility.h
-trees_lib/nodes/Node.h
-../structure_templates_lib/trees_lib/rbutil/trees_lib/nodes/Node.h
 trees_lib/node_util/NodeRotator.h
 ../structure_templates_lib/trees_lib/rbutil/trees_lib/node_util/NodeRotator.h
+trees_lib/nodes/RBNode.h
+../structure_templates_lib/trees_lib/rbutil/trees_lib/nodes/RBNode.h
+
+../structure_templates_lib/trees_lib/rbutil/RBPutter.h
+trees_lib/nodes/RBFactory.h
+-
+trees_lib/node_util/NodePutter.h
+../structure_templates_lib/trees_lib/rbutil/trees_lib/node_util/NodePutter.h
+trees_lib/rbutil/PutPropertyRestorer.h
+../structure_templates_lib/trees_lib/rbutil/trees_lib/rbutil/PutPropertyRestorer.h
+
+../structure_templates_lib/trees_lib/rbutil/RBRemover.h
+trees_lib/node_util/NodeRotator.h
+-
+trees_lib/node_util/KeyFinder.h
+../structure_templates_lib/trees_lib/rbutil/trees_lib/node_util/KeyFinder.h
+trees_lib/node_util/ConsequentFinder.h
+../structure_templates_lib/trees_lib/rbutil/trees_lib/node_util/ConsequentFinder.h
+trees_lib/node_util/ConsequentLiberator.h
+../structure_templates_lib/trees_lib/rbutil/trees_lib/node_util/ConsequentLiberator.h
+trees_lib/node_util/NodeReplacer.h
+../structure_templates_lib/trees_lib/rbutil/trees_lib/node_util/NodeReplacer.h
 
 D:/projects/clion/sdizo_1/program/ArrayOperations.cpp
 ArrayOperations.h
 D:/projects/clion/sdizo_1/program/ArrayOperations.h
 iostream
 -
+cstdlib
+-
 TextFileReader.h
 D:/projects/clion/sdizo_1/program/TextFileReader.h
+StopWatch.h
+D:/projects/clion/sdizo_1/program/StopWatch.h
 
 D:/projects/clion/sdizo_1/program/ArrayOperations.h
 string
@@ -282,6 +288,26 @@ string
 structures.h
 -
 
+D:/projects/clion/sdizo_1/program/Main.cpp
+iostream
+-
+Main.h
+D:/projects/clion/sdizo_1/program/Main.h
+fstream
+D:/projects/clion/sdizo_1/program/fstream
+
+D:/projects/clion/sdizo_1/program/Main.h
+string
+-
+ArrayOperations.h
+D:/projects/clion/sdizo_1/program/ArrayOperations.h
+ListOperations.h
+D:/projects/clion/sdizo_1/program/ListOperations.h
+HeapOperations.h
+D:/projects/clion/sdizo_1/program/HeapOperations.h
+RBTreeOperations.h
+D:/projects/clion/sdizo_1/program/RBTreeOperations.h
+
 D:/projects/clion/sdizo_1/program/RBTreeOperations.cpp
 RBTreeOperations.h
 D:/projects/clion/sdizo_1/program/RBTreeOperations.h
@@ -294,6 +320,10 @@ structures.h
 iostream
 -
 string
+-
+
+D:/projects/clion/sdizo_1/program/StopWatch.h
+windows.h
 -
 
 D:/projects/clion/sdizo_1/program/TextFileReader.h

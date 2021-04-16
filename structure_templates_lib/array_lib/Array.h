@@ -11,6 +11,7 @@ class Array
 {
 public:
     Array<T>();
+    Array<T>(int initialSize);
     void putAtPosition(T, const int);
     void swap(const int, const int);
     T removeAt(const int index);
@@ -23,6 +24,7 @@ public:
     bool isEmpty();
     int getLength();
     std::string toString();
+    T& operator[](int);
 private:
     std::unique_ptr<T[]> elements;
     int length;
@@ -158,6 +160,17 @@ bool Array<T>::contains(T element) {
         }
     }
     return false;
+}
+
+template<typename T>
+Array<T>::Array(int initialSize) {
+    length = initialSize;
+    elements = std::make_unique<T[]>(initialSize);
+}
+
+template<typename T>
+T &Array<T>::operator[](int index) {
+    return elements[index];
 }
 
 #endif //SDIZO_1_ARRAY_H

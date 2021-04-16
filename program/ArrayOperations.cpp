@@ -235,16 +235,11 @@ void ArrayOperations::measureFindingTime() {
         default:
             throw 4;
     }
-    srand((unsigned)time(0));
     unsigned long long average = 0;
     for(int i = 0; i < 128; i++)
     {
-        array measurementsArray;
+        array measurementsArray = generateArray(numberOfElements);
         std::cout << "|";//todo
-        for(int j = 0; j < numberOfElements; j++)
-        {
-            measurementsArray.pushBack(rand() % (numberOfElements/2));
-        }
         int32_t seekedElement = rand() % (numberOfElements/2);
         StopWatch watch;
         bool contains;
@@ -273,6 +268,131 @@ void ArrayOperations::measureFindingTime() {
 }
 
 void ArrayOperations::measurePuttingTime() {
+    std::cout << "Dla jakiego rozmiaru struktury chcesz mierzyc czas?\n"
+                 "1. 2500\n"
+                 "2. 5000\n"
+                 "3. 12500\n"
+                 "4. 25000\n"
+                 "5. 50000\n";
+    int numberOfElements = readInt();
+    switch(numberOfElements)
+    {
+        case 1:
+            numberOfElements = 2500;
+            break;
+        case 2:
+            numberOfElements = 5000;
+            break;
+        case 3:
+            numberOfElements = 12500;
+            break;
+        case 4:
+            numberOfElements = 25000;
+            break;
+        case 5:
+            numberOfElements = 50000;
+            break;
+        default:
+            throw 4;
+    }
+    std::cout << "Gdzie chcesz wstawiac nowy element?\n"
+                 "1. Na poczatku.\n"
+                 "2. Na koncu.\n"
+                 "3. W srodku.\n";
+    int option = readInt();
+    unsigned long long output;
+    switch(option)
+    {
+        case 1:
+            output = measPutBeg(numberOfElements);
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        default:
+            throw 4;
+    }
+}
 
+array ArrayOperations::generateArray(int numberOfElements) {
+    array measurementsArray(numberOfElements);
+    for(int j = 0; j < numberOfElements; j++)
+    {
+        measurementsArray[j] = (rand() % (numberOfElements/2));
+    }
+    return measurementsArray;
+}
+
+void ArrayOperations::read() {
+    std::getline(std::cin, input);
+}
+
+int ArrayOperations::readInt() {
+    read();
+    return std::stoi(input);
+}
+
+unsigned long long ArrayOperations::measPutBeg(int size) {
+    unsigned long long average = 0;
+    for(int i = 0; i < 128; i++)
+    {
+        array measurementsArray = generateArray(size);
+        std::cout << "|";//todo
+        int32_t elementToPut = rand() % (size/2);
+        StopWatch watch;
+        watch.start();
+        measurementsArray.pushFront(elementToPut);
+        watch.stop();
+        average += watch.getLastMeasurmentMicrosec();
+        if(!watch.getLastMeasurmentMicrosec())
+        {
+            i--;
+            continue;
+        }
+    }
+    return average;
+}
+
+unsigned long long ArrayOperations::measPutMid(int size) {
+    unsigned long long average = 0;
+    for(int i = 0; i < 128; i++)
+    {
+        array measurementsArray = generateArray(size);
+        std::cout << "|";//todo
+        int32_t elementToPut = rand() % (size/2);
+        StopWatch watch;
+        watch.start();
+        measurementsArray.putAtPosition(4, size/2);
+        watch.stop();
+        average += watch.getLastMeasurmentMicrosec();
+        if(!watch.getLastMeasurmentMicrosec())
+        {
+            i--;
+            continue;
+        }
+    }
+    return average;
+}
+
+unsigned long long ArrayOperations::measPutEnd(int size) {
+    unsigned long long average = 0;
+    for(int i = 0; i < 128; i++)
+    {
+        array measurementsArray = generateArray(size);
+        std::cout << "|";//todo
+        int32_t elementToPut = rand() % (size/2);
+        StopWatch watch;
+        watch.start();
+        measurementsArray.pushBack(elementToPut);
+        watch.stop();
+        average += watch.getLastMeasurmentMicrosec();
+        if(!watch.getLastMeasurmentMicrosec())
+        {
+            i--;
+            continue;
+        }
+    }
+    return average;
 }
 

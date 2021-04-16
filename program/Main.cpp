@@ -4,6 +4,7 @@
 #include "fstream"
 
 int main(){
+    srand((unsigned)time(0));
     auto program = Main();
     return program.run();
 }
