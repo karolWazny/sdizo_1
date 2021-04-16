@@ -72,7 +72,7 @@ void HeapOperations::addElement() {
 }
 
 void HeapOperations::display() {
-    //todo zaimplementowac sensowny sposob prezentacji kopca
+    std::cout << mHeap.getRepresentation() << std::endl;
 }
 
 void HeapOperations::removeElement() {

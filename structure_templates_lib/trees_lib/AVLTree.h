@@ -3,10 +3,9 @@
 
 #include "trees_lib/nodes/Node.h"
 #include "trees_lib/node_util/KeyFinder.h"
-#include "trees_lib/nodes/SimpleFactory.h"
-#include "RBPutter.h"
-#include "RBRemover.h"
-#include "TreePrinter.h"
+#include "trees_lib/AVLPutter.h"
+#include "trees_lib/rbutil/RBRemover.h"
+#include "trees_lib/node_util/TreePrinter.h"
 
 template <typename T>
 class AVLTree {
@@ -29,7 +28,7 @@ AVLTree<T>::AVLTree() {
 
 template<typename T>
 void AVLTree<T>::put(T key) {
-    auto putter = NodePutter<T>(root, new SimpleFactory<T>());
+    auto putter = AVLPutter<T>(root);
     putter.put(key);
     root = putter.obtainRoot();
 }

@@ -22,13 +22,10 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/AVLTest.cpp.obj
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-port.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-string.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-type-util.h
+ ../structure_templates_lib/trees_lib/AVLPutRestorer.h
+ ../structure_templates_lib/trees_lib/AVLPutter.h
  ../structure_templates_lib/trees_lib/AVLTree.h
- ../structure_templates_lib/trees_lib/RBPutter.h
- ../structure_templates_lib/trees_lib/RBRemover.h
- ../structure_templates_lib/trees_lib/TreePrinter.h
- ../structure_templates_lib/trees_lib/colors/Black.h
  ../structure_templates_lib/trees_lib/colors/Colored.h
- ../structure_templates_lib/trees_lib/colors/RedBlack.h
  ../structure_templates_lib/trees_lib/node_util/ConsequentFinder.h
  ../structure_templates_lib/trees_lib/node_util/ConsequentLiberator.h
  ../structure_templates_lib/trees_lib/node_util/KeyFinder.h
@@ -40,17 +37,18 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/AVLTest.cpp.obj
  ../structure_templates_lib/trees_lib/node_util/PlaceToPutFinder.h
  ../structure_templates_lib/trees_lib/node_util/RootFinder.h
  ../structure_templates_lib/trees_lib/node_util/Side.h
+ ../structure_templates_lib/trees_lib/node_util/TreePrinter.h
  ../structure_templates_lib/trees_lib/node_util/TreeSizer.h
+ ../structure_templates_lib/trees_lib/nodes/AVLFactory.h
+ ../structure_templates_lib/trees_lib/nodes/AVLNode.h
+ ../structure_templates_lib/trees_lib/nodes/AVLNodeImpl.h
  ../structure_templates_lib/trees_lib/nodes/Node.h
  ../structure_templates_lib/trees_lib/nodes/NodeFactory.h
  ../structure_templates_lib/trees_lib/nodes/NodeImpl.h
- ../structure_templates_lib/trees_lib/nodes/RBFactory.h
  ../structure_templates_lib/trees_lib/nodes/RBNode.h
- ../structure_templates_lib/trees_lib/nodes/RBNodeImpl.h
- ../structure_templates_lib/trees_lib/nodes/RBSentinel.h
  ../structure_templates_lib/trees_lib/nodes/Sentinel.h
  ../structure_templates_lib/trees_lib/nodes/SimpleFactory.h
- ../structure_templates_lib/trees_lib/rbutil/PutPropertyRestorer.h
+ ../structure_templates_lib/trees_lib/rbutil/RBRemover.h
  D:/projects/clion/sdizo_1/Google_tests/AVLTest.cpp
 Google_tests/CMakeFiles/Google_Tests_run.dir/DeleteRestorerTest.cpp.obj
  ../Google_tests/lib/googletest/include/gtest/gtest-death-test.h
@@ -395,7 +393,6 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/RBRemoverTest.cpp.obj
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-port.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-string.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-type-util.h
- ../structure_templates_lib/trees_lib/RBRemover.h
  ../structure_templates_lib/trees_lib/colors/Black.h
  ../structure_templates_lib/trees_lib/colors/Colored.h
  ../structure_templates_lib/trees_lib/colors/RedBlack.h
@@ -416,6 +413,7 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/RBRemoverTest.cpp.obj
  ../structure_templates_lib/trees_lib/nodes/RBNodeImpl.h
  ../structure_templates_lib/trees_lib/nodes/RBSentinel.h
  ../structure_templates_lib/trees_lib/nodes/Sentinel.h
+ ../structure_templates_lib/trees_lib/rbutil/RBRemover.h
  D:/projects/clion/sdizo_1/Google_tests/RBRemoverTest.cpp
 Google_tests/CMakeFiles/Google_Tests_run.dir/RedBlackTreeTests.cpp.obj
  ../Google_tests/lib/googletest/include/gtest/gtest-death-test.h
@@ -438,10 +436,7 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/RedBlackTreeTests.cpp.obj
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-port.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-string.h
  ../Google_tests/lib/googletest/include/gtest/internal/gtest-type-util.h
- ../structure_templates_lib/trees_lib/RBPutter.h
- ../structure_templates_lib/trees_lib/RBRemover.h
  ../structure_templates_lib/trees_lib/RedBlackTree.h
- ../structure_templates_lib/trees_lib/TreePrinter.h
  ../structure_templates_lib/trees_lib/colors/Black.h
  ../structure_templates_lib/trees_lib/colors/Colored.h
  ../structure_templates_lib/trees_lib/colors/RedBlack.h
@@ -456,6 +451,7 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/RedBlackTreeTests.cpp.obj
  ../structure_templates_lib/trees_lib/node_util/PlaceToPutFinder.h
  ../structure_templates_lib/trees_lib/node_util/RootFinder.h
  ../structure_templates_lib/trees_lib/node_util/Side.h
+ ../structure_templates_lib/trees_lib/node_util/TreePrinter.h
  ../structure_templates_lib/trees_lib/node_util/TreeSizer.h
  ../structure_templates_lib/trees_lib/nodes/Node.h
  ../structure_templates_lib/trees_lib/nodes/NodeFactory.h
@@ -467,4 +463,6 @@ Google_tests/CMakeFiles/Google_Tests_run.dir/RedBlackTreeTests.cpp.obj
  ../structure_templates_lib/trees_lib/nodes/Sentinel.h
  ../structure_templates_lib/trees_lib/nodes/SimpleFactory.h
  ../structure_templates_lib/trees_lib/rbutil/PutPropertyRestorer.h
+ ../structure_templates_lib/trees_lib/rbutil/RBPutter.h
+ ../structure_templates_lib/trees_lib/rbutil/RBRemover.h
  D:/projects/clion/sdizo_1/Google_tests/RedBlackTreeTests.cpp

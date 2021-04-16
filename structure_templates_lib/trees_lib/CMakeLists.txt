@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.17)
 project(trees_lib)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 set(HEADER_FILES
         RedBlackTree.h
@@ -32,12 +32,15 @@ set(HEADER_FILES
         node_util/NodeRotator.h
         rbutil/PutPropertyRestorer.h
         rbutil/DeletePropertyRestorer.h
-        RBPutter.h
-        RBRemover.h
-        TreePrinter.h
+        rbutil/RBPutter.h
+        rbutil/RBRemover.h
+        node_util/TreePrinter.h
         AVLTree.h
         nodes/AVLNode.h
-        nodes/AVLNodeImpl.h)
+        nodes/AVLNodeImpl.h
+        nodes/AVLFactory.h
+        AVLPutter.h
+        AVLPutRestorer.h)
 
 set(SOURCE_FILES
         index.cpp

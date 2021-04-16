@@ -44,7 +44,7 @@ NodePointer<T> SimpleFactory<T>::createNode(T key) {
 
 template<typename T>
 NodePointer<T> SimpleFactory<T>::createSentinel(NodePointer<T> parent) {
-    return makeSentinel(); //todo do poprawy
+    return makeSentinel();
 }
 
 template<typename T>

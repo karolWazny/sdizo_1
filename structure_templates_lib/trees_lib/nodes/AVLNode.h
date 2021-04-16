@@ -21,6 +21,12 @@ public:
     virtual bool isNil() = 0;
 
     virtual char getBalanceFactor() = 0;
+    virtual void setBalanceFactor(char factor) = 0;
 };
+
+template <typename T>
+AVLNodePtr<T> avlcast(NodePointer<T> node) {
+    return std::dynamic_pointer_cast<AVLNode<T>>(node);
+}
 
 #endif //SDIZO_1_AVLNODE_H

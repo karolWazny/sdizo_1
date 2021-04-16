@@ -2,6 +2,7 @@
 #define SDIZO_1_BINARYHEAP_H
 
 #include <memory>
+#include <string>
 
 template <typename T>
 class BinaryHeap
@@ -14,6 +15,7 @@ public:
     T getMax();
     T extractMax();
     int getSize();
+    std::string getRepresentation();
 private:
     std::unique_ptr<T[]> content;
     int size;
@@ -170,6 +172,23 @@ T BinaryHeap<T>::extractMax() {
 template<typename T>
 int BinaryHeap<T>::getSize() {
     return size;
+}
+
+template<typename T>
+std::string BinaryHeap<T>::getRepresentation() {
+    std::string out;
+    out += "[";
+    if(size)
+    {
+        out += std::to_string(content[0]);
+        for(int i = 1; i < size; i++)
+        {
+            out += ", ";
+            out += std::to_string(content[i]);
+        }
+    }
+    out += "]";
+    return out;
 }
 
 #endif //SDIZO_1_BINARYHEAP_H

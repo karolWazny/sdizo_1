@@ -2,8 +2,8 @@
 #define SDIZO_1_PUTPROPERTYRESTORER_H
 
 #include "trees_lib/node_util/NodeUtility.h"
-#include "trees_lib/nodes/Node.h"
 #include "trees_lib/node_util/NodeRotator.h"
+#include "trees_lib/nodes/RBNode.h"
 
 template <typename T>
 class PutPropertyRestorer : public NodeUtility<T>

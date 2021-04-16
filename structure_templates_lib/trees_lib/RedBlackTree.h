@@ -4,9 +4,9 @@
 #include "trees_lib/nodes/Node.h"
 #include "trees_lib/node_util/KeyFinder.h"
 #include "trees_lib/nodes/RBFactory.h"
-#include "RBPutter.h"
-#include "RBRemover.h"
-#include "TreePrinter.h"
+#include "trees_lib/rbutil/RBPutter.h"
+#include "trees_lib/rbutil/RBRemover.h"
+#include "trees_lib/node_util/TreePrinter.h"
 
 
 template <typename T>

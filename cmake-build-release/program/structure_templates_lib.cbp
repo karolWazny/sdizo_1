@@ -301,19 +301,16 @@
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/structures.h">
 			<Option target="structure_templates_lib"/>
 		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/AVLPutRestorer.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/AVLPutter.h">
+			<Option target="trees_lib"/>
+		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/AVLTree.h">
 			<Option target="trees_lib"/>
 		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/RBPutter.h">
-			<Option target="trees_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/RBRemover.h">
-			<Option target="trees_lib"/>
-		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/RedBlackTree.h">
-			<Option target="trees_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/TreePrinter.h">
 			<Option target="trees_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/colors/Black.cpp">
@@ -370,7 +367,13 @@
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/node_util/Side.h">
 			<Option target="trees_lib"/>
 		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/node_util/TreePrinter.h">
+			<Option target="trees_lib"/>
+		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/node_util/TreeSizer.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/nodes/AVLFactory.h">
 			<Option target="trees_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/nodes/AVLNode.h">
@@ -410,6 +413,12 @@
 			<Option target="trees_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/rbutil/PutPropertyRestorer.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/rbutil/RBPutter.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/rbutil/RBRemover.h">
 			<Option target="trees_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/CMakeLists.txt">

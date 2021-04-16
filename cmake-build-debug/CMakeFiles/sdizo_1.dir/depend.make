@@ -7,10 +7,7 @@ CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_l
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\linked_list_lib\LinkedList.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\linked_list_lib\LinkedListItem.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\structures.h
-CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\RBPutter.h
-CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\RBRemover.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\RedBlackTree.h
-CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\TreePrinter.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\colors\Black.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\colors\Colored.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\colors\RedBlack.h
@@ -25,6 +22,7 @@ CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_l
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\PlaceToPutFinder.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\RootFinder.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\Side.h
+CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\TreePrinter.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\TreeSizer.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\Node.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\NodeFactory.h
@@ -36,6 +34,8 @@ CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_l
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\Sentinel.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\SimpleFactory.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\rbutil\PutPropertyRestorer.h
+CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\rbutil\RBPutter.h
+CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\rbutil\RBRemover.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\program\ArrayOperations.cpp
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\program\ArrayOperations.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\program\TextFileReader.h
@@ -46,10 +46,7 @@ CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_li
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\linked_list_lib\LinkedList.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\linked_list_lib\LinkedListItem.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\structures.h
-CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\RBPutter.h
-CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\RBRemover.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\RedBlackTree.h
-CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\TreePrinter.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\colors\Black.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\colors\Colored.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\colors\RedBlack.h
@@ -64,6 +61,7 @@ CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_li
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\PlaceToPutFinder.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\RootFinder.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\Side.h
+CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\TreePrinter.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\TreeSizer.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\Node.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\NodeFactory.h
@@ -75,6 +73,8 @@ CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_li
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\Sentinel.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\SimpleFactory.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\rbutil\PutPropertyRestorer.h
+CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\rbutil\RBPutter.h
+CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\rbutil\RBRemover.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\program\HeapOperations.cpp
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\program\HeapOperations.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\program\TextFileReader.h
@@ -85,10 +85,7 @@ CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_li
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\linked_list_lib\LinkedList.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\linked_list_lib\LinkedListItem.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\structures.h
-CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\trees_lib\RBPutter.h
-CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\trees_lib\RBRemover.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\trees_lib\RedBlackTree.h
-CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\trees_lib\TreePrinter.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\trees_lib\colors\Black.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\trees_lib\colors\Colored.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\trees_lib\colors\RedBlack.h
@@ -103,6 +100,7 @@ CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_li
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\PlaceToPutFinder.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\RootFinder.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\Side.h
+CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\TreePrinter.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\TreeSizer.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\Node.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\NodeFactory.h
@@ -114,6 +112,8 @@ CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_li
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\Sentinel.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\SimpleFactory.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\trees_lib\rbutil\PutPropertyRestorer.h
+CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\trees_lib\rbutil\RBPutter.h
+CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\trees_lib\rbutil\RBRemover.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\program\ListOperations.cpp
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\program\ListOperations.h
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\program\TextFileReader.h
@@ -124,10 +124,7 @@ CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\linked_l
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\linked_list_lib\LinkedList.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\linked_list_lib\LinkedListItem.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\structures.h
-CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_lib\RBPutter.h
-CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_lib\RBRemover.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_lib\RedBlackTree.h
-CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_lib\TreePrinter.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_lib\colors\Black.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_lib\colors\Colored.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_lib\colors\RedBlack.h
@@ -142,6 +139,7 @@ CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_li
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\PlaceToPutFinder.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\RootFinder.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\Side.h
+CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\TreePrinter.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\TreeSizer.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\Node.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\NodeFactory.h
@@ -153,6 +151,8 @@ CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_li
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\Sentinel.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\SimpleFactory.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_lib\rbutil\PutPropertyRestorer.h
+CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_lib\rbutil\RBPutter.h
+CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\structure_templates_lib\trees_lib\rbutil\RBRemover.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\program\ArrayOperations.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\program\HeapOperations.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\program\ListOperations.h
@@ -166,10 +166,7 @@ CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\linked_list_lib\LinkedList.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\linked_list_lib\LinkedListItem.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\structures.h
-CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\trees_lib\RBPutter.h
-CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\trees_lib\RBRemover.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\trees_lib\RedBlackTree.h
-CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\trees_lib\TreePrinter.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\trees_lib\colors\Black.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\trees_lib\colors\Colored.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\trees_lib\colors\RedBlack.h
@@ -184,6 +181,7 @@ CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\PlaceToPutFinder.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\RootFinder.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\Side.h
+CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\TreePrinter.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\trees_lib\node_util\TreeSizer.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\Node.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\NodeFactory.h
@@ -195,6 +193,8 @@ CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\Sentinel.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\trees_lib\nodes\SimpleFactory.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\trees_lib\rbutil\PutPropertyRestorer.h
+CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\trees_lib\rbutil\RBPutter.h
+CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\trees_lib\rbutil\RBRemover.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\program\RBTreeOperations.cpp
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\program\RBTreeOperations.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\program\TextFileReader.h

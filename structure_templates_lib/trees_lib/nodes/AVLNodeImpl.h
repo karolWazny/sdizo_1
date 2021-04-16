@@ -7,8 +7,8 @@ template <typename T>
 class AVLNodeImpl : public AVLNode<T>
 {
 public:
-    AVLNodeImpl(Node<T>*);
-    AVLNode() = delete;
+    explicit AVLNodeImpl(Node<T>*);
+    AVLNodeImpl() = delete;
 
     T getKey()override;
     void setParent(NodePointer<T>) override;
@@ -19,6 +19,9 @@ public:
     NodePointer<T> getRight() override;
     bool isNil() override;
     std::string toString() override;
+
+    char getBalanceFactor() override;
+    void setBalanceFactor(char factor) override;
 
 private:
     std::unique_ptr<Node<T>> node;
@@ -48,7 +51,7 @@ NodePointer <T> AVLNodeImpl<T>::getParent() {
 
 template<typename T>
 void AVLNodeImpl<T>::setLeft(NodePointer <T> left) {
-    node->setLeft();
+    node->setLeft(left);
 }
 
 template<typename T>
@@ -89,6 +92,16 @@ std::string AVLNodeImpl<T>::toString() {
     out += "|";
     out += node->toString();
     return out;
+}
+
+template<typename T>
+char AVLNodeImpl<T>::getBalanceFactor() {
+    return 0;
+}
+
+template<typename T>
+void AVLNodeImpl<T>::setBalanceFactor(char factor) {
+    this->balanceFactor = factor;
 }
 
 #endif //SDIZO_1_AVLNODEIMPL_H
