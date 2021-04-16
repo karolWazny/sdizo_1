@@ -1,4 +1,5 @@
 #include "RBTreeOperations.h"
+#include "TextFileReader.h"
 
 void RBTreeOperations::run() {
     active = true;
@@ -28,6 +29,7 @@ void RBTreeOperations::interpretInput() {
         option = std::stoi(input);
         switch(option){
             case 1:
+                fromFile();
                 break;
             case 2:
                 tree = rbtree();
@@ -113,4 +115,23 @@ void RBTreeOperations::findElement() {
 
 void RBTreeOperations::display() {
     std::cout << tree.getRepresentation() << std::endl;
+}
+
+void RBTreeOperations::fromFile() {
+    std::string text = "Wprowadz nazwe, sciezke wzgledem aktualnego folderu,\n"
+                       "lub pelna sciezke do pliku:\n";
+    std::cout << text;
+    std::string filename;
+    std::getline(std::cin, filename);
+    try {
+        TextFileReader reader;
+        auto content = reader.fromFile(filename);
+        for(int i = 1; i <= content[0]; i++)
+        {
+            tree.put(content[i]);
+        }
+    } catch(...) {
+        std::cout << "Wystapil problem.\n"
+                     "Operacje anulowano.\n";
+    }
 }

@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include <red_black_tree_lib/nodes/RBFactory.h>
+#include <trees_lib/nodes/RBFactory.h>
 
 TEST(RBNodeSuite, Compilation){
     auto node = RBFactory<int>().createNode(2);

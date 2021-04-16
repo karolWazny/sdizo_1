@@ -1,4 +1,5 @@
 #include "ListOperations.h"
+#include "TextFileReader.h"
 
 void ListOperations::run() {
     active = true;
@@ -28,6 +29,7 @@ void ListOperations::interpretInput() {
         option = std::stoi(input);
         switch(option){
             case 1:
+                fromFile();
                 break;
             case 2:
                 linkedList = list();
@@ -154,4 +156,23 @@ void ListOperations::findElement() {
 
 void ListOperations::display() {
     std::cout << linkedList.toString() << std::endl;
+}
+
+void ListOperations::fromFile() {
+    std::string text = "Wprowadz nazwe, sciezke wzgledem aktualnego folderu,\n"
+                       "lub pelna sciezke do pliku:\n";
+    std::cout << text;
+    std::string filename;
+    std::getline(std::cin, filename);
+    try {
+        TextFileReader reader;
+        auto content = reader.fromFile(filename);
+        for(int i = 1; i <= content[0]; i++)
+        {
+            linkedList.pushBack(content[i]);
+        }
+    } catch(...) {
+        std::cout << "Wystapil problem.\n"
+                     "Operacje anulowano.\n";
+    }
 }

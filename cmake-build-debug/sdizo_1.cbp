@@ -5,7 +5,7 @@
 		<Option title="sdizo_1"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="msvc8"/>
-		<Option virtualFolders="CMake Files\;CMake Files\Google_tests\;CMake Files\Google_tests\lib\;CMake Files\Google_tests\lib\googlemock\;CMake Files\Google_tests\lib\googlemock\cmake\;CMake Files\Google_tests\lib\googletest\;CMake Files\Google_tests\lib\googletest\cmake\;CMake Files\structure_templates_lib\;CMake Files\structure_templates_lib\array_lib\;CMake Files\structure_templates_lib\binary_heap_lib\;CMake Files\structure_templates_lib\linked_list_lib\;CMake Files\structure_templates_lib\red_black_tree_lib\;CMake Files\structure_templates_lib\tree_lib\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\Google_tests\;CMake Files\Google_tests\lib\;CMake Files\Google_tests\lib\googlemock\;CMake Files\Google_tests\lib\googlemock\cmake\;CMake Files\Google_tests\lib\googletest\;CMake Files\Google_tests\lib\googletest\cmake\;CMake Files\structure_templates_lib\;CMake Files\structure_templates_lib\array_lib\;CMake Files\structure_templates_lib\binary_heap_lib\;CMake Files\structure_templates_lib\linked_list_lib\;CMake Files\structure_templates_lib\trees_lib\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug"/>
@@ -317,9 +317,9 @@
 					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\linked_list_lib\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="red_black_tree_lib">
-				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/program/red_black_tree_lib/red_black_tree_lib.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/program/red_black_tree_lib"/>
+			<Target title="trees_lib">
+				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/program/trees_lib/trees_lib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/program/trees_lib"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
@@ -336,15 +336,15 @@
 					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\red_black_tree_lib\Makefile VERBOSE=1 red_black_tree_lib"/>
-					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\red_black_tree_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\red_black_tree_lib\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\red_black_tree_lib\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\trees_lib\Makefile VERBOSE=1 trees_lib"/>
+					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\trees_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\trees_lib\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\trees_lib\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="red_black_tree_lib/fast">
-				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/program/red_black_tree_lib/red_black_tree_lib.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/program/red_black_tree_lib"/>
+			<Target title="trees_lib/fast">
+				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/program/trees_lib/trees_lib.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/program/trees_lib"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
@@ -361,60 +361,10 @@
 					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\red_black_tree_lib\Makefile VERBOSE=1 red_black_tree_lib/fast"/>
-					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\red_black_tree_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\red_black_tree_lib\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\red_black_tree_lib\Makefile VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="tree_lib">
-				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/program/tree_lib/tree_lib.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/program/tree_lib"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="msvc8"/>
-				<Compiler>
-					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
-					<Add directory="D:/projects/clion/sdizo_1/program"/>
-					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
-					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
-					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\ucrt"/>
-					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\shared"/>
-					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\um"/>
-					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\winrt"/>
-					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\tree_lib\Makefile VERBOSE=1 tree_lib"/>
-					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\tree_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\tree_lib\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\tree_lib\Makefile VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="tree_lib/fast">
-				<Option output="D:/projects/clion/sdizo_1/cmake-build-debug/program/tree_lib/tree_lib.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/projects/clion/sdizo_1/cmake-build-debug/program/tree_lib"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="msvc8"/>
-				<Compiler>
-					<Add directory="D:/projects/clion/sdizo_1/structure_templates_lib"/>
-					<Add directory="D:/projects/clion/sdizo_1/program"/>
-					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include"/>
-					<Add directory="C:\Program_Files_86\Microsoft_Visual_Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
-					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\ucrt"/>
-					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\shared"/>
-					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\um"/>
-					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\winrt"/>
-					<Add directory="D:\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\tree_lib\Makefile VERBOSE=1 tree_lib/fast"/>
-					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\tree_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\tree_lib\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\tree_lib\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\trees_lib\Makefile VERBOSE=1 trees_lib/fast"/>
+					<CompileFile command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\trees_lib\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\trees_lib\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f D:\projects\clion\sdizo_1\cmake-build-debug\program\trees_lib\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Google_Tests_run">
@@ -813,116 +763,113 @@
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/linked_list_lib/index.cpp">
 			<Option target="linked_list_lib"/>
 		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/RBPutter.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/RBRemover.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/RedBlackTree.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/TreePrinter.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/colors/Black.cpp">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/colors/Black.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/colors/Colored.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/colors/RedBlack.cpp">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/colors/RedBlack.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/index.cpp">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/ConsequentFinder.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/ConsequentLiberator.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/KeyFinder.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/NodeFinder.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/NodePutter.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/NodeReplacer.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/NodeRotator.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/NodeUtility.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/PlaceToPutFinder.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/RootFinder.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/Side.cpp">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/Side.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/node_util/TreeSizer.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/Node.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/NodeFactory.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/NodeImpl.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/RBFactory.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/RBNode.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/RBNodeImpl.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/RBSentinel.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/Sentinel.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/nodes/SimpleFactory.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/rbutil/DeletePropertyRestorer.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/rbutil/PutPropertyRestorer.h">
-			<Option target="red_black_tree_lib"/>
-		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/structures.h">
 			<Option target="structure_templates_lib"/>
 		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/tree_lib/BinaryTree.h">
-			<Option target="tree_lib"/>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/AVLTree.h">
+			<Option target="trees_lib"/>
 		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/tree_lib/index.cpp">
-			<Option target="tree_lib"/>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/RBPutter.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/RBRemover.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/RedBlackTree.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/TreePrinter.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/colors/Black.cpp">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/colors/Black.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/colors/Colored.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/colors/RedBlack.cpp">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/colors/RedBlack.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/index.cpp">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/node_util/ConsequentFinder.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/node_util/ConsequentLiberator.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/node_util/KeyFinder.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/node_util/NodeFinder.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/node_util/NodePutter.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/node_util/NodeReplacer.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/node_util/NodeRotator.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/node_util/NodeUtility.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/node_util/PlaceToPutFinder.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/node_util/RootFinder.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/node_util/Side.cpp">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/node_util/Side.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/node_util/TreeSizer.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/nodes/Node.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/nodes/NodeFactory.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/nodes/NodeImpl.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/nodes/RBFactory.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/nodes/RBNode.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/nodes/RBNodeImpl.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/nodes/RBSentinel.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/nodes/Sentinel.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/nodes/SimpleFactory.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/rbutil/DeletePropertyRestorer.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/rbutil/PutPropertyRestorer.h">
+			<Option target="trees_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
@@ -969,11 +916,8 @@
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/linked_list_lib/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\structure_templates_lib\linked_list_lib\"/>
 		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\structure_templates_lib\red_black_tree_lib\"/>
-		</Unit>
-		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/tree_lib/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\structure_templates_lib\tree_lib\"/>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\structure_templates_lib\trees_lib\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

@@ -35,8 +35,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "D:/projects/clion/sdizo_1/cmake-build-debug/program/array_lib/CMakeFiles/array_lib.dir/DependInfo.cmake"
   "D:/projects/clion/sdizo_1/cmake-build-debug/program/binary_heap_lib/CMakeFiles/binary_heap_lib.dir/DependInfo.cmake"
   "D:/projects/clion/sdizo_1/cmake-build-debug/program/linked_list_lib/CMakeFiles/linked_list_lib.dir/DependInfo.cmake"
-  "D:/projects/clion/sdizo_1/cmake-build-debug/program/red_black_tree_lib/CMakeFiles/red_black_tree_lib.dir/DependInfo.cmake"
-  "D:/projects/clion/sdizo_1/cmake-build-debug/program/tree_lib/CMakeFiles/tree_lib.dir/DependInfo.cmake"
+  "D:/projects/clion/sdizo_1/cmake-build-debug/program/trees_lib/CMakeFiles/trees_lib.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

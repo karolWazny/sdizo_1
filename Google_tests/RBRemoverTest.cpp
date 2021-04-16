@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
-#include <red_black_tree_lib/nodes/RBFactory.h>
-#include <red_black_tree_lib/RBRemover.h>
+#include <trees_lib/nodes/RBFactory.h>
+#include <trees_lib/RBRemover.h>
 
 TEST(RemoverSuite, SimpleCaseRedSuccessor){
     auto factory = RBFactory<int>();

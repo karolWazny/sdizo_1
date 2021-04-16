@@ -1,4 +1,5 @@
 #include "HeapOperations.h"
+#include "TextFileReader.h"
 
 void HeapOperations::run() {
     active = true;
@@ -28,6 +29,7 @@ void HeapOperations::interpretInput() {
         option = std::stoi(input);
         switch(option){
             case 1:
+                fromFile();
                 break;
             case 2:
                 mHeap = heap();
@@ -117,4 +119,23 @@ void HeapOperations::findElement() {
     text += std::to_string(value);
     text += ".\n";
     std::cout << text;
+}
+
+void HeapOperations::fromFile() {
+    std::string text = "Wprowadz nazwe, sciezke wzgledem aktualnego folderu,\n"
+                       "lub pelna sciezke do pliku:\n";
+    std::cout << text;
+    std::string filename;
+    std::getline(std::cin, filename);
+    try {
+        TextFileReader reader;
+        auto content = reader.fromFile(filename);
+        for(int i = 1; i <= content[0]; i++)
+        {
+            mHeap.add(content[i]);
+        }
+    } catch(...) {
+        std::cout << "Wystapil problem.\n"
+                     "Operacje anulowano.\n";
+    }
 }

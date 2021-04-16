@@ -15,6 +15,7 @@ private:
     void display();
     void removeElement();
     void findElement();
+    void fromFile();
 
     bool active;
     std::string input;

@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
-#include <red_black_tree_lib/nodes/SimpleFactory.h>
-#include <red_black_tree_lib/node_util/NodePutter.h>
+#include <trees_lib/nodes/SimpleFactory.h>
+#include <trees_lib/node_util/NodePutter.h>
 
 TEST(KeyFinderSuite, PutOnTheRight){
     auto node = SimpleFactory<int>::makeNode(2);

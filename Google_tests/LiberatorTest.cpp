@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
-#include <red_black_tree_lib/node_util/ConsequentLiberator.h>
-#include <red_black_tree_lib/nodes/SimpleFactory.h>
+#include <trees_lib/node_util/ConsequentLiberator.h>
+#include <trees_lib/nodes/SimpleFactory.h>
 
 TEST(LiberatorSuite, Compilation){
     auto replacer = ConsequentLiberator<int>(SimpleFactory<int>::makeNode(0));

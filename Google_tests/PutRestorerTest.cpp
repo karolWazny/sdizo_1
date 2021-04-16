@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
-#include <red_black_tree_lib/nodes/RBFactory.h>
-#include <red_black_tree_lib/rbutil/PutPropertyRestorer.h>
+#include <trees_lib/nodes/RBFactory.h>
+#include <trees_lib/rbutil/PutPropertyRestorer.h>
 
 TEST(PutRestorerSuite, Compilation){
     auto restorer = PutPropertyRestorer<int>();

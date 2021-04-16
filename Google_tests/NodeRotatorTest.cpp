@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
-#include <red_black_tree_lib/node_util/NodeRotator.h>
-#include <red_black_tree_lib/nodes/SimpleFactory.h>
+#include <trees_lib/node_util/NodeRotator.h>
+#include <trees_lib/nodes/SimpleFactory.h>
 
 TEST(NodeRotatorSuite, Compilation){
     auto node = SimpleFactory<int>().createNode(2);

@@ -336,10 +336,10 @@ linked_list_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/pr
 linked_list_lib_SOURCE_DIR:STATIC=D:/projects/clion/sdizo_1/structure_templates_lib/linked_list_lib
 
 //Value Computed by CMake
-red_black_tree_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/program/red_black_tree_lib
+red_black_tree_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/program/trees_lib
 
 //Value Computed by CMake
-red_black_tree_lib_SOURCE_DIR:STATIC=D:/projects/clion/sdizo_1/structure_templates_lib/red_black_tree_lib
+red_black_tree_lib_SOURCE_DIR:STATIC=D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib
 
 //Value Computed by CMake
 sdizo_1_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug
@@ -358,6 +358,12 @@ tree_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/program/t
 
 //Value Computed by CMake
 tree_lib_SOURCE_DIR:STATIC=D:/projects/clion/sdizo_1/structure_templates_lib/tree_lib
+
+//Value Computed by CMake
+trees_lib_BINARY_DIR:STATIC=D:/projects/clion/sdizo_1/cmake-build-debug/program/trees_lib
+
+//Value Computed by CMake
+trees_lib_SOURCE_DIR:STATIC=D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib
 
 
 ########################
@@ -488,7 +494,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RC_COMPILER

@@ -1,0 +1,4 @@
+"D:\Program_Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - NMake Makefiles" D:\projects\clion\sdizo_1
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/projects/clion/sdizo_1/cmake-build-release

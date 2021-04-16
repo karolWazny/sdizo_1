@@ -214,30 +214,17 @@ linked_list_lib\fast:
 .PHONY : linked_list_lib\fast
 
 #=============================================================================
-# Target rules for targets named red_black_tree_lib
+# Target rules for targets named trees_lib
 
 # Build rule for target.
-red_black_tree_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) red_black_tree_lib
-.PHONY : red_black_tree_lib
+trees_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) trees_lib
+.PHONY : trees_lib
 
 # fast build rule for target.
-red_black_tree_lib\fast:
-	$(MAKE) $(MAKESILENT) -f program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build.make /nologo -$(MAKEFLAGS) program\red_black_tree_lib\CMakeFiles\red_black_tree_lib.dir\build
-.PHONY : red_black_tree_lib\fast
-
-#=============================================================================
-# Target rules for targets named tree_lib
-
-# Build rule for target.
-tree_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) tree_lib
-.PHONY : tree_lib
-
-# fast build rule for target.
-tree_lib\fast:
-	$(MAKE) $(MAKESILENT) -f program\tree_lib\CMakeFiles\tree_lib.dir\build.make /nologo -$(MAKEFLAGS) program\tree_lib\CMakeFiles\tree_lib.dir\build
-.PHONY : tree_lib\fast
+trees_lib\fast:
+	$(MAKE) $(MAKESILENT) -f program\trees_lib\CMakeFiles\trees_lib.dir\build.make /nologo -$(MAKEFLAGS) program\trees_lib\CMakeFiles\trees_lib.dir\build
+.PHONY : trees_lib\fast
 
 #=============================================================================
 # Target rules for targets named Google_Tests_run
@@ -485,10 +472,9 @@ help:
 	@echo ... gtest
 	@echo ... gtest_main
 	@echo ... linked_list_lib
-	@echo ... red_black_tree_lib
 	@echo ... sdizo_1
 	@echo ... structure_templates_lib
-	@echo ... tree_lib
+	@echo ... trees_lib
 	@echo ... program/ArrayOperations.obj
 	@echo ... program/ArrayOperations.i
 	@echo ... program/ArrayOperations.s

@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include <red_black_tree_lib/RedBlackTree.h>
+#include <trees_lib/RedBlackTree.h>
 #include <iostream>
 
 TEST(RedBlackTestSuite, Compilation){

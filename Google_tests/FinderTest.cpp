@@ -1,8 +1,8 @@
 #include "gtest/gtest.h"
-#include <red_black_tree_lib/nodes/SimpleFactory.h>
-#include <red_black_tree_lib/node_util/KeyFinder.h>
-#include <red_black_tree_lib/node_util/PlaceToPutFinder.h>
-#include <red_black_tree_lib/node_util/ConsequentFinder.h>
+#include <trees_lib/nodes/SimpleFactory.h>
+#include <trees_lib/node_util/KeyFinder.h>
+#include <trees_lib/node_util/PlaceToPutFinder.h>
+#include <trees_lib/node_util/ConsequentFinder.h>
 
 TEST(KeyFinderSuite, KeyFoundInInitialNode){
     auto node = SimpleFactory<int>::makeNode(2);
