@@ -65,6 +65,9 @@ void HeapOperations::addElement() {
     int value = std::stoi(input);
     mHeap.add(value);
 
+    text = "Dodano do kopca wartosc ";
+    text += std::to_string(value);
+    text += ".\n";
     std::cout << text;
 }
 
