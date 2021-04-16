@@ -39,6 +39,7 @@ CMakeFiles/sdizo_1.dir/program/ArrayOperations.cpp.obj
  ../structure_templates_lib/trees_lib/rbutil/RBRemover.h
  D:/projects/clion/sdizo_1/program/ArrayOperations.cpp
  D:/projects/clion/sdizo_1/program/ArrayOperations.h
+ D:/projects/clion/sdizo_1/program/Operations.h
  D:/projects/clion/sdizo_1/program/StopWatch.h
  D:/projects/clion/sdizo_1/program/TextFileReader.h
 CMakeFiles/sdizo_1.dir/program/HeapOperations.cpp.obj
@@ -160,7 +161,11 @@ CMakeFiles/sdizo_1.dir/program/Main.cpp.obj
  D:/projects/clion/sdizo_1/program/ListOperations.h
  D:/projects/clion/sdizo_1/program/Main.cpp
  D:/projects/clion/sdizo_1/program/Main.h
+ D:/projects/clion/sdizo_1/program/Operations.h
  D:/projects/clion/sdizo_1/program/RBTreeOperations.h
+CMakeFiles/sdizo_1.dir/program/Operations.cpp.obj
+ D:/projects/clion/sdizo_1/program/Operations.cpp
+ D:/projects/clion/sdizo_1/program/Operations.h
 CMakeFiles/sdizo_1.dir/program/RBTreeOperations.cpp.obj
  ../structure_templates_lib/array_lib/Array.h
  ../structure_templates_lib/binary_heap_lib/BinaryHeap.h

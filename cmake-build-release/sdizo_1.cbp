@@ -724,6 +724,12 @@
 		<Unit filename="D:/projects/clion/sdizo_1/program/Main.h">
 			<Option target="sdizo_1"/>
 		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/program/Operations.cpp">
+			<Option target="sdizo_1"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/program/Operations.h">
+			<Option target="sdizo_1"/>
+		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/program/RBTreeOperations.cpp">
 			<Option target="sdizo_1"/>
 		</Unit>

@@ -259,12 +259,8 @@ string
 -
 structures.h
 -
-
-D:/projects/clion/sdizo_1/program/HeapOperations.cpp
-HeapOperations.h
-D:/projects/clion/sdizo_1/program/HeapOperations.h
-TextFileReader.h
-D:/projects/clion/sdizo_1/program/TextFileReader.h
+Operations.h
+D:/projects/clion/sdizo_1/program/Operations.h
 
 D:/projects/clion/sdizo_1/program/HeapOperations.h
 iostream
@@ -273,12 +269,6 @@ string
 -
 structures.h
 -
-
-D:/projects/clion/sdizo_1/program/ListOperations.cpp
-ListOperations.h
-D:/projects/clion/sdizo_1/program/ListOperations.h
-TextFileReader.h
-D:/projects/clion/sdizo_1/program/TextFileReader.h
 
 D:/projects/clion/sdizo_1/program/ListOperations.h
 iostream
@@ -308,11 +298,15 @@ D:/projects/clion/sdizo_1/program/HeapOperations.h
 RBTreeOperations.h
 D:/projects/clion/sdizo_1/program/RBTreeOperations.h
 
-D:/projects/clion/sdizo_1/program/RBTreeOperations.cpp
-RBTreeOperations.h
-D:/projects/clion/sdizo_1/program/RBTreeOperations.h
-TextFileReader.h
-D:/projects/clion/sdizo_1/program/TextFileReader.h
+D:/projects/clion/sdizo_1/program/Operations.cpp
+Operations.h
+D:/projects/clion/sdizo_1/program/Operations.h
+iostream
+-
+
+D:/projects/clion/sdizo_1/program/Operations.h
+string
+-
 
 D:/projects/clion/sdizo_1/program/RBTreeOperations.h
 structures.h

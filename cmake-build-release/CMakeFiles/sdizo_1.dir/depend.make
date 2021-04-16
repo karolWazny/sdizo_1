@@ -38,6 +38,7 @@ CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_l
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\structure_templates_lib\trees_lib\rbutil\RBRemover.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\program\ArrayOperations.cpp
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\program\ArrayOperations.h
+CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\program\Operations.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\program\StopWatch.h
 CMakeFiles\sdizo_1.dir\program\ArrayOperations.cpp.obj: ..\program\TextFileReader.h
 
@@ -159,7 +160,11 @@ CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\program\HeapOperations.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\program\ListOperations.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\program\Main.cpp
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\program\Main.h
+CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\program\Operations.h
 CMakeFiles\sdizo_1.dir\program\Main.cpp.obj: ..\program\RBTreeOperations.h
+
+CMakeFiles\sdizo_1.dir\program\Operations.cpp.obj: ..\program\Operations.cpp
+CMakeFiles\sdizo_1.dir\program\Operations.cpp.obj: ..\program\Operations.h
 
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\array_lib\Array.h
 CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.obj: ..\structure_templates_lib\binary_heap_lib\BinaryHeap.h

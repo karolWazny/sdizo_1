@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/sdizo_1.dir/program/HeapOperations.cpp.obj"
   "CMakeFiles/sdizo_1.dir/program/ListOperations.cpp.obj"
   "CMakeFiles/sdizo_1.dir/program/Main.cpp.obj"
+  "CMakeFiles/sdizo_1.dir/program/Operations.cpp.obj"
   "CMakeFiles/sdizo_1.dir/program/RBTreeOperations.cpp.obj"
   "CMakeFiles/sdizo_1.dir/program/StopWatch.cpp.obj"
   "CMakeFiles/sdizo_1.dir/program/TextFileReader.cpp.obj"

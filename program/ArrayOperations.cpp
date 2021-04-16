@@ -4,27 +4,20 @@
 #include "TextFileReader.h"
 #include "StopWatch.h"
 
+
 void ArrayOperations::run() {
     active = true;
     while(active)
     {
-        displayMenu();
+        menu();
         std::getline(std::cin, input);
         interpretInput();
     }
 }
 
-void ArrayOperations::displayMenu() {
-    std::string menuText = "TABLICA DYNAMICZNA\n"
-                           "1. Zbuduj z pliku\n"
-                           "2. Stworz nowa tablice\n"
-                           "3. Dodaj element\n"
-                           "4. Usun element\n"
-                           "5. Znajdz element\n"
-                           "6. Wyswietl\n"
-                           "7. Pomiar czasu\n"
-                           "8. Wroc do menu glownego\n\n";
-    std::cout << menuText;
+void ArrayOperations::menu() {
+    std::string header("TABLICA DYNAMICZNA");
+    displayMenu(header);
 
 }
 
@@ -75,10 +68,10 @@ void ArrayOperations::fromFile() {
     try {
         TextFileReader reader;
         auto content = reader.fromFile(filename);
-        tab = array();
+        tab = array(content[0]);
         for(int i = 1; i <= content[0]; i++)
         {
-            tab.pushBack(content[i]);
+            tab[i -1] = content[i];
         }
     } catch(...) {
         std::cout << "Wystapil problem.\n"
@@ -196,8 +189,10 @@ void ArrayOperations::timeMeasurment() {
             measureFindingTime();
             break;
         case 2:
+            measurePuttingTime();
             break;
         case 3:
+            measureRemovingTime();
             break;
         default:
             std::cout << "Nieprawidlowa opcja.\nPomiar anulowano.\n";
@@ -206,35 +201,9 @@ void ArrayOperations::timeMeasurment() {
 }
 
 void ArrayOperations::measureFindingTime() {
-    std::cout << "Dla ilu elementow chcesz zmierzyc czas wyszukiwania?\n"
-                 "1. 2500\n"
-                 "2. 5000\n"
-                 "3. 12500\n"
-                 "4. 25000\n"
-                 "5. 50000\n";
-    std::getline(std::cin, input);
-    int option = std::stoi(input);
-    int numberOfElements;
-    switch(option)
-    {
-        case 1:
-            numberOfElements = 2500;
-            break;
-        case 2:
-            numberOfElements = 5000;
-            break;
-        case 3:
-            numberOfElements = 12500;
-            break;
-        case 4:
-            numberOfElements = 25000;
-            break;
-        case 5:
-            numberOfElements = 50000;
-            break;
-        default:
-            throw 4;
-    }
+    std::cout << "Dla ilu elementow chcesz zmierzyc czas wyszukiwania?\n";
+    int options[] = {2500, 5000, 12500, 25000, 50000};
+    int numberOfElements = sizeChoiceMenu(options, 5);
     unsigned long long average = 0;
     for(int i = 0; i < 128; i++)
     {
@@ -268,51 +237,40 @@ void ArrayOperations::measureFindingTime() {
 }
 
 void ArrayOperations::measurePuttingTime() {
-    std::cout << "Dla jakiego rozmiaru struktury chcesz mierzyc czas?\n"
-                 "1. 2500\n"
-                 "2. 5000\n"
-                 "3. 12500\n"
-                 "4. 25000\n"
-                 "5. 50000\n";
-    int numberOfElements = readInt();
-    switch(numberOfElements)
-    {
-        case 1:
-            numberOfElements = 2500;
-            break;
-        case 2:
-            numberOfElements = 5000;
-            break;
-        case 3:
-            numberOfElements = 12500;
-            break;
-        case 4:
-            numberOfElements = 25000;
-            break;
-        case 5:
-            numberOfElements = 50000;
-            break;
-        default:
-            throw 4;
-    }
+    std::cout << "Dla jakiego rozmiaru struktury chcesz mierzyc czas?\n";
+    int options[] = {2500, 5000, 12500, 25000, 50000};
+    int numberOfElements = sizeChoiceMenu(options, 5);
     std::cout << "Gdzie chcesz wstawiac nowy element?\n"
                  "1. Na poczatku.\n"
-                 "2. Na koncu.\n"
-                 "3. W srodku.\n";
+                 "2. W srodku.\n"
+                 "3. Na koncu.\n";
     int option = readInt();
     unsigned long long output;
+    std::string text = "Sredni czas dodania elementu ";
     switch(option)
     {
         case 1:
             output = measPutBeg(numberOfElements);
+            text += "na poczatku\n";
             break;
         case 2:
+            output = measPutMid(numberOfElements);
+            text += "w srodku\n";
             break;
         case 3:
+            output = measPutEnd(numberOfElements);
+            text += "na koncu\n";
             break;
         default:
             throw 4;
     }
+    text += "tablicy o rozmiarze ";
+    text += std::to_string(numberOfElements);
+    text += " elementow\n"
+            "to ";
+    text += std::to_string(output);
+    text += ".\n";
+    std::cout << text;
 }
 
 array ArrayOperations::generateArray(int numberOfElements) {
@@ -322,15 +280,6 @@ array ArrayOperations::generateArray(int numberOfElements) {
         measurementsArray[j] = (rand() % (numberOfElements/2));
     }
     return measurementsArray;
-}
-
-void ArrayOperations::read() {
-    std::getline(std::cin, input);
-}
-
-int ArrayOperations::readInt() {
-    read();
-    return std::stoi(input);
 }
 
 unsigned long long ArrayOperations::measPutBeg(int size) {
@@ -385,6 +334,103 @@ unsigned long long ArrayOperations::measPutEnd(int size) {
         StopWatch watch;
         watch.start();
         measurementsArray.pushBack(elementToPut);
+        watch.stop();
+        average += watch.getLastMeasurmentMicrosec();
+        if(!watch.getLastMeasurmentMicrosec())
+        {
+            i--;
+            continue;
+        }
+    }
+    return average;
+}
+
+void ArrayOperations::measureRemovingTime() {
+    std::cout << "Dla jakiej ilosci danych w tablicy chcesz mierzyc czas?\n";
+    int options[] = {2500, 5000, 12500, 25000, 50000};
+    int numberOfElements = sizeChoiceMenu(options, 5);
+    std::cout << "Skad chcesz usuwac element?\n"
+                 "1. Z poczatku.\n"
+                 "2. Ze srodka.\n"
+                 "3. Ze konca.\n";
+    int option = readInt();
+    unsigned long long output;
+    std::string text = "Sredni czas usuniecia elementu ";
+    switch(option)
+    {
+        case 1:
+            output = measRemBeg(numberOfElements);
+            text += "na poczatku\n";
+            break;
+        case 2:
+            output = measRemMid(numberOfElements);
+            text += "w srodku\n";
+            break;
+        case 3:
+            output = measRemEnd(numberOfElements);
+            text += "na koncu\n";
+            break;
+        default:
+            throw 4;
+    }
+    text += "tablicy o rozmiarze ";
+    text += std::to_string(numberOfElements);
+    text += " elementow to ";
+    text += std::to_string(output);
+    text += ".\n";
+    std::cout << text;
+}
+
+unsigned long long ArrayOperations::measRemBeg(int size) {
+    unsigned long long average = 0;
+    for(int i = 0; i < 128; i++)
+    {
+        array measurementsArray = generateArray(size);
+        std::cout << "|";//todo
+        StopWatch watch;
+        watch.start();
+        measurementsArray.removeFirst();
+        watch.stop();
+        average += watch.getLastMeasurmentMicrosec();
+        if(!watch.getLastMeasurmentMicrosec())
+        {
+            i--;
+            continue;
+        }
+    }
+    return average;
+}
+
+unsigned long long ArrayOperations::measRemMid(int size) {
+    unsigned long long average = 0;
+    for(int i = 0; i < 128; i++)
+    {
+        array measurementsArray = generateArray(size);
+        std::cout << "|";//todo
+        StopWatch watch;
+        int position = size / 2;
+        watch.start();
+        measurementsArray.removeAt(position);
+        watch.stop();
+        average += watch.getLastMeasurmentMicrosec();
+        if(!watch.getLastMeasurmentMicrosec())
+        {
+            i--;
+            continue;
+        }
+    }
+    return average;
+}
+
+unsigned long long ArrayOperations::measRemEnd(int size) {
+    unsigned long long average = 0;
+    for(int i = 0; i < 128; i++)
+    {
+        array measurementsArray = generateArray(size);
+        std::cout << "|";//todo
+        StopWatch watch;
+        watch.start();
+        measurementsArray.removeLast();
         watch.stop();
         average += watch.getLastMeasurmentMicrosec();
         if(!watch.getLastMeasurmentMicrosec())

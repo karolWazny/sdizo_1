@@ -3,12 +3,13 @@
 
 #include <string>
 #include <structures.h>
+#include "Operations.h"
 
-class ArrayOperations {
+class ArrayOperations : public Operations {
 public:
     void run();
 private:
-    void displayMenu();
+    void menu();
     void interpretInput();
     void fromFile();
     void displayArray();
@@ -18,19 +19,21 @@ private:
     void timeMeasurment();
     void measureFindingTime();
     void measurePuttingTime();
-    void read();
-    int readInt();
-    unsigned long long measPutBeg(int size);
-    unsigned long long measPutMid(int size);
-    unsigned long long measPutEnd(int size);
+    static unsigned long long measPutBeg(int size);
+    static unsigned long long measPutMid(int size);
+    static unsigned long long measPutEnd(int size);
+    void measureRemovingTime();
 
-    array generateArray(int param);
+    static unsigned long long measRemBeg(int size);
+    static unsigned long long measRemMid(int size);
+    static unsigned long long measRemEnd(int size);
+
+    static array generateArray(int param);
 
     array tab = array();
 
     bool active = true;
     std::string input;
 };
-
 
 #endif //SDIZO_1_ARRAYOPERATIONS_H

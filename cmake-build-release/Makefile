@@ -399,6 +399,33 @@ program\Main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\Main.cpp.s
 .PHONY : program\Main.cpp.s
 
+program\Operations.obj: program\Operations.cpp.obj
+
+.PHONY : program\Operations.obj
+
+# target to build an object file
+program\Operations.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\Operations.cpp.obj
+.PHONY : program\Operations.cpp.obj
+
+program\Operations.i: program\Operations.cpp.i
+
+.PHONY : program\Operations.i
+
+# target to preprocess a source file
+program\Operations.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\Operations.cpp.i
+.PHONY : program\Operations.cpp.i
+
+program\Operations.s: program\Operations.cpp.s
+
+.PHONY : program\Operations.s
+
+# target to generate assembly for a file
+program\Operations.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\Operations.cpp.s
+.PHONY : program\Operations.cpp.s
+
 program\RBTreeOperations.obj: program\RBTreeOperations.cpp.obj
 
 .PHONY : program\RBTreeOperations.obj
@@ -514,6 +541,9 @@ help:
 	@echo ... program/Main.obj
 	@echo ... program/Main.i
 	@echo ... program/Main.s
+	@echo ... program/Operations.obj
+	@echo ... program/Operations.i
+	@echo ... program/Operations.s
 	@echo ... program/RBTreeOperations.obj
 	@echo ... program/RBTreeOperations.i
 	@echo ... program/RBTreeOperations.s
