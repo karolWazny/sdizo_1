@@ -167,6 +167,7 @@ void ListOperations::fromFile() {
     try {
         TextFileReader reader;
         auto content = reader.fromFile(filename);
+        linkedList = list();
         for(int i = 1; i <= content[0]; i++)
         {
             linkedList.pushBack(content[i]);

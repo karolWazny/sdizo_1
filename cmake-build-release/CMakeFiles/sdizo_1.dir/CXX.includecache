@@ -282,26 +282,6 @@ string
 structures.h
 -
 
-D:/projects/clion/sdizo_1/program/Main.cpp
-iostream
--
-Main.h
-D:/projects/clion/sdizo_1/program/Main.h
-fstream
-D:/projects/clion/sdizo_1/program/fstream
-
-D:/projects/clion/sdizo_1/program/Main.h
-string
--
-ArrayOperations.h
-D:/projects/clion/sdizo_1/program/ArrayOperations.h
-ListOperations.h
-D:/projects/clion/sdizo_1/program/ListOperations.h
-HeapOperations.h
-D:/projects/clion/sdizo_1/program/HeapOperations.h
-RBTreeOperations.h
-D:/projects/clion/sdizo_1/program/RBTreeOperations.h
-
 D:/projects/clion/sdizo_1/program/RBTreeOperations.cpp
 RBTreeOperations.h
 D:/projects/clion/sdizo_1/program/RBTreeOperations.h

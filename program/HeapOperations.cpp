@@ -130,6 +130,7 @@ void HeapOperations::fromFile() {
     try {
         TextFileReader reader;
         auto content = reader.fromFile(filename);
+        mHeap = heap();
         for(int i = 1; i <= content[0]; i++)
         {
             mHeap.add(content[i]);

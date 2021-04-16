@@ -126,6 +126,7 @@ void RBTreeOperations::fromFile() {
     try {
         TextFileReader reader;
         auto content = reader.fromFile(filename);
+        tree = rbtree();
         for(int i = 1; i <= content[0]; i++)
         {
             tree.put(content[i]);

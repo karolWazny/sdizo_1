@@ -69,6 +69,7 @@ void ArrayOperations::fromFile() {
     try {
         TextFileReader reader;
         auto content = reader.fromFile(filename);
+        tab = array();
         for(int i = 1; i <= content[0]; i++)
         {
             tab.pushBack(content[i]);
