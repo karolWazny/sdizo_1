@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Google_Tests_run.dir/AVLTest.cpp.obj"
   "CMakeFiles/Google_Tests_run.dir/DeleteRestorerTest.cpp.obj"
   "CMakeFiles/Google_Tests_run.dir/FinderTest.cpp.obj"
   "CMakeFiles/Google_Tests_run.dir/LiberatorTest.cpp.obj"

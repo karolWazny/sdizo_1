@@ -177,6 +177,39 @@ Google_Tests_run\fast:
 	cd D:\projects\clion\sdizo_1\cmake-build-release\Google_tests
 .PHONY : Google_Tests_run\fast
 
+AVLTest.obj: AVLTest.cpp.obj
+
+.PHONY : AVLTest.obj
+
+# target to build an object file
+AVLTest.cpp.obj:
+	cd D:\projects\clion\sdizo_1\cmake-build-release
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\AVLTest.cpp.obj
+	cd D:\projects\clion\sdizo_1\cmake-build-release\Google_tests
+.PHONY : AVLTest.cpp.obj
+
+AVLTest.i: AVLTest.cpp.i
+
+.PHONY : AVLTest.i
+
+# target to preprocess a source file
+AVLTest.cpp.i:
+	cd D:\projects\clion\sdizo_1\cmake-build-release
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\AVLTest.cpp.i
+	cd D:\projects\clion\sdizo_1\cmake-build-release\Google_tests
+.PHONY : AVLTest.cpp.i
+
+AVLTest.s: AVLTest.cpp.s
+
+.PHONY : AVLTest.s
+
+# target to generate assembly for a file
+AVLTest.cpp.s:
+	cd D:\projects\clion\sdizo_1\cmake-build-release
+	$(MAKE) $(MAKESILENT) -f Google_tests\CMakeFiles\Google_Tests_run.dir\build.make /nologo -$(MAKEFLAGS) Google_tests\CMakeFiles\Google_Tests_run.dir\AVLTest.cpp.s
+	cd D:\projects\clion\sdizo_1\cmake-build-release\Google_tests
+.PHONY : AVLTest.cpp.s
+
 DeleteRestorerTest.obj: DeleteRestorerTest.cpp.obj
 
 .PHONY : DeleteRestorerTest.obj
@@ -585,6 +618,9 @@ help:
 	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... Google_Tests_run
+	@echo ... AVLTest.obj
+	@echo ... AVLTest.i
+	@echo ... AVLTest.s
 	@echo ... DeleteRestorerTest.obj
 	@echo ... DeleteRestorerTest.i
 	@echo ... DeleteRestorerTest.s

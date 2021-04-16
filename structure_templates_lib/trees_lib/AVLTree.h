@@ -29,7 +29,9 @@ AVLTree<T>::AVLTree() {
 
 template<typename T>
 void AVLTree<T>::put(T key) {
-
+    auto putter = NodePutter<T>(root, new SimpleFactory<T>());
+    putter.put(key);
+    root = putter.obtainRoot();
 }
 
 template<typename T>

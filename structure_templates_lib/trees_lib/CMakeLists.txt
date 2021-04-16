@@ -35,7 +35,9 @@ set(HEADER_FILES
         RBPutter.h
         RBRemover.h
         TreePrinter.h
-        AVLTree.h)
+        AVLTree.h
+        nodes/AVLNode.h
+        nodes/AVLNodeImpl.h)
 
 set(SOURCE_FILES
         index.cpp

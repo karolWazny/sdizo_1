@@ -646,6 +646,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/projects/clion/sdizo_1/Google_tests/AVLTest.cpp">
+			<Option target="Google_Tests_run"/>
+		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/Google_tests/DeleteRestorerTest.cpp">
 			<Option target="Google_Tests_run"/>
 		</Unit>
@@ -836,6 +839,12 @@
 			<Option target="trees_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/node_util/TreeSizer.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/nodes/AVLNode.h">
+			<Option target="trees_lib"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/nodes/AVLNodeImpl.h">
 			<Option target="trees_lib"/>
 		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/structure_templates_lib/trees_lib/nodes/Node.h">
