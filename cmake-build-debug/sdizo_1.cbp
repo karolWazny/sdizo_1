@@ -730,6 +730,12 @@
 		<Unit filename="D:/projects/clion/sdizo_1/program/RBTreeOperations.h">
 			<Option target="sdizo_1"/>
 		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/program/StopWatch.cpp">
+			<Option target="sdizo_1"/>
+		</Unit>
+		<Unit filename="D:/projects/clion/sdizo_1/program/StopWatch.h">
+			<Option target="sdizo_1"/>
+		</Unit>
 		<Unit filename="D:/projects/clion/sdizo_1/program/TextFileReader.cpp">
 			<Option target="sdizo_1"/>
 		</Unit>

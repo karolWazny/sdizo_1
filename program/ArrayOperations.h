@@ -15,6 +15,9 @@ private:
     void addElement();
     void removeElement();
     void findElement();
+    void timeMeasurment();
+    void measureFindingTime();
+    void measurePuttingTime();
 
     array tab = array();
 

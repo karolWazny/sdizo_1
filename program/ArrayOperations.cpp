@@ -1,6 +1,8 @@
 #include "ArrayOperations.h"
 #include <iostream>
+#include <cstdlib>
 #include "TextFileReader.h"
+#include "StopWatch.h"
 
 void ArrayOperations::run() {
     active = true;
@@ -20,7 +22,8 @@ void ArrayOperations::displayMenu() {
                            "4. Usun element\n"
                            "5. Znajdz element\n"
                            "6. Wyswietl\n"
-                           "7. Wroc do menu glownego\n\n";
+                           "7. Pomiar czasu\n"
+                           "8. Wroc do menu glownego\n\n";
     std::cout << menuText;
 
 }
@@ -49,6 +52,9 @@ void ArrayOperations::interpretInput() {
                 displayArray();
                 break;
             case 7:
+                timeMeasurment();
+                break;
+            case 8:
                 active = false;
                 break;
             default:
@@ -175,3 +181,98 @@ void ArrayOperations::findElement() {
     text += ".\n";
     std::cout << text;
 }
+
+void ArrayOperations::timeMeasurment() {
+    std::string text = "Co chcesz zmierzyc?\n"
+                       "1. Czas wyszukania elementu.\n"
+                       "2. Czas dodania elementu.\n"
+                       "3. Czas usuwania elementu.\n";
+    std::cout << text;
+    std::getline(std::cin, input);
+    int option = std::stoi(input);
+    switch(option)
+    {
+        case 1:
+            measureFindingTime();
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        default:
+            std::cout << "Nieprawidlowa opcja.\nPomiar anulowano.\n";
+            return;
+    }
+}
+
+void ArrayOperations::measureFindingTime() {
+    std::cout << "Dla ilu elementow chcesz zmierzyc czas wyszukiwania?\n"
+                 "1. 2500\n"
+                 "2. 5000\n"
+                 "3. 12500\n"
+                 "4. 25000\n"
+                 "5. 50000\n";
+    std::getline(std::cin, input);
+    int option = std::stoi(input);
+    int numberOfElements;
+    switch(option)
+    {
+        case 1:
+            numberOfElements = 2500;
+            break;
+        case 2:
+            numberOfElements = 5000;
+            break;
+        case 3:
+            numberOfElements = 12500;
+            break;
+        case 4:
+            numberOfElements = 25000;
+            break;
+        case 5:
+            numberOfElements = 50000;
+            break;
+        default:
+            throw 4;
+    }
+    srand((unsigned)time(0));
+    unsigned long long average = 0;
+    for(int i = 0; i < 128; i++)
+    {
+        array measurementsArray;
+        std::cout << "|";//todo
+        for(int j = 0; j < numberOfElements; j++)
+        {
+            measurementsArray.pushBack(rand() % (numberOfElements/2));
+        }
+        int32_t seekedElement = rand() % (numberOfElements/2);
+        StopWatch watch;
+        bool contains;
+        watch.start();
+        contains = measurementsArray.contains(seekedElement);
+        watch.stop();
+        if(contains)
+            average += watch.getLastMeasurmentMicrosec();
+        else
+        {
+            average += watch.getLastMeasurmentMicrosec();
+            watch.start();
+        }
+        if(!watch.getLastMeasurmentMicrosec())
+        {
+            i--;
+            continue;
+        }
+    }
+    std::cout << std::endl;
+    average /= 128;
+    std::cout << "Sredni czas wyszukania elementu\n"
+                 "dla tablicy o dlugosci " << std::to_string(numberOfElements)
+                 << " wynosi " << std::to_string(average)
+                 << std::endl;
+}
+
+void ArrayOperations::measurePuttingTime() {
+
+}
+

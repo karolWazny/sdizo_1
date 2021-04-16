@@ -426,6 +426,33 @@ program\RBTreeOperations.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\RBTreeOperations.cpp.s
 .PHONY : program\RBTreeOperations.cpp.s
 
+program\StopWatch.obj: program\StopWatch.cpp.obj
+
+.PHONY : program\StopWatch.obj
+
+# target to build an object file
+program\StopWatch.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\StopWatch.cpp.obj
+.PHONY : program\StopWatch.cpp.obj
+
+program\StopWatch.i: program\StopWatch.cpp.i
+
+.PHONY : program\StopWatch.i
+
+# target to preprocess a source file
+program\StopWatch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\StopWatch.cpp.i
+.PHONY : program\StopWatch.cpp.i
+
+program\StopWatch.s: program\StopWatch.cpp.s
+
+.PHONY : program\StopWatch.s
+
+# target to generate assembly for a file
+program\StopWatch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sdizo_1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\sdizo_1.dir\program\StopWatch.cpp.s
+.PHONY : program\StopWatch.cpp.s
+
 program\TextFileReader.obj: program\TextFileReader.cpp.obj
 
 .PHONY : program\TextFileReader.obj
@@ -490,6 +517,9 @@ help:
 	@echo ... program/RBTreeOperations.obj
 	@echo ... program/RBTreeOperations.i
 	@echo ... program/RBTreeOperations.s
+	@echo ... program/StopWatch.obj
+	@echo ... program/StopWatch.i
+	@echo ... program/StopWatch.s
 	@echo ... program/TextFileReader.obj
 	@echo ... program/TextFileReader.i
 	@echo ... program/TextFileReader.s

@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/sdizo_1.dir/program/ListOperations.cpp.obj"
   "CMakeFiles/sdizo_1.dir/program/Main.cpp.obj"
   "CMakeFiles/sdizo_1.dir/program/RBTreeOperations.cpp.obj"
+  "CMakeFiles/sdizo_1.dir/program/StopWatch.cpp.obj"
   "CMakeFiles/sdizo_1.dir/program/TextFileReader.cpp.obj"
   "sdizo_1.exe"
   "sdizo_1.exe.manifest"
