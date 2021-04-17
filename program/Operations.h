@@ -6,8 +6,10 @@
 class Operations {
 public:
     void displayMenu(std::string&);
+    void displayMenu(const char*);
     void read();
     int readInt();
+    std::string readStr();
     int sizeChoiceMenu(int[], int);
 protected:
     std::string input;

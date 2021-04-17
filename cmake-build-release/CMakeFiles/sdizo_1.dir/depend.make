@@ -79,6 +79,8 @@ CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_li
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\structure_templates_lib\trees_lib\rbutil\RBRemover.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\program\HeapOperations.cpp
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\program\HeapOperations.h
+CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\program\Operations.h
+CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\program\StopWatch.h
 CMakeFiles\sdizo_1.dir\program\HeapOperations.cpp.obj: ..\program\TextFileReader.h
 
 CMakeFiles\sdizo_1.dir\program\ListOperations.cpp.obj: ..\structure_templates_lib\array_lib\Array.h

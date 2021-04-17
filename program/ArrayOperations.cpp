@@ -300,6 +300,7 @@ unsigned long long ArrayOperations::measPutBeg(int size) {
             continue;
         }
     }
+    average /= 128;
     return average;
 }
 
@@ -321,6 +322,7 @@ unsigned long long ArrayOperations::measPutMid(int size) {
             continue;
         }
     }
+    average /= 128;
     return average;
 }
 
@@ -342,6 +344,7 @@ unsigned long long ArrayOperations::measPutEnd(int size) {
             continue;
         }
     }
+    average /= 128;
     return average;
 }
 
@@ -398,6 +401,7 @@ unsigned long long ArrayOperations::measRemBeg(int size) {
             continue;
         }
     }
+    average /= 128;
     return average;
 }
 
@@ -419,6 +423,7 @@ unsigned long long ArrayOperations::measRemMid(int size) {
             continue;
         }
     }
+    average /= 128;
     return average;
 }
 
@@ -439,6 +444,7 @@ unsigned long long ArrayOperations::measRemEnd(int size) {
             continue;
         }
     }
+    average /= 128;
     return average;
 }
 
