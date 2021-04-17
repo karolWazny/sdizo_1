@@ -23,6 +23,11 @@ private:
     static unsigned long long measPutEnd(int);
     static unsigned long long measPutMid(int);
 
+    void measRemTime(int size);
+    static unsigned long long measRemBeg(int);
+    static unsigned long long measRemEnd(int);
+    static unsigned long long measRemMid(int);
+
     static list generateList(int size);
 
     bool active{};

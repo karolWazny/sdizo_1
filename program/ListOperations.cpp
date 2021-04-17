@@ -186,6 +186,7 @@ void ListOperations::measurements() {
             measPutTime(numberOfElements);
             break;
         case 2:
+            measRemTime(numberOfElements);
             break;
         case 3:
             break;
@@ -290,6 +291,103 @@ unsigned long long ListOperations::measPutMid(int size) {
         watch.start();
         //dodajemy dokładnie w połowie listy
         measurementsStructure.addAtPosition(89, index);
+        watch.stop();
+        average += watch.getLastMeasurmentMicrosec();
+        if(!watch.getLastMeasurmentMicrosec())
+        {
+            i--;
+            continue;
+        }
+    }
+    average /= 128;
+    return average;
+}
+
+void ListOperations::measRemTime(int size) {
+    std::cout << "Z ktorego miejsca chcesz usuwac element?\n"
+                 "1. Z poczatku.\n"
+                 "2. Z konca.\n"
+                 "3. Ze srodka.\n";
+    int option = readInt();
+    unsigned long long output;
+    std::string text = "Sredni czas usuwania elementu ";
+    switch(option)
+    {
+        case 1:
+            output = measRemBeg(size);
+            text += "z poczatku";
+            break;
+        case 2:
+            output = measRemEnd(size);
+            text += "z konca";
+            break;
+        case 3:
+            output = measRemMid(size);
+            text += "ze srodka";
+            break;
+        default:
+            throw 4;
+    }
+    text += " listy o dlugosci ";
+    text += std::to_string(size);
+    text += " to ";
+    text += std::to_string(output);
+    text += ".\n";
+    std::cout << text;
+}
+
+unsigned long long ListOperations::measRemBeg(int size) {
+    unsigned long long average = 0;
+    for(int i = 0; i < 128; i++)
+    {
+        auto measurementsStructure = generateList(size);
+        std::cout << "|";//todo
+        StopWatch watch;
+        watch.start();
+        measurementsStructure.removeFirst();
+        watch.stop();
+        average += watch.getLastMeasurmentMicrosec();
+        if(!watch.getLastMeasurmentMicrosec())
+        {
+            i--;
+            continue;
+        }
+    }
+    average /= 128;
+    return average;
+}
+
+unsigned long long ListOperations::measRemEnd(int size) {
+    unsigned long long average = 0;
+    for(int i = 0; i < 128; i++)
+    {
+        auto measurementsStructure = generateList(size);
+        std::cout << "|";//todo
+        StopWatch watch;
+        watch.start();
+        measurementsStructure.removeLast();
+        watch.stop();
+        average += watch.getLastMeasurmentMicrosec();
+        if(!watch.getLastMeasurmentMicrosec())
+        {
+            i--;
+            continue;
+        }
+    }
+    average /= 128;
+    return average;
+}
+
+unsigned long long ListOperations::measRemMid(int size) {
+    unsigned long long average = 0;
+    for(int i = 0; i < 128; i++)
+    {
+        auto measurementsStructure = generateList(size);
+        std::cout << "|";//todo
+        StopWatch watch;
+        int index = size / 2;
+        watch.start();
+        measurementsStructure.removeAt(index);
         watch.stop();
         average += watch.getLastMeasurmentMicrosec();
         if(!watch.getLastMeasurmentMicrosec())
