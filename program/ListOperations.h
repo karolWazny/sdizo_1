@@ -28,6 +28,8 @@ private:
     static unsigned long long measRemEnd(int);
     static unsigned long long measRemMid(int);
 
+    void measFindTime(int size);
+
     static list generateList(int size);
 
     bool active{};

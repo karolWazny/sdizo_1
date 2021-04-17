@@ -189,6 +189,7 @@ void ListOperations::measurements() {
             measRemTime(numberOfElements);
             break;
         case 3:
+            measFindTime(numberOfElements);
             break;
         default:
             throw 4;
@@ -398,4 +399,34 @@ unsigned long long ListOperations::measRemMid(int size) {
     }
     average /= 128;
     return average;
+}
+
+void ListOperations::measFindTime(int size) {
+    unsigned long long average = 0;
+    for(int i = 0; i < 128; i++)
+    {
+        auto measurementsStructure = generateList(size);
+        std::cout << "|";//todo
+        StopWatch watch;
+        int32_t elementToFind = rand() % size;
+        bool contains;
+        watch.start();
+        contains = measurementsStructure.contains(elementToFind);
+        watch.stop();
+        if(contains)
+            measurementsStructure.removeFirst();
+        average += watch.getLastMeasurmentMicrosec();
+        if(!watch.getLastMeasurmentMicrosec())
+        {
+            i--;
+            continue;
+        }
+    }
+    average /= 128;
+    std::string text = "Sredni czas wyszukania elementu w liscie o dlugosci ";
+    text += std::to_string(size);
+    text += " wynosi ";
+    text += std::to_string(average);
+    text += ".\n";
+    std::cout << text;
 }
