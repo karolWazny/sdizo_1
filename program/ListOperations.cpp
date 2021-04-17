@@ -1,32 +1,24 @@
 #include "ListOperations.h"
 #include "TextFileReader.h"
+#include "StopWatch.h"
 
 void ListOperations::run() {
     active = true;
     while(active)
     {
-        displayMenu();
-        std::getline(std::cin, input);
+        menu();
         interpretInput();
     }
 }
 
-void ListOperations::displayMenu() {
-    std::string text = "OPERACJE NA LISCIE\n"
-                       "1. Zbuduj z pliku\n"
-                       "2. Stworz nowa liste\n"
-                       "3. Dodaj element\n"
-                       "4. Usun element\n"
-                       "5. Znajdz element\n"
-                       "6. Wyswietl\n"
-                       "7. Wroc do menu glownego\n\n";
-    std::cout << text;
+void ListOperations::menu() {
+    displayMenu("OPERACJE NA LISCIE DWUKIERUNKOWEJ");
 }
 
 void ListOperations::interpretInput() {
     int option;
     try{
-        option = std::stoi(input);
+        option = readInt();
         switch(option){
             case 1:
                 fromFile();
@@ -47,6 +39,9 @@ void ListOperations::interpretInput() {
                 display();
                 break;
             case 7:
+                measurements();
+                break;
+            case 8:
                 active = false;
                 break;
             default:
@@ -61,13 +56,12 @@ void ListOperations::interpretInput() {
 void ListOperations::addElement() {
     std::string text = "Podaj wartosc, ktora chcesz umiescic:\n";
     std::cout << text;
-    std::getline(std::cin, input);
-    int value = std::stoi(input);
+    int value = readInt();
     text = "Podaj wartosc, po ktorej chcesz dodac element\n"
            "(uzyj 'last', zeby dodac na koncu,\n"
            "lub 'first', zeby dodac na poczatku):\n";
     std::cout << text;
-    std::getline(std::cin, input);
+    read();
     try{
         std::string sideText;
         if(input == "first")
@@ -108,7 +102,7 @@ void ListOperations::removeElement() {
             throw IndexOutOfBoundException();
         int keyToRemove;
         std::cout << text;
-        std::getline(std::cin, input);
+        read();
         if(input == "first")
         {
             linkedList.removeFirst();
@@ -139,9 +133,7 @@ void ListOperations::removeElement() {
 void ListOperations::findElement() {
     std::string text = "Podaj element, ktory chcesz wyszukac:\n";
     std::cout << text;
-    std::getline(std::cin, input);
-    int value;
-    value = std::stoi(input);
+    int value = readInt();
     bool contains = linkedList.contains(value);
     if(contains)
     {
@@ -163,7 +155,8 @@ void ListOperations::fromFile() {
                        "lub pelna sciezke do pliku:\n";
     std::cout << text;
     std::string filename;
-    std::getline(std::cin, filename);
+    read();
+    filename = input;
     try {
         TextFileReader reader;
         auto content = reader.fromFile(filename);
@@ -176,4 +169,135 @@ void ListOperations::fromFile() {
         std::cout << "Wystapil problem.\n"
                      "Operacje anulowano.\n";
     }
+}
+
+void ListOperations::measurements() {
+    std::cout << "Dla jakiej operacji chcesz mierzyc czas?\n"
+                 "1. Dodawanie elementu.\n"
+                 "2. Usuwanie elementu.\n"
+                 "3. Wyszukanie elementu.\n";
+    int option = readInt();
+    std::cout << "Dla jakiego rozmiaru struktury chcesz mierzyc czas?\n";
+    int options[] = {2500, 5000, 12500, 25000, 50000};
+    int numberOfElements = sizeChoiceMenu(options, 5);
+    switch(option)
+    {
+        case 1:
+            measPutTime(numberOfElements);
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        default:
+            throw 4;
+            break;
+    }
+}
+
+void ListOperations::measPutTime(int size) {
+    std::cout << "Gdzie chcesz dodawac element?\n"
+                 "1. Na poczatku.\n"
+                 "2. Na koncu.\n"
+                 "3. W srodku.\n";
+    int option = readInt();
+    std::string text = "Sredni czas dodania elementu ";
+    unsigned long long output;
+    switch(option)
+    {
+        case 1:
+            text += "na poczatku";
+            output = measPutBeg(size);
+            break;
+        case 2:
+            text += "na koncu";
+            output = measPutEnd(size);
+            break;
+        case 3:
+            text += "w srodku";
+            output = measPutMid(size);
+            break;
+        default:
+            throw 4;
+    }
+    text += "listy o dlugosci ";
+    text += std::to_string(size);
+    text += " to ";
+    text += std::to_string(output);
+    text += ".\n";
+    std::cout << text;
+}
+
+unsigned long long ListOperations::measPutBeg(int size) {
+    unsigned long long average = 0;
+    for(int i = 0; i < 128; i++)
+    {
+        auto measurementsStructure = generateList(size);
+        std::cout << "|";//todo
+        StopWatch watch;
+        watch.start();
+        measurementsStructure.pushFront(89);
+        watch.stop();
+        average += watch.getLastMeasurmentMicrosec();
+        if(!watch.getLastMeasurmentMicrosec())
+        {
+            i--;
+            continue;
+        }
+    }
+    average /= 128;
+    return average;
+}
+
+list ListOperations::generateList(int size) {
+    auto measurementsStructure = list();
+    for(int j = 0; j < size; j++)
+    {
+        measurementsStructure.pushBack(rand() % (size / 2));
+    }
+    return measurementsStructure;
+}
+
+unsigned long long ListOperations::measPutEnd(int size) {
+    unsigned long long average = 0;
+    for(int i = 0; i < 128; i++)
+    {
+        auto measurementsStructure = generateList(size);
+        std::cout << "|";//todo
+        StopWatch watch;
+        watch.start();
+        measurementsStructure.pushBack(89);
+        watch.stop();
+        average += watch.getLastMeasurmentMicrosec();
+        if(!watch.getLastMeasurmentMicrosec())
+        {
+            i--;
+            continue;
+        }
+    }
+    average /= 128;
+    return average;
+}
+
+unsigned long long ListOperations::measPutMid(int size) {
+    unsigned long long average = 0;
+    for(int i = 0; i < 128; i++)
+    {
+        auto measurementsStructure = generateList(size);
+        std::cout << "|";//todo
+        StopWatch watch;
+        int index = size / 2;
+        watch.start();
+        //dodajemy dokładnie w połowie listy
+        measurementsStructure.addAtPosition(89, index);
+        watch.stop();
+        average += watch.getLastMeasurmentMicrosec();
+        if(!watch.getLastMeasurmentMicrosec())
+        {
+            i--;
+            continue;
+        }
+    }
+    average /= 128;
+    return average;
 }

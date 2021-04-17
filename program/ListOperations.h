@@ -4,21 +4,28 @@
 #include <iostream>
 #include <string>
 #include <structures.h>
+#include "Operations.h"
 
-class ListOperations {
+class ListOperations : public Operations{
 public:
     void run();
 private:
-    void displayMenu();
+    void menu();
     void interpretInput();
     void addElement();
     void removeElement();
     void findElement();
     void display();
     void fromFile();
+    void measurements();
+    void measPutTime(int);
+    static unsigned long long measPutBeg(int);
+    static unsigned long long measPutEnd(int);
+    static unsigned long long measPutMid(int);
 
-    bool active;
-    std::string input;
+    static list generateList(int size);
+
+    bool active{};
     list linkedList;
 };
 

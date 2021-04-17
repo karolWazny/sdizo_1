@@ -121,6 +121,8 @@ CMakeFiles/sdizo_1.dir/program/ListOperations.cpp.obj
  ../structure_templates_lib/trees_lib/rbutil/RBRemover.h
  D:/projects/clion/sdizo_1/program/ListOperations.cpp
  D:/projects/clion/sdizo_1/program/ListOperations.h
+ D:/projects/clion/sdizo_1/program/Operations.h
+ D:/projects/clion/sdizo_1/program/StopWatch.h
  D:/projects/clion/sdizo_1/program/TextFileReader.h
 CMakeFiles/sdizo_1.dir/program/Main.cpp.obj
  ../structure_templates_lib/array_lib/Array.h
