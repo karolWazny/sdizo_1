@@ -77,15 +77,13 @@ T Array<T>::removeAt(const int index)
 {
     auto buffer = elements[index];
     auto newArray = std::make_unique<T[]>(length - 1);
-    int newArrayCount = 0;
-    for(int i = 0; i < length; i++, newArrayCount++)
+    for(int i = 0; i < index; i++)
     {
-        if(i == index)
-        {
-            newArrayCount--;
-            continue;
-        }
-        newArray[newArrayCount] = elements[i];
+        newArray[i] = elements[i];
+    }
+    for(int i = index + 1; i < length; i++)
+    {
+        newArray[i-1] = elements[i];
     }
     elements = std::move(newArray);
     length--;
@@ -108,14 +106,13 @@ void Array<T>::putAtPosition(T element, const int index)
         throw IndexOutOfBoundException();
     }
     auto newArray = std::make_unique<T[]>(length + 1);
-    int newArrayCount = 0;
-    for(int i = 0; i < length; i++, newArrayCount++)
+    for(int i = 0; i < index; i++)
     {
-        if(i == index)
-        {
-            newArrayCount++;
-        }
-        newArray[newArrayCount] = elements[i];
+        newArray[i] = elements[i];
+    }
+    for(int i = index + 1; i < length; i++)
+    {
+        newArray[i+1] = elements[i];
     }
     newArray[index] = element;
     elements = std::move(newArray);
